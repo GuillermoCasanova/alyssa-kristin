@@ -1,0 +1,222 @@
+/*------------------------------------*\
+    #Product Card
+\*------------------------------------*/
+
+.product-card-wrapper {
+  color: inherit;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+}
+
+.product-card {
+  color: rgb(var(--color-base-text));
+  margin-bottom: calc(var(--level7) + var(--level7));
+  text-align: left;
+  text-decoration: none;
+}
+
+.product-card:hover .product-card__heading,
+.product-card:focus .product-card__heading {
+  border-bottom: 2px solid black;
+}
+
+.product-card .media {
+  border-radius: 20px;
+}
+
+.product-card:hover .media img:first-child,
+.product-card:focus .media img:first-child {
+  opacity: 0;
+}
+
+.product-card__media {
+  margin-bottom: var(--level5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.product-card__media .media img:first-child {
+  z-index: 1;
+}
+
+.product-card.product-card--sold-out {
+  color: rgba(var(--color-base-link));
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Product Card Information
+\*------------------------------------*/
+
+.product-card__information {
+  align-items: center;
+  color: rgb(var(--color-base-text));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.product-card__information:hover .product-card__heading,
+.product-card__information:focus .product-card__heading {
+  border-bottom: 2px solid black;
+}
+
+.product-card__heading {
+  border-bottom: 2px solid transparent;
+  font-size: var(--h2);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--level1);
+  padding-right: var(--level1);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 700px) {
+  .product-card__heading {
+    font-size: var(--h4);
+  }
+}
+
+@media only screen and (min-width: 940px) {
+  .product-card__heading {
+    font-size: var(--h3);
+  }
+}
+
+.product-card__price {
+  font-size: var(--h4);
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 700px) {
+  .product-card__price {
+    font-size: var(--h5);
+  }
+}
+
+/*------------------------------------*\
+    #Product Card Badge
+\*------------------------------------*/
+
+.product-card__badge {
+  font-size: var(--micro);
+  left: var(--level1);
+  letter-spacing: 2px;
+  position: absolute;
+  text-transform: uppercase;
+  top: var(--level1);
+  z-index: 3;
+}
+
+@media only screen and (min-width: 940px) {
+  .product-card__badge {
+    font-size: var(--normal);
+    left: var(--level2);
+    top: var(--level2);
+  }
+}
+
+.product-card__badge__text--sold-out {
+  color: #fa0000;
+}
+
+.product-card__badge.is-hidden {
+  display: none;
+}
+
+.product-card__badge-text.is-hidden {
+  display: none;
+}
+
+.card__badge {
+  align-self: flex-end;
+  grid-row-start: 3;
+  justify-self: flex-start;
+}
+
+.card__badge.top {
+  align-self: flex-start;
+  grid-row-start: 1;
+}
+
+.card__badge.right {
+  justify-self: flex-end;
+}
+
+.card>.card__content>.card__badge {
+  margin: 1.3rem;
+}
+
+.card__media .media img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+.card__inner:not(.ratio)>.card__content {
+  height: 100%;
+}
+
+.card__heading {
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.card__heading:last-child {
+  margin-bottom: 0;
+}
+
+.card--card.card--media>.card__content {
+  margin-top: calc(0rem - var(--card-image-padding));
+}
+
+.card--standard.card--text a::after,
+.card--card .card__heading a::after {
+  bottom: calc(var(--card-border-width) * -1);
+  left: calc(var(--card-border-width) * -1);
+  right: calc(var(--card-border-width) * -1);
+  top: calc(var(--card-border-width) * -1);
+}
+
+.card__heading a::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.card__heading a:after {
+  outline-offset: 0.3rem;
+}
+
+.card__heading a:focus:after {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+}
+
+.card__heading a:focus-visible:after {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+}
+
+.card__heading a:focus:not(:focus-visible):after {
+  box-shadow: none;
+  outline: 0;
+}
+
+.card__heading a:focus {
+  box-shadow: none;
+  outline: 0;
+}

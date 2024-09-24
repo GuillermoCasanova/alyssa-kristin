@@ -1,0 +1,120 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'template-blog.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width visually-hidden">
+  <div class="blog-posts-header">
+    <div class="blog-posts-header__inner ">
+      <h1 class="blog-posts-header__heading">
+        {{ blog.title }}
+      </h1>
+      <span class="blog-posts-header__subline"> Lorem Ipsum </span>
+    </div>
+  </div>
+</div>
+
+<div class="main-blog page-width  section-{{ section.id }}-padding">
+  {% for block in section.blocks %}
+    <div class="blog-preview">
+      {% assign current_blog = block.settings.blog.handle %}
+      <div class="blog-posts-header">
+        <div class="blog-posts-header__inner ">
+          <h2 class="blog-posts-header__heading">
+            {{ block.settings.blog.title }}
+          </h2>
+          <span class="blog-posts-header__subline"> Lorem Ipsum </span>
+        </div>
+      </div>
+      <div class="blog-articles">
+        {% for article in blogs[current_blog].articles limit: 3 %}
+          {%- render 'article-card',
+            article: article,
+            media_height: section.settings.image_height,
+            media_aspect_ratio: article.image.aspect_ratio,
+            show_image: section.settings.show_image,
+            show_date: section.settings.show_date,
+            show_author: section.settings.show_author,
+            show_excerpt: false
+          -%}
+        {% endfor %}
+      </div>
+      <div class="blog-view-more">
+        <a
+          class="blog-view-more__link"
+          title="Go to {{ block.settings.blog.title }} page"
+          href="{{ block.settings.blog.url }}#navigated"
+        >
+          <svg class="blog-view-more__link__icon">
+            <use href="#icon-plus-sign"/>
+          </svg>
+          <span class="visually-hidden">View More</span>
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% comment %}
+  {%- paginate blog.articles by 6 -%}
+    <div class="main-blog page-width  section-{{ section.id }}-padding">
+      <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+        {%- for article in blog.articles -%}
+
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Blog Home",
+  "tag": "section",
+  "class": "section",
+  "templates": ["blog"],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-blog.settings.header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "default": false,
+      "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-blog.settings.paragraph.content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "blog_preview",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog Preview Source"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

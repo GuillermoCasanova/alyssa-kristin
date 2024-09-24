@@ -1,0 +1,10 @@
+{
+    "sections": {
+        "main": {
+            "type": "recipe-article"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

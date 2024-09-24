@@ -1,0 +1,116 @@
+<link
+  rel="stylesheet"
+  href="{{ 'section-image-slideshow-break.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
+<link
+  rel="preload"
+  href="{{ 'vendor-swiper.css' | asset_url }}"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+>
+
+<div class="image-slideshow-break {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
+  <custom-slideshow
+    class="image-slideshow-break__inner"
+    pagination="true"
+    loop="true"
+    grabCursor="true"
+    spaceBetween="0"
+  >
+    {% for block in section.blocks %}
+      <div class="image-slideshow-break__slide">
+        <div class="image-slideshow-break__slide__inner">
+          <img
+            srcset="
+              {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {%- if block.settings.image.width >= 1600 -%}{{ block.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
+              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+            "
+            src="{{ block.settings.image | image_url: width: 533 }}"
+            sizes="(min-width: 700px) 50vw, 100vw"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            class="responsive-image"
+          >
+        </div>
+      </div>
+    {% endfor %}
+  </custom-slideshow>
+</div>
+
+<script type="module" src="{{ 'custom-slideshow.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Image Slideshow Break",
+  "tag": "section",
+  "templates": ["page", "index", "product", "article"],
+  "settings": [
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Slideshow Description",
+      "info": "The description of the contents of this slideshow, for SEO and accesibility purposes."
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slideshow_slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Slideshow Break"
+    }
+  ]
+}
+{% endschema %}

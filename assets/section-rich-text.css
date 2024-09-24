@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    #Rich Text Section
+\*------------------------------------*/
+
+.rich-text {
+  z-index: 1;
+}
+
+.rich-text__wrapper {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 4rem / var(--font-body-scale));
+}
+
+.rich-text:not(.rich-text--full-width) .rich-text__wrapper {
+  margin: auto;
+  width: calc(100% - 8rem / var(--font-body-scale));
+}
+
+.rich-text__blocks {
+  width: 100%;
+}
+
+.rich-text__buttons {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 45rem;
+  word-break: break-word;
+}
+
+.rich-text__buttons--multiple>* {
+  flex-grow: 1;
+  min-width: 22rem;
+}
+
+.rich-text__buttons+.rich-text__buttons {
+  margin-top: 1rem;
+}
+
+.rich-text__blocks.left .rich-text__buttons {
+  justify-content: flex-start;
+}
+
+.rich-text__blocks.right .rich-text__buttons {
+  justify-content: flex-end;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Text
+\*------------------------------------*/
+
+.rich-text__heading {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--level4);
+  font-size: var(--h4);
+}
+
+@media screen and (min-width: 700px) {
+  .rich-text__heading {
+    font-size: var(--h3);
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .rich-text__heading {
+    font-size: var(--h2);
+  }
+}
+
+
+
+
+/*------------------------------------*\
+    #Text
+\*------------------------------------*/
+
+@media screen and (min-width: 700px) {
+  .rich-text__text {
+    font-size: var(--h5);
+  }
+
+  .rich-text__text p {
+    line-height: 1.65;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .rich-text__text {
+    font-size: var(--h4);
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Image
+\*------------------------------------*/
+
+
+.rich-text__image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: var(--level8);
+  margin-bottom: var(--level8);
+}
+
+@media screen and (min-width: 940px) {
+  .rich-text__image {
+    margin-top: var(--level10);
+    margin-bottom: var(--level10)
+  }
+
+}
+
+.rich-text__image__inner {
+  position: relative;
+  padding-bottom: 52.2%;
+}
+
+
+
+
+/*------------------------------------*\
+    #CTA
+\*------------------------------------*/
+
+.rich-text__cta {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--h5);
+  margin-top: var(--level4);
+  margin-bottom: var(--level4);
+}
+
+@media screen and (min-width: 940px) {
+  .rich-text__cta {
+    margin-top: var(--level5);
+    margin-bottom: var(--level7);
+  }
+}

@@ -1,0 +1,135 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "c6eaf4ed-a42d-44fa-a5f0-c1424c20c12a": {
+          "type": "product_type",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "8f1a3c21-14f1-4a1f-8eae-52aacc399720": {
+          "type": "custom_color_picker",
+          "settings": {
+            "picker_label": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "5e2f8c5e-7d65-4bac-8cac-6831126031b3": {
+          "type": "back-in-stock",
+          "settings": {
+            "button_cta_text": "",
+            "button_success_text": "Success"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "c6eaf4ed-a42d-44fa-a5f0-c1424c20c12a",
+        "price",
+        "description",
+        "8f1a3c21-14f1-4a1f-8eae-52aacc399720",
+        "variant_picker",
+        "5e2f8c5e-7d65-4bac-8cac-6831126031b3",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "enable_video_looping": false
+      }
+    },
+    "3d95728d-ae23-4b0e-8ca3-268a5188e23b": {
+      "type": "content-slideshow",
+      "blocks": {
+        "96125306-14a4-4032-9a07-157e5111a60d": {
+          "type": "Slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v82_1102.png",
+            "heading": "Lorem Ipsum Example",
+            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor.<\/p>"
+          }
+        },
+        "332146d8-89e1-49bf-a5cd-345ec71b3d80": {
+          "type": "Slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v82_1079.png",
+            "heading": "Lorem Ipsum",
+            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor.<\/p>"
+          }
+        },
+        "a36ae783-a801-4e9e-b077-e54a13c7164e": {
+          "type": "Slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v82_1105.png",
+            "heading": "Lorem Ipsum Headline 3",
+            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "96125306-14a4-4032-9a07-157e5111a60d",
+        "332146d8-89e1-49bf-a5cd-345ec71b3d80",
+        "a36ae783-a801-4e9e-b077-e54a13c7164e"
+      ],
+      "disabled": true,
+      "settings": {
+        "top_border": "no",
+        "bottom_border": "yes",
+        "trigger_email_popup": false
+      }
+    },
+    "1674ed9e-11bf-48c3-93ce-b31f048094e3": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Explore More",
+        "products_to_show": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3d95728d-ae23-4b0e-8ca3-268a5188e23b",
+    "1674ed9e-11bf-48c3-93ce-b31f048094e3"
+  ]
+}

@@ -1,0 +1,206 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+<section class="contact-form">
+  <div class="contact-form__bg">
+    <img
+      srcset="
+        {%- if section.settings.background.width >= 165 -%}{{ section.settings.background | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if section.settings.background.width >= 360 -%}{{ section.settings.background | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if section.settings.background.width >= 533 -%}{{ section.settings.background | image_url: width: 533 }} 533w,{%- endif -%}
+        {%- if section.settings.background.width >= 720 -%}{{ section.settings.background | image_url: width: 720 }} 720w,{%- endif -%}
+        {%- if section.settings.background.width >= 800 -%}{{ section.settings.background | image_url: width: 800 }} 800w,{%- endif -%}
+        {%- if section.settings.background.width >= 940 -%}{{ section.settings.background | image_url: width: 940 }} 940w,{%- endif -%}
+        {%- if section.settings.background.width >= 1066 -%}{{ section.settings.background | image_url: width: 1066 }} 1066w,{%- endif -%}
+        {{ section.settings.background | image_url }} {{ section.settings.background.width }}w
+      "
+      src="{{ section.settings.background | image_url: width: 533 }}"
+      sizes="(min-width: 700px) 50vw, 90vw"
+      alt="{{ section.settings.background.alt | escape }}"
+      class="responsive-image motion-reduce"
+      loading="lazy"
+      width="{{ section.settings.background.width }}"
+      height="{{ section.settings.background.height }}"
+    >
+  </div>
+  <div class="contact-form__inner  page-width">
+    <h2 class="contact-form__heading">
+      {{ section.settings.heading }}
+    </h2>
+    <div class="contact-form__body">
+      {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+        <div class="form-section">
+          <custom-input-wrapper class="custom-field custom-field--primary custom-field--large">
+            <input
+              autocomplete="name"
+              required
+              type="text"
+              id="ContactForm-name"
+              aria-required="true"
+              name="contact[{{ 'templates.contact.form.name' | t }}]"
+              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              {% if form.errors contains 'name' %}
+                aria-invalid="true"
+                aria-describedby="ContactForm-name-error"
+              {% endif %}
+            >
+            <label for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+          </custom-input-wrapper>
+          {%- if form.errors contains 'name' -%}
+            <small class="contact__field-error" id="ContactForm-name-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {{- form.errors.translated_fields.name | capitalize }}
+                {{ form.errors.messages.name -}}
+              </span>
+            </small>
+          {%- endif -%}
+
+          <custom-input-wrapper class="custom-field custom-field--primary custom-field--large">
+            <input
+              autocomplete="email"
+              type="email"
+              id="ContactForm-email"
+              name="contact[email]"
+              spellcheck="false"
+              autocapitalize="off"
+              required
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              aria-required="true"
+              {% if form.errors contains 'email' %}
+                aria-invalid="true"
+                aria-describedby="ContactForm-email-error"
+              {% endif %}
+            >
+            <label for="ContactForm-email">
+              {{- 'templates.contact.form.email' | t }}
+              <span aria-hidden="true">*</span></label
+            >
+          </custom-input-wrapper>
+
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+
+          <custom-input-wrapper class="custom-field custom-field--primary custom-field--large">
+            <input
+              type="text"
+              id="ContactForm-title"
+              name="contact[title]"
+              required
+              aria-required="true"
+              {% if form.errors contains 'title' %}
+                aria-invalid="true"
+                aria-describedby="ContactForm-title-error"
+              {% endif %}
+            >
+            <label class="field__label" for="ContactForm-name">Title*</label>
+          </custom-input-wrapper>
+          {%- if form.errors contains 'title' -%}
+            <small class="contact__field-error" id="ContactForm-title-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {{- form.errors.translated_fields.title | capitalize }}
+                {{ form.errors.messages.title -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+
+        <div class="form-section">
+          <label class="visually-hidden" for="ContactForm-body">
+            {{- 'templates.contact.form.comment' | t -}}
+          </label>
+          <textarea
+            rows="10"
+            id="ContactForm-body"
+            name="contact[{{ 'templates.contact.form.comment' | t }}]"
+            class="input  input--primary  textarea--large"
+            required
+            aria-required="true"
+          >
+          {{- form.body -}}
+        </textarea>
+        </div>
+
+        <div class="contact-form__cta">
+          {%- if form.posted_successfully? -%}
+            <button disabled class="button  button--secondary  button--medium  button--contact-form is-submitted">
+              <span class="button__text"> Submitted! </span>
+              <span class="button__icon">
+                <svg>
+                  <use href="#arrow-right"/>
+                </svg>
+              </span>
+            </button>
+          {% else %}
+            <button type="submit" class="button  button--secondary  button--medium  button--contact-form">
+              <span class="button__text">
+                {{ 'templates.contact.form.send' | t }}
+              </span>
+              <span class="button__icon">
+                <svg>
+                  <use href="#arrow-right"/>
+                </svg>
+              </span>
+            </button>
+          {%- endif -%}
+        </div>
+        <div class="contact-form__states">
+          {%- if form.posted_successfully? -%}
+            <div class="form-status form-status-list form__message" tabindex="-1" autofocus>
+              {{ 'templates.contact.form.post_success' | t }}
+            </div>
+          {%- elsif form.errors -%}
+            <alert class="contact-form__states__errors" tabindex="-1" autofocus>
+              <div class="form__message">
+                <h2 class="contact-form__states__heading">
+                  {{ 'templates.contact.form.error_heading' | t }}
+                </h2>
+              </div>
+              <ul class="form-status-list caption-large" role="list">
+                <li>
+                  <a href="#ContactForm-email" class="link">
+                    {{ form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email }}
+                  </a>
+                </li>
+              </ul>
+            </alert>
+          {%- endif -%}
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.contact-form.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Lorem Ipsum",
+      "label": "Heading",
+      "info": "The heading for this contact form"
+    },
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Form Background",
+      "info": "Select the background image for the form section."
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact-form.presets.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,28 @@
+<ul
+  id="{{ localPosition }}List"
+  role="list"
+  class="localization-form__inner"
+>
+  {%- for language in localization.available_languages -%}
+    <li
+      class="localization-form__item"
+      tabindex="-1"
+    >
+      <button
+        class="localization-form__lang-option  {% if language.iso_code == localization.country.iso_code %} disclosure__link--active {% endif %}"
+        {% if language.iso_code == localization.language.iso_code %}
+          data-current="true"
+        {% endif %}
+        data-value="{{ language.iso_code }}"
+        data-primary="{{ language.primary }}"
+        aria-label="{{ 'localization.update_language' | t }} {{ language.endonym_name }}"
+      >
+        <span class="localization-form__currency">
+          {{- language.iso_code }}
+        </span>
+      </button>
+    </li>
+  {%- endfor -%}
+</ul>
+
+<input type="hidden" name="language_code" value="{{ language.country.iso_code }}">

@@ -1,0 +1,262 @@
+{{ 'section-image-video-banner.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'section-blog-header.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+<style>
+  /*------------------------------------*\
+      #Blog Header
+  \*------------------------------------*/
+
+  blog-header {
+    display: block;
+  }
+
+  .blog-header {
+    margin-top: var(--level6);
+  }
+
+  @media screen and (min-width: 940px) {
+    .blog-header {
+      margin-top: var(--level8);
+    }
+  }
+  .blog-header__inner {
+    padding-left: var(--level5);
+    padding-right: var(--level5);
+  }
+
+  @media screen and (min-width: 940px) {
+    .blog-header__inner {
+      padding-left: var(--level7);
+      padding-right: var(--level7);
+    }
+  }
+  @media screen and (min-width: 940px) {
+    .blog-header .image-banner {
+      min-width: 42rem;
+      padding-bottom: 30%;
+    }
+  }
+
+  .blog-header .image-banner-container {
+    border-radius: 30px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog-header__copy__heading {
+    font-size: var(--h3);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+  }
+
+  @media screen and (min-width: 700px) {
+    .blog-header__copy__heading {
+      font-size: var(--h2);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .blog-header__copy__heading {
+      font-size: var(--h1);
+    }
+  }
+
+  .blog-header__copy__inner {
+    padding-top: var(--level6);
+  }
+
+  @media screen and (min-width: 700px) {
+    .blog-header__copy__inner {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      column-gap: var(--level8);
+      padding-top: var(--level7);
+    }
+
+    .blog-header__copy__body {
+      font-size: var(--h4);
+    }
+
+    .blog-header__copy__body p {
+      line-height: 1.4;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .blog-header__copy__inner {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      column-gap: var(--level10);
+    }
+  }
+</style>
+<div class="blog-header">
+  <div class="blog-header__inner">
+    <blog-header id="Banner-{{ section.id }}" class="image-banner-container">
+      <div class="image-banner" data-banner-media>
+        <div class="image-banner__media">
+          {% if section.settings.image != blank %}
+            <img
+              srcset="
+                {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if section.settings.image.width >= 2800 -%}{{ section.settings.image | image_url: width: 2800 }} 2800w{%- endif -%}
+              "
+              sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+              src="{{ section.settings.image | image_url: width: 750 }}"
+              loading="eager"
+              alt="{{ section.settings.image.alt | escape }}"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+              class="image-banner__media__image  image-banner__media__image--mobile"
+            >
+          {% else %}
+            <video
+              data-lazy-src="{{ section.settings.video }}"
+              id="hero-video"
+              width="100%"
+              allowfullscreen="true"
+              muted="muted"
+              autoplay
+              loop
+              muted
+              playsinline
+              playsinline="playsinline"
+              loop="loop"
+              class="image-banner__media__image"
+            >
+              <source src="" type="video/mp4">
+            </video>
+          {% endif %}
+        </div>
+      </div>
+    </blog-header>
+
+    <div class="page-width">
+      <div class="blog-header__copy">
+        <div class="blog-header__copy__inner">
+          {% for block in section.blocks %}
+            {% if block.type == 'heading' %}
+              <p class="blog-header__copy__heading">
+                {{ block.settings.heading }}
+              </p>
+            {% endif %}
+            {% if block.type == 'body' %}
+              <div class="blog-header__copy__body">
+                {{ block.settings.body }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer>
+  class BlogHeader extends HTMLElement {
+    constructor() {
+      super();
+      if (this.querySelector('video')) {
+        this.initVideo();
+      }
+    }
+
+    initVideo() {
+      window.addEventListener('DOMContentLoaded', function () {
+        let mediaQueries = {
+          mediumDown: window.matchMedia('(max-width: 939px)'),
+          largeUp: window.matchMedia('(min-width: 940px)'),
+        };
+
+        let vidSrc = document.querySelector('#hero-video').dataset.lazySrc;
+
+        function startVideo(pSource) {
+          document.querySelector('#hero-video').querySelector('[type="video/mp4"]').src = pSource;
+          document.querySelector('#hero-video').load();
+
+          setTimeout(function () {
+            document.querySelector('#hero-video').classList.add('is-loaded');
+            document.querySelector('#hero-video').play();
+          }, 500);
+        }
+
+        startVideo(vidSrc);
+      });
+    }
+  }
+
+  customElements.define('blog-header', BlogHeader);
+</script>
+
+{% schema %}
+{
+  "name": "Blog Header",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "templates": ["blog", "page"],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "video",
+      "label": "Background Video"
+    },
+    {
+      "type": "url",
+      "id": "cta-url",
+      "label": "CTA Url"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "About this blog",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "body",
+      "name": "Body",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "body",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+          "label": "Body"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Header",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "body"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

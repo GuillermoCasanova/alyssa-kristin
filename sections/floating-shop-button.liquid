@@ -1,0 +1,62 @@
+<link
+  rel="stylesheet"
+  href="{{ 'component-floating-order-button.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'"
+>
+
+{% if section.settings.is_active == true %}
+  <floating-order-button>
+    <a
+      data-order-link
+      href="{{ section.settings.button_link }}"
+      title="Order Ajornada"
+      rel="internal"
+      class="floating-order-button__inner"
+    >
+      <svg class="floating-order-button__flower-graphic">
+        <use href="#illust-flower-default"/>
+      </svg>
+      <span class="floating-order-button__text">
+        {{ section.settings.button_text }}
+      </span>
+    </a>
+  </floating-order-button>
+{% endif %}
+
+<script src="{{ 'floating-order-button.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Floating Order Button",
+  "templates": ["index", "page", "article", "blog"],
+  "tag": "aside",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text",
+      "default": "Order",
+      "info": "Text to display on the button."
+    },
+    {
+      "type": "url",
+      "label": "Link Field",
+      "id": "button_link",
+      "info": "URL to link when the button is clicked."
+    },
+    {
+      "type": "checkbox",
+      "label": "Activate Order Button",
+      "id": "is_active",
+      "default": true,
+      "info": "If checked, this will have the button appear on the page."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Floating Order Button"
+    }
+  ]
+}
+{% endschema %}

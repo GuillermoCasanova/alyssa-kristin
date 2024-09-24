@@ -1,0 +1,145 @@
+{% comment %}
+  Renders a header drawer menu for mobile and desktop.
+
+  Usage:
+  {% render 'header-drawer' %}
+{% endcomment %}
+
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container menu-close">
+    <summary
+      class="header__icon  focus-inset"
+      aria-label="{{ 'sections.header.menu' | t }}"
+    >
+      <div class="header__icon--menu">
+        <div class="header__icon__inner"></div>
+      </div>
+      <span class="visually-hidden"> Toggle Menu </span>
+    </summary>
+    <div id="menu-drawer" class="menu-drawer motion-reduce">
+      <div class="menu-drawer__inner-container">
+        <div class="menu-drawer__navigation-container">
+          <nav class="menu-drawer__navigation">
+            <h2 class="menu-drawer__heading visually-hidden">
+              {{ section.settings.mobile_nav_heading }}
+            </h2>
+
+            <nav class="menu-drawer__navigation">
+              <ul class="menu-drawer__menu" role="list">
+                {%- for link in section.settings.mobile_menu_primary.links -%}
+                  <li>
+                    {%- if link.links != blank -%}
+                      <div class="menu-drawer__menu-item  " id="{{ link.title | escape }}">
+                        {{ link.title | escape }}
+                      </div>
+                      <ul
+                        class="menu-drawer__menu__list"
+                        role="list"
+                        tabindex="-1"
+                        aria-labelledby="{{ link.title | escape }}"
+                      >
+                        {%- for childlink in link.links -%}
+                          <li>
+                            {%- if childlink.links == blank -%}
+                              <a
+                                href="{{ childlink.url }}"
+                                class="menu-drawer__menu-item   menu-drawer__menu-subitem  list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                {% if childlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ childlink.title | escape }}
+                              </a>
+                            {%- else -%}
+                              <div
+                                class="menu-drawer__menu-item menu-drawer__menu-subitem"
+                                id="{{ childlink.title | escape }}"
+                              >
+                                {{ childlink.title | escape }}
+                              </div>
+                              <ul
+                                class="menu-drawer__menu__list menu-drawer__menu__child-list"
+                                role="list"
+                                tabindex="-1"
+                                aria-labelledby="{{ childlink.title | escape }}"
+                              >
+                                {%- for grandchildlink in childlink.links -%}
+                                  <li>
+                                    <a
+                                      href="{{ grandchildlink.url }}"
+                                      class="menu-drawer__menu-item  menu-drawer__menu-child-item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                      {% if grandchildlink.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                    >
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- else -%}
+                      <a
+                        href="{{ link.url }}"
+                        class="menu-drawer__menu-item  menu-drawer__menu-item--no-children   focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ link.title | escape }}
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+              <localization-form class="no-js-hidden">
+                <div>
+                  <h2 class="visually-hidden" id="HeaderCountryLabel">
+                    {{ 'localization.language_label' | t }}
+                  </h2>
+                  {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+                </div>
+              </localization-form>
+              <ul>
+                {%- for link in section.settings.mobile_menu_secondary.links -%}
+                  <li>
+                    <a
+                      href="{{ link.url }}"
+                      class="menu-drawer__menu-item {% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ link.title | escape }}
+                    </a>
+                  </li>
+                {% endfor %}
+
+                <li>
+                  <button
+                    aria-label="Open modal to sign up for the Ajornada newsletter"
+                    aria-expanded="false"
+                    aria-controls="newsletter-sign-up-modal"
+                    aria-haspopup="dialog"
+                    data-modal="newsletter-sign-up-modal"
+                    class="button  button--secondary  button--medium menu-drawer__utility-links__button"
+                  >
+                    <span class="button__text"> Get Updates </span>
+                    <span class="button__icon">
+                      <svg aria-hidden="true" focusable="false">
+                        <use href="#arrow-right">
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>

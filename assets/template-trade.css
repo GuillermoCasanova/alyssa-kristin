@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #Trade Page
+\*------------------------------------*/
+
+
+
+@media screen and (min-width: 700px) {
+    .main-trade-page__inner {
+        padding-left: var(--level7);
+        padding-right: var(--level7);
+    }
+}

@@ -1,0 +1,205 @@
+/*------------------------------------*\
+    #Image With Text Section
+\*------------------------------------*/
+
+
+.image-with-text__image {
+    margin-bottom: var(--level3);
+    position: relative;
+}
+
+
+.image-with-text.is-right-to-left .image-with-text__image__inner {
+    padding-bottom: 100%;
+    border-radius: 30%;
+}
+
+@media screen and (min-width: 700px) {
+    .image-with-text__inner {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        align-items: center;
+        column-gap: var(--level7);
+        padding-bottom: var(--level5)
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .image-with-text__inner {
+        display: grid;
+        align-items: center;
+        column-gap: var(--level10);
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Image
+\*------------------------------------*/
+
+.image-with-text__image__inner {
+    position: relative;
+    padding-bottom: 56.2%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+@media screen and (min-width: 940px) {
+    .image-with-text__image__inner {
+        position: relative;
+        padding-bottom: 60%;
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Copy
+\*------------------------------------*/
+
+.image-with-text__copy {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 700px) {
+    .image-with-text__copy p {
+        line-height: 1.35;
+    }
+}
+
+
+@media screen and (min-width: 940px) {
+    .image-with-text__copy p {
+        font-size: var(--h3);
+        line-height: 1.5;
+    }
+
+    .image-with-text__copy {
+        max-width: 40rem;
+    }
+}
+
+@media screen and (min-width: 940px) {
+
+    .image-with-text__copy__inner {
+        padding-right: var(--level4);
+        padding-left: var(--level4);
+    }
+
+}
+
+
+
+.image-with-text__copy__heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--h3);
+}
+
+@media screen and (min-width: 940px) {
+    .image-with-text__copy__heading {
+        font-size: var(--h1);
+        margin-bottom: var(--level8)
+    }
+}
+
+
+
+.image-with-text__copy__heading.is-style-2 {
+    font-weight: normal;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--h3);
+}
+
+@media screen and (min-width: 700px) {
+    .image-with-text__copy__heading.is-style-2 {
+        font-size: var(--h3);
+    }
+}
+
+
+.image-with-text__copy__body {
+    padding-left: var(--level4);
+    padding-right: var(--level4);
+}
+
+@media screen and (min-width: 940px) {
+    .image-with-text__copy__body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.image-with-text__symbol {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -2rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+@media screen and (min-width: 940px) {
+    .image-with-text__symbol {
+        width: 8rem;
+        height: 8rem;
+        right: -2rem;
+        bottom: -4rem;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .image-with-text__symbol {
+        width: 12rem;
+        height: 12rem;
+        right: -5rem;
+        bottom: -5rem;
+    }
+}
+
+
+.image-with-text__symbol svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*------------------------------------*\
+    #Directional Arrow
+\*------------------------------------*/
+
+
+.image-with-text__directional-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-with-text__directional-arrow button {
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    width: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.image-with-text__directional-arrow button:hover,
+.image-with-text__directional-arrow button:focus {
+    transform: translateY(10px);
+}

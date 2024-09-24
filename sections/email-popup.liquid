@@ -1,0 +1,244 @@
+{{ 'component-email-popup.css' | asset_url | stylesheet_tag }}
+{{ 'component-modal.css' | asset_url | stylesheet_tag }}
+
+<modal-email-sign-up id="newsletter-sign-up-modal">
+  <div
+    role="dialog"
+    aria-live="assertive"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    id="buy-near-me-modal"
+    aria-hidden="true"
+    class="modal  modal-email"
+    data-section-id="{{ section.id }}"
+    data-email-popup
+    data-frequency="{{ settings.email_pop_up_frequency }}"
+    data-time-delay="{{ settings.email_pop_up_time_delay }}"
+  >
+    <div class="modal__cover" data-close-modal aria-hidden="true"></div>
+
+    <div class="modal__inner" data-email-popup-swipe>
+      <div class="modal__close">
+        <button aria-label="Close Modal" data-modal-close>
+          <span class="button__text">Close</span>
+          <span class="button__decorative-elem"></span>
+        </button>
+      </div>
+      <div class="modal__content modal-email__content">
+        <div class="modal-email__image">
+          <picture>
+            <source
+              srcset="
+                  {%- if settings.email_popup_image_large.width >= 533 -%}
+                {{ settings.email_popup_image_large | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if settings.email_popup_image_large.width >= 720 -%}
+                        {{ settings.email_popup_image_large | image_url: width: 720 }} 720w,{%- endif -%}
+                        {%- if settings.email_popup_image_large.width >= 800 -%}
+                    {{ settings.email_popup_image_large | image_url: width: 800 }} 800w{%- endif -%}
+              "
+              sizes="(min-width: 1200px) 30vw, 50vw"
+              media="(min-width: 940px)"
+            >
+            <source
+              srcset="
+                  {%- if settings.email_popup_image_small.width >= 165 -%}
+                    {{ settings.email_popup_image_small | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if settings.email_popup_image_small.width >= 360 -%}
+                    {{ settings.email_popup_image_small | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if settings.email_popup_image_small.width >= 533 -%}
+                    {{ settings.email_popup_image_small | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if settings.email_popup_image_small.width >= 720 -%}
+                    {{ settings.email_popup_image_small | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if settings.email_popup_image_small.width >= 800 -%}
+                {{ settings.email_popup_image_small | image_url: width: 800 }} 800w{%- endif -%}
+              "
+              sizes="(min-width: 1200px) 35vw, (min-width: 940px) 30vw, (min-width: 700px) 88vw, 90vw"
+            >
+            <img
+              src="{{ settings.email_popup_image_small | image_url: width: 100, height: 100, width: 200 }}"
+              alt="{{ settings.email_popup_image_small.alt | escape }}"
+              loading="lazy"
+              class="motion-reduce responsive-image"
+              width="500"
+              height="500"
+              aria-hidden="true"
+            >
+          </picture>
+        </div>
+        <div class="modal-email__copy">
+          <div class="modal-email__copy__header">
+            <h1 id="modal-title" class="modal-email__headline">{{ settings.email_popup_headline }}</h1>
+            <div class="modal-email__body">
+              <p>
+                {{ settings.email_popup_body }}
+              </p>
+            </div>
+          </div>
+
+          <div class="modal-email__copy__body">
+            <div class="modal-email__form">
+              <div class="klaviyo-form-Wn3WBQ"></div>
+            </div>
+            <div class="modal-email__disclaimer">
+              {{ settings.email_popup_secondary_body }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</modal-email-sign-up>
+
+{% javascript %}
+  //Inlined for performance
+  class ModalEmailSignUp extends GlobalModal {
+    constructor() {
+      super();
+
+      // Get data attributes
+      this.popUpFrequency = this.dataset.frequency;
+      this.modalSessionCookie = 'first-time-visitor-saw-pop-up';
+      this.timeDelay = this.dataset.timeDelay;
+
+      // Selectors
+      this.selectors = {
+        modalClose: '[data-close-modal]',
+        emailPopup: '[data-email-popup]',
+        emailPopUpImg: '[data-email-popup-image]',
+        signUpButton: '[data-sign-up-button]',
+        hideOnSubmit: '[data-hide-on-submit]',
+      };
+
+      // Event listener for the custom element
+      this.addEventListener('click', (event) => {
+        if (event.target.dataset.emailPopup) {
+          this.showEmailPopup();
+        }
+      });
+
+      // Initialize the popup after the element is created
+      this.initPopup();
+    }
+
+    observeTrigger(elementId, callback, options) {
+      const target = document.querySelector(elementId);
+
+      if (!target) {
+        return;
+      }
+
+      const defaultOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '100px', // No margin
+        threshold: 1, // 50% of the element must be visible
+      };
+
+      const observerOptions = { ...defaultOptions, ...options };
+
+      const intersectionCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback(entry.target);
+            // Optionally, stop observing once the element is visible
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(intersectionCallback, observerOptions);
+
+      observer.observe(target);
+    }
+
+    initPopup() {
+      // Check if the user has already seen the popup
+      if (this.checkPopupDisplay()) {
+        console.log('already seen');
+        return;
+      }
+
+      //Init Swipe behavior
+      this.initSwipeGestures();
+      this.observeTrigger('[data-trigger-pop-up]', this.showEmailPopup.bind(this));
+    }
+
+    initSwipeGestures() {
+      this.swipeDetection = null;
+
+      // Load HAMMER JS Plugin from the Shopify CDN
+      loadScript('https://cdn.shopify.com/s/files/1/0638/6201/4197/files/hammer.min.js?v=1698261229').then(() => {
+        var swipeElement = this.querySelector('[data-email-popup-swipe]');
+        this.swipeDetection = new Hammer(swipeElement);
+
+        this.swipeDetection.get('pinch').set({ enable: true });
+        this.swipeDetection.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+
+        this.swipeDetection.on('swipe', (e) => {
+          console.log(e.direction);
+          if (e.direction === 16) {
+            console.log('close');
+            this.closeModal();
+          }
+        });
+      });
+    }
+
+    checkPopupDisplay() {
+      return false;
+      if (this.popUpFrequency === 'first-timers-only') {
+        return localStorage.getItem(this.modalSessionCookie);
+      } else {
+        return sessionStorage.getItem(this.modalSessionCookie);
+      }
+    }
+
+    showEmailPopup() {
+      if (this.popUpFrequency === 'first-timers-only') {
+        sessionStorage.removeItem(this.modalSessionCookie);
+        localStorage.setItem(this.modalSessionCookie, 'true');
+      } else {
+        sessionStorage.setItem(this.modalSessionCookie, 'true');
+        localStorage.removeItem(this.modalSessionCookie);
+      }
+
+      this.animCtrl = null;
+      this.imageEntryAnim = null;
+      let timeDelay = parseInt(this.timeDelay);
+
+      setTimeout(() => {
+        this.openModal();
+      }, timeDelay);
+    }
+
+    setUpPopup() {
+      const form = document.querySelector('[data-newsletter-form]');
+
+      if (form) {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          this.handleFormSubmit(form);
+        });
+      }
+    }
+
+    handleFormSubmit(form) {
+      setTimeout(() => {
+        const successResponse = document.querySelector('#mce-success-response');
+        if (successResponse && this.checkIfFormFilled(form)) {
+          const hideOnSubmitElements = document.querySelectorAll(this.selectors.hideOnSubmit);
+          hideOnSubmitElements.forEach((element) => {
+            element.style.display = 'none';
+          });
+          successResponse.style.margin = '0';
+        }
+      }, 200);
+    }
+
+    checkIfFormFilled(form) {
+      return form.checkValidity();
+    }
+  }
+
+  // Define the custom HTML element
+  customElements.define('modal-email-sign-up', ModalEmailSignUp);
+{% endjavascript %}

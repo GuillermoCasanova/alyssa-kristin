@@ -1,0 +1,147 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<section
+  class="
+    image-with-text custom-section  {% if section.settings.orientation == 'left_to_right' %}
+    is-left-to-right
+    {% else %}
+    is-right-to-left
+    {% endif %}
+  "
+>
+  <div class="image-with-text__inner page-width">
+    <div class="image-with-text__image">
+      {% if section.settings.show_symbol and section.settings.orientation != 'right_to_left' %}
+        <div class="image-with-text__symbol">
+          <svg>
+            <use href="#illust-flower-default"/>
+          </svg>
+        </div>
+      {% endif %}
+      <div class="image-with-text__image__inner">
+        <img
+          class="responsive-image"
+          src="{{ section.settings.image | image_url: width: 600 }}"
+          alt="Section Image"
+          width="500"
+          height="auto"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+    <div class="image-with-text__copy">
+      <div class="image-with-text__copy__inner">
+        <h2
+          class="
+              image-with-text__copy__heading   {% if section.settings.headline_style == 'style_1' %}
+                is-style-1
+            {% else %}nas
+                is-style-2
+              {% endif %}
+          "
+        >
+          {{ section.settings.headline }}
+        </h2>
+
+        <div class="image-with-text__copy__body">
+          {{ section.settings.richtext }}
+        </div>
+        {% if section.settings.show_directional_arrow == true %}
+          <directional-arrow class="image-with-text__directional-arrow">
+            <button>
+              <svg>
+                <use href="#directional-arrow"></use>
+              </svg>
+              <span class="visually-hidden"> Scroll to next section </span>
+            </button>
+          </directional-arrow>
+          <script type="module" src="{{ 'component-directional-arrow.js' | asset_url }}" defer="defer"></script>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image With Text",
+  "templates": ["index", "product", "page"],
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image",
+      "info": "Select an image for the section."
+    },
+    {
+      "type": "text",
+      "label": "Headline",
+      "id": "headline",
+      "default": "Your Headline",
+      "info": "Enter a headline for the section."
+    },
+    {
+      "type": "richtext",
+      "label": "Rich Text",
+      "id": "richtext",
+      "default": "<p>Your rich text content here.</p>",
+      "info": "Enter rich text content for the section."
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Symbol",
+      "id": "show_symbol",
+      "default": true,
+      "info": "Toggle to show/hide the symbol input."
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Directional Arrow",
+      "id": "show_directional_arrow",
+      "default": false,
+      "info": "Toggle to show/hide the arrow that if clicked scrolls to the next section."
+    },
+    {
+      "type": "select",
+      "label": "Headline Style",
+      "id": "headline_style",
+      "options": [
+        {
+          "value": "style_1",
+          "label": "Style 1"
+        },
+        {
+          "value": "style_2",
+          "label": "Style 2"
+        }
+      ],
+      "default": "style_1",
+      "info": "Select the headline style for the section."
+    },
+    {
+      "type": "select",
+      "label": "Orientation",
+      "id": "orientation",
+      "options": [
+        {
+          "value": "left_to_right",
+          "label": "Left to Right"
+        },
+        {
+          "value": "right_to_left",
+          "label": "Right to Left"
+        }
+      ],
+      "default": "left_to_right",
+      "info": "Select the orientation for the section."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Text",
+      "category": "section"
+    }
+  ]
+}
+{% endschema %}
