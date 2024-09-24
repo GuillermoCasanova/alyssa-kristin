@@ -35,19 +35,25 @@ image-video-banner {
 
 @media screen and (min-width: 700px) {
   .image-banner__inner {
-    min-width: 42rem;
+    min-height: 50rem;
     padding-bottom: 60%;
   }
 }
 
 
-@media screen and (min-width: 940px) {
-  .image-banner_inner {
-    min-width: 42rem;
-    padding-bottom: 50%;
+@media screen and (min-width: 1280px) {
+  .image-banner__inner {
+    min-height: 42rem;
+    padding-bottom: 48%;
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .image-banner__inner {
+    min-width: 36rem;
+    padding-bottom: 42%;
+  }
+}
 
 .image-banner a:hover .image-banner__cta,
 .image-banner a:focus .image-banner__cta {
