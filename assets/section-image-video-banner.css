@@ -15,12 +15,26 @@ image-video-banner {
 .image-banner {
   position: relative;
   width: 100%;
+}
+
+.image-banner__inner {
+  position: relative;
+  width: 100%;
   padding-bottom: 90%;
+  margin-bottom: var(--level10);
 }
 
 
+@media only screen and (min-width: 940px) {
+  .image-banner__inner {
+    margin-bottom: calc(var(--level10) * 2);
+  }
+}
+
+
+
 @media screen and (min-width: 700px) {
-  .image-banner {
+  .image-banner__inner {
     min-width: 42rem;
     padding-bottom: 60%;
   }
@@ -28,7 +42,7 @@ image-video-banner {
 
 
 @media screen and (min-width: 940px) {
-  .image-banner {
+  .image-banner_inner {
     min-width: 42rem;
     padding-bottom: 50%;
   }

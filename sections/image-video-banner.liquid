@@ -1,92 +1,7 @@
-{% comment %} {{ 'section-image-video-banner.css' | asset_url | stylesheet_tag }} {% endcomment %}
-
-{% style %}
-  /*------------------------------------*\
-    #Image Video Banner  (inlined for performance)
-\*------------------------------------*/
-
-  image-video-banner {
-    display: block;
-  }
-
-  .image-banner-container {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    background-color: rgb(var(--color-base-background-2));
-  }
-
-  .image-banner {
-    position: relative;
-    width: 100%;
-    padding-bottom: 90%;
-  }
-
-  @media screen and (min-width: 700px) {
-    .image-banner {
-      min-width: 42rem;
-      padding-bottom: 60%;
-    }
-  }
-
-  @media screen and (min-width: 940px) {
-    .image-banner {
-      min-width: 42rem;
-      padding-bottom: 48%;
-    }
-  }
-
-  @media screen and (min-width: 1800px) {
-    .image-banner {
-      min-width: 42rem;
-      padding-bottom: 44%;
-    }
-  }
-
-  .image-banner a:hover .image-banner__cta,
-  .image-banner a:focus .image-banner__cta {
-    opacity: 1;
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .image-banner__media {
-    width: 100%;
-    height: 100%;
-  }
-
-  .image-banner video {
-    opacity: 0;
-  }
-
-  .image-banner video.is-loaded {
-    animation: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-
-  .image-banner__media__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .image-banner__content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-  }
-{% endstyle %}
+{{ 'section-image-video-banner.css' | asset_url | stylesheet_tag }}
 
 <image-video-banner id="Banner-{{ section.id }}" class="image-banner">
-  <div data-banner-media>
+  <section class="image-banner__inner" data-banner-media>
     <div class="image-banner__media">
       {% if section.settings.image != blank %}
         <img
@@ -126,7 +41,7 @@
         </video>
       {% endif %}
     </div>
-  </div>
+  </section>
 </image-video-banner>
 
 <script src="{{ 'image-video-banner.js' | asset_url }}" defer="defer"></script>

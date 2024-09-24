@@ -1,22 +1,60 @@
+<style>
+  @media screen and (min-width: 940px) {
+    .collection-thumb-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: calc(var(--level10) + var(--level2));
+    }
+  }
+
+  .collection-thumb__image {
+    position: relative;
+    padding-bottom: 130%;
+    display: block;
+    margin-bottom: var(--level4);
+  }
+
+  .collection-thumb__info {
+    text-align: center;
+  }
+  .collection-thumb__info__title {
+    text-align: center;
+    font-family: var(--secondary-font-family);
+    margin-bottom: var(--level7);
+    font-size: var(--h2);
+  }
+</style>
+
 <!-- sections/featured-collections.liquid -->
 <section id="featured-collections" class="featured-collections">
-  <div class="container">
-    <div class="row">
+  <div class="featured-collections__inner page-width">
+    <div class="collection-thumb-list">
       {% for block in section.blocks %}
         {% if block.type == 'collection' %}
           {% assign collection = block.settings.collection %}
           {% if collection %}
-            <div class="col-12 col-md-4">
-              <div class="collection-block">
-                <a href="{{ collection.url }}">
-                  <img
-                    src="{{ collection.image | img_url: 'medium' }}"
-                    alt="{{ collection.title }}"
-                    width="300"
-                    height="300"
-                  >
-                  <h2>{{ collection.title }}</h2>
+            <div class="collection-thumb">
+              <div class="collection-thumb__inner">
+                <a href="{{ collection.url }}" class="collection-thumb__image">
+                  <div class="collection-thumb__image__inner">
+                    <img
+                      src="{{ collection.image | img_url: 'medium' }}"
+                      alt="{{ collection.title }}"
+                      width="300"
+                      height="300"
+                      class="responsive-image"
+                    >
+                  </div>
                 </a>
+                <div class="collection-thumb__info">
+                  <h2 class="collection-thumb__info__title">{{ collection.title }}</h2>
+                  <a
+                    href="{{ collection.url }}"
+                    class="collection-thumb__info__cta button button--primary button--medium"
+                  >
+                    Explore More
+                  </a>
+                </div>
               </div>
             </div>
           {% endif %}

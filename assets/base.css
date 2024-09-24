@@ -365,7 +365,7 @@ section {
 
 @media only screen and (min-width: 940px) {
   section {
-    padding-bottom: calc(var(--level7) * 2);
+    padding-bottom: calc(var(--level10) * 2);
   }
 }
 
@@ -1196,8 +1196,7 @@ textarea:focus {
 button,
 .button {
   align-items: center;
-  border-radius: 8px;
-  display: flex;
+  display: inlin-block;
   font-family: var(--primary-font-family);
   justify-content: center;
   line-height: 1;
@@ -1205,7 +1204,7 @@ button,
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  width: 100%;
+  width: auto;
   text-decoration: none;
 }
 
@@ -1221,9 +1220,9 @@ button:hover,
 }
 
 .button--primary {
-  background-color: rgb(var(--color-base-background-2));
   border: 1px solid rgb(var(--color-base-text));
-  color: rgb(var(--color-base-text-2));
+  color: rgb(var(--color-base-text-1));
+  border-bottom: 2px solid rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
   letter-spacing: .5px;
 }
