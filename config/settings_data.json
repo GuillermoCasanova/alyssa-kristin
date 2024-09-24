@@ -139,7 +139,7 @@
           "mobile_menu_primary": "main-menu",
           "mobile_menu_secondary": "",
           "menu": "main-menu",
-          "sticky_header_type": "on-scroll-up",
+          "sticky_header_type": "always",
           "show_line_separator": true,
           "enable_country_selector": false,
           "enable_language_selector": false
