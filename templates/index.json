@@ -66,12 +66,6 @@
         "trigger_email_popup": true
       }
     },
-    "video_section_dy89XM": {
-      "type": "video-section",
-      "settings": {
-        "heading": "Introductory Video"
-      }
-    },
     "1fb290d3-1160-424c-8641-e536b754d192": {
       "type": "content-slideshow",
       "blocks": {
@@ -108,35 +102,6 @@
         "trigger_email_popup": false
       }
     },
-    "2bb814ef-d55a-470e-bc5c-8bf06b1dfe81": {
-      "type": "recipes-featured",
-      "blocks": {
-        "recipe_card_XFYWpC": {
-          "type": "recipe_card",
-          "settings": {
-            "recipe_post": "recipes/macunaima"
-          }
-        },
-        "recipe_card_icAL9G": {
-          "type": "recipe_card",
-          "settings": {
-            "recipe_post": "recipes/macunaima-1"
-          }
-        }
-      },
-      "block_order": [
-        "recipe_card_XFYWpC",
-        "recipe_card_icAL9G"
-      ],
-      "settings": {
-        "headline": "Recipes",
-        "subline": "Our Cocktails",
-        "cta_url": "shopify://blogs/news",
-        "top_border": "no",
-        "bottom_border": "yes",
-        "trigger_email_popup": false
-      }
-    },
     "1655920347d426af19": {
       "type": "instagram-feed",
       "settings": {
@@ -145,23 +110,12 @@
         "bottom_border": "yes",
         "trigger_email_popup": false
       }
-    },
-    "2f73c840-9de8-4701-aed1-27c8e0d14e8e": {
-      "type": "floating-shop-button",
-      "settings": {
-        "button_text": "Order",
-        "button_link": "shopify://products/prata",
-        "is_active": true
-      }
     }
   },
   "order": [
     "image_banner",
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
-    "video_section_dy89XM",
     "1fb290d3-1160-424c-8641-e536b754d192",
-    "2bb814ef-d55a-470e-bc5c-8bf06b1dfe81",
-    "1655920347d426af19",
-    "2f73c840-9de8-4701-aed1-27c8e0d14e8e"
+    "1655920347d426af19"
   ]
 }
