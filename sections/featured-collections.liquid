@@ -1,0 +1,49 @@
+<!-- sections/featured-collections.liquid -->
+<section id="featured-collections" class="featured-collections">
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        {% if block.type == 'collection' %}
+          {% assign collection = block.settings.collection %}
+          {% if collection %}
+            <div class="col-12 col-md-4">
+              <div class="collection-block">
+                <a href="{{ collection.url }}">
+                  <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+                  <h2>{{ collection.title }}</h2>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collections",
+      "category": "Custom"
+    }
+  ],
+  "limit": 3
+}
+{% endschema %}
