@@ -28,6 +28,36 @@
         "video": ""
       }
     },
+    "featured_collections_hmLHtr": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_qB4cqN": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "collection_p4QFgg": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "collection_bWQi4N": {
+          "type": "collection",
+          "settings": {
+            "collection": "little-white-dress"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qB4cqN",
+        "collection_p4QFgg",
+        "collection_bWQi4N"
+      ],
+      "settings": {
+      }
+    },
     "a91f73fa-9991-492c-bca6-4dfe59bea098": {
       "type": "brand-intro",
       "settings": {
@@ -36,9 +66,9 @@
         "body": "<p>Designed and Handmade in Chicago. Just as every one of our brides is unique, distinct, intelligent, and sophisticated in her own way; so is each gown. Each piece is thoughtfully crafted to accentuate a distinct element, whether a dramatic train, a plunging hand draped neckline, or an iconic side slit. </p>",
         "cta_text": "Explore More",
         "cta_url": "shopify://blogs/all",
-        "top_border": "yes",
-        "bottom_border": "yes",
-        "trigger_email_popup": true
+        "top_border": "no",
+        "bottom_border": "no",
+        "trigger_email_popup": false
       }
     },
     "1fb290d3-1160-424c-8641-e536b754d192": {
@@ -85,36 +115,6 @@
         "top_border": "no",
         "bottom_border": "yes",
         "trigger_email_popup": false
-      }
-    },
-    "featured_collections_hmLHtr": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_qB4cqN": {
-          "type": "collection",
-          "settings": {
-            "collection": "accessories"
-          }
-        },
-        "collection_p4QFgg": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "collection_bWQi4N": {
-          "type": "collection",
-          "settings": {
-            "collection": "little-white-dress"
-          }
-        }
-      },
-      "block_order": [
-        "collection_qB4cqN",
-        "collection_p4QFgg",
-        "collection_bWQi4N"
-      ],
-      "settings": {
       }
     }
   },
