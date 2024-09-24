@@ -86,10 +86,41 @@
         "bottom_border": "yes",
         "trigger_email_popup": false
       }
+    },
+    "featured_collections_hmLHtr": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_qB4cqN": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "collection_p4QFgg": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "collection_bWQi4N": {
+          "type": "collection",
+          "settings": {
+            "collection": "little-white-dress"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qB4cqN",
+        "collection_p4QFgg",
+        "collection_bWQi4N"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
+    "featured_collections_hmLHtr",
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
     "1fb290d3-1160-424c-8641-e536b754d192",
     "1655920347d426af19"
