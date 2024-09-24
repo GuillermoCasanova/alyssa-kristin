@@ -50,57 +50,7 @@
       });
     }
 
-    initLoadingAnim() {
-      //this.loadScript('https://cdn.shopify.com/s/files/1/0638/6201/4197/files/snap.min.js?v=1723921929')
-        .then(() => {
-          this.loadingAnimationId = null;
-          this.loadingAnimDisabled = false;
-
-          var svg = this.querySelector('svg');
-          var s = Snap(svg);
-          this.masterFlower = s.select('#first-stage');
-          var fancyCup = s.select('#second-stage');
-          var thirdStage = s.select('#third-stage');
-
-          var firstFlowerPoints = this.masterFlower.node.getAttribute('d');
-          var secondFlowerPoints = fancyCup.node.getAttribute('d');
-          var thirdFlowerPoints = thirdStage.node.getAttribute('d');
-
-          const animate = (from, to, duration, callback) => {
-            this.loadingAnimationId = this.masterFlower.animate({ d: to }, duration, mina.easeinout, callback);
-          };
-
-          const endAnimationSequence = () => {
-            animate(firstFlowerPoints, firstFlowerPoints, 800, this.masterFlower.stop);
-          };
-
-          const animateSequence = () => {
-            if (this.loadingAnimDisabled) {
-              endAnimationSequence();
-              return;
-            }
-
-            animate(firstFlowerPoints, secondFlowerPoints, 800, () => {
-              if (this.loadingAnimDisabled) {
-                endAnimationSequence();
-                return;
-              }
-              animate(secondFlowerPoints, thirdFlowerPoints, 800, () => {
-                if (this.loadingAnimDisabled) {
-                  endAnimationSequence();
-                  return;
-                }
-                animate(thirdFlowerPoints, firstFlowerPoints, 800, animateSequence);
-              });
-            });
-          };
-
-          animateSequence();
-        })
-        .catch((error) => {
-          console.error('Script loading failed! Handle this error');
-        });
-    }
+    initLoadingAnim() {}
 
     pauseLoadingAnim() {
       if (this.loadingAnimationId) {
