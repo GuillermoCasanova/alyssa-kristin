@@ -105,36 +105,40 @@
           {%- endif -%}
         </li>
       {%- endfor -%}
-      <li>
-        <a
-          class="header__cart-button header__menu-item focus-inset"
-          ref="{{ routes.cart_url }}"
-          id="cart-icon-bubble"
-          data-cart-toggle
-          aria-expanded="false"
-        >
-          <span data-cart-toggle-text class="header__cart-button__text">{{ 'templates.cart.cart' | t }}</span>
-          <div
-            data-cart-count-bubble
-            class="cart-count-bubble {% if cart.item_count == 0 %}is-hidden{% endif %}"
+      {% comment %}
+        <li>
+          <a
+            class="header__cart-button header__menu-item focus-inset"
+            ref="{{ routes.cart_url }}"
+            id="cart-icon-bubble"
+            data-cart-toggle
+            aria-expanded="false"
           >
-            <span aria-hidden="true" data-cart-count>
-              {{ cart.item_count }}
-            </span>
-            <span class="visually-hidden" data-cart-count-aria>
-              {%- if cart.item_count > 0 -%}
-                {{ 'sections.header.cart_count' | t: count: cart.item_count }}
-              {%- endif -%}
-            </span>
-          </div>
-        </a>
-      </li>
+            <span data-cart-toggle-text class="header__cart-button__text">{{ 'templates.cart.cart' | t }}</span>
+            <div
+              data-cart-count-bubble
+              class="cart-count-bubble {% if cart.item_count == 0 %}is-hidden{% endif %}"
+            >
+              <span aria-hidden="true" data-cart-count>
+                {{ cart.item_count }}
+              </span>
+              <span class="visually-hidden" data-cart-count-aria>
+                {%- if cart.item_count > 0 -%}
+                  {{ 'sections.header.cart_count' | t: count: cart.item_count }}
+                {%- endif -%}
+              </span>
+            </div>
+          </a>
+        </li>
+      {% endcomment %}
     </ul>
   </nav>
-  <localization-form class="no-js-hidden  show-for-large-up">
-    <h2 class="visually-hidden" id="HeaderCountryLabel">
-      {{ 'localization.language_label' | t }}
-    </h2>
-    {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-  </localization-form>
+  {% comment %}
+    <localization-form class="no-js-hidden  show-for-large-up">
+      <h2 class="visually-hidden" id="HeaderCountryLabel">
+        {{ 'localization.language_label' | t }}
+      </h2>
+      {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
+    </localization-form>
+  {% endcomment %}
 {%- endif -%}
