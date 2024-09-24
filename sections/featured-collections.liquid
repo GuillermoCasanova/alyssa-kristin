@@ -7,11 +7,25 @@
     }
   }
 
+  .collection-thumb {
+    margin-bottom: calc(var(--level10) + var(--level3));
+  }
+
+  @media screen and (min-width: 940px) {
+    .collection-thumb {
+      margin-bottom: 0;
+    }
+  }
+
   .collection-thumb__image {
+    margin-bottom: var(--level7);
+    display: block;
+  }
+
+  .collection-thumb__image__inner {
     position: relative;
     padding-bottom: 130%;
     display: block;
-    margin-bottom: var(--level4);
   }
 
   .collection-thumb__info {
@@ -38,11 +52,22 @@
                 <a href="{{ collection.url }}" class="collection-thumb__image">
                   <div class="collection-thumb__image__inner">
                     <img
-                      src="{{ collection.image | img_url: 'medium' }}"
-                      alt="{{ collection.title }}"
-                      width="300"
-                      height="300"
-                      class="responsive-image"
+                      srcset="
+                        {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if collection.image.width >= 533 -%}{{ collection.image | image_url: width: 533 }} 533w,{%- endif -%}
+                        {%- if collection.image.width >= 720 -%}{{ collection.image | image_url: width: 720 }} 720w,{%- endif -%}
+                        {%- if collection.image.width >= 940 -%}{{ collection.image | image_url: width: 940 }} 940w,{%- endif -%}
+                        {{ collection.image | image_url }} {{ collection.image.width }}w
+                      "
+                      src="{{ collection.image | image_url: width: 533 }}"
+                      sizes="(min-width: 940px) 30vw, 50vw"
+                      alt="{{ collection.image.alt | escape }}"
+                      class="motion-reduce responsive-image"
+                      aria-hidden="true"
+                      loading="lazy"
+                      width="{{ collection.image.width }}"
+                      height="{{ collection.image.height }}"
                     >
                   </div>
                 </a>
