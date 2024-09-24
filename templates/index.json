@@ -72,14 +72,6 @@
     },
     "video_section_dy89XM": {
       "type": "video-section",
-      "blocks": {
-        "video_shopify_hosted_fD3pc7": {
-          "type": "video-shopify-hosted",
-          "settings": {
-            "video_asset": "shopify:\/\/files\/videos\/ajornada-desktop-compressed.mp4"
-          }
-        }
-      },
       "block_order": [
         "video_shopify_hosted_fD3pc7"
       ],
