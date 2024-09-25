@@ -151,15 +151,30 @@
         "blocks": {
           "footer-0": {
             "type": "link_list",
-            "disabled": true,
             "settings": {
               "heading": "Quick links",
               "menu": "footer"
             }
+          },
+          "social_media_nzfap3": {
+            "type": "social_media",
+            "settings": {
+              "heading": "Follow Us"
+            }
+          },
+          "contact_emails_bLiDWP": {
+            "type": "contact_emails",
+            "settings": {
+              "heading": "Contact Us",
+              "general_email": "info@ajornada.com",
+              "orders_email": "help@ajornada.com"
+            }
           }
         },
         "block_order": [
-          "footer-0"
+          "footer-0",
+          "social_media_nzfap3",
+          "contact_emails_bLiDWP"
         ],
         "settings": {
           "newsletter_enable": true,
