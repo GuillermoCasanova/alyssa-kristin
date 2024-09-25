@@ -85,6 +85,7 @@
   .footer__blocks {
     grid-area: links;
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
 }
 
@@ -140,15 +141,12 @@
   grid-template-columns: 1fr;
   margin-bottom: var(--level6);
   justify-items: left;
-  color
 }
 
 @media only screen and (min-width: 940px) {
   .footer__block__links-list {
     display: block;
-    columns: 3;
-    column-width: 15rem;
-  }
+  } /* Added closing brace */
 }
 
 
@@ -195,7 +193,6 @@
 .footer__block__link:hover,
 .footer__block__link:focus {
   text-decoration: underline;
-  color: var(--color-base-accent);
 }
 
 .footer__block__link:active {
