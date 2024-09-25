@@ -9,106 +9,100 @@
 */
 {
   "sections": {
+    "image_video_banner_XmEgnA": {
+      "type": "image-video-banner",
+      "blocks": {
+        "heading_PRxGNh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PRxGNh"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image-test.png",
+        "video": ""
+      }
+    },
     "main": {
       "type": "faqs",
       "blocks": {
         "97e89cb5-05ca-478d-853d-cfd51f98b511": {
           "type": "faq_block",
           "settings": {
-            "question": "What is cachaça?",
-            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.<\/p>"
+            "question": "How much do your gowns cost?",
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
+          }
+        },
+        "faq_block_TMLN7m": {
+          "type": "faq_block",
+          "settings": {
+            "question": "What sizes do you offer?",
+            "answer": ""
           }
         },
         "e00f2a91-4f7c-4e5a-b9d2-e609293e2cf7": {
           "type": "faq_block",
           "settings": {
-            "question": "How is cachaça different from rum?",
-            "answer": "<p>While both cachaça and rum are made from sugarcane, cachaça is distilled directly from fresh sugarcane juice, whereas rum is typically made from molasses, a byproduct of sugar production.<\/p>"
+            "question": "Do you offer custom gowns?",
+            "answer": "<p>While both cachaça and rum are made from sugarcane, cachaça is distilled directly from fresh sugarcane juice, whereas rum is typically made from molasses, a byproduct of sugar production.</p>"
           }
         },
         "a59fd2a2-e0f2-41c0-83a6-a0340c31b109": {
           "type": "faq_block",
           "settings": {
-            "question": "What does Ajornada cachaça taste like?",
-            "answer": "<p>The taste of cachaça can vary widely depending on the expressions and the individual production process and aging. It can range from light and fruity with a grassy aroma to rich and complex with notes of vanilla, caramel, and wood from barrel aging.<\/p>"
+            "question": "Do you offer modifications?",
+            "answer": "<p>The taste of cachaça can vary widely depending on the expressions and the individual production process and aging. It can range from light and fruity with a grassy aroma to rich and complex with notes of vanilla, caramel, and wood from barrel aging.</p>"
           }
         },
         "07e8ca04-f6ce-4334-9590-a20fef831ea8": {
           "type": "faq_block",
           "settings": {
-            "question": "How do you pronounce cachaça?",
-            "answer": "<p>Cachaça is pronounced kah-SHAH-sah.<\/p>"
+            "question": "Where can I try onaAlyssa Kristin gowns?",
+            "answer": "<p>Cachaça is pronounced kah-SHAH-sah.</p>"
           }
         },
         "faq_block_znR8zw": {
           "type": "faq_block",
           "settings": {
-            "question": "How should I drink cachaça?",
-            "answer": "<p>Cachaça can be enjoyed neat, on the rocks, or as part of a cocktail. The most famous cocktail is the Caipirinha [can \"Caipirinha\" be an active link to the recipe for the caipirinha], made with cachaça, lime, sugar, and ice.<\/p>"
+            "question": "What are some Mikado modifications?",
+            "answer": "<p>Cachaça can be enjoyed neat, on the rocks, or as part of a cocktail. The most famous cocktail is the Caipirinha [can \"Caipirinha\" be an active link to the recipe for the caipirinha], made with cachaça, lime, sugar, and ice.</p>"
           }
         },
-        "faq_block_VEJe7n": {
+        "faq_block_mmb4xj": {
           "type": "faq_block",
           "settings": {
-            "question": "What makes your cachaça brand unique?",
-            "answer": "<p>Our cachaça is crafted using traditional methods, with a focus on quality and authenticity. We source the finest sugarcane and employ artisanal distillation techniques to produce a spirit that embodies the true essence of Brazil.<\/p>"
-          }
-        },
-        "faq_block_DUKgkW": {
-          "type": "faq_block",
-          "settings": {
-            "question": "Where is your cachaça produced?",
-            "answer": "<p>Our cachaça is produced in Minas Gerais, where we have access to high-quality sugarcane and a rich tradition of cachaça making. Also, widely known as the champagne region of cachaça and where cachaça began over 500 years ago.<\/p>"
-          }
-        },
-        "faq_block_CwaXdE": {
-          "type": "faq_block",
-          "settings": {
-            "question": "Is cachaça gluten-free?",
-            "answer": "<p>Yes, cachaça is gluten-free as it is made from sugarcane, which does not contain gluten.<\/p>"
-          }
-        },
-        "faq_block_kXCPHE": {
-          "type": "faq_block",
-          "settings": {
-            "question": "Are there any additives in Ajornada cachaça?",
-            "answer": "<p>No, there are no additives or sugar, of any kind used in the production of Ajornada cachaça.<\/p>"
-          }
-        },
-        "faq_block_nrKxt4": {
-          "type": "faq_block",
-          "settings": {
-            "question": "What cocktails can I make with cachaça?",
-            "answer": "<p>In addition to the classic caipirinha, you can use cachaça in a variety of cocktails such as the Macunaíma, <a href=\"\/blogs\/recipes\/flor-de-jamaica\" target=\"_blank\" title=\"Rabo De Galo\">Rabo de Galo<\/a>, and even in place of rum in drinks like the <a href=\"\/blogs\/recipes\/batida-de-coco-recipe\" target=\"_blank\" title=\"Hemingway Special\">Hemingway Daiquiri<\/a>.<\/p>"
-          }
-        },
-        "faq_block_wUrHfQ": {
-          "type": "faq_block",
-          "settings": {
-            "question": "Where can I buy your cachaça?",
-            "answer": "<p>Ajornda cachaça is available for purchase online here and at select retailers and bars across the U.S. Check our <a href=\"\/pages\/find-us\" target=\"_blank\" title=\"Find Us\">store locator page<\/a> for more information.<\/p>"
+            "question": "What are some crepe modifications?",
+            "answer": ""
           }
         }
       },
       "block_order": [
         "97e89cb5-05ca-478d-853d-cfd51f98b511",
+        "faq_block_TMLN7m",
         "e00f2a91-4f7c-4e5a-b9d2-e609293e2cf7",
         "a59fd2a2-e0f2-41c0-83a6-a0340c31b109",
         "07e8ca04-f6ce-4334-9590-a20fef831ea8",
         "faq_block_znR8zw",
-        "faq_block_VEJe7n",
-        "faq_block_DUKgkW",
-        "faq_block_CwaXdE",
-        "faq_block_kXCPHE",
-        "faq_block_nrKxt4",
-        "faq_block_wUrHfQ"
+        "faq_block_mmb4xj"
       ],
       "settings": {
-        "heading": "Frequently Asked Questions"
+        "heading": "General"
+      }
+    },
+    "faqs_kTYnzW": {
+      "type": "faqs",
+      "settings": {
+        "heading": "AK Studio Gown Appointments"
       }
     }
   },
   "order": [
-    "main"
+    "image_video_banner_XmEgnA",
+    "main",
+    "faqs_kTYnzW"
   ]
 }
