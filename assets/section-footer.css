@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 .footer {
-  background-color: rgb(var(--color-base-background-3));
+  background-color: rgb(var(--color-base-background-2));
   border-top: 1px solid rgb(var(--color-base-text));
-  color: rgb(var(--color-base-text-2))
+  color: rgb(var(--color-base-text-1))
 }
 
 .footer__inner {
