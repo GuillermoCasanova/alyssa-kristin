@@ -179,9 +179,9 @@
     "instagram_feed_TwYz4n": {
       "type": "instagram-feed",
       "settings": {
-        "heading": "",
+        "heading": "Follow us on Instagram",
         "top_border": "no",
-        "bottom_border": "yes",
+        "bottom_border": "no",
         "trigger_email_popup": false
       }
     }
