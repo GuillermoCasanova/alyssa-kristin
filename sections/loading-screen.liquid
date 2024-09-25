@@ -25,7 +25,6 @@
       this.logo = this.querySelector('[data-loader-logo]');
       this.logoSvg = this.querySelector('[data-loader-logo] svg');
       this.ageVerified = localStorage.getItem('ageVerified');
-      this.initLoadingAnim();
     }
 
     connectedCallback() {
@@ -55,7 +54,6 @@
       });
     }
 
-    initLoadingAnim() {}
     pauseLoadingAnim() {
       if (this.loadingAnimationId) {
         this.loadingAnimDisabled = true;
@@ -110,35 +108,7 @@
     }
 
     startLoadedAnim() {
-      if (this.ageVerified) {
-        this.playFadeOutAnim();
-      } else {
-        this.alertAgeModal();
-        let tl = gsap.timeline();
-        this.style.pointerEvents = 'none';
-        this.pauseLoadingAnim();
-        tl.to(
-          this,
-          {
-            backgroundColor: 'transparent',
-            ease: 'none',
-            duration: 1,
-            ease: 'power1.inOut',
-          },
-          '+=.5'
-        );
-        tl.to(
-          this.logo,
-          {
-            bottom: '.5rem',
-            top: 'auto',
-            scale: 0.7,
-            duration: 0.8,
-            ease: 'power1.inOut',
-          },
-          '-=1'
-        );
-      }
+      this.playFadeOutAnim();
     }
 
     fadeInTransiton() {

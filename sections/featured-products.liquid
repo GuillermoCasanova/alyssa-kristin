@@ -1,0 +1,102 @@
+{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}
+
+<section class="featured-products">
+  <div class="featured-products__inner page-width is-x-small">
+    <div class="featured-products__header">
+      <h2 class="featured-products__heading">
+        {{ section.settings.heading }}
+      </h2>
+    </div>
+    <tab-panel>
+      <div class="tab-panel__header" role="tablist">
+        <button class="tab-panel__button" role="tab" aria-selected="true" aria-controls="tab1" id="tabButton1">
+          {{ section.settings.product_name_1 }}
+        </button>
+        <button class="tab-panel__button" role="tab" aria-selected="false" aria-controls="tab2" id="tabButton2">
+          {{ section.settings.product_name_2 }}
+        </button>
+      </div>
+
+      <div role="tabpanel" class="tab" id="tab1" aria-labelledby="tabButton1">
+        <ajax-loaded-product>
+          <div data-featured-product data-url="{{ section.settings.product_url_1 }}"></div>
+        </ajax-loaded-product>
+      </div>
+
+      <div role="tabpanel" class="tab" id="tab2" aria-labelledby="tabButton2" hidden>
+        <ajax-loaded-product>
+          <div data-featured-product data-url="{{ section.settings.product_url_2 }}"></div>
+        </ajax-loaded-product>
+      </div>
+    </tab-panel>
+  </div>
+</section>
+
+<script src="{{ 'tab-panel.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'ajax-loaded-product.js' | asset_url }}" defer="defer"></script>
+
+<script>
+  window.addEventListener('load', () => {
+    function initYotpoWidgets() {
+      if (typeof yotpoWidgetsContainer !== 'undefineed') {
+        yotpoWidgetsContainer.initWidgets();
+      }
+
+      setTimeout(initYotpoWidgets, 3000);
+    }
+    initYotpoWidgets();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading",
+      "info": "The heading for this section.",
+      "default": "Lorem Ipsum"
+    },
+    {
+      "type": "header",
+      "content": "Featured Products"
+    },
+    {
+      "type": "text",
+      "label": "Product Name",
+      "id": "product_name_1",
+      "info": "The name that will display for the tab.",
+      "default": "Product 1"
+    },
+    {
+      "type": "url",
+      "id": "product_url_1",
+      "label": "Product 1",
+      "info": "Enter the url for the first product here."
+    },
+    {
+      "type": "text",
+      "label": "Product Name",
+      "id": "product_name_2",
+      "info": "The name that will display for the tab.",
+      "default": "Product 2"
+    },
+    {
+      "type": "url",
+      "id": "product_url_2",
+      "label": "Product 2",
+      "info": "Enter the url for the second product here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}

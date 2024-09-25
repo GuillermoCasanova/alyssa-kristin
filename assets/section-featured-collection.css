@@ -1,166 +1,132 @@
+
 /*------------------------------------*\
     #Featured Collection
 \*------------------------------------*/
 
-.featured-collection-section {
-    background-color: rgb(var(--color-base-background-2));
-    margin-bottom: 0;
-    padding-bottom: var(--level7);
+.featured-collection custom-slideshow {
+    display: block;
+    width: 100%; 
 }
 
-@media screen and (min-width: 940px) {
-    .featured-collection-section {
-        padding-bottom: var(--level10);
-    }
+.featured-collection__header {
+    margin-bottom: var(--level6); 
+}
+.featured-collection__heading {
+    text-transform: uppercase;
+    font-family: var(--secondary-font-family); 
+    font-size: var(--h1);
+    text-align: center;
+    margin-bottom: var(--level1); 
 }
 
-.featured-collection-section__inner {
-    padding-left: var(--level7);
-    padding-right: var(--level7);
-    padding-top: var(--level8);
-}
-
-@media screen and (min-width: 940px) {
-    .featured-collection-section__inner {
-        padding-top: calc(var(--level10) + var(--level2));
-    }
-}
-
-.featured-collection-section__copy {
+.featured-collection__description {
+    font-size: var(--h6); 
     text-align: center;
 }
 
-.featured-collection-section__copy__heading {
-    font-family: var(--tertiary-font-family);
-    font-size: var(--h3);
-    max-width: 21rem;
-    margin-bottom: var(--level7);
-    margin-right: auto;
-    margin-left: auto;
+@media screen and (min-width: 700px) {
+    .featured-collection__products-list {
+        display: flex;
+        width: 100%; 
+        gap: var(--level10);
+    }
+
+    .featured-collection__products-list.no-slideshow  {
+        max-width: var(--max-width-large);
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    
+}
+
+
+@media screen and (min-width: 700px) {
+    .featured-collection__products-list.no-slideshow  .featured-collection__products__item {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Swiper
+\*------------------------------------*/
+
+
+.featured-collection .swiper-container {
+    max-width: 65%;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: var(--level6); 
+}
+
+
+@media screen and (min-width: 700px) {
+    .featured-collection .swiper-container {
+        max-width: 80%;
+    }
 }
 
 @media screen and (min-width: 940px) {
-    .featured-collection-section__copy__heading {
+    .featured-collection .swiper-container {
         max-width: 100%;
-        margin-bottom: var(--level9);
-        font-size: var(--h2);
+        margin-left: 0; 
+        margin-right: 0; 
+        max-width: auto;
     }
-}
 
-.featured-collection-section__copy__body {
-    font-size: var(--normal);
-    max-width: 29rem;
-    margin-bottom: var(--level6);
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-@media screen and (min-width: 700px) {
-    .featured-collection-section__copy__body {
-        max-width: 31rem;
-    }
-}
-
-@media screen and (min-width: 940px) {
-    .featured-collection-section__copy__body {
-        max-width: 60rem;
-        margin-bottom: var(--level10);
-        font-size: var(--h5);
+    .featured-collection .swiper-wrapper {
     }
 }
 
 
-.featured-collection-section__copy__cta {
-    margin-bottom: var(--level7);
+
+.featured-collection .swiper-pagination.swiper-pagination-bullets {
+    bottom: -1.5rem; 
+    z-index: 0;
 }
 
-@media screen and (min-width: 700px) {
-    .featured-collection-section__copy__cta {
-        margin-bottom: var(--level7);
-    }
+.featured-collection .swiper-pagination-bullet {
+    border: 2px solid rgb(var(--color-base-text-1)); 
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    opacity: 1;
 }
 
-
-@media screen and (min-width: 940px) {
-    .featured-collection-section__copy__cta {
-        margin-bottom: var(--level10);
-    }
+.featured-collection .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: rgb(var(--color-base-text-2));
 }
 
-.featured-collection-section__copy__cta a {
-    font-size: var(--h5);
+.featured-collection .swiper-button-next:after,
+.featured-collection .swiper-button-prev:after {
+    content:"";
+
 }
 
-@media screen and (min-width: 940px) {
-    .featured-collection-section__copy__cta a {
-        font-size: var(--h4);
-    }
-}
-
-
-.featured-collection-section__images {
-    width: 100%;
-    display: grid;
-    max-width: 21rem;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media screen and (min-width: 700px) {
-    .featured-collection-section__images {
-        display: grid;
-        max-width: 100%;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: var(--level4);
-        max-width: 67rem;
-    }
-}
-
-@media screen and (min-width: 940px) {
-    .featured-collection-section__images {
-        column-gap: var(--level7);
-        max-width: 97rem;
-    }
-}
-
-
-.featured-collection-section__images__image {
-    position: relative;
-    padding-bottom: 140%;
-    background-color: rgb(var(--color-base-background-3));
-}
-
-
-@media screen and (min-width: 700px) {
-    .featured-collection-section__images__image {
-        padding-bottom: 155%;
-    }
-}
-
-.featured-collection-section__images .featured-collection-section__images__image-container:first-child {
-    display: none;
-}
-
-@media screen and (min-width: 700px) {
-    .featured-collection-section__images .featured-collection-section__images__image-container:first-child {
-        display: block;
-    }
-}
-
-.featured-collection-section__images .featured-collection-section__images__image-container:last-child {
-    display: none;
-}
-
-@media screen and (min-width: 700px) {
-    .featured-collection-section__images .featured-collection-section__images__image-container:last-child {
-        display: block;
-    }
-}
-
-.featured-collection-section__images__image img {
+.featured-collection .swiper-button-next,
+.featured-collection .swiper-button-prev {
+    bottom: -2rem; 
+    top: auto; 
     position: absolute;
+    color: rgb(var(--color-base-text-1));
+    z-index: 0; 
+}
+
+.featured-collection .swiper-button-next svg,
+.featured-collection .swiper-button-prev svg {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+}
+.featured-collection .swiper-button-next {
+    right: -3rem; 
+    width: 3.5rem; 
+    left: auto; 
+}
+
+.featured-collection .swiper-button-prev {
+    left: -3rem; 
+    width: 3.5rem; 
+    right: auto; 
 }
