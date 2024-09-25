@@ -175,11 +175,21 @@
       "settings": {
         "heading": "AK Studio Gown Appointments"
       }
+    },
+    "instagram_feed_TwYz4n": {
+      "type": "instagram-feed",
+      "settings": {
+        "heading": "",
+        "top_border": "no",
+        "bottom_border": "yes",
+        "trigger_email_popup": false
+      }
     }
   },
   "order": [
     "image_video_banner_XmEgnA",
     "main",
-    "faqs_kTYnzW"
+    "faqs_kTYnzW",
+    "instagram_feed_TwYz4n"
   ]
 }
