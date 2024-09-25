@@ -71,6 +71,16 @@
         "trigger_email_popup": false
       }
     },
+    "featured_collection_7NitaA": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "cta-url": "shopify://collections/best-sellers",
+        "top_border": "no",
+        "bottom_border": "no"
+      }
+    },
     "1fb290d3-1160-424c-8641-e536b754d192": {
       "type": "content-slideshow",
       "blocks": {
@@ -113,18 +123,8 @@
       "settings": {
         "heading": "Follow Us",
         "top_border": "no",
-        "bottom_border": "yes",
+        "bottom_border": "no",
         "trigger_email_popup": false
-      }
-    },
-    "featured_collection_7NitaA": {
-      "type": "featured-collection",
-      "settings": {
-        "heading": "",
-        "body": "",
-        "cta-url": "shopify://collections/accessories",
-        "top_border": "no",
-        "bottom_border": "yes"
       }
     }
   },
@@ -132,8 +132,8 @@
     "image_banner",
     "featured_collections_hmLHtr",
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
+    "featured_collection_7NitaA",
     "1fb290d3-1160-424c-8641-e536b754d192",
-    "1655920347d426af19",
-    "featured_collection_7NitaA"
+    "1655920347d426af19"
   ]
 }
