@@ -165,6 +165,7 @@
           },
           "social_media_nzfap3": {
             "type": "social_media",
+            "disabled": true,
             "settings": {
               "heading": "Follow Us"
             }
