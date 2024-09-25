@@ -22,10 +22,6 @@
   border-bottom: 2px solid black;
 }
 
-.product-card .media {
-  border-radius: 20px;
-}
-
 .product-card:hover .media img:first-child,
 .product-card:focus .media img:first-child {
   opacity: 1;
