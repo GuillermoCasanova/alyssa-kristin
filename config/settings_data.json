@@ -149,6 +149,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "link_list_pagyyM": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick Links",
+              "menu": "main-menu"
+            }
+          },
           "footer-0": {
             "type": "link_list",
             "settings": {
@@ -164,6 +171,7 @@
           },
           "contact_emails_bLiDWP": {
             "type": "contact_emails",
+            "disabled": true,
             "settings": {
               "heading": "Contact Us",
               "general_email": "info@ajornada.com",
@@ -172,6 +180,7 @@
           }
         },
         "block_order": [
+          "link_list_pagyyM",
           "footer-0",
           "social_media_nzfap3",
           "contact_emails_bLiDWP"
