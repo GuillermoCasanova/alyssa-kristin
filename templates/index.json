@@ -74,11 +74,11 @@
     "featured_collection_7NitaA": {
       "type": "featured-collection",
       "settings": {
-        "heading": "",
-        "body": "",
-        "cta-url": "shopify://collections/best-sellers",
-        "top_border": "no",
-        "bottom_border": "no"
+        "title": "Best <em>Sellers</em>",
+        "description": "",
+        "collection": "best-sellers",
+        "show_view_all": true,
+        "product_card_style": "normal"
       }
     },
     "1fb290d3-1160-424c-8641-e536b754d192": {
