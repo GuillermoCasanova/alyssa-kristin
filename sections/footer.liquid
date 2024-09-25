@@ -44,7 +44,12 @@
                     {{ 'newsletter.label' | t }}
                   </label>
                 </custom-input-wrapper>
-                <button type="submit" class="newsletter-form__button" name="commit" id="Subscribe">
+                <button
+                  type="submit"
+                  class=" button--large button--secondary"
+                  name="commit"
+                  id="Subscribe"
+                >
                   {{ 'newsletter.button_label' | t }}
                 </button>
               </div>
@@ -204,7 +209,6 @@
 
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
-      <div class="footer__logo-container"></div>
       <div class="footer__copyright">
         <small class="copyright__content">Copyright &copy; {{ 'now' | date: '%Y' }}, {{ shop.name }}</small>
       </div>
