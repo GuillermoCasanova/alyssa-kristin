@@ -1206,7 +1206,7 @@ button,
 .button {
   align-items: center;
   display: inlin-block;
-  font-family: var(--primary-font-family);
+  font-family: var(--tertiary-font-family);
   justify-content: center;
   line-height: 1;
   margin: 0;
@@ -1233,7 +1233,8 @@ button:hover,
   color: rgb(var(--color-base-text-1));
   border-bottom: 2px solid rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
-  letter-spacing: .5px;
+  font-family: var(--tertiary-font-family);
+  letter-spacing: 3px;
 }
 
 .button--primary:focus,
@@ -1298,7 +1299,7 @@ button:hover,
 .button--medium {
   padding-top: .85rem;
   padding-bottom: 1rem;
-  font-size: var(--h6);
+  font-size: var(--normal);
   padding-left: var(--level4); 
   padding-right: var(--level4); 
 }
