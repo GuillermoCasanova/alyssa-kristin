@@ -116,6 +116,16 @@
         "bottom_border": "yes",
         "trigger_email_popup": false
       }
+    },
+    "featured_collection_7NitaA": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "cta-url": "shopify://collections/accessories",
+        "top_border": "no",
+        "bottom_border": "yes"
+      }
     }
   },
   "order": [
@@ -123,6 +133,7 @@
     "featured_collections_hmLHtr",
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
     "1fb290d3-1160-424c-8641-e536b754d192",
-    "1655920347d426af19"
+    "1655920347d426af19",
+    "featured_collection_7NitaA"
   ]
 }
