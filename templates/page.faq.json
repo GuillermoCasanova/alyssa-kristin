@@ -22,6 +22,7 @@
       "block_order": [
         "heading_PRxGNh"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/image-test.png",
         "video": ""
@@ -95,6 +96,82 @@
     },
     "faqs_kTYnzW": {
       "type": "faqs",
+      "blocks": {
+        "faq_block_cdQepC": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Do I need an appointment?",
+            "answer": ""
+          }
+        },
+        "faq_block_dLxbLf": {
+          "type": "faq_block",
+          "settings": {
+            "question": "How long are appointments?",
+            "answer": ""
+          }
+        },
+        "faq_block_mBLrYk": {
+          "type": "faq_block",
+          "settings": {
+            "question": "What styles and sizes are available to try on in the studio?",
+            "answer": ""
+          }
+        },
+        "faq_block_BGYKce": {
+          "type": "faq_block",
+          "settings": {
+            "question": "What should I wear to my appointment?",
+            "answer": ""
+          }
+        },
+        "faq_block_kt4zbx": {
+          "type": "faq_block",
+          "settings": {
+            "question": "How many guests can I bring with me?",
+            "answer": ""
+          }
+        },
+        "faq_block_6KLthL": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Are we allowed to bring outside food or drink?",
+            "answer": ""
+          }
+        },
+        "faq_block_8Y3e6D": {
+          "type": "faq_block",
+          "settings": {
+            "question": "What is your mask policy?",
+            "answer": ""
+          }
+        },
+        "faq_block_XckEUh": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Can I cancel or reschedule my appointment?",
+            "answer": ""
+          }
+        },
+        "faq_block_9LjgrK": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Where should I park when I arrive?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_cdQepC",
+        "faq_block_dLxbLf",
+        "faq_block_mBLrYk",
+        "faq_block_BGYKce",
+        "faq_block_kt4zbx",
+        "faq_block_6KLthL",
+        "faq_block_8Y3e6D",
+        "faq_block_XckEUh",
+        "faq_block_9LjgrK"
+      ],
       "settings": {
         "heading": "AK Studio Gown Appointments"
       }
