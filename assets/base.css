@@ -214,7 +214,7 @@ summary::before {
 /*MEDIUM-UP*/
 @media screen and (min-width: 800px) {
   :root {
-    font-size: .85rem;
+    font-size: .7rem;
   }
 }
 
@@ -223,7 +223,7 @@ summary::before {
 /*LARGE-UP*/
 @media screen and (min-width: 940px) {
   :root {
-    font-size: .7rem;
+    font-size: .75rem;
   }
 }
 
@@ -236,7 +236,7 @@ summary::before {
 }
 
 /*X-LARGE-UP*/
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   :root {
     font-size: 1rem;
   }
@@ -246,7 +246,7 @@ summary::before {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-    font-size: 1rem;
+  font-size: 1.05rem;
   }
 }
 

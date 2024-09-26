@@ -51,8 +51,9 @@
     display: flex;
     flex-basis: content;
     flex-shrink: 0;
-
+    margin-bottom: var(--level10);
 }
+
 .featured-collection__heading {
     font-family: var(--secondary-font-family); 
     font-size: var(--h1);

@@ -5,7 +5,9 @@
 .footer {
   background-color: rgb(var(--color-base-background-2));
   border-top: 1px solid rgb(var(--color-base-text));
-  color: rgb(var(--color-base-text-1))
+  color: rgb(var(--color-base-text-1));
+  padding-top: var(--level4);
+  padding-bottom: var(--level4);
 }
 
 .footer__inner {
@@ -30,11 +32,11 @@
 
 @media only screen and (min-width: 940px) {
   .footer__inner {
-    grid-template-columns: 1fr 1fr 1.15fr 1.25fr;
+    grid-template-columns: 1.15fr 1.15fr 1fr 1fr;
     grid-template-areas:
       'links links  newsletter newsletter';
     column-gap: var(--level8);
-    max-width: 90rem;
+    max-width: var(--max-width-small);
     padding-left: var(--level9);
     padding-right: var(--level9);
     padding-top: calc(var(--level10) + var(--level7));
@@ -112,7 +114,7 @@
 
 @media only screen and (min-width: 940px) {
   .footer__block {
-    width: auto;
+    width: 100%;
     margin-right: calc(var(--level10) + var(--level2));
   }
 }
@@ -180,14 +182,14 @@
   text-decoration: none;
   margin-bottom: var(--level1);
   display: inline-block;
-  font-size: var(--h6);
+  font-size: var(--h5);
   text-transform: uppercase;
 }
 
 @media only screen and (min-width: 940px) {
   .footer__block__link {
     text-transform: uppercase;
-    font-size: var(--h5);
+    font-size: var(--h4);
     margin-bottom: var(--level3);
   }
 }
@@ -203,10 +205,14 @@
   text-decoration: none;
 }
 
+.footer__contact-blocks {
+  display: flex;
+  flex-direction: column;
+}
 
 
 @media only screen and (min-width: 700px) {
-  .footer__newsletter {
+  .footer__contact-blocks {
     grid-area: newsletter;
   }
 }
@@ -231,40 +237,6 @@
 
 
 
-/*------------------------------------*\
-    #Logo
-\*------------------------------------*/
-
-.footer__logo-container {
-  position: relative;
-  padding-bottom: 22%;
-  margin-bottom: var(--level1);
-  width: 100%;
-}
-
-@media screen and (min-width: 940px) {
-  .footer__logo-container {
-    margin-bottom: 0;
-  }
-}
-
-
-
-.footer__logo-container svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  color: rgb(var(--color-base-text-2));
-  fill: rgb(var(--color-base-text-2));
-  margin-bottom: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-
 
 
 /*------------------------------------*\
@@ -283,15 +255,39 @@
 
 .footer__social-media-list {
   display: flex;
-  gap: 1rem;
+  gap: .75rem;
 }
 
 
 .footer__social-media-link {
-  width: 2rem;
+  width: 2.5rem;
   display: inline-block
 }
 
+
+
+
+
+/*------------------------------------*\
+    #Logo
+\*------------------------------------*/
+
+
+.footer__logo {
+  width: 13rem;
+  align-self: self-end;
+  margin-top: -4rem;
+  margin-bottom: var(--level4);
+}
+
+@media screen and (min-width: 940px) {
+.footer__logo {
+    width: 14rem;
+    display: inline-block;
+    align-self: self-end;
+    margin-top: -3rem;
+  }
+}
 
 
 /*------------------------------------*\
