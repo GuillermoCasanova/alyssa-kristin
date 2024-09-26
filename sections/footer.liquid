@@ -73,6 +73,58 @@
             {%- endif -%}
           {%- endform -%}
         </div>
+        <div class="footer__social-media">
+          <ul class="footer__social-media-list">
+            {% if settings.social_facebook_link %}
+              <li class="footer__social-media-item">
+                <a
+                  href="{{ settings.social_facebook_link }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-media-link"
+                >
+                  {% render 'icon-facebook' %}
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.social_twitter_link %}
+              <li class="footer__social-media-item">
+                <a
+                  href="{{ settings.social_twitter_link }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-media-link"
+                >
+                  {% render 'icon-twitter' %}
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.social_instagram_link %}
+              <li class="footer__social-media-item">
+                <a
+                  href="{{ settings.social_instagram_link }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-media-link"
+                >
+                  {% render 'icon-instagram' %}
+                </a>
+              </li>
+            {% endif %}
+            {% if settings.social_linkedin_link %}
+              <li class="footer__social-media-item">
+                <a
+                  href="{{ settings.social_linkedin_link }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-media-link"
+                >
+                  {% render 'icon-linkedin' %}
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
       </div>
     {%- endif -%}
 
@@ -210,7 +262,10 @@
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__copyright">
-        <small class="copyright__content">Copyright &copy; {{ 'now' | date: '%Y' }}, {{ shop.name }}</small>
+        <small class="copyright__content"
+          >&copy; {{ 'now' | date: '%Y' }}
+          {{ shop.name | remove: '-shop' | replace: '-', ' ' }}
+        </small>
       </div>
     </div>
   </div>
