@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-header.css' | asset_url }}" media="print" onload="this.media='all'"> 
 <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
 
   {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
   {{ 'component-cart.css' | asset_url | stylesheet_tag }}
@@ -21,7 +22,7 @@
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
-
+<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
   for block in section.blocks
@@ -65,6 +66,18 @@
       {%- endif -%}
 
     <div class="header__icons">
+      <div class="header__icon  header__icon--search">
+        <search-toggle>
+          <button  class="header__icon " id="search-modal-toggle" data-search-modal-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="search-modal">
+            <span >     
+              <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+              <use href="#icon-search">
+            </svg>
+            </span>
+          </button>
+        </search-toggle>
+      </div>
+
     {% comment %} <localization-form class="no-js-hidden header__localization">
       <div>
         <h2 class="visually-hidden" id="HeaderCountryLabel">
@@ -107,10 +120,120 @@
       </a>
     </div>
    </div>
+
+
+   <div class="search-modal preload"  data-search-modal  aria-hidden="true"  id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-toggle" aria-label="{{ 'general.search.search' | t }}">
+    <div class="search-modal__content" tabindex="-1">
+        <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+            <div class="search__input-container  page-width">
+              <input class="search__input"
+                id="Search-In-Modal-1"
+                type="search"
+                name="q"
+                value=""
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-owns="predictive-search-results-list"
+                  aria-controls="predictive-search-results-list"
+                  aria-haspopup="listbox"
+                  aria-autocomplete="list"
+                  autocorrect="off"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+              >
+              <label data-search-input-label  class="search__label" for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
+              <input type="hidden" name="options[prefix]" value="last">
+              <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#icon-search">
+                </svg>
+              </button>
+            </div>
+              <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                <div class="predictive-search__loading-state">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </div>
+              </div>
+              <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+          </form>
+        </predictive-search>
+
+      {% comment %} <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+        <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+          <use href="#icon-close">
+        </svg>
+      </button> } {% endcomment %}
+    </div>
+  </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {% javascript %}
+
+
+
+class SearchToggle extends HTMLElement {
+constructor() {
+  super(); 
+  this.button = this.querySelector('button');
+  this.setUpEvents(); 
+
+  document.addEventListener('click', (event) => {
+    
+    var isClickInside = document.querySelector('[data-search-modal]').contains(event.target);
+    var isToggleButton = this.contains(event.target); 
+
+    if (!isClickInside && !isToggleButton) {
+      this.closeSearch(); 
+    }
+  });
+}
+
+
+setUpCloseEvents() {    
+  document.addEventListener('keyup', (evt) => {
+    evt.code === 'Escape' && this.closeSearch()
+  }, { once: true });
+}
+
+closeSearch() {
+  this.button.setAttribute('aria-expanded', false); 
+  this.button.blur();
+  document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+}
+
+setUpEvents() {
+
+  this.button.addEventListener('click', (event) => {
+    if(this.button.getAttribute('aria-expanded') == 'false') {
+      this.button.setAttribute('aria-expanded', true); 
+    } else {
+      this.button.setAttribute('aria-expanded', false); 
+    }     
+
+    this.button.blur();
+
+    if(document.querySelector('[data-search-modal]').getAttribute('aria-hidden') == 'false') {
+      document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+      removeTrapFocus(); 
+    }
+    else {
+      this.setUpCloseEvents();
+      document.querySelector('[data-search-modal]').setAttribute('aria-hidden', false);
+      trapFocus(document.querySelector('[data-search-modal]'), document.querySelector('[data-search-modal] input[type="search"]'));
+    }
+  }); 
+}
+
+}
+
+customElements.define('search-toggle', SearchToggle);
+
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();

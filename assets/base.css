@@ -805,7 +805,7 @@ input,
 textarea {
   border: 0;
   outline: 0;
-  background-color: white;
+  background-color: transparent;
   width: 100%;
   border: none;
   font-family: var(--primary-font-family);
