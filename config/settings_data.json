@@ -138,7 +138,7 @@
         "settings": {
           "mobile_nav_heading": "Navigation",
           "mobile_menu_primary": "main-menu",
-          "mobile_menu_secondary": "footer",
+          "mobile_menu_secondary": "secondary-menu",
           "menu": "main-menu",
           "sticky_header_type": "always",
           "show_line_separator": true,
