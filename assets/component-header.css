@@ -118,7 +118,13 @@ header.menu-open {
     max-width: 20rem;
     transition: all var(--duration-default) var(--default-easing);
     z-index: 0;
-    width: 100vw;
+    width: 57vw;
+}
+
+@media screen and (min-width: 700px) {
+    .header__logo {
+        max-width: 22rem;
+    }
 }
 
 @media screen and (min-width: 940px) {
@@ -240,6 +246,16 @@ header.menu-open {
     width: 100%;
 }
 
+
+.header__icon--search {
+    display: none;
+}
+
+@media screen and (min-width: 989px) {
+    .header__icon--search {
+        display: block;
+    }
+}
 
 
 

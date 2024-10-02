@@ -20,95 +20,134 @@
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
-            <h2 class="menu-drawer__heading visually-hidden">
-              {{ section.settings.mobile_nav_heading }}
-            </h2>
+            <ul class="menu-drawer__menu" role="list">
+              {%- for link in section.settings.mobile_menu_primary.links -%}
+                <li>
+                  {%- if link.links != blank -%}
+                    <div class="menu-drawer__menu-item  " id="{{ link.title | escape }}">
+                      {{ link.title | escape }}
+                    </div>
+                    <ul
+                      class="menu-drawer__menu__list"
+                      role="list"
+                      tabindex="-1"
+                      aria-labelledby="{{ link.title | escape }}"
+                    >
+                      {%- for childlink in link.links -%}
+                        <li>
+                          {%- if childlink.links == blank -%}
+                            <a
+                              href="{{ childlink.url }}"
+                              class="menu-drawer__menu-item   menu-drawer__menu-subitem  list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                              {% if childlink.current %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              {{ childlink.title | escape }}
+                            </a>
+                          {%- else -%}
+                            <div
+                              class="menu-drawer__menu-item menu-drawer__menu-subitem"
+                              id="{{ childlink.title | escape }}"
+                            >
+                              {{ childlink.title | escape }}
+                            </div>
+                            <ul
+                              class="menu-drawer__menu__list menu-drawer__menu__child-list"
+                              role="list"
+                              tabindex="-1"
+                              aria-labelledby="{{ childlink.title | escape }}"
+                            >
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a
+                                    href="{{ grandchildlink.url }}"
+                                    class="menu-drawer__menu-item  menu-drawer__menu-child-item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- else -%}
+                    <a
+                      href="{{ link.url }}"
+                      class="menu-drawer__menu-item  menu-drawer__menu-item--no-children   focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ link.title | escape }}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
 
-            <nav class="menu-drawer__navigation">
-              <ul class="menu-drawer__menu" role="list">
-                {%- for link in section.settings.mobile_menu_primary.links -%}
-                  <li>
-                    {%- if link.links != blank -%}
-                      <div class="menu-drawer__menu-item  " id="{{ link.title | escape }}">
-                        {{ link.title | escape }}
+            <div class="menu-drawer__utility-links  hide-for-large-up">
+              <div class="menu-drawer-search  hide-for-large-up">
+                <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+                  <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                    <div class="search__input-container  page-width">
+                      <input
+                        class="search__input"
+                        id="Search-In-Modal-1"
+                        type="search"
+                        name="q"
+                        value=""
+                        role="combobox"
+                        aria-expanded="false"
+                        aria-owns="predictive-search-results-list"
+                        aria-controls="predictive-search-results-list"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocorrect="off"
+                        autocomplete="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                      >
+                      <label data-search-input-label class="search__label" for="Search-In-Modal-1">
+                        {{- 'general.search.search' | t -}}
+                      </label>
+                      <input type="hidden" name="options[prefix]" value="last">
+                      <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                        <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                          <use href="#icon-search">
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                      <div class="predictive-search__loading-state">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          role="presentation"
+                          class="spinner"
+                          viewBox="0 0 66 66"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
                       </div>
-                      <ul
-                        class="menu-drawer__menu__list"
-                        role="list"
-                        tabindex="-1"
-                        aria-labelledby="{{ link.title | escape }}"
-                      >
-                        {%- for childlink in link.links -%}
-                          <li>
-                            {%- if childlink.links == blank -%}
-                              <a
-                                href="{{ childlink.url }}"
-                                class="menu-drawer__menu-item   menu-drawer__menu-subitem  list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
-                                {% if childlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ childlink.title | escape }}
-                              </a>
-                            {%- else -%}
-                              <div
-                                class="menu-drawer__menu-item menu-drawer__menu-subitem"
-                                id="{{ childlink.title | escape }}"
-                              >
-                                {{ childlink.title | escape }}
-                              </div>
-                              <ul
-                                class="menu-drawer__menu__list menu-drawer__menu__child-list"
-                                role="list"
-                                tabindex="-1"
-                                aria-labelledby="{{ childlink.title | escape }}"
-                              >
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a
-                                      href="{{ grandchildlink.url }}"
-                                      class="menu-drawer__menu-item  menu-drawer__menu-child-item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
-                                      {% if grandchildlink.current %}
-                                        aria-current="page"
-                                      {% endif %}
-                                    >
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            {%- endif -%}
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    {%- else -%}
-                      <a
-                        href="{{ link.url }}"
-                        class="menu-drawer__menu-item  menu-drawer__menu-item--no-children   focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
-                        {% if link.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ link.title | escape }}
-                      </a>
-                    {%- endif -%}
-                  </li>
-                {%- endfor -%}
-              </ul>
-              <localization-form class="no-js-hidden">
-                <div>
-                  <h2 class="visually-hidden" id="HeaderCountryLabel">
-                    {{ 'localization.language_label' | t }}
-                  </h2>
-                  {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-                </div>
-              </localization-form>
+                    </div>
+                    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                  </form>
+                </predictive-search>
+              </div>
+
               <ul>
                 {%- for link in section.settings.mobile_menu_secondary.links -%}
                   <li>
                     <a
                       href="{{ link.url }}"
-                      class="menu-drawer__menu-item {% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      class="menu-drawer__menu-item  menu-drawer__menu-item--utility-link {% if link.current %} menu-drawer__menu-item--active{% endif %}"
                       {% if link.current %}
                         aria-current="page"
                       {% endif %}
@@ -117,26 +156,8 @@
                     </a>
                   </li>
                 {% endfor %}
-
-                <li>
-                  <button
-                    aria-label="Open modal to sign up for the Ajornada newsletter"
-                    aria-expanded="false"
-                    aria-controls="newsletter-sign-up-modal"
-                    aria-haspopup="dialog"
-                    data-modal="newsletter-sign-up-modal"
-                    class="button  button--secondary  button--medium menu-drawer__utility-links__button"
-                  >
-                    <span class="button__text"> Get Updates </span>
-                    <span class="button__icon">
-                      <svg aria-hidden="true" focusable="false">
-                        <use href="#arrow-right">
-                      </svg>
-                    </span>
-                  </button>
-                </li>
               </ul>
-            </nav>
+            </div>
           </nav>
         </div>
       </div>
