@@ -534,8 +534,8 @@ main {
 
 @media screen and (min-width: 360px) {
   .page-width {
-    padding-left: var(--level5);
-    padding-right: var(--level5);
+    padding-left: var(--level3);
+    padding-right: var(--level3);
   }
 }
 
@@ -1230,7 +1230,7 @@ button:hover,
 .button--primary {
   border: 1px solid rgb(var(--color-base-text));
   color: rgb(var(--color-base-text-1));
-  border-bottom: 2px solid rgb(var(--color-base-text-1));
+  border-bottom: 1px solid rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
   font-family: var(--tertiary-font-family);
   letter-spacing: 3px;
@@ -1238,7 +1238,7 @@ button:hover,
 
 .button--primary:focus,
 .button--primary:hover {
-  background-color: black;
+  background-color: rgb(var(--color-base-text-1));
   color: #fff;
 }
 
@@ -1295,6 +1295,14 @@ button:hover,
 \*------------------------------------*/
 
 
+.button--micro {
+  font-size: var(--micro);
+  padding-left: var(--level2); 
+  padding-right: var(--level2);
+  padding-bottom: .35rem; 
+  padding-top: .35rem; 
+}
+
 .button--medium {
   padding-top: .85rem;
   padding-bottom: 1rem;
@@ -1330,16 +1338,6 @@ button:hover,
 .styled-link:hover,
 .styled-link:focus {
   text-decoration: none;
-}
-
-
-.has-top-border {
-  border-top: 1px solid black;
-}
-
-
-.has-bottom-border {
-  border-bottom: 1px solid black;
 }
 
 

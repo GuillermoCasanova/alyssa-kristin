@@ -17,8 +17,13 @@
       <span class="visually-hidden"> Toggle Menu </span>
     </summary>
     <div id="menu-drawer" class="menu-drawer motion-reduce">
-      <div class="menu-drawer__inner-container">
-        <div class="menu-drawer__navigation-container">
+      <div class="menu-drawer__inner">
+        <div class="menu-drawer__badge">
+          <svg aria-hidden="true" focusable="false" role="presentation">
+            <use href="#logo-badge">
+          </svg>
+        </div>
+        <div class="menu-drawer__navigation-wrapper">
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu" role="list">
               {%- for link in section.settings.mobile_menu_primary.links -%}
@@ -87,70 +92,102 @@
             </ul>
 
             <div class="menu-drawer__utility-links  hide-for-large-up">
-              <div class="menu-drawer-search  hide-for-large-up">
-                <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-                  <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                    <div class="search__input-container  page-width">
-                      <input
-                        class="search__input"
-                        id="Search-In-Modal-1"
-                        type="search"
-                        name="q"
-                        value=""
-                        role="combobox"
-                        aria-expanded="false"
-                        aria-owns="predictive-search-results-list"
-                        aria-controls="predictive-search-results-list"
-                        aria-haspopup="listbox"
-                        aria-autocomplete="list"
-                        autocorrect="off"
-                        autocomplete="off"
-                        autocapitalize="off"
-                        spellcheck="false"
-                      >
-                      <label data-search-input-label class="search__label" for="Search-In-Modal-1">
-                        {{- 'general.search.search' | t -}}
-                      </label>
-                      <input type="hidden" name="options[prefix]" value="last">
-                      <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
-                        <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                          <use href="#icon-search">
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-                      <div class="predictive-search__loading-state">
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          role="presentation"
-                          class="spinner"
-                          viewBox="0 0 66 66"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                        </svg>
-                      </div>
-                    </div>
-                    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-                  </form>
-                </predictive-search>
-              </div>
-
+          
               <ul>
                 {%- for link in section.settings.mobile_menu_secondary.links -%}
-                  <li>
-                    <a
-                      href="{{ link.url }}"
-                      class="menu-drawer__menu-item  menu-drawer__menu-item--utility-link {% if link.current %} menu-drawer__menu-item--active{% endif %}"
-                      {% if link.current %}
-                        aria-current="page"
-                      {% endif %}
-                    >
-                      {{ link.title | escape }}
-                    </a>
+                  <li class="menu-drawer__menu-item">
+                 
+                    {%- if link.url contains 'search' or link.title contains 'search' -%}
+                      <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                        <summary
+                          id="HeaderDrawer-{{ link.handle }}"
+                          class="menu-drawer__submenu-title focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                        >
+                          {{ link.title | escape }}
+                        </summary>
+                        <div
+                          id="link-{{ link.handle | escape }}"
+                          tabindex="-1"
+                        >
+                        <div class="menu-drawer-search">
+                          <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+                            <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                              <div class="search__input-container ">
+                                <input
+                                  class="search__input"
+                                  id="Search-In-Modal-1"
+                                  type="search"
+                                  name="q"
+                                  value=""
+                                  role="combobox"
+                                  aria-expanded="false"
+                                  aria-owns="predictive-search-results-list"
+                                  aria-controls="predictive-search-results-list"
+                                  aria-haspopup="listbox"
+                                  aria-autocomplete="list"
+                                  autocorrect="off"
+                                  autocomplete="off"
+                                  autocapitalize="off"
+                                  spellcheck="false"
+                                  placeholder="Type here...asa"
+                                >
+                                <label data-search-input-label class="search__label" for="Search-In-Modal-1">
+                                  {{- 'general.search.search' | t -}}
+                                </label>
+                                <input type="hidden" name="options[prefix]" value="last">
+                                <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                                  <svg class="icon icon-search visually-hidden" aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-search">
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                                <div class="predictive-search__loading-state">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    role="presentation"
+                                    class="spinner"
+                                    viewBox="0 0 66 66"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                  </svg>
+                                </div>
+                              </div>
+                              <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                            </form>
+                          </predictive-search>
+                        </div>
+                        </div>
+                
+                      </details>
+                    {%- else -%}
+                      <a
+                        href="{{ link.url }}"
+                        class="menu-drawer__menu-link {% if link.current %} menu-drawer__menu-item--active{% endif %}{% if link.title contains 'Join' %} button-join{% endif %}"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ link.title | escape }}
+                      </a>
+
+                      {%- if link.title contains 'Join' -%}
+                        <a
+                          href="/acccount/register"
+                          class="menu-drawer__menu-link button-register  button button--micro button--primary"
+                          {% if link.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          Sign In
+                        </a>
+                      {%- endif -%}
+                    {%- endif -%}
                   </li>
                 {% endfor %}
+
               </ul>
             </div>
           </nav>

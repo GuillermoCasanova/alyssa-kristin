@@ -3,6 +3,12 @@
     #Menu Drawer 
 \*------------------------------------*/
 
+header-drawer {
+  z-index: 3;
+  display: block;
+  position: static;
+}
+
 .header__icon--menu {
   background: transparent;
   position: relative;
@@ -112,7 +118,7 @@ header-drawer .menu-drawer {
   height: 100vh;
   z-index: 0;
   color: rgb(var(--color-base-text-2));
-  top: calc(100% + 1px); 
+  top: 0;
 }
 
 
@@ -154,12 +160,25 @@ header-drawer .menu-drawer {
 }
 
 
-.menu-drawer__inner-container {
+.menu-drawer__inner {
   position: relative;
   height: 100%;
 }
 
-.menu-drawer__navigation-container {
+.menu-drawer__badge {
+  position: absolute;
+  right: var(--level5);
+  top: var(--level3); 
+  width: 4rem; 
+  height: 4rem;
+}
+
+.menu-drawer__badge svg {
+  width: 100%; 
+  height: 100%; 
+}
+
+.menu-drawer__navigation-wrapper {
   overflow-y: auto;
 }
 
@@ -175,7 +194,8 @@ header-drawer .menu-drawer {
   padding-top: var(--level8);
   background-color: rgb(var(--color-base-background-2));
   border-bottom: 1px solid rgb(var(--color-base-text-1));
-  padding-left: var(--level6);
+  padding-left: var(--level7);
+  padding-top: 7rem;
 }
 
 .menu-drawer__menu-item {
@@ -192,6 +212,7 @@ header-drawer .menu-drawer {
 
 .menu-drawer__menu-link {
   text-decoration: none;
+  margin-right: var(--level7); 
 }
 
 a.menu-drawer__menu-item:hover,
@@ -217,6 +238,24 @@ a.menu-drawer__menu-item:focus {
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
   color: rgb(var(--color-base-text-1));
+}
+
+.menu-drawer__menu-link.button-join {
+  border: 1px solid rgb(var(--color-base-text-1)); 
+  padding: var(--level2); 
+  padding-left: var(--level2); 
+  padding-right: var(--level2); 
+  padding-top: var(--level1); 
+  padding-bottom: var(--level1); 
+  font-size: var(--micro);
+  letter-spacing: 2px;
+  font-family: var(--tertiary-font-family);
+}
+
+.menu-drawer__menu-link.button-join:hover,
+.menu-drawer__menu-link.button-join:focus {
+  background: rgb(var(--color-base-text-1)); 
+  color: rgb(var(--color-base-text-2)); 
 }
 
 /* .menu-drawer__menu-item--active:hover {} */
@@ -266,9 +305,9 @@ a.menu-drawer__menu-item:focus {
 .menu-drawer__utility-links {
   border-bottom: 1px solid rgb(var(--color-base-text-1));
   padding-top: var(--level6);
-  padding-bottom: var(--level8);
   background-color: rgb(var(--color-base-background-1));
-  padding-left: var(--level6);
+  padding-left: var(--level7);
+  padding-right: var(--level7);
 }
 
 
@@ -300,6 +339,7 @@ a.menu-drawer__menu-item:focus {
   height: 2rem;
   width: 3rem;
 }
+
 
 
 

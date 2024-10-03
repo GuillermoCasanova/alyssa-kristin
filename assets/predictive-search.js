@@ -220,8 +220,10 @@ class PredictiveSearch extends HTMLElement {
         this.input.value = '';
         this.removeAttribute('results');
       }
-  
-      document.querySelector('[data-predictive-search-results]').remove(); 
+      
+      if(document.querySelector('[data-predictive-search-results]')) {
+        document.querySelector('[data-predictive-search-results]').remove(); 
+      }
   
       const selected = this.querySelector('[aria-selected="true"]');
   
