@@ -111,17 +111,21 @@
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
 >
-
 {% schema %}
 {
   "name": "Brand Intro",
-  "templates": ["index", "page"],
   "settings": [
     {
       "type": "image_picker",
       "label": "Image",
       "id": "image",
       "info": "Upload an image for your brand intro section."
+    },
+    {
+      "type": "image_picker",
+      "label": "Second Image",
+      "id": "second_image",
+      "info": "Upload a second image for your brand intro section."
     },
     {
       "type": "text",
@@ -161,66 +165,11 @@
       "info": "Enter the URL that the Call To Action button should link to."
     },
     {
-      "type": "radio",
-      "id": "top_border",
-      "label": "Top Border",
-      "options": [
-        {
-          "value": "yes",
-          "label": "Yes"
-        },
-        {
-          "value": "no",
-          "label": "No"
-        }
-      ],
-      "default": "no",
-      "info": "Choose whether to display a top border for the brand intro section."
-    },
-    {
-      "type": "radio",
-      "id": "bottom_border",
-      "label": "Bottom Border",
-      "options": [
-        {
-          "value": "yes",
-          "label": "Yes"
-        },
-        {
-          "value": "no",
-          "label": "No"
-        }
-      ],
-      "default": "yes",
-      "info": "Choose whether to display a bottom border for the brand intro section."
-    },
-    {
       "type": "checkbox",
       "id": "trigger_email_popup",
       "label": "Trigger Email Pop Up",
       "info": "If checked, this section will trigger the email pop up.",
       "default": false
-    }
-  ],
-  "blocks": [
-    {
-      "type": "block",
-      "name": "Award & Accolade",
-      "settings": [
-        {
-          "type": "text",
-          "label": "Name",
-          "id": "name",
-          "default": "Block 1 Title",
-          "info": "Enter the name or title for this award or accolade."
-        },
-        {
-          "type": "image_picker",
-          "label": "Graphic",
-          "id": "graphic",
-          "info": "Upload a graphic or image for this award or accolade."
-        }
-      ]
     }
   ],
   "presets": [
