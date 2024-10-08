@@ -1,0 +1,62 @@
+<section class="featured-on">
+  <div class="featured-on__inner page-width">
+    <div>
+      <h2>
+        {{ section.settings.headline }}
+      </h2>
+    </div>
+    <ul class="featured-on__logos">
+      {% for block in section.blocks %}
+        <li class="featured-on__logo">
+          <img
+            src="{{ block.settings.logo_image | asset_url }}"
+            alt="{{ block.settings.logo_alt_text }}"
+            width="{{ block.settings.logo_width }}"
+            height="{{ block.settings.logo_height }}"
+          >
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured On",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "headline",
+      "label": "Headline"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["index", "page", "product"]
+  },
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "logo_alt_text",
+          "label": "Logo Alt Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured On",
+      "category": "Custom"
+    }
+  ],
+  "max_blocks": 6
+}
+{% endschema %}
