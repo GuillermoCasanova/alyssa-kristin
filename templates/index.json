@@ -131,8 +131,8 @@
       "type": "appointment-section",
       "settings": {
         "image": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2.png",
-        "image_alt": "",
-        "headline": "<p>Vusit <em>Us</em></p>",
+        "image_alt": "Woman wearing dress.",
+        "headline": "<p>Visit <em>Us</em></p>",
         "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio.445 W Erie St #108, Chicago, IL 60654</p>",
         "cta_link": "shopify://pages/contact",
         "cta_text": "Book An Appointment"
