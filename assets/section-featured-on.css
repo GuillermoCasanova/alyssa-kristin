@@ -24,7 +24,8 @@
 }
 
 .featured-on-section__inner {
-    padding-top: var(--level8)
+    padding-top: var(--level8);
+    max-width: var(--max-width-medium)
 }
 
 @media screen and (min-width: 700px) {
@@ -38,4 +39,11 @@
         display: grid;
         grid-template-columns:  1fr 1fr 1fr;
     }
+}
+
+.featured-on-section__logo {
+    max-width: 18rem; 
+    align-self: center;
+    justify-self: center;
+    height: auto;
 }
