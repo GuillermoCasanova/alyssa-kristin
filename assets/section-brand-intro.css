@@ -161,9 +161,8 @@
 }
 
 .brand-intro__copy__heading {
-    font-family: var(--tertiary-font-family);
+    font-family: var(--secondary-font-family);
     font-size: var(--h4);
-    text-transform: uppercase;
     text-align: left;
     margin-bottom: 0;
     background: rgb(var(--color-base-background-1));

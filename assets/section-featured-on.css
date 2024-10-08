@@ -34,6 +34,12 @@
     }
 }
 
+.featured-on-section__logos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 @media screen and (min-width: 700px) {
     .featured-on-section__logos {
         display: grid;
