@@ -185,14 +185,14 @@ summary::before {
 /*X-SMALL*/
 @media screen and (min-width: 260px) {
   :root {
-    font-size: .8rem;
+    font-size: .75rem;
   }
 }
 
 /*SMALL-UP*/
 @media screen and (min-width: 370px) {
   :root {
-    font-size: .75rem;
+    font-size: .8rem;
   }
 }
 
