@@ -192,14 +192,14 @@ summary::before {
 /*SMALL-UP*/
 @media screen and (min-width: 370px) {
   :root {
-    font-size: .85rem;
+    font-size: .75rem;
   }
 }
 
 /*SMALL-UP*/
 @media screen and (min-width: 500px) {
   :root {
-    font-size: .9rem;
+    font-size: .8rem;
   }
 }
 
@@ -207,14 +207,14 @@ summary::before {
 /*MEDIUM-UP*/
 @media screen and (min-width: 700px) {
   :root {
-    font-size: .9rem;
+    font-size: .8rem;
   }
 }
 
 /*MEDIUM-UP*/
 @media screen and (min-width: 800px) {
   :root {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 }
 
@@ -223,7 +223,7 @@ summary::before {
 /*LARGE-UP*/
 @media screen and (min-width: 940px) {
   :root {
-    font-size: .75rem;
+    font-size: .9rem;
   }
 }
 
@@ -1204,7 +1204,7 @@ textarea:focus {
 button,
 .button {
   align-items: center;
-  display: inlin-block;
+  display: inline-block;
   font-family: var(--tertiary-font-family);
   justify-content: center;
   line-height: 1;
@@ -1214,6 +1214,7 @@ button,
   text-transform: uppercase;
   width: auto;
   text-decoration: none;
+  margin-bottom: var(--level3); 
 }
 
 button:hover,

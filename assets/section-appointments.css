@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    #Appointment Section
+\*------------------------------------*/
+
+.appointment-section {
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black; 
+}
+
+@media screen and (min-width: 400px) {
+    .appointment-section__inner {
+        display: grid;
+        grid-template-columns: minmax(50vw, 1fr) minmax(50vw, 1fr);
+    }
+    
+}
+
+.appointment-section__inner {
+    align-items: stretch;
+}
+
+.apppointment-section__image {
+    display: flex;
+}
+
+.appointment-section__image img {
+    object-position: top;
+}
+.apppointment-section__image__innner {
+    position: relative;
+    padding-bottom: 140%; 
+    width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    .apppointment-section__image__innner {
+        padding-bottom: 60%; 
+    }
+}
+
+@media screen and (min-width: 1681px) {
+    .apppointment-section__image__innner {
+        padding-bottom: 40%; 
+    }
+}
+
+
+.appointment-section__copy {
+    text-align: center;
+    display: flex; 
+   justify-content: center;
+   align-items: center;
+}
+
+.appointment-section__copy__heading {
+    font-family: var(--secondary-font-family);
+    font-size: var(--h2);
+    text-transform: uppercase;
+}
+
+.appointment-section__copy__heading em {
+    text-transform: lowercase;
+}
+
+@media screen and (min-width: 900px) {
+    .appointment-section__copy__heading {
+        font-family: var(--secondary-font-family);
+        font-size: var(--h1);
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .appointment-section__copy__heading {
+        font-family: var(--secondary-font-family);
+        font-size: var(--kilo);
+        font-weight: 300;
+    }
+}
+
+.appointment-section__copy__body {
+    font-size: var(--normal);
+    max-width: 38rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+@media screen and (min-width: 900px) {
+    .appointment-section__copy__body {
+        margin-bottom: var(--level10); 
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .appointment-section__copy__body p {
+        font-size: var(--h5);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .appointment-section__copy__body p {
+        font-size: var(--h4);
+    }
+}
+
+
+.appointment-section__copy__inner {
+    padding: var(--level4);
+    padding-top: var(--level5);  
+}
