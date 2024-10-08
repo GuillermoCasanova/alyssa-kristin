@@ -66,8 +66,6 @@
         "body": "<p>Designed and Handmade in Chicago. Just as every one of our brides is unique, distinct, intelligent, and sophisticated in her own way; so is each gown. Each piece is thoughtfully crafted to accentuate a distinct element, whether a dramatic train, a plunging hand draped neckline, or an iconic side slit. </p>",
         "cta_text": "Explore More",
         "cta_url": "shopify://pages/contact",
-        "top_border": "no",
-        "bottom_border": "no",
         "trigger_email_popup": false
       }
     },
@@ -118,6 +116,40 @@
         "trigger_email_popup": false
       }
     },
+    "featured_on_mByktG": {
+      "type": "featured-on",
+      "blocks": {
+        "logo_CdRFWY": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/image_3.png",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_tAPXDC": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/image_4.png",
+            "logo_alt_text": ""
+          }
+        },
+        "logo_3Q6RzW": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/a.png",
+            "logo_alt_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_CdRFWY",
+        "logo_tAPXDC",
+        "logo_3Q6RzW"
+      ],
+      "settings": {
+        "headline": "<p>Featured On</p>"
+      }
+    },
     "appointment_section_zrN4XF": {
       "type": "appointment-section",
       "settings": {
@@ -145,6 +177,7 @@
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
     "featured_collection_7NitaA",
     "1fb290d3-1160-424c-8641-e536b754d192",
+    "featured_on_mByktG",
     "appointment_section_zrN4XF",
     "1655920347d426af19"
   ]
