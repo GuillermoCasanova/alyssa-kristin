@@ -1,2 +1,41 @@
+/*------------------------------------*\
+    #Featured On 
+\*------------------------------------*/
 
 
+.featured-on-section {
+    background-color: rgb(var(--color-base-background-2));
+}
+@media screen and (min-width: 700px) {
+
+    .featured-on-section {
+        padding-bottom: var(--level10)
+    }
+}
+.featured-on-section__header {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--tertiary-font-family);
+}
+
+.featured-on-section__header__heading {
+    font-size: var(--h6);
+    letter-spacing: 5px;
+}
+
+.featured-on-section__inner {
+    padding-top: var(--level8)
+}
+
+@media screen and (min-width: 700px) {
+    .featured-on-section__inner {
+        padding-top: var(--level10)
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .featured-on-section__logos {
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+    }
+}

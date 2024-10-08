@@ -1,15 +1,15 @@
 {{ 'section-featured-on.css' | asset_url | stylesheet_tag }}
-<section class="featured-on">
-  <div class="featured-on__inner page-width">
-    <div class="featured-on__header">
-      <h2>
+<section class="featured-on-section">
+  <div class="featured-on-section__inner page-width">
+    <div class="featured-on-section__header">
+      <h2 class="featured-on-section__header__heading">
         {{ section.settings.headline }}
       </h2>
     </div>
-    <ul class="featured-on__logos">
+    <ul class="featured-on-section__logos">
       {% for block in section.blocks %}
-        <li class="featured-on__logo">
-          <div class="featured-on__logo_inner">
+        <li class="featured-on-section__logo">
+          <div class="featured-on-section__logo_inner">
             {% if block.settings.image != blank %}
               <img
                 srcset="
