@@ -126,6 +126,16 @@
         "bottom_border": "no",
         "trigger_email_popup": false
       }
+    },
+    "appointment_section_zrN4XF": {
+      "type": "appointment-section",
+      "settings": {
+        "image_alt": "",
+        "headline": "",
+        "body_copy": "",
+        "cta_link": "",
+        "cta_text": ""
+      }
     }
   },
   "order": [
@@ -134,6 +144,7 @@
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
     "featured_collection_7NitaA",
     "1fb290d3-1160-424c-8641-e536b754d192",
-    "1655920347d426af19"
+    "1655920347d426af19",
+    "appointment_section_zrN4XF"
   ]
 }
