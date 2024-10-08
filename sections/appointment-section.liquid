@@ -1,0 +1,57 @@
+<div class="appointment-section">
+  <img
+    src="{{ section.settings.image |  asset_url }}"
+    alt="{{ section.settings.image_alt }}"
+    width="{{ section.settings.image_width }}"
+    height="{{ section.settings.image_height }}"
+  >
+  <h2>{{ section.settings.headline }}</h2>
+  <p>{{ section.settings.body_copy }}</p>
+  <a href="{{ section.settings.cta_link }}" class="cta-button">{{ section.settings.cta_text }}</a>
+</div>
+
+{% schema %}
+{
+  "name": "Appointment Section",
+  "enabled_on": {
+    "templates": ["index", "page"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline"
+    },
+    {
+      "type": "textarea",
+      "id": "body_copy",
+      "label": "Body Copy"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Appointment Section"
+    }
+  ]
+}
+{% endschema %}
