@@ -61,6 +61,8 @@
     "a91f73fa-9991-492c-bca6-4dfe59bea098": {
       "type": "brand-intro",
       "settings": {
+        "image": "shopify://shop_images/image_f33e4fcf-5d9e-4570-9292-bc5f2f854418.png",
+        "second_image": "shopify://shop_images/image-1.png",
         "headline": "\"Nothing looks more striking on a woman than confidence.\"",
         "subline": "",
         "body": "<p>Designed and Handmade in Chicago. Just as every one of our brides is unique, distinct, intelligent, and sophisticated in her own way; so is each gown. Each piece is thoughtfully crafted to accentuate a distinct element, whether a dramatic train, a plunging hand draped neckline, or an iconic side slit. </p>",
