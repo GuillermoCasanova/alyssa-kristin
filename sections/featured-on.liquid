@@ -1,6 +1,7 @@
+{{ 'section-featured-on.css' | asset_url | stylesheet_tag }}
 <section class="featured-on">
   <div class="featured-on__inner page-width">
-    <div>
+    <div class="featured-on__header">
       <h2>
         {{ section.settings.headline }}
       </h2>
@@ -8,12 +9,26 @@
     <ul class="featured-on__logos">
       {% for block in section.blocks %}
         <li class="featured-on__logo">
-          <img
-            src="{{ block.settings.logo_image | asset_url }}"
-            alt="{{ block.settings.logo_alt_text }}"
-            width="{{ block.settings.logo_width }}"
-            height="{{ block.settings.logo_height }}"
-          >
+          <div class="featured-on__logo_inner">
+            {% if block.settings.image != blank %}
+              <img
+                srcset="
+                  {%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                "
+                src="{{ block.settings.image | image_url: width: 533 }}"
+                sizes="(min-width: 940px) 30vw, 50vw"
+                alt="{{ block.settings.alt_text | escape }}"
+                class="motion-reduce"
+                loading="lazy"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+              >
+            {% endif %}
+          </div>
         </li>
       {% endfor %}
     </ul>
@@ -40,12 +55,12 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "logo_image",
+          "id": "image",
           "label": "Logo Image"
         },
         {
           "type": "text",
-          "id": "logo_alt_text",
+          "id": "alt_text",
           "label": "Logo Alt Text"
         }
       ]
