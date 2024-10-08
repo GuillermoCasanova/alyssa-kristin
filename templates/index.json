@@ -87,29 +87,29 @@
         "logo_CdRFWY": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify://shop_images/image_3.png",
-            "logo_alt_text": "The Wed"
+            "image": "shopify://shop_images/image_3_1678f65c-ebfb-4fd2-b39d-9878f624ca79.png",
+            "alt_text": ""
           }
         },
         "logo_tAPXDC": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify://shop_images/image_4.png",
-            "logo_alt_text": "Bridges"
+            "image": "shopify://shop_images/image_4_808b3393-c98d-41f0-aa05-391e5fb78cdc.png",
+            "alt_text": ""
           }
         },
-        "logo_3Q6RzW": {
+        "logo_DkMaWC": {
           "type": "logo",
           "settings": {
-            "logo_image": "shopify://shop_images/a.png",
-            "logo_alt_text": "The New York Times"
+            "image": "shopify://shop_images/a_1524de14-0b06-4425-8c48-a1b4228fc5fc.png",
+            "alt_text": ""
           }
         }
       },
       "block_order": [
         "logo_CdRFWY",
         "logo_tAPXDC",
-        "logo_3Q6RzW"
+        "logo_DkMaWC"
       ],
       "settings": {
         "headline": "<p>Featured On</p>"
