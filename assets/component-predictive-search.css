@@ -36,7 +36,7 @@ predictive-search {
 
 @media screen and (min-width: 940px) {
   .search-modal {
-    top: 9rem;
+    top: 9.5rem;
   }
 }
 
@@ -81,6 +81,12 @@ predictive-search {
   padding-bottom: var(--level0);
   padding-top: var(--level1);  
   width: 100%;
+}
+
+@media screen and (min-width: 940px) {
+  .search-modal__form {
+    border: none;
+  }
 }
 
 .search-modal__form.is-focused .search__label {
@@ -156,6 +162,7 @@ predictive-search {
     padding-bottom: var(--level5);
     padding-left: 2.75rem;
     padding-top: var(--level5);
+    border: none;
   }
 }
 
