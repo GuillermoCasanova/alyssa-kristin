@@ -1,18 +1,21 @@
 <style>
-  @media screen and (min-width: 940px) {
+  .collection-thumb-list {
+    padding-left: var(--level5);
+    padding-right: var(--level5);
+  }
+
+  @media screen and (min-width: 900px) {
     .collection-thumb-list {
+      padding: 0;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: calc(var(--level10) + var(--level2));
-      padding-left: var(--level4);
-      padding-right: var(--level4);
+      gap: calc(var(--level10));
     }
   }
 
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1200px) {
     .collection-thumb-list {
-      padding-left: var(--level10);
-      padding-right: var(--level10);
+      gap: calc(var(--level10) + var(--level2));
     }
   }
 
@@ -20,7 +23,7 @@
     margin-bottom: calc(var(--level10) + var(--level3));
   }
 
-  @media screen and (min-width: 940px) {
+  @media screen and (min-width: 900px) {
     .collection-thumb {
       margin-bottom: 0;
     }
