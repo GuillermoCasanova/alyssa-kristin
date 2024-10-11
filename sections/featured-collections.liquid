@@ -65,24 +65,26 @@
               <div class="collection-thumb__inner">
                 <a href="{{ collection.url }}" class="collection-thumb__image">
                   <div class="collection-thumb__image__inner">
-                    <img
-                      srcset="
-                        {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
-                        {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
-                        {%- if collection.image.width >= 533 -%}{{ collection.image | image_url: width: 533 }} 533w,{%- endif -%}
-                        {%- if collection.image.width >= 720 -%}{{ collection.image | image_url: width: 720 }} 720w,{%- endif -%}
-                        {%- if collection.image.width >= 940 -%}{{ collection.image | image_url: width: 940 }} 940w,{%- endif -%}
-                        {{ collection.image | image_url }} {{ collection.image.width }}w
-                      "
-                      src="{{ collection.image | image_url: width: 533 }}"
-                      sizes="(min-width: 940px) 30vw, 50vw"
-                      alt="{{ collection.image.alt | escape }}"
-                      class="motion-reduce responsive-image"
-                      aria-hidden="true"
-                      loading="lazy"
-                      width="{{ collection.image.width }}"
-                      height="{{ collection.image.height }}"
-                    >
+                    {% if collection.image %}
+                      <img
+                        srcset="
+                          {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+                          {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+                          {%- if collection.image.width >= 533 -%}{{ collection.image | image_url: width: 533 }} 533w,{%- endif -%}
+                          {%- if collection.image.width >= 720 -%}{{ collection.image | image_url: width: 720 }} 720w,{%- endif -%}
+                          {%- if collection.image.width >= 940 -%}{{ collection.image | image_url: width: 940 }} 940w,{%- endif -%}
+                          {{ collection.image | image_url }} {{ collection.image.width }}w
+                        "
+                        src="{{ collection.image | image_url: width: 533 }}"
+                        sizes="(min-width: 940px) 30vw, 50vw"
+                        alt="{{ collection.image.alt | escape }}"
+                        class="motion-reduce responsive-image"
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="{{ collection.image.width }}"
+                        height="{{ collection.image.height }}"
+                      >
+                    {% endif %}
                   </div>
                 </a>
                 <div class="collection-thumb__info">

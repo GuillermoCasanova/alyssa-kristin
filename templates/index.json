@@ -63,7 +63,7 @@
       "settings": {
         "image": "shopify://shop_images/image_f33e4fcf-5d9e-4570-9292-bc5f2f854418.png",
         "second_image": "shopify://shop_images/image-1.png",
-        "headline": "\"Nothing looks more striking on a woman than confidence.\"",
+        "headline": "<p>Nothing looks more striking on a woman than confidence.</p>",
         "subline": "",
         "body": "<p>Every bride is unique, and so are our gowns. With customizable options and thoughtfully crafted details, each dress is designed to accentuate your style and confidence, making you feel like the best version of yourself on your special day.</p>",
         "cta_text": "Explore More",
