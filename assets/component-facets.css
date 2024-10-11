@@ -192,7 +192,6 @@
   color: rgba(var(--color-foreground), 0.75);
   font-size: 1.4rem;
   padding: 0 1.75rem 0 0;
-  margin-bottom: 1.5rem;
 }
 
 .facets__summary .svg-wrapper {
@@ -261,16 +260,10 @@
 }
 
 .facets__display {
-  border-width: var(--popup-border-width);
-  border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
-  border-radius: var(--popup-corner-radius);
-  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  border-bottom: 1px solid rgb(var(--color-base-text-1));
   background-color: rgb(var(--color-background));
   top: calc(100% + 0.5rem);
-  left: -1.2rem;
-  width: 35rem;
+  width: 100%;
   max-height: 55rem;
   overflow-y: auto;
 }
@@ -861,17 +854,19 @@ a.active-facets__button.focused .active-facets__button-inner {
 }
 
 .mobile-facets__close {
-  display: none;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0.7rem;
-  right: 1rem;
-  width: 4.4rem;
-  height: 4.4rem;
+  top: var(--level0);
+  right: var(--level2);
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: transparent;
+  border: 0;
   z-index: 101;
-  opacity: 0;
   transition: opacity var(--duration-short) ease;
+  position: absolute;
+  margin-right: 0; 
+  margin-left: auto;
 }
 
 .mobile-facets__close .svg-wrapper {
@@ -1243,4 +1238,24 @@ input.mobile-facets__checkbox {
   .facets-vertical .active-facets__button-remove {
     padding: 0 1rem 1rem;
   }
+}
+
+
+.facets-modal {
+  background-color: rgb(var(--color-base-background-2));
+  position: absolute;
+  width: 100%;
+  max-width: 30rem;
+  z-index: 2;
+  border: 1px solid rgb(var(--color-base-text-1)); 
+  margin-top: var(--level2);
+  padding-top: var(--level3); 
+}
+
+.facets-modal .facets__summary {
+  padding: var(--level7); 
+  padding-top: 0;
+  padding-bottom: var(--level5);
+  padding-top: var(--level5);
+  border-bottom: 1px solid rgb(var(--color-base-text-1));
 }
