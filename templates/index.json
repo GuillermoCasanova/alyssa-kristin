@@ -37,10 +37,10 @@
             "collection": "accessories"
           }
         },
-        "collection_p4QFgg": {
+        "collection_3TbTnq": {
           "type": "collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "gowns"
           }
         },
         "collection_bWQi4N": {
@@ -52,7 +52,7 @@
       },
       "block_order": [
         "collection_qB4cqN",
-        "collection_p4QFgg",
+        "collection_3TbTnq",
         "collection_bWQi4N"
       ],
       "settings": {
