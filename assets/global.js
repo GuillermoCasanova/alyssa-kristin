@@ -485,13 +485,18 @@ class MenuDrawer extends HTMLElement {
       if(isOpen) event.preventDefault();
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
     } else {
-      setTimeout(() => {
-        this.mainDetailsToggle.classList.remove('menu-close');
-        detailsElement.classList.add('menu-open');
-        summaryElement.setAttribute('aria-expanded', true);
-        parentMenuElement && parentMenuElement.classList.add('submenu-open');
-        !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
-      }, 100);
+      if(!this.detailsElement.classList.contains('menu-open')) {
+        setTimeout(() => {
+            this.mainDetailsToggle.classList.remove('menu-close');
+            detailsElement.classList.add('menu-open');
+            summaryElement.setAttribute('aria-expanded', true);
+            parentMenuElement && parentMenuElement.classList.add('submenu-open');
+            !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
+        }, 100);
+      } else {
+        this.closeSubmenu(detailsElement);
+        console.log("close submenu");
+      }
     }
   }
 
@@ -535,12 +540,12 @@ class MenuDrawer extends HTMLElement {
   }
 
   closeSubmenu(detailsElement) {
-    // const parentMenuElement = detailsElement.closest('.submenu-open');
-    // parentMenuElement && parentMenuElement.classList.remove('submenu-open');
-    // detailsElement.classList.remove('menu-open');
-    // detailsElement.querySelector('summary').setAttribute('aria-expanded', false);
-    // removeTrapFocus(detailsElement.querySelector('summary'));
-    // this.closeAnimation(detailsElement);
+    const parentMenuElement = detailsElement.closest('.submenu-open');
+    parentMenuElement && parentMenuElement.classList.remove('submenu-open');
+    detailsElement.classList.remove('menu-open');
+    detailsElement.querySelector('summary').setAttribute('aria-expanded', false);
+    removeTrapFocus(detailsElement.querySelector('summary'));
+    this.closeAnimation(detailsElement);
   }
 
   closeAnimation(detailsElement) {

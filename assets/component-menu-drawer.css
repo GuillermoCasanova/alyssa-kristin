@@ -128,8 +128,8 @@ header-drawer .menu-drawer {
 }
 
 .menu-drawer-container.menu-close .menu-drawer {
-  animation: headerDrawerClose .6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  pointer-events: all;
+   animation: headerDrawerClose .6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  pointer-events: all; 
 }
 
 
