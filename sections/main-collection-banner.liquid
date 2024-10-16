@@ -1,15 +1,18 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 
-<section class="collection-header master-padding-top">
-  <div class="page-width">
-    <div class="collection-header__inner">
-      <span class="collection-header__heading"> Products </span>
-      <span class="collection-header__subline">
-        {{ collection.title }}
-      </span>
-    </div>
+<section class="collection-banner master-padding-top">
+  <div>
+    <h2 class=" visually-hidden">
+      {{ collection.title }}
+    </h2>
   </div>
 </section>
+
+<style>
+  .collection-banner {
+    margin-bottom: var(--level6);
+  }
+</style>
 
 {% schema %}
 {
