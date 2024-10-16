@@ -45,7 +45,7 @@
         flex-direction: row;
         justify-content: center;
         padding-bottom: var(--level7);
-        padding-top: calc(var(--level7) + var(--level6));
+        padding-top: calc(var(--level6) + var(--level6));
     }
 }
 
@@ -209,7 +209,7 @@
         right: 0;
         top: 0; 
         position: absolute;
-        right: 2rem;
+        right: var(--level4);
         top: .75rem;
         color: rgb(var(--color-base-text-1));
     }
@@ -222,8 +222,8 @@
 }
 
 .header__icon {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: transparent;
     border: none;
     color: rgb(var(--color-base-text-1));
@@ -267,7 +267,6 @@
     border: 0;
     color: black;
     display: flex;
-    height: 3rem;
     align-items: center;
     justify-content: center;
     margin-right: calc(-1 * var(--level3));

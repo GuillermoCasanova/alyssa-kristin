@@ -349,7 +349,6 @@ a.menu-drawer__menu-item:focus {
 
 
 .header__menu {
-  margin-left: -1.2rem;
   display: none;
 }
 
@@ -365,6 +364,8 @@ a.menu-drawer__menu-item:focus {
       width: 100%;
       max-width: 100%;
       margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
   }
 
   .header__menu__list-menu {
@@ -383,7 +384,7 @@ a.menu-drawer__menu-item:focus {
   }
 
   .header__menu-item {
-      padding: var(--level3);
+
       padding-top: var(--level2);
       padding-bottom: var(--level2);
       text-decoration: none;
