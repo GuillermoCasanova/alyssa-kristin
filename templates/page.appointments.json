@@ -67,11 +67,27 @@
             "question": "How long are appointments?",
             "answer": ""
           }
+        },
+        "faq_block_Apgw7F": {
+          "type": "faq_block",
+          "settings": {
+            "question": "What styles and sizes are available to try on in the studio?",
+            "answer": ""
+          }
+        },
+        "faq_block_9nz7Pf": {
+          "type": "faq_block",
+          "settings": {
+            "question": "How many guests can I bring with me?",
+            "answer": ""
+          }
         }
       },
       "block_order": [
         "faq_block_QzhGAm",
-        "faq_block_tDPREr"
+        "faq_block_tDPREr",
+        "faq_block_Apgw7F",
+        "faq_block_9nz7Pf"
       ],
       "settings": {
         "headline": "FAQ",
