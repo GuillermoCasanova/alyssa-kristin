@@ -54,10 +54,10 @@
     "faqs_preview_hMeWbA": {
       "type": "faqs-preview",
       "settings": {
-        "headline": "",
+        "headline": "FAQ",
         "image_alt": "",
-        "cta_link": "",
-        "cta_text": ""
+        "cta_link": "shopify://pages/frequently-asked-questions",
+        "cta_text": "Read All FAQ"
       }
     }
   },
