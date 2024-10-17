@@ -1,0 +1,65 @@
+{{ 'section-appointmnet-info.css' | asset_url | stylesheet_tag }}
+
+<section>
+  <div class="appointment-info-section">
+    <div class="appointment-info-section__inner">
+      <div class="appointment-info-section__header">
+        <h2 class="appointment-info-section__heading">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="apppointment-info-section__body">
+        {% for block in section.blocks %}
+          <div class="apppointment-info-section__step">
+            <h3 class="appointment-info-section__step__heading">{{ block.settings.heading }}</h3>
+            <div class="appointment-info-section__body">
+              {{ block.settings.rich_text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Appointments Info",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Our Features</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_column",
+      "name": "Text Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "01 Preparing For Appointment"
+        },
+        {
+          "type": "richtext",
+          "id": "rich_text",
+          "label": "Rich Text",
+          "default": "<p>Our Chicago flagship showroom is open by appointment only on Fridays and Saturdays. To make the most of your visit, we suggest wearing nude-colored seamless undergarments and bringing any wedding day accessories, like jewelry, shoes, or a veil. </p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Columns",
+      "category": "Custom"
+    }
+  ],
+  "max_blocks": 3
+}
+{% endschema %}
