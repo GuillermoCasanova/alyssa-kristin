@@ -42,9 +42,18 @@
       "settings": {
         "heading": "<p>Our Features</p>"
       }
+    },
+    "appointment_embed_XUXw4R": {
+      "type": "appointment-embed",
+      "settings": {
+        "heading": "<p>Visit us</p>",
+        "body_copy": "<p>Discover the gown of your dreams at our Chicago flagship showroom. Share the moment with your loved ones in a private, personalized appointment designed to make your bridal experience unforgettable.</p>",
+        "iframe_code": "<iframe src=\"https://example.com\" width=\"600\" height=\"400\"></iframe>"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "appointment_embed_XUXw4R"
   ]
 }
