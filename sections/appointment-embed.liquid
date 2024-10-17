@@ -1,0 +1,54 @@
+<!-- Appointment Embed Section -->
+
+<section>
+  <div class="appointment-embed-section">
+    <div class="appointment-embed-section__inner">
+      <div class="appointment-embed-section__header">
+        <h2 class="appointment-embed-section__heading">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="appointment-embed-section__body">
+        <div class="appointment-embed-section__body__text">
+          {{ section.settings.body_copy }}
+        </div>
+        <div class="appointment-embed-section__iframe">
+          {{ section.settings.iframe_code }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Appointment Embed",
+  "enabled_on": {
+    "templates": ["index", "page"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Visit us</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "body_copy",
+      "label": "Body Copy",
+      "default": "<p>Discover the gown of your dreams at our Chicago flagship showroom. Share the moment with your loved ones in a private, personalized appointment designed to make your bridal experience unforgettable.</p>"
+    },
+    {
+      "type": "html",
+      "id": "iframe_code",
+      "label": "Iframe Code",
+      "default": "<iframe src='https://example.com' width='600' height='400'></iframe>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Appointment Embed",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
