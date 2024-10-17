@@ -1,10 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "main": {
-        "type": "appointments-info"
+  "sections": {
+    "main": {
+      "type": "appointments-info",
+      "blocks": {
+        "text_column_GTqDUq": {
+          "type": "text_column",
+          "settings": {
+            "heading": "01 Preparing For Appointment",
+            "rich_text": "<p>Our Chicago flagship showroom is open by appointment only on Fridays and Saturdays. To make the most of your visit, we suggest wearing nude-colored seamless undergarments and bringing any wedding day accessories, like jewelry, shoes, or a veil. </p>"
+          }
+        },
+        "text_column_YcMJyN": {
+          "type": "text_column",
+          "settings": {
+            "heading": "02 The Fitting Experience",
+            "rich_text": "<p>Once you arrive, our bridal stylist will pull some personalized bridal gowns for you to try on based on your preferred style and fit. Since our gowns are made-to-order, our sizing ranges from size 0-28 for all body types. Each appointment lasts 60 minutes, and you’re welcome to bring up to four guests.</p>"
+          }
+        },
+        "text_column_tR6wqD": {
+          "type": "text_column",
+          "settings": {
+            "heading": "03 The Gown",
+            "rich_text": "<p>The bridal stylist will walk you through the fitting process to ensure the bride feels like the most elegant version of herself – offering some modification options during the fitting appointment. Since the gowns are made-to-order, an estimated 8 weeks is required for turn around. Expedited gowns are available, please inquire with our bridal stylist.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_column_GTqDUq",
+        "text_column_YcMJyN",
+        "text_column_tR6wqD"
+      ],
+      "settings": {
+        "heading": "<p>Our Features</p>"
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
