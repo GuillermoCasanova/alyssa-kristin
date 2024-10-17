@@ -53,6 +53,26 @@
     },
     "faqs_preview_hMeWbA": {
       "type": "faqs-preview",
+      "blocks": {
+        "faq_block_QzhGAm": {
+          "type": "faq_block",
+          "settings": {
+            "question": "What should I wear to my appointment?",
+            "answer": ""
+          }
+        },
+        "faq_block_tDPREr": {
+          "type": "faq_block",
+          "settings": {
+            "question": "How long are appointments?",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_QzhGAm",
+        "faq_block_tDPREr"
+      ],
       "settings": {
         "headline": "FAQ",
         "image_alt": "",
