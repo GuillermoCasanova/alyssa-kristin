@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -122,7 +122,7 @@
         "image_alt": "Woman wearing dress.",
         "headline": "<p>Visit <em>Us</em></p>",
         "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio.445 W Erie St #108, Chicago, IL 60654</p>",
-        "cta_link": "shopify://pages/contact",
+        "cta_link": "shopify://pages/appointments",
         "cta_text": "Book An Appointment"
       }
     },
