@@ -238,7 +238,7 @@ summary::before {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1200px) {
   :root {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
@@ -246,7 +246,7 @@ summary::before {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-  font-size: 1.05rem;
+  font-size: .95rem;
   }
 }
 
@@ -254,7 +254,7 @@ summary::before {
 /*WIDESCREEN-UP*/
 @media screen and (min-width: 2000px) {
   :root {
-    font-size: 1.04rem;
+    font-size: 1rem;
   }
 }
 
@@ -549,7 +549,7 @@ main {
 
 @media screen and (min-width: 940px) {
   .page-width {
-    max-width: var(--max-width-large);
+    max-width: var(--max-width-medium);
     margin-left: auto;
     margin-right: auto;
   }
@@ -579,7 +579,7 @@ main {
 @media screen and (min-width: 1300px) {
   .page-width {
     /* max-width: 98rem; */
-    max-width: var(--max-width-large);
+    max-width: var(--max-width-medium);
   }
 }
 

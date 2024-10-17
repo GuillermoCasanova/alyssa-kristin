@@ -1,3 +1,23 @@
+
+
+
+@media screen and (min-width: 700px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: calc(var(--level6) * 2);
+  }
+}
+
+
+@media screen and (min-width: 940px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: calc(var(--level6) * 2);
+  }
+  
+}
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;
