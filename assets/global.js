@@ -512,7 +512,9 @@ class MenuDrawer extends HTMLElement {
   }
 
   closeMenuDrawer(event, elementToFocus = false) {
-    event.preventDefault();
+    if(event) {
+      event.preventDefault();
+    }
     if (event === undefined) return;
 
     this.mainDetailsToggle.classList.remove('menu-open');

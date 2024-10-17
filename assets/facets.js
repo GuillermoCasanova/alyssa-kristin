@@ -10,10 +10,17 @@ class FacetFiltersForm extends HTMLElement {
     const facetForm = this.querySelector('form');
     facetForm.addEventListener('input', this.debouncedOnSubmit.bind(this));
 
+    facetForm.addEventListener('click', (event) => {
+      if (event.target.matches('[data-custom-sort-trigger]')) {
+        this.onCustomSortTriggeClick(event);
+      }
+    });
+
     const facetWrapper = this.querySelector('#FacetsWrapperDesktop');
     if (facetWrapper) facetWrapper.addEventListener('keyup', onKeyUpEscape);
   }
 
+   
   static setListeners() {
     const onHistoryChange = (event) => {
       const searchParams = event.state ? event.state.searchParams : FacetFiltersForm.searchParamsInitial;
@@ -21,6 +28,7 @@ class FacetFiltersForm extends HTMLElement {
       FacetFiltersForm.renderPage(searchParams, null, false);
     };
     window.addEventListener('popstate', onHistoryChange);
+
   }
 
   static toggleActiveFacets(disable = true) {
@@ -56,6 +64,10 @@ class FacetFiltersForm extends HTMLElement {
     });
 
     if (updateURLHash) FacetFiltersForm.updateURLHash(searchParams);
+
+    document.querySelectorAll('[data-custom-sort-trigger]').forEach((element) => {
+      element.addEventListener('click', this.onCustomSortTriggeClick);
+    });
   }
 
   static renderSectionFromFetch(url, event) {
@@ -282,6 +294,22 @@ class FacetFiltersForm extends HTMLElement {
     }
   }
 
+  onCustomSortTriggeClick(event) {
+    event.preventDefault();
+
+    const targetValue = event.target.dataset.value;
+    const sortBySelect = document.getElementById('SortBy');
+
+    const optionElement = sortBySelect.querySelector(`option[value='${targetValue}']`);
+    if (optionElement) {
+      optionElement.selected = true;
+      sortBySelect.dispatchEvent(new Event('input', { bubbles: true }));
+    } else {
+      console.error(`Option with value '${targetValue}' not found in sortBySelect.`);
+    }
+
+  }
+
   onActiveFilterClick(event) {
     event.preventDefault();
     FacetFiltersForm.toggleActiveFacets();
@@ -297,6 +325,7 @@ FacetFiltersForm.filterData = [];
 FacetFiltersForm.searchParamsInitial = window.location.search.slice(1);
 FacetFiltersForm.searchParamsPrev = window.location.search.slice(1);
 customElements.define('facet-filters-form', FacetFiltersForm);
+
 FacetFiltersForm.setListeners();
 
 class PriceRange extends HTMLElement {

@@ -346,11 +346,24 @@
                       </span>
                     </button>
                     {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
-                    <ul>
+                    <ul class="facets__sorting-options">
                       {%- for option in results.sort_options -%}
-                        <li>
-                          {{ option.name | escape }}
-                        </li>
+                        {% if option.value == 'price-ascending'
+                          or option.value == 'price-descending'
+                          or option.value == 'created-descending'
+                          or option.value == 'best-selling'
+                        %}
+                          <li class="facets__sorting-option">
+                            <button
+                              class="facets__sorting-option-button"
+                              type="button"
+                              data-custom-sort-trigger
+                              data-value="{{ option.value | escape }}"
+                            >
+                              {{ option.name | escape }}
+                            </button>
+                          </li>
+                        {% endif %}
                       {%- endfor -%}
                     </ul>
                     <div class="select visually-hidden">
