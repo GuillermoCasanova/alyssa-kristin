@@ -50,10 +50,20 @@
         "body_copy": "<p>Discover the gown of your dreams at our Chicago flagship showroom. Share the moment with your loved ones in a private, personalized appointment designed to make your bridal experience unforgettable.</p>",
         "iframe_code": "<iframe src=\"https://example.com\" width=\"600\" height=\"400\"></iframe>"
       }
+    },
+    "faqs_preview_hMeWbA": {
+      "type": "faqs-preview",
+      "settings": {
+        "headline": "",
+        "image_alt": "",
+        "cta_link": "",
+        "cta_text": ""
+      }
     }
   },
   "order": [
     "main",
-    "appointment_embed_XUXw4R"
+    "appointment_embed_XUXw4R",
+    "faqs_preview_hMeWbA"
   ]
 }
