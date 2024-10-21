@@ -16,14 +16,14 @@
 }
 
 .appointment-info__inner {
-    padding-top: var(--level7); 
-    padding-bottom: var(--level7); 
+    padding-top: var(--level10); 
+    padding-bottom: calc(var(--level10) + var(--level4)); 
 }
 
 @media screen and (min-width: 940px) {
     .appointment-info__inner {
         padding-top: calc(var(--level5) + var(--level10)); 
-        padding-bottom: var(--level10); 
+        padding-bottom: calc(var(--level5) + var(--level10)); 
     }
 }
 
@@ -43,21 +43,110 @@
     font-size: var(--h2); 
 }
 
+
 @media screen and (min-width: 940px) {
-    .apppointment-info-section__body__inner {
+    .appointment-info__body__inner {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: var(--level10); 
     }
 }
 
-.apppointment-info-section__step {
-    background-color: rbg(var(--color-base-background-1)); 
-    padding: var(--level6); 
+
+
+/*------------------------------------*\
+    #Swiper
+\*------------------------------------*/
+
+.appointment-info-section .swiper  {
+    background-color: rgb(var(--color-base-background-1));
+    background-color: white;
+    border: 1px solid rgb(var(--color-base-text-1));  
+    width: 99%;
+    padding-bottom: var(--level5);
+    padding-top: var(--level5);
 }
 
+.appointment-info-section .swiper-pagination {
+    max-width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    left: 0; 
+    right: 0; 
+}
+
+.appointment-info-section .swiper-pagination-bullet {
+    height: 1.15rem; 
+    width: 1.15rem; 
+    border: 1px solid rgb(var(--color-base-text-1)); 
+    background-color: #C3C0B9; 
+    opacity: 1;
+    border-color: transparent; 
+}
+
+.appointment-info-section .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: rgb(var(--color-base-text-1)); 
+
+}
+
+.appointment-info-section .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: var(--level5);
+}
+
+
+.appointment-info-section .swiper-button-next,
+.appointment-info-section .swiper-button-prev {
+    bottom: var(--level2); 
+    position: absolute;
+    top: auto; 
+    color: rgb(var(--color-base-text-1));
+    z-index: 2;
+}
+
+.appointment-info-section .swiper-button-next:after,
+.appointment-info-section .swiper-button-prev:after {
+    content: none
+}
+
+.appointment-info-section .swiper-button-next,
+.appointment-info-section .swiper-button-prev {
+    width: 3rem; 
+}
+
+.appointment-info-section .swiper-button-next {
+    right: var(--level7);
+}
+
+.appointment-info-section .swiper-button-prev {
+    left: var(--level7);
+}
+
+.appointment-info-section .swiper-button-next svg,
+.appointment-info-section .swiper-button-prev svg {
+    pointer-events: none;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Steps
+\*------------------------------------*/
+
+
+.appointment-info__step {
+    padding: var(--level7);
+    padding-bottom: var(--level10);
+    max-width: 33rem; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 @media screen and (min-width: 940px) {
-    .apppointment-info-section__step {
+    .appointment-info__step {
         padding: 0; 
     }
 }
@@ -65,7 +154,9 @@
 .appointment-info__step__heading {
     font-family: var(--quaternary-font-family); 
     font-weight: normal;
-    font-size: var(--h3); 
+        text-transform: uppercase;
+        font-size: var(--h5); 
+        margin-bottom: var(--level7); 
 }
 
 @media screen and (min-width: 940px) {
@@ -77,7 +168,6 @@
 }
 
 
-
-    .appointment-info__step__body {
-        font-size: var(--h5);
-    }
+.appointment-info__step__body {
+    font-size: var(--h5);
+}

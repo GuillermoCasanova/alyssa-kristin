@@ -77,7 +77,7 @@
     margin-bottom: var(--level10);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1800px) {
     .faq-preview__questions-list {
         margin-bottom: calc(var(--level10) + var(--level4));
     }
@@ -101,7 +101,7 @@
     position: relative;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1800px) {
    .faq-preview-item   {
     font-size: var(--h4); 
    } 
@@ -134,7 +134,7 @@
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1800px) {
     .faq-preview-item__question {
         padding-top: var(--level8);
         padding-bottom: var(--level8);

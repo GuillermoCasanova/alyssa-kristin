@@ -55,7 +55,7 @@ class ImageSlideshow extends HTMLElement {
     }
 
 
-    if(fadeOnLargeUp && this.mediaQueries.mediumUp.matches) {
+    if(fadeOnLargeUp && this.mediaQueries.mediumUp.matches || this.options.effect == 'fade') {
       this.options.effect = 'fade';
       this.options.fadeEffect = {
         crossFade: true
@@ -147,8 +147,10 @@ class ImageSlideshow extends HTMLElement {
             .map(child => `<div class="swiper-slide">${child.outerHTML}</div>`)
             .join('')}
         </div>
-        ${pOptions.navigation ? `<div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>`:  ''}
+        ${pOptions.navigation ? `<div class="swiper-button-next">
+          <svg  viewBox="0 0 91 38" xmlns="http://www.w3.org/2000/svg"><path d="M89.768 20.768a1.5 1.5 0 0 0 0-2.536L73.858 1.322a1.5 1.5 0 0 0-2.121 2.121L84.464 19 71.737 31.737a1.5 1.5 0 1 0 2.121 2.121L89.768 20.768zM0 21.5h88v-5H0v5z" fill="currentColor"/></svg></div>
+        <div class="swiper-button-prev">
+        <svg  viewBox="0 0 91 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.23223 20.7678C0.255921 19.7915 0.25592 18.2086 1.23223 17.2322L17.1421 1.32234C18.1184 0.346032 19.7014 0.346032 20.6777 1.32234C21.654 2.29865 21.654 3.88157 20.6777 4.85788L6.53554 19L20.6777 33.1421C21.654 34.1185 21.654 35.7014 20.6777 36.6777C19.7014 37.654 18.1184 37.654 17.1421 36.6777L1.23223 20.7678ZM91 21.5L3 21.5L3 16.5L91 16.5L91 21.5Z" fill="currentColor"/></svg></div>`:  ''}
         ${pOptions.pagination ? `<div class="swiper-pagination"></div>`:  ''}
       </div>
     `;
@@ -190,9 +192,9 @@ class ImageSlideshow extends HTMLElement {
               this.setUpHtml(this.options);
               this.swiper = new Swiper.default(this.querySelector('.swiper-container'), this.options);
               controlElement.getSwiper().controller.control = this.swiper; 
-              if(true) {
-                this.initHoverArrowNav(); 
-              } 
+              // if(true) {
+              //   this.initHoverArrowNav(); 
+              // } 
             }); // Return the promise from initSwiper
           }
   

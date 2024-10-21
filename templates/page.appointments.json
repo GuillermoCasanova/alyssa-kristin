@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "appointments-info",
+      "type": "appointment-info",
       "blocks": {
         "text_column_GTqDUq": {
           "type": "text_column",

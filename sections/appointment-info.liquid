@@ -7,18 +7,19 @@
       <div class="appointment-info__header">
         <h2 class="appointment-info__heading">{{ section.settings.heading }}</h2>
       </div>
-      <div class="apppointment-info-section__body">
+      <div class="appointment-info__body">
         <custom-slideshow
-          class="apppointment-info-section__body__inner"
+          class="appointment-info__body__inner"
           slidesPerView="1"
           pagination="true"
           navigation="true"
-          freeMode="false"
           loop="false"
+          spaceBetween="0"
+          effect="fade"
           disableOn="largeUp"
         >
           {% for block in section.blocks %}
-            <div class="apppointment-info-section__step">
+            <div class="appointment-info__step">
               <h3 class="appointment-info__step__heading">{{ block.settings.heading }}</h3>
               <div class="appointment-info__step__body">
                 {{ block.settings.rich_text }}
