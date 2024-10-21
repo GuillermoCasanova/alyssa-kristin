@@ -3,59 +3,65 @@
 
 <!-- FAQs Preview Section -->
 <section class="faq-preview-section">
-  <div class="faq-preview-section__inner page-width">
-    <div class="faq-preview-section__image">
-      {% if section.settings.image != blank %}
-        <img
-          srcset="
-            {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
-            {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
-            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
-          "
-          src="{{ section.settings.image | image_url: width: 533 }}"
-          sizes="(min-width: 940px) 30vw, 50vw"
-          alt="{{ section.settings.image_alt | escape }}"
-          class="motion-reduce responsive-image"
-          loading="lazy"
-          width="{{ section.settings.image.width }}"
-          height="{{ section.settings.image.height }}"
-        >
-      {% endif %}
-    </div>
-    <h2 class="faq-preview-section__heading">{{ section.settings.headline }}</h2>
-
-    <div class="faq-preview-section__questions-list">
-      {% for block in section.blocks %}
-        <details class="faq-preview-item" data-id="faq-preview-{{ forloop.index }}" {{ block.shopify_attributes }}>
-          <summary
-            class="faq-preview-item__question"
-            aria-expanded="false"
-            aria-label="Open FAQ answer for question {{ forloop.index }}"
-            data-id="{{ forloop.index }}"
+  <div class="faq-preview__inner">
+    <div class="faq-preview__image">
+      <div class="faq-preview__image__inner">
+        {% if section.settings.image != blank %}
+          <img
+            srcset="
+              {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+            "
+            src="{{ section.settings.image | image_url: width: 533 }}"
+            sizes="(min-width: 940px) 30vw, 50vw"
+            alt="{{ section.settings.image_alt | escape }}"
+            class="motion-reduce responsive-image"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
           >
-            {{ block.settings.question }}
-            <span class="faq-preview-item__icon">
-              <svg class="open-icon">
-                <use href="#icon-plus-sign"/>
-              </svg>
-              <svg class="close-icon">
-                <use href="#icon-negative-sign"/>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-preview-item__answer" data-faq-answer data-answer-id="{{ forloop.index }}">
-            {{ block.settings.answer }}
-          </div>
-        </details>
-      {% endfor %}
+        {% endif %}
+      </div>
     </div>
+    <div class="faq-preview__questions">
+      <div class="page-width faq-preview__questions-inner">
+        <h2 class="faq-preview__heading">{{ section.settings.headline }}</h2>
 
-    <div class="faq-preview-section__cta">
-      <a href="{{ section.settings.cta_link }}" class="button button--medium button--primary">
-        {{ section.settings.cta_text }}
-      </a>
+        <div class="faq-preview__questions-list">
+          {% for block in section.blocks %}
+            <details class="faq-preview-item" data-id="faq-preview-{{ forloop.index }}" {{ block.shopify_attributes }}>
+              <summary
+                class="faq-preview-item__question"
+                aria-expanded="false"
+                aria-label="Open FAQ answer for question {{ forloop.index }}"
+                data-id="{{ forloop.index }}"
+              >
+                {{ block.settings.question }}
+                <span class="faq-preview-item__icon">
+                  <svg class="open-icon">
+                    <use href="#icon-plus-sign"/>
+                  </svg>
+                  <svg class="close-icon">
+                    <use href="#icon-negative-sign"/>
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-preview-item__answer" data-faq-answer data-answer-id="{{ forloop.index }}">
+                {{ block.settings.answer }}
+              </div>
+            </details>
+          {% endfor %}
+        </div>
+
+        <div class="faq-preview__cta">
+          <a href="{{ section.settings.cta_link }}" class="button button--medium button--primary">
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
