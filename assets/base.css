@@ -1311,7 +1311,7 @@ button:hover,
 .button--medium {
   padding-top: .85rem;
   padding-bottom: 1rem;
-  font-size: var(--normal);
+  font-size: var(--micro);
   padding-left: var(--level4); 
   padding-right: var(--level4); 
 }
