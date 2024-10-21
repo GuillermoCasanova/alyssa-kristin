@@ -91,6 +91,7 @@
       ],
       "settings": {
         "headline": "FAQ",
+        "image": "shopify://shop_images/Rectangle_35.png",
         "image_alt": "",
         "cta_link": "shopify://pages/frequently-asked-questions",
         "cta_text": "Read All FAQ"
