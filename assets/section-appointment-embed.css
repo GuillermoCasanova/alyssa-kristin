@@ -1,0 +1,48 @@
+
+
+/*------------------------------------*\
+    #Appointment Embed
+\*------------------------------------*/
+
+
+.appointment-embed__header {
+    text-align: center;
+}
+
+
+.appointment-embed__heading {
+    font-size: var(--h2); 
+    font-family: var(--secondary-font-family); 
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.appointment-embed__body {
+    text-align: center;
+    font-size: var(--h5);
+    margin-bottom: var(--level9);
+}
+
+@media screen and (min-width: 940px) {
+    .appointment-embed__body {
+        font-size: var(--h5);
+        margin-bottom: var(--level10);
+    }
+}
+
+.appointment-embed__iframe {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%; 
+    background-color: rgb(var(--color-base-background-2));
+    padding-bottom: 100%; 
+    overflow: hidden;
+    position: relative;
+    margin-bottom: var(--level10);
+}
+
+
+.appointment-embed__iframe iframe {
+    border: 0;
+    position: absolute;
+    object-fit: cover;
+}

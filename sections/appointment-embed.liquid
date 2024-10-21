@@ -1,17 +1,17 @@
+{{ 'section-appointment-embed.css' | asset_url | stylesheet_tag }}
+
 <!-- Appointment Embed Section -->
 <section>
   <div class="appointment-embed-section">
-    <div class="appointment-embed-section__inner">
-      <div class="appointment-embed-section__header">
-        <h2 class="appointment-embed-section__heading">{{ section.settings.heading }}</h2>
+    <div class="appointment-embed__inner page-width is-x-small">
+      <div class="appointment-embed__header">
+        <h2 class="appointment-embed__heading">{{ section.settings.heading }}</h2>
       </div>
-      <div class="appointment-embed-section__body">
-        <div class="appointment-embed-section__body__text">
-          {{ section.settings.body_copy }}
-        </div>
-        <div class="appointment-embed-section__iframe">
-          {{ section.settings.iframe_code }}
-        </div>
+      <div class="appointment-embed__body">
+        {{ section.settings.body_copy }}
+      </div>
+      <div class="appointment-embed__iframe">
+        {{ section.settings.iframe_code }}
       </div>
     </div>
   </div>

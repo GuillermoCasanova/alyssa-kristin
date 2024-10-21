@@ -22,7 +22,7 @@
 
 @media screen and (min-width: 940px) {
     .appointment-info__inner {
-        padding-top: var(--level10); 
+        padding-top: calc(var(--level5) + var(--level10)); 
         padding-bottom: var(--level10); 
     }
 }
@@ -78,8 +78,6 @@
 
 
 
-@media screen and (min-width: 940px) {
     .appointment-info__step__body {
-        font-size: var(--h6);
+        font-size: var(--h5);
     }
-}
