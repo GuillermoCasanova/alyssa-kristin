@@ -1,0 +1,85 @@
+
+/*------------------------------------*\
+    #Appointment Info
+\*------------------------------------*/
+
+
+.appointment-info-section {
+    background-color:rgb(var(--color-base-background-2));
+    margin-top: calc(var(--level10) + var(--level10)); 
+}
+
+@media screen and (min-width: 940px) {
+    .appointment-info-section {
+        margin-top: calc(var(--level10) + var(--level10) + var(--level10)); 
+    }
+}
+
+.appointment-info__inner {
+    padding-top: var(--level7); 
+    padding-bottom: var(--level7); 
+}
+
+@media screen and (min-width: 940px) {
+    .appointment-info__inner {
+        padding-top: var(--level10); 
+        padding-bottom: var(--level10); 
+    }
+}
+
+.appointment-info__header {
+    text-align: center;
+}
+
+@media screen and (min-width: 940px) {
+    .appointment-info__header {
+        margin-bottom: var(--level10);
+    }
+}
+
+.appointment-info__heading {
+    font-family: var(--secondary-font-family); 
+    font-weight: 300;
+    font-size: var(--h2); 
+}
+
+@media screen and (min-width: 940px) {
+    .apppointment-info-section__body__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: var(--level10); 
+    }
+}
+
+.apppointment-info-section__step {
+    background-color: rbg(var(--color-base-background-1)); 
+    padding: var(--level6); 
+}
+
+@media screen and (min-width: 940px) {
+    .apppointment-info-section__step {
+        padding: 0; 
+    }
+}
+
+.appointment-info__step__heading {
+    font-family: var(--quaternary-font-family); 
+    font-weight: normal;
+    font-size: var(--h3); 
+}
+
+@media screen and (min-width: 940px) {
+    .appointment-info__step__heading {
+        font-size: var(--normal);
+        text-transform: uppercase;
+        margin-bottom: var(--level6); 
+    }
+}
+
+
+
+@media screen and (min-width: 940px) {
+    .appointment-info__step__body {
+        font-size: var(--h6);
+    }
+}

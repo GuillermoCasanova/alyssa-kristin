@@ -141,7 +141,7 @@ class ImageSlideshow extends HTMLElement {
         .swiper-content {
           }
       </style>
-      <div class="swiper-container">
+      <div class="swiper swiper-container">
         <div class="swiper-wrapper ${pOptions.autoplay ? 'marquee-timing': ''}">
           ${Array.from(this.children)
             .map(child => `<div class="swiper-slide">${child.outerHTML}</div>`)

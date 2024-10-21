@@ -1,25 +1,39 @@
-{{ 'section-appointmnet-info.css' | asset_url | stylesheet_tag }}
+{{ 'section-appointment-info.css' | asset_url | stylesheet_tag }}
 
 <!-- Appointment Info Section -->
 <section>
   <div class="appointment-info-section">
-    <div class="appointment-info-section__inner">
-      <div class="appointment-info-section__header">
-        <h2 class="appointment-info-section__heading">{{ section.settings.heading }}</h2>
+    <div class="appointment-info__inner page-width is-small">
+      <div class="appointment-info__header">
+        <h2 class="appointment-info__heading">{{ section.settings.heading }}</h2>
       </div>
       <div class="apppointment-info-section__body">
-        {% for block in section.blocks %}
-          <div class="apppointment-info-section__step">
-            <h3 class="appointment-info-section__step__heading">{{ block.settings.heading }}</h3>
-            <div class="appointment-info-section__body">
-              {{ block.settings.rich_text }}
+        <custom-slideshow
+          class="apppointment-info-section__body__inner"
+          slidesPerView="1"
+          pagination="true"
+          navigation="true"
+          freeMode="false"
+          loop="false"
+          disableOn="largeUp"
+        >
+          {% for block in section.blocks %}
+            <div class="apppointment-info-section__step">
+              <h3 class="appointment-info__step__heading">{{ block.settings.heading }}</h3>
+              <div class="appointment-info__step__body">
+                {{ block.settings.rich_text }}
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </custom-slideshow>
       </div>
     </div>
   </div>
 </section>
+
+<script type="module" src="{{ 'custom-slideshow.js' | asset_url }}" defer="defer"></script>
+
+{{ 'vendor-swiper.css' | asset_url | stylesheet_tag: preload: true }}
 
 {% schema %}
 {
@@ -32,7 +46,7 @@
       "type": "richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "<p>Our Features</p>"
+      "default": "<p>Before Your Appointment</p>"
     }
   ],
   "blocks": [
