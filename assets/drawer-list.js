@@ -1,4 +1,4 @@
-class FAQList extends HTMLElement {
+class DrawerList extends HTMLElement {
   constructor() {
     super();
     this.activeDrawer = null;
@@ -7,7 +7,7 @@ class FAQList extends HTMLElement {
   connectedCallback() {
     this.init();
     if (Shopify.designMode) {
-      document.addEventListener('shopify:block:select', this.onFAQBlockSelect.bind(this));
+      document.addEventListener('shopify:block:select', this.oncontentBlockSelect.bind(this));
     }
   }
 
@@ -19,7 +19,7 @@ class FAQList extends HTMLElement {
   closeDrawer(pElem) {
     if (!pElem) return;
 
-    pElem.querySelector('[data-faq-answer]').style.height = 0;
+    pElem.querySelector('[data-drawer-content]').style.height = 0;
     pElem.querySelector('summary').setAttribute('aria-expanded', false);
 
     setTimeout(() => {
@@ -29,7 +29,7 @@ class FAQList extends HTMLElement {
     this.activeDrawer = null;
   }
 
-  onFAQBlockSelect(event) {
+  oncontentBlockSelect(event) {
     event.preventDefault();
     setTimeout(() => this.openDrawer(event.target), 200);
   }
@@ -48,8 +48,8 @@ class FAQList extends HTMLElement {
 
     if (parentDetails) {
       parentDetails.setAttribute('open', true);
-      const faqAnswer = parentDetails.querySelector('[data-faq-answer]');
-      faqAnswer.style.height = `${faqAnswer.querySelector('p').offsetHeight}px`;
+      const contentAnswer = parentDetails.querySelector('[data-drawer-content]');
+      contentAnswer.style.height = `${contentAnswer.querySelector('[data-drawer-content-inner]').offsetHeight}px`;
       pDrawer.setAttribute('aria-expanded', true);
       this.activeDrawer = parentDetails.dataset.id;
     }
@@ -58,11 +58,11 @@ class FAQList extends HTMLElement {
   init() {
     this.querySelectorAll('details').forEach(detailsElem => {
       detailsElem.querySelector('summary').addEventListener('click', this.toggleDrawer.bind(this));
-      detailsElem.querySelectorAll('[data-faq-answer]').forEach(answerElem => {
+      detailsElem.querySelectorAll('[data-drawer-content]').forEach(answerElem => {
         answerElem.style.height = 0;
       });
     });
   }
 }
 
-customElements.define('faq-list', FAQList);
+customElements.define('drawer-list', DrawerList);
