@@ -3,6 +3,10 @@
 \*------------------------------------*/
 
 
+.faq-preview-section {
+    margin-bottom: 0; 
+    padding-bottom: 0;
+}
 
 @media screen and (min-width: 940px) {
     .faq-preview__inner {
