@@ -10,23 +10,7 @@
 {
   "sections": {
     "image_video_banner_XmEgnA": {
-      "type": "image-video-banner",
-      "blocks": {
-        "heading_PRxGNh": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner"
-          }
-        }
-      },
-      "block_order": [
-        "heading_PRxGNh"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/image-test.png",
-        "video": ""
-      }
+      "type": "text-page-header"
     },
     "main": {
       "type": "faqs",

@@ -999,7 +999,7 @@ details.menu-open .facets-modal {
   padding-top: 0;
   padding-bottom: var(--level5);
   padding-top: var(--level5);
-  padding-left: var(--level4); 
+  padding-left: var(--level4);
   border-bottom: 1px solid rgb(var(--color-base-text-1));
 }
 
@@ -1028,6 +1028,8 @@ details.menu-open .facets-modal {
   border: 0; 
   font-family: var(--primary-font-family);
   padding: 0; 
+  color: rgb(var(--color-base-text-1));  
+
 }
 
 .facets__sorting-option-button:hover,

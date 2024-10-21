@@ -1,8 +1,18 @@
-.text-page__header {
-    width: 100%;
-    text-align: center;
-    padding-top: var(--level7);
-    padding-bottom: var(--level9);
+
+
+/*------------------------------------*\
+    #Text Page Header
+\*------------------------------------*/
+
+.text-page-header {
+    background-color:rgb(var(--color-base-background-2));
+    margin-top: calc(var(--level10) + var(--level10)); 
+}
+
+@media screen and (min-width: 940px) {
+    .text-page-header{
+        margin-top: calc(var(--level10) + var(--level10) + var(--level10)); 
+    }
 }
 
 .text-page__header__heading {
