@@ -1,16 +1,19 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_video_banner_XmEgnA": {
-      "type": "text-page-header"
+      "type": "text-page-header",
+      "settings": {
+        "page": ""
+      }
     },
     "main": {
       "type": "faqs",
@@ -26,7 +29,7 @@
           "type": "faq_block",
           "settings": {
             "question": "What sizes do you offer?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "e00f2a91-4f7c-4e5a-b9d2-e609293e2cf7": {
@@ -61,7 +64,7 @@
           "type": "faq_block",
           "settings": {
             "question": "What are some crepe modifications?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         }
       },
@@ -85,63 +88,63 @@
           "type": "faq_block",
           "settings": {
             "question": "Do I need an appointment?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_dLxbLf": {
           "type": "faq_block",
           "settings": {
             "question": "How long are appointments?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_mBLrYk": {
           "type": "faq_block",
           "settings": {
             "question": "What styles and sizes are available to try on in the studio?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_BGYKce": {
           "type": "faq_block",
           "settings": {
             "question": "What should I wear to my appointment?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_kt4zbx": {
           "type": "faq_block",
           "settings": {
             "question": "How many guests can I bring with me?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_6KLthL": {
           "type": "faq_block",
           "settings": {
             "question": "Are we allowed to bring outside food or drink?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_8Y3e6D": {
           "type": "faq_block",
           "settings": {
             "question": "What is your mask policy?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_XckEUh": {
           "type": "faq_block",
           "settings": {
             "question": "Can I cancel or reschedule my appointment?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         },
         "faq_block_9LjgrK": {
           "type": "faq_block",
           "settings": {
             "question": "Where should I park when I arrive?",
-            "answer": ""
+            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
           }
         }
       },
