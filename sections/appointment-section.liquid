@@ -45,7 +45,6 @@
     </div>
   </div>
 </section>
-
 {% schema %}
 {
   "name": "Appointment Section",
@@ -66,12 +65,14 @@
     {
       "type": "richtext",
       "id": "headline",
-      "label": "Headline"
+      "label": "Headline",
+      "default": "<p>Visit Us</p>"
     },
     {
       "type": "richtext",
       "id": "body_copy",
-      "label": "Body Copy"
+      "label": "Body Copy",
+      "default": "<p>Discover your dream dress at our River North Chicago loft studio.445 W Erie St #108, Chicago, IL 60654</p>"
     },
     {
       "type": "url",
@@ -81,7 +82,8 @@
     {
       "type": "text",
       "id": "cta_text",
-      "label": "CTA Text"
+      "label": "CTA Text",
+      "default": "Book an Appointment"
     }
   ],
   "presets": [
