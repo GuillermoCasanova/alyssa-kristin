@@ -68,6 +68,12 @@ class FacetFiltersForm extends HTMLElement {
     document.querySelectorAll('[data-custom-sort-trigger]').forEach((element) => {
       element.addEventListener('click', this.onCustomSortTriggeClick);
     });
+
+    if (window.initAjaxinate) {
+      setTimeout(() => {
+        initAjaxinate();
+      }, 100);
+    }
   }
 
   static renderSectionFromFetch(url, event) {

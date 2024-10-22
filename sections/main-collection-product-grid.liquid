@@ -18,8 +18,8 @@
   <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-  {%- paginate collection.products by section.settings.products_per_page -%}
+<div class="section-{{ section.id }}-padding">
+  {%- paginate collection.products by 9 -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
 
     <div class="page-width">
@@ -65,17 +65,14 @@
           </div>
         {%- else -%}
           <div
-            class="collection "
+            class="collection"
+            id="AjaxinateLoop"
           >
             <div class="loading-overlay gradient"></div>
             <ul
               id="product-grid"
               data-id="{{ section.id }}"
-              class="
-                grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-                grid--{{ section.settings.columns_desktop }}-col-desktop
-                {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
-              "
+              class="product-grid"
             >
               {% assign skip_card_product_styles = false %}
               {%- for product in collection.products -%}
@@ -108,17 +105,28 @@
             </ul>
 
             {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
+              {% render 'pagination', paginate: paginate %}
             {%- endif -%}
           </div>
         {%- endif -%}
       </div>
     </div>
   {%- endpaginate -%}
-  {% if section.settings.image_shape == 'arch' %}
-    {{ 'mask-arch.svg' | inline_asset_content }}
-  {%- endif -%}
 </div>
+
+<script src="{{ 'ajaxinate.min.js' | asset_url }}" defer></script>
+<script>
+  function initAjaxinate() {
+    var endlessScroll = new Ajaxinate({
+      container: '#AjaxinateLoop',
+      pagination: '#AjaxinatePagination',
+      method: 'click',
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    initAjaxinate();
+  });
+</script>
 
 {% schema %}
 {
