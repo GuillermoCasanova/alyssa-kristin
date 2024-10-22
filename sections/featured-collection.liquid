@@ -8,11 +8,6 @@
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
-  if section.settings.collection.all_products_count > section.settings.products_to_show
-    assign products_to_display = section.settings.products_to_show
-    assign more_in_collection = true
-  endif
-
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
   if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
@@ -59,7 +54,7 @@
         data-swiper
         aria-label="{{ 'general.slider.name' | t }}"
       >
-        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+        {%- for product in section.settings.collection.products limit: 4 -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="featured-collection__products__item {% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -159,26 +154,6 @@
       "id": "show_view_all",
       "default": true,
       "label": "t:sections.featured-collection.settings.show_view_all.label"
-    },
-    {
-      "type": "header",
-      "content": "Product Card Style"
-    },
-    {
-      "type": "select",
-      "id": "product_card_style",
-      "label": "Product Card Style",
-      "default": "normal",
-      "options": [
-        {
-          "value": "normal",
-          "label": "Card Style 1"
-        },
-        {
-          "value": "condensed",
-          "label": "Card Style 2"
-        }
-      ]
     }
   ],
   "presets": [
