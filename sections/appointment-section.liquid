@@ -6,22 +6,40 @@
       <div class="">
         <div class="appointment-section__image">
           <div class="apppointment-section__image__innner">
-            {% if section.settings.image != blank %}
+            {% if section.settings.image_mobile != blank %}
               <img
                 srcset="
-                  {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
-                  {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+                  {%- if section.settings.image_mobile.width >= 165 -%}{{ section.settings.image_mobile | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 360 -%}{{ section.settings.image_mobile | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 533 -%}{{ section.settings.image_mobile | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if section.settings.image_mobile.width >= 720 -%}{{ section.settings.image_mobile | image_url: width: 720 }} 720w,{%- endif -%}
+                  {{ section.settings.image_mobile | image_url }} {{ section.settings.image_mobile.width }}w
                 "
-                src="{{ section.settings.image | image_url: width: 533 }}"
+                src="{{ section.settings.image_mobile | image_url: width: 533 }}"
                 sizes="(min-width: 940px) 30vw, 50vw"
-                alt="{{ section.settings.alt_text | escape }}"
-                class="motion-reduce responsive-image"
+                alt="{{ section.settings.image_alt | escape }}"
+                class="motion-reduce responsive-image hide-for-large-up"
                 loading="lazy"
-                width="{{ section.settings.image.width }}"
-                height="{{ section.settings.image.height }}"
+                width="{{ section.settings.image_mobile.width }}"
+                height="{{ section.settings.image_mobile.height }}"
+              >
+            {% endif %}
+            {% if section.settings.image_desktop != blank %}
+              <img
+                srcset="
+                  {%- if section.settings.image_desktop.width >= 165 -%}{{ section.settings.image_desktop | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.image_desktop.width >= 360 -%}{{ section.settings.image_desktop | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.image_desktop.width >= 533 -%}{{ section.settings.image_desktop | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if section.settings.image_desktop.width >= 720 -%}{{ section.settings.image_desktop | image_url: width: 720 }} 720w,{%- endif -%}
+                  {{ section.settings.image_desktop | image_url }} {{ section.settings.image_desktop.width }}w
+                "
+                src="{{ section.settings.image_desktop | image_url: width: 533 }}"
+                sizes="(min-width: 940px) 30vw, 50vw"
+                alt="{{ section.settings.image_alt | escape }}"
+                class="motion-reduce responsive-image show-for-large-up"
+                loading="lazy"
+                width="{{ section.settings.image_desktop.width }}"
+                height="{{ section.settings.image_desktop.height }}"
               >
             {% endif %}
           </div>
@@ -54,8 +72,13 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "id": "image_mobile",
+      "label": "Image Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image Desktop"
     },
     {
       "type": "text",
