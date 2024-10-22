@@ -77,8 +77,7 @@
         "title": "Best <em>Sellers</em>",
         "description": "",
         "collection": "best-sellers",
-        "show_view_all": true,
-        "product_card_style": "normal"
+        "show_view_all": true
       }
     },
     "featured_on_mByktG": {
@@ -118,7 +117,8 @@
     "appointment_section_zrN4XF": {
       "type": "appointment-section",
       "settings": {
-        "image": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2.png",
+        "image_mobile": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2_3e9f5bd5-32b1-4ce5-81c6-4d8d219ac36d.png",
+        "image_desktop": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_1_0ed5b793-88bd-4bb3-9e3d-4298e43f23be.png",
         "image_alt": "Woman wearing dress.",
         "headline": "<p>Visit <em>Us</em></p>",
         "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio.445 W Erie St #108, Chicago, IL 60654</p>",
