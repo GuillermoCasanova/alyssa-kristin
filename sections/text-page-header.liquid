@@ -1,23 +1,20 @@
 {{ 'section-text-page.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">
-    {{ page.title | escape }}
-  </h1>
-</div>
+<section class="text-page-header">
+  <div class="text-page-header__inner page-width page-width--narrow section-{{ section.id }}-padding">
+    <h1 class="text-page__header__heading">
+      {{ page.title | escape }}
+    </h1>
+  </div>
+</section>
 
 {% schema %}
 {
   "name": "Text Page Header",
-  "tag": "section",
   "class": "section",
-  "settings": [
-    {
-      "type": "page",
-      "id": "page",
-      "label": "t:sections.page.settings.page.label"
-    }
-  ],
+  "enabled_on": {
+    "templates": ["page"]
+  },
   "presets": [
     {
       "name": "Text Page Header"

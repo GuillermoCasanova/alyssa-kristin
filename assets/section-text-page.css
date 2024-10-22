@@ -5,19 +5,20 @@
 \*------------------------------------*/
 
 .text-page-header {
-    background-color:rgb(var(--color-base-background-2));
-    margin-top: calc(var(--level10) + var(--level10)); 
+    margin-top: calc(var(--level10) + var(--level10) + var(--level10) + var(--level5)); 
 }
 
 @media screen and (min-width: 940px) {
     .text-page-header{
-        margin-top: calc(var(--level10) + var(--level10) + var(--level10)); 
+        margin-top: calc(var(--level10) + var(--level10) + var(--level10) + var(--level10) + var(--level6)); 
     }
 }
 
 .text-page__header__heading {
-    font-family: var(--tertiary-font-family);
-    font-size: var(--h2)
+    font-family: var(--secondary-font-family);
+    font-size: var(--h2);
+    font-weight: 300; 
+    text-align: center;
 }
 
 @media only screen and (min-width: 940px) {

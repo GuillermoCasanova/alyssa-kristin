@@ -1,14 +1,14 @@
-<link rel="stylesheet" href="{{ 'section-faq.css' | asset_url }}" media="print" onload="this.media='all'">
-<script src="{{ 'faq-list.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="{{ 'section-faqs-list.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 
 <!-- FAQs Section -->
-<faq-list>
-  <section class="faq-section">
-    <div class="faq-section__inner page-width">
-      <h2 class="faq-section__heading">{{ section.settings.heading }}</h2>
+<section class="faqs-list-section">
+  <div class="faqs-list__inner page-width">
+    <h2 class="faqs-list__heading">{{ section.settings.heading }}</h2>
 
-      <div class="faq-section__questions-list">
-        {% for block in section.blocks %}
+    <div class="faqs-list__questions-list">
+      {% for block in section.blocks %}
+        <drawer-disclosure>
           <details class="faq-item" data-id="faq-{{ forloop.index }}" {{ block.shopify_attributes }}>
             <summary
               class="faq-item__question"
@@ -26,15 +26,17 @@
                 </svg>
               </span>
             </summary>
-            <div class="faq-item__answer" data-faq-answer data-answer-id="{{ forloop.index }}">
-              {{ block.settings.answer }}
+            <div class="faq-item__answer" data-drawer-content data-id="{{ forloop.index }}">
+              <div data-drawer-content-inner>
+                {{ block.settings.answer }}
+              </div>
             </div>
           </details>
-        {% endfor %}
-      </div>
+        </drawer-disclosure>
+      {% endfor %}
     </div>
-  </section>
-</faq-list>
+  </div>
+</section>
 
 {% schema %}
 {

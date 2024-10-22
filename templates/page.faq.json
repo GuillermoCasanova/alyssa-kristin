@@ -13,7 +13,7 @@
       "type": "text-page-header"
     },
     "main": {
-      "type": "faqs",
+      "type": "faqs-list",
       "blocks": {
         "97e89cb5-05ca-478d-853d-cfd51f98b511": {
           "type": "faq_block",
@@ -79,7 +79,7 @@
       }
     },
     "faqs_kTYnzW": {
-      "type": "faqs",
+      "type": "faqs-list",
       "blocks": {
         "faq_block_cdQepC": {
           "type": "faq_block",

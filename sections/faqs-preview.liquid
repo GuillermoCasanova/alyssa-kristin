@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ 'section-faq-preview.css' | asset_url }}" media="print" onload="this.media='all'">
-<script src="{{ 'drawer-list.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 
 <!-- FAQs Preview Section -->
 <section class="faq-preview-section">
@@ -50,8 +50,8 @@
         <h2 class="faq-preview__heading">{{ section.settings.headline }}</h2>
 
         <div class="faq-preview__questions-list">
-          <drawer-list>
-            {% for block in section.blocks %}
+          {% for block in section.blocks %}
+            <drawer-disclosure>
               <details
                 class="faq-preview-item"
                 data-id="faq-preview-{{ forloop.index }}"
@@ -73,14 +73,14 @@
                     </svg>
                   </span>
                 </summary>
-                <div class="faq-preview-item__answer" data-drawer-content data-content-id="{{ forloop.index }}">
+                <div class="faq-preview-item__answer" data-drawer-content data-id="{{ forloop.index }}">
                   <div data-drawer-content-inner>
                     {{ block.settings.answer }}
                   </div>
                 </div>
               </details>
-            {% endfor %}
-          </drawer-list>
+            </drawer-disclosure>
+          {% endfor %}
         </div>
 
         <div class="faq-preview__cta">
