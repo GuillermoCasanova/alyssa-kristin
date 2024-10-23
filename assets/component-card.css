@@ -1,0 +1,260 @@
+
+/*------------------------------------*\
+    #Card
+\*------------------------------------*/
+
+.card-wrapper {
+  color: inherit;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
+.card {
+  text-decoration: none;
+  text-align: var(--text-alignment);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Component Styles
+\*------------------------------------*/
+
+
+.card .card__inner .card__media {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.card-information {
+  text-align: var(--text-alignment);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Content + Info
+\*------------------------------------*/
+
+
+.card__content {
+  display: grid;
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  margin-bottom: var(--level8); 
+  padding-top: var(--level4); 
+  text-decoration: none;
+}
+
+
+.card__information {
+  grid-row-start: 2;
+}
+
+.card-information .card__information-volume-pricing-note {
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.card-information quantity-popover volume-pricing {
+  margin-top: 0;
+}
+
+.card__badge {
+  align-self: flex-end;
+  grid-row-start: 3;
+  justify-self: flex-start;
+}
+
+.card__badge.top {
+  align-self: flex-start;
+  grid-row-start: 1;
+}
+
+.card__badge.right {
+  justify-self: flex-end;
+}
+
+
+.card__inner:not(.ratio) > .card__content {
+  height: 100%;
+}
+
+.card__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: var(--h6);
+  margin-bottom: var(--level2); 
+  text-wrap: nowrap;
+  max-width: 90%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__heading > a {
+  text-decoration: none;
+}
+
+
+/* .card__heading a::after {
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+} */
+
+.card__heading a:after {
+  outline-offset: 0.3rem;
+}
+
+.card__heading a:focus:after {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+}
+
+.card__heading a:focus-visible:after {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+}
+
+.card__heading a:focus:not(:focus-visible):after {
+  box-shadow: none;
+  outline: 0;
+}
+
+.card__heading a:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Media
+\*------------------------------------*/
+
+.card__media {
+  padding-bottom: 130%; 
+  width: 100%; 
+}
+
+.card .media {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+}
+
+.card .media {
+  width: 100%;
+}
+
+.card__inner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--media .card__inner .card__content {
+  position: relative;
+}
+
+
+.card__media .media img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+/* component-media */
+.media {
+  display: block;
+  background-color: rgba(var(--color-foreground), 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.media--transparent {
+  background-color: transparent;
+}
+
+.media > *:not(.zoom):not(.deferred-media__poster-button),
+.media model-viewer {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.media > img {
+  object-fit: cover;
+  object-position: center center;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.media--square {
+  padding-bottom: 100%;
+}
+
+.media--portrait {
+  padding-bottom: 125%;
+}
+
+.media--landscape {
+  padding-bottom: 66.6%;
+}
+
+.media--cropped {
+  padding-bottom: 56%;
+}
+
+.media--16-9 {
+  padding-bottom: 56.25%;
+}
+
+.media--circle {
+  padding-bottom: 100%;
+  border-radius: 50%;
+}
+
+.media.media--hover-effect > img + img {
+  opacity: 0;
+}
+
+@media screen and (min-width: 990px) {
+  .media--cropped {
+    padding-bottom: 63%;
+  }
+}
+
+deferred-media {
+  display: block;
+}
+
+
+.ratio {
+  display: flex;
+  position: relative;
+  align-items: stretch;
+}
+
+.ratio::before {
+  content: '';
+  width: 0;
+  height: 0;
+  padding-bottom: var(--ratio-percent);
+}

@@ -1,151 +1,125 @@
-
-
-    class QuickAddColorPicker extends HTMLElement {
-    constructor() {
-        super();
-        this.addEventListener('change', this.onVariantChange);
-    }
-
-    onVariantChange() {
-        this.updateVariantData();
-        this.updateImages(); 
-    }
-
-    setCurrentColor() {
-        let currentColor = this.getCurrentColor(); 
-        this.querySelectorAll('[data-color-option]').forEach((elem) => {
-            if(elem.dataset.colorName.toLocaleLowerCase() === currentColorName ) {
-                elem.checked = true; 
-            }
-        });  
-    }
-
-    getCurrentColor() { 
-        let that = this; 
-        this.querySelectorAll('[data-color-option]').forEach((elem) => {
-            if(elem.checked) {
-                this.currentColor = elem; 
-            }
-        }); 
-
-        return this.currentColor; 
-    }; 
-
-    updateVariantData() {
-        const currentColor = this.getCurrentColor(); 
-        let sectionId = this.dataset.section; 
-        let productContainer = document.querySelector(`[data-product-card-wrapper][data-section="${sectionId}"]`); 
-
-        productContainer.querySelectorAll(`variant-radios[data-section="${this.dataset.section}"]`).forEach((elem) => {
-            if( elem.querySelector('[type="application/json"]')) {
-                let e = elem.querySelector('[type="application/json"]');
-                e.parentElement.removeChild(e); 
-            }
-            let newScript = document.createElement('script');
-            newScript.innerHTML  = ` ` + JSON.stringify(JSON.parse(currentColor.dataset.product).variants || JSON.parse(currentColor.dataset.product) );  
-            newScript.type = "application/json";
-            elem.appendChild(newScript); 
-            elem.dispatchEvent(new Event('change'));
-        }); 
-    }
-
-    updateImages() {
-        let currentColor = this.getCurrentColor(); 
-        let productObj = JSON.parse(currentColor.dataset.productMedia); 
-        let images = productObj.splice(0, 2); 
-        let imagesContainer =  document.querySelector(`[data-product-images][data-section="${this.dataset.section}"]`); 
-
-        function createImageObj(pSource, pAlt, pWidth, pIndex) {
-            let imageTemplate = ``; 
-            let index = pIndex + 1;
-
-            function processImageSrc(pImageSrc, pSize) {
-                let imageSrc = '';
-                imageSrc = pImageSrc.replace(/(\.[^.]*)$/, `_${pSize}$1`)
-                .replace('http:', '');
-                return imageSrc;
-            }
-
-
-            imageTemplate = `
-                    <img
-                    srcset="${processImageSrc(pSource, '165x')} 165w,
-                            ${processImageSrc(pSource, '360x')} 360w,
-                            ${processImageSrc(pSource, '533x')} 533w,
-                            ${processImageSrc(pSource, '720x')} 720w,
-                            ${processImageSrc(pSource, '940x')} 940w,
-                            ${processImageSrc(pSource, '1066x')} 1066w,
-                            ${processImageSrc(pSource, '1066x')} ${pWidth}w"
-                    src="${processImageSrc(pSource, '533x')}"
-                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                    alt="${pAlt}"
-                    aria-hidden="true"
-                    width="1000"
-                    height="1000"
-                >
-            `; 
-
-            imagesContainer.innerHTML +=(imageTemplate);
-
+if (!customElements.get('quick-add-modal')) {
+    customElements.define(
+      'quick-add-modal',
+      class QuickAddModal extends ModalDialog {
+        constructor() {
+          console.log('heere');
+          super();
+          this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
+  
+          this.addEventListener('product-info:loaded', ({ target }) => {
+            target.addPreProcessCallback(this.preprocessHTML.bind(this));
+          });
         }
-                
-        function clearImages() {
-            imagesContainer.innerHTML = ""; 
+  
+        hide(preventFocus = false) {
+          const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+          if (cartNotification) cartNotification.setActiveElement(this.openedBy);
+          this.modalContent.innerHTML = '';
+  
+          if (preventFocus) this.openedBy = null;
+          super.hide();
         }
-
-        clearImages() 
-
-        images.forEach((image, index)=> {
-            if(image.alt === null || image.alt.indexOf('swatch_') == -1) {
-                createImageObj(image.src, '', index);
-            }
-        });
-
-    }
-
-    setUpEvents() {
-        if(this.querySelectorAll("[data-color-container]").length > 0) {
-            let colorContainer = this.querySelector('[data-color-container]');
-            let currentColor = this.querySelector("[data-color-container]").textContent; 
-
-            function showColor(pColor) {
-                colorContainer.textContent = pColor; 
-            }
-        
-            this.querySelectorAll('[data-color-label]').forEach((element) => {
-                element.addEventListener('mouseenter', function(event) {
-                    let name = this.dataset.colorName; 
-                    showColor(name)
-                })
-                element.addEventListener('mouseleave', (event) => {
-                    showColor(this.getSelectedColor().dataset.colorName)
-                })
-            }); 
-        
+  
+        show(opener) {
+          opener.setAttribute('aria-disabled', true);
+          opener.classList.add('loading');
+          opener.querySelector('.loading__spinner').classList.remove('hidden');
+  
+          fetch(opener.getAttribute('data-product-url'))
+            .then((response) => response.text())
+            .then((responseText) => {
+              const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
+              const productElement = responseHTML.querySelector('product-info');
+  
+              this.preprocessHTML(productElement);
+              HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.outerHTML);
+  
+              if (window.Shopify && Shopify.PaymentButton) {
+                Shopify.PaymentButton.init();
+              }
+              if (window.ProductModel) window.ProductModel.loadShopifyXR();
+  
+              super.show(opener);
+            })
+            .finally(() => {
+              opener.removeAttribute('aria-disabled');
+              opener.classList.remove('loading');
+              opener.querySelector('.loading__spinner').classList.add('hidden');
+            });
         }
-    }
-    }
-
-
-    if (!customElements.get('quick-add-color-picker')) {
-      customElements.define('quick-add-color-picker', QuickAddColorPicker)
-
-    }
-
-
-    class QuickAddButton extends HTMLElement {
-    constructor() {
-        super();
-        this.querySelector('button').addEventListener('click', this.addToCart.bind(this));
-        this.variantRadios =  document.querySelector(`variant-radios[data-section="${this.dataset.section}"]`); 
-    }
-
-    addToCart() {
-        const quickAddForm = document.querySelector(`#quick-add-form-${this.dataset.section}`);
-        quickAddForm.dispatchEvent(new Event('submit'));
-    }
-    }
-
-    if (!customElements.get('quick-add-button')) {
-    customElements.define('quick-add-button', QuickAddButton)
-    }
+  
+        preprocessHTML(productElement) {
+          console.log(productElement);
+          productElement.classList.forEach((classApplied) => {
+            if (classApplied.startsWith('color-') || classApplied === 'gradient')
+              this.modalContent.classList.add(classApplied);
+          });
+          this.preventDuplicatedIDs(productElement);
+          this.removeDOMElements(productElement);
+          this.removeGalleryListSemantic(productElement);
+          this.updateImageSizes(productElement);
+          this.preventVariantURLSwitching(productElement);
+        }
+  
+        preventVariantURLSwitching(productElement) {
+          productElement.setAttribute('data-update-url', 'false');
+        }
+  
+        removeDOMElements(productElement) {
+          const pickupAvailability = productElement.querySelector('pickup-availability');
+          if (pickupAvailability) pickupAvailability.remove();
+  
+          const productModal = productElement.querySelector('product-modal');
+          if (productModal) productModal.remove();
+  
+          const modalDialog = productElement.querySelectorAll('modal-dialog');
+          if (modalDialog) modalDialog.forEach((modal) => modal.remove());
+        }
+  
+        preventDuplicatedIDs(productElement) {
+          const sectionId = productElement.dataset.section;
+  
+          const oldId = sectionId;
+          const newId = `quickadd-${sectionId}`;
+          productElement.innerHTML = productElement.innerHTML.replaceAll(oldId, newId);
+          Array.from(productElement.attributes).forEach((attribute) => {
+            if (attribute.value.includes(oldId)) {
+              productElement.setAttribute(attribute.name, attribute.value.replace(oldId, newId));
+            }
+          });
+  
+          productElement.dataset.originalSection = sectionId;
+        }
+  
+        removeGalleryListSemantic(productElement) {
+          const galleryList = productElement.querySelector('[id^="Slider-Gallery"]');
+          if (!galleryList) return;
+  
+          galleryList.setAttribute('role', 'presentation');
+          galleryList.querySelectorAll('[id^="Slide-"]').forEach((li) => li.setAttribute('role', 'presentation'));
+        }
+  
+        updateImageSizes(productElement) {
+          const product = productElement.querySelector('.product');
+          const desktopColumns = product?.classList.contains('product--columns');
+          if (!desktopColumns) return;
+  
+          const mediaImages = product.querySelectorAll('.product__media img');
+          if (!mediaImages.length) return;
+  
+          let mediaImageSizes =
+            '(min-width: 1000px) 715px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)';
+  
+          if (product.classList.contains('product--medium')) {
+            mediaImageSizes = mediaImageSizes.replace('715px', '605px');
+          } else if (product.classList.contains('product--small')) {
+            mediaImageSizes = mediaImageSizes.replace('715px', '495px');
+          }
+  
+          mediaImages.forEach((img) => img.setAttribute('sizes', mediaImageSizes));
+        }
+      }
+    );
+  }
+  

@@ -656,202 +656,67 @@ customElements.define('deferred-media', DeferredMedia);
 class VariantSelects extends HTMLElement {
   constructor() {
     super();
-    this.addEventListener('change', this.onVariantChange);
-    this.onVariantChange();
   }
 
-  onVariantChange() {
-    this.updateOptions();
-    this.updateMasterVariantId();
-    this.setSoldOutOptions()
-    this.updateVariantInput();
-    this.setChosenOption(); 
-  }
+  connectedCallback() {
+    this.addEventListener('change', (event) => {
+      const target = this.getInputForEventTarget(event.target);
+      this.updateSelectionMetadata(event);
 
-  updateOptions() {
-      this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-  }
-
-  setSoldOutOptions(resetOptions = false) {
-   
-    let data = {
-       productVariants: JSON.parse(this.querySelector('[type="application/json"]').innerHTML)
-     }; 
-
-     let allProductVariants = data.productVariants;
-        let sizeOptions = [];
-
-      this.querySelector('select').querySelectorAll("option").forEach(elem => {
-        elem.disabled = false;
-        sizeOptions.push(elem); 
+      publish(PUB_SUB_EVENTS.optionValueSelectionChange, {
+        data: {
+          event,
+          target,
+          selectedOptionValues: this.selectedOptionValues,
+        },
       });
-
-      for(var i = 0; i < allProductVariants.length; i++) {
-        if(allProductVariants[i].available == false) {
-          sizeOptions.forEach((elem) => {
-            if(allProductVariants[i].option1 == elem.value || allProductVariants[i].option2 == elem.value) {
-              elem.disabled = true;
-              elem.checked = false; 
-            } 
-          })
-        } 
-      }
-
-      if(!this.currentVariant.available) {
-        if(this.querySelector('select').querySelectorAll("option:not([disabled])").length === 0) {
-          this.toggleAddButton('sold-out', true);
-          this.setChosenOption(false); 
-        } 
-
-        if(this.querySelector('select').querySelectorAll("option:not([disabled])").length > 0) {
-          this.toggleAddButton('variant-sold-out', true);
-          this.setChosenOption(); 
-        }
-      } else {
-        this.setChosenOption(); 
-        this.toggleAddButton(false, false);
-      }
-   }
-
-  updateMasterVariantId() {
-    this.currentVariant = this.getVariantData().find((variant) => {
-      return !variant.options.map((option, index) => {
-        return this.options[index] === option;
-      }).includes(false);
     });
   }
 
-  updateURL() {
-    if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
-  }
+  updateSelectionMetadata({ target }) {
+    const { value, tagName } = target;
 
-  updateShareUrl() {
-    const shareButton = document.getElementById(`Share-${this.dataset.section}`);
-    if (!shareButton || !shareButton.updateUrl) return;
-    shareButton.updateUrl(`${window.shopUrl}${this.dataset.url}?variant=${this.currentVariant.id}`);
-  }
+    if (tagName === 'SELECT' && target.selectedOptions.length) {
+      Array.from(target.options)
+        .find((option) => option.getAttribute('selected'))
+        .removeAttribute('selected');
+      target.selectedOptions[0].setAttribute('selected', 'selected');
 
-  updateVariantInput() {
-    const productForms = document.querySelectorAll(`#quick-add-form-${this.dataset.section}, #product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
-    productForms.forEach((productForm) => {
-      if(productForm.querySelector('input[name="id"][data-mobile]')) {
-        const input = productForm.querySelector('input[name="id"][data-mobile]');
-        input.value = this.currentVariant.id;
-        input.dispatchEvent(new Event('change', { bubbles: true }));
-      }
-    });
-  }
-
-  updatePickupAvailability() {
-    const pickUpAvailability = document.querySelector('pickup-availability');
-    if (!pickUpAvailability) return;
-
-    if (this.currentVariant && this.currentVariant.available) {
-      pickUpAvailability.fetchAvailability(this.currentVariant.id);
-    } else {
-      pickUpAvailability.removeAttribute('available');
-      pickUpAvailability.innerHTML = '';
-    }
-  }
-
-  removeErrorMessage() {
-    const section = this.closest('section');
-    if (!section) return;
-
-    if(section.querySelector('product-form')) {
-      const productForm = section.querySelector('product-form');
-      if (productForm) productForm.handleErrorMessage();
-    }
-  }
-
-  toggleSelect(pDisableButton) {
-    let disable = pDisableButton; 
-    const productForm = document.getElementById(`product-form-${this.dataset.section}`);
-    
-    if(this.tagName.toLowerCase() == 'variant-selects') {
-      if(disable) {
-        this.querySelector('select').setAttribute('disabled', true);
-        this.querySelector('[data-select-container]').setAttribute('disabled', true);
+      const swatchValue = target.selectedOptions[0].dataset.optionSwatchValue;
+      const selectedDropdownSwatchValue = target
+        .closest('.product-form__input')
+        .querySelector('[data-selected-value] > .swatch');
+      if (!selectedDropdownSwatchValue) return;
+      if (swatchValue) {
+        selectedDropdownSwatchValue.style.setProperty('--swatch--background', swatchValue);
+        selectedDropdownSwatchValue.classList.remove('swatch--unavailable');
       } else {
-        this.querySelector('select').removeAttribute('disabled');
-        this.querySelector('[data-select-container]').removeAttribute('disabled');
+        selectedDropdownSwatchValue.style.setProperty('--swatch--background', 'unset');
+        selectedDropdownSwatchValue.classList.add('swatch--unavailable');
       }
-    } 
-  }
 
-  toggleQuickAddButton (pSoldOutStatus, pDisableButton, pButton, pButtonText){
-
-    if (pDisableButton) {
-      pButton.setAttribute('disabled', true);
-      if(pSoldOutStatus === 'sold-out') {
-        pButtonText.textContent = window.variantStrings.soldOut;
-      }
-      if(pSoldOutStatus === 'variant-sold-out') {
-        pButtonText.textContent = window.variantStrings.currentOptionSoldOut;
-      }
-    } else {
-      pButton.removeAttribute('disabled');
-      pButtonText.textContent = 'Quick Add+';
+      selectedDropdownSwatchValue.style.setProperty(
+        '--swatch-focal-point',
+        target.selectedOptions[0].dataset.optionSwatchFocalPoint || 'unset'
+      );
+    } else if (tagName === 'INPUT' && target.type === 'radio') {
+      const selectedSwatchValue = target.closest(`.product-form__input`).querySelector('[data-selected-value]');
+      if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
     }
   }
 
-  
-  toggleAddButton(pSoldOutStatus, pDisableButton, pQuickAddButton) {
-
-    let productForm =  document.getElementById(`product-form-${this.dataset.section}`);
-
-    let disable = pDisableButton; 
-    if (!productForm) return;
-        
-    const addButton = productForm.querySelector('[name="add"]');
-    const addButtonText = productForm.querySelector('[name="add"] > span');
-
-    if (!addButton) return;
-
-    if (disable) {
-      addButton.setAttribute('disabled', true);
-      if(pSoldOutStatus === 'sold-out') {
-        addButtonText.textContent = window.variantStrings.soldOut;
-        this.toggleSelect(true);
-      }
-      if(pSoldOutStatus === 'variant-sold-out') {
-        addButtonText.textContent = window.variantStrings.currentOptionSoldOut;
-        this.toggleSelect(false);
-      }
-    } else {
-      addButton.removeAttribute('disabled');
-      this.toggleSelect(false);
-      addButtonText.textContent = window.variantStrings.addToCart;
-    }
-
+  getInputForEventTarget(target) {
+    return target.tagName === 'SELECT' ? target.selectedOptions[0] : target;
   }
 
-  setUnavailable() {
-    const addButton = document.getElementById(`product-form-${this.dataset.section}`)?.querySelector('[name="add"]');
-    if (!addButton) return;
-    addButton.textContent = window.variantStrings.soldOut;
-    document.getElementById(`price-${this.dataset.section}`)?.classList.add('visibility-hidden');
-  }
-
-  getVariantData() {
-    this.variantData = this.variantData === JSON.parse(this.querySelector('[type="application/json"]').textContent) ? this.variantData :  JSON.parse(this.querySelector('[type="application/json"]').textContent);
-    return this.variantData;
-  }
-
-  setChosenOption(pIsAvailable) {
-    if(this.tagName.toLowerCase() === 'variant-selects') {
-      if(pIsAvailable == false) {
-        this.querySelector('[data-option-text]').textContent = "";
-      } else {
-       this.querySelector('[data-option-text]').textContent = this.querySelector('select').value; 
-      }
-    } 
+  get selectedOptionValues() {
+    return Array.from(this.querySelectorAll('select option[selected], fieldset input:checked')).map(
+      ({ dataset }) => dataset.optionValueId
+    );
   }
 }
 
 customElements.define('variant-selects', VariantSelects);
-
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
@@ -1110,6 +975,115 @@ customElements.define('custom-input-wrapper', CustomInputWrapper);
 
 
 
+
+class ModalOpener extends HTMLElement {
+  constructor() {
+    super();
+
+    const button = this.querySelector('button');
+
+    if (!button) return;
+    button.addEventListener('click', () => {
+      const modal = document.querySelector(this.getAttribute('data-modal'));
+      console.log(modal); 
+      if (modal) modal.show(button);
+    });
+  }
+}
+customElements.define('modal-opener', ModalOpener);
+
+
+class ModalDialog extends HTMLElement {
+  constructor() {
+    super();
+    this.querySelector('[id^="ModalClose-"]').addEventListener(
+      'click',
+      this.hide.bind(this, false)
+    );
+    this.addEventListener('keyup', (event) => {
+      if (event.code.toUpperCase() === 'ESCAPE') this.hide();
+    });
+    if (this.classList.contains('media-modal')) {
+      this.addEventListener('pointerup', (event) => {
+        if (event.pointerType === 'mouse' && !event.target.closest('deferred-media, product-model')) this.hide();
+      });
+    } else {
+      this.addEventListener('click', (event) => {
+        if (event.target === this) this.hide();
+      });
+    }
+  }
+
+  connectedCallback() {
+    if (this.moved) return;
+    this.moved = true;
+    document.body.appendChild(this);
+  }
+
+  show(opener) {
+    this.openedBy = opener;
+    const popup = this.querySelector('.template-popup');
+    document.body.classList.add('overflow-hidden');
+    this.setAttribute('open', '');
+    if (popup) popup.loadContent();
+    trapFocus(this, this.querySelector('[role="dialog"]'));
+    window.pauseAllMedia();
+  }
+
+  hide() {
+    document.body.classList.remove('overflow-hidden');
+    document.body.dispatchEvent(new CustomEvent('modalClosed'));
+    this.removeAttribute('open');
+    removeTrapFocus(this.openedBy);
+    window.pauseAllMedia();
+  }
+}
+customElements.define('modal-dialog', ModalDialog);
+
+
+
+class HTMLUpdateUtility {
+  /**
+   * Used to swap an HTML node with a new node.
+   * The new node is inserted as a previous sibling to the old node, the old node is hidden, and then the old node is removed.
+   *
+   * The function currently uses a double buffer approach, but this should be replaced by a view transition once it is more widely supported https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API
+   */
+  static viewTransition(oldNode, newContent, preProcessCallbacks = [], postProcessCallbacks = []) {
+    preProcessCallbacks?.forEach((callback) => callback(newContent));
+
+    const newNodeWrapper = document.createElement('div');
+    HTMLUpdateUtility.setInnerHTML(newNodeWrapper, newContent.outerHTML);
+    const newNode = newNodeWrapper.firstChild;
+
+    // dedupe IDs
+    const uniqueKey = Date.now();
+    oldNode.querySelectorAll('[id], [form]').forEach((element) => {
+      element.id && (element.id = `${element.id}-${uniqueKey}`);
+      element.form && element.setAttribute('form', `${element.form.getAttribute('id')}-${uniqueKey}`);
+    });
+
+    oldNode.parentNode.insertBefore(newNode, oldNode);
+    oldNode.style.display = 'none';
+
+    postProcessCallbacks?.forEach((callback) => callback(newNode));
+
+    setTimeout(() => oldNode.remove(), 500);
+  }
+
+  // Sets inner HTML and reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
+  static setInnerHTML(element, html) {
+    element.innerHTML = html;
+    element.querySelectorAll('script').forEach((oldScriptTag) => {
+      const newScriptTag = document.createElement('script');
+      Array.from(oldScriptTag.attributes).forEach((attribute) => {
+        newScriptTag.setAttribute(attribute.name, attribute.value);
+      });
+      newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
+      oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
+    });
+  }
+}
 
 class GlobalModal extends HTMLElement {
   constructor() {
