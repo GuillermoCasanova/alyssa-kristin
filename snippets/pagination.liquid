@@ -14,6 +14,33 @@
 <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 
+<style>
+  :root {
+    --pulse-size: 4em;
+    --pulse-timing: 1.2s;
+  }
+
+  .pulseLoader {
+    width: ;
+    height: var(--pulse-size);
+    border-radius: var(--pulse-size);
+    background-color: rgb(227, 52, 52);
+    outline: 1px solid transparent;
+    animation: pulseanim var(--pulse-timing) ease-in-out infinite;
+  }
+
+  @keyframes pulseanim {
+    0% {
+      transform: scale(0);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+</style>
+
 <div id="AjaxinatePagination" class="pagination-container">
   {% if paginate.next %}
     <a href="{{ paginate.next.url }}" class="pagination-button">
@@ -24,5 +51,6 @@
       </span>
       View More
     </a>
+    <div class="pulseLoader"></div>
   {% endif %}
 </div>

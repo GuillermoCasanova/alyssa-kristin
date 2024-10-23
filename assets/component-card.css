@@ -147,6 +147,7 @@
 .card__media {
   padding-bottom: 130%; 
   width: 100%; 
+  display: block;
 }
 
 .card .media {
