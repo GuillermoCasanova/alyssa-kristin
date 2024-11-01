@@ -12,9 +12,9 @@ product-info {
   margin: 0;
   display: flex;
   margin: autop;
-    max-width: 90rem;
+    max-width: 78rem;
     margin: auto;
-    margin-top: 11rem;
+    margin-top: 14rem;
 
 }
 
@@ -75,13 +75,14 @@ product-info {
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 47rem;
+    max-width: 38rem;
     width: 100%; 
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding: 0 0 0 4rem;
-    width: 40%;
+    width: 100%;
+    max-width: 33rem;
   }
 
   .product--large:not(.product--no-media).product--right .product__info-wrapper {
@@ -292,7 +293,7 @@ a.product__text {
   font-family: var(--secondary-font-family);
   text-transform: uppercase;
   font-size: var(--h5);
-  margin-bottom: var(--level6);
+  margin-bottom: var(--level7);
   font-weight: 300;
 }
 
