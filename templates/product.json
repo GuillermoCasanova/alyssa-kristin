@@ -53,6 +53,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "contact_kMHxFw": {
+          "type": "contact",
+          "settings": {
+            "heading": "Contact Us to Find Your Size",
+            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+          }
         }
       },
       "block_order": [
@@ -62,7 +69,8 @@
         "variant_picker",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "contact_kMHxFw"
       ],
       "settings": {
         "enable_sticky_info": true,
