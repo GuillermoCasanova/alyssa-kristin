@@ -661,15 +661,17 @@
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
               {%- when 'product-cta' -%}
-                <div class="product-cta-section">
-                  <h2 class="product-cta__heading">{{ section.settings.heading }}</h2>
-                  <div class="product-cta__body">
-                    {{ section.settings.rich_text }}
-                  </div>
-                  <div class="product-cta__cta">
-                    <a href="{{ section.settings.cta_link }}" class="button button--primary button--medium">
-                      {{- section.settings.cta_text -}}
-                    </a>
+                <div class="product-cta-card  card">
+                  <div class="card__inner">
+                    <h2 class="product-cta-card__heading">{{ block.settings.heading }}</h2>
+                    <div class="product-cta-card__body">
+                      {{ block.settings.body }}
+                    </div>
+                    <div class="product-cta__cta">
+                      <a href="{{ block.settings.cta_link }}" class="button button--primary button--small">
+                        {{- block.settings.cta_text -}}
+                      </a>
+                    </div>
                   </div>
                 </div>
             {%- endcase -%}
@@ -2107,13 +2109,14 @@
         },
         {
           "type": "url",
-          "id": "button_link",
+          "id": "cta_link",
           "label": "Button Link"
         },
         {
           "type": "text",
-          "id": "button_text",
-          "label": "Button Text"
+          "id": "cta_text",
+          "label": "Button Text",
+          "default": "Learn More"
         }
       ]
     }

@@ -1837,8 +1837,8 @@ button:hover,
 
 .button--small {
   font-size: var(--micro);
-  padding-left: var(--level2); 
-  padding-right: var(--level2);
+  padding-left: var(--level3); 
+  padding-right: var(--level3);
   padding-bottom: 1rem; 
   padding-top: 1rem; 
   font-size: var(--mini);
@@ -2005,4 +2005,20 @@ button:hover,
   100% {
     transform: rotate(1turn)
   }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Cards
+\*------------------------------------*/
+
+.card {
+  background-color: rgb(var(--color-base-background-2));
+}
+
+.card__inner {
+  padding: var(--level6);
 }

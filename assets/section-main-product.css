@@ -1559,3 +1559,42 @@ a.product__text {
     border: none;
   }
 }
+
+
+.product-cta-card {
+  text-align: center;
+  padding-top: var(--level2);
+}
+
+.product-cta-card__heading {
+  margin-bottom: var(--level2);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--secondary-font-family);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.product-cta-card__heading em {
+  text-transform: lowercase;
+}
+
+.product-cta-card__body {
+  text-align: center;
+  margin-bottom: var(--level4);
+  max-width: 38rem; 
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--normal);
+}
+
+.product-cta__cta {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.product-cta__cta button {
+  padding-left: var(--level6); 
+  padding-right: var(--level6);
+}
