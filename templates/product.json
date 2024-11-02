@@ -47,11 +47,13 @@
             "share_label": "Share"
           }
         },
-        "contact_kMHxFw": {
-          "type": "contact",
+        "product_cta_P4igca": {
+          "type": "product-cta",
           "settings": {
-            "heading": "Contact Us to Find Your Size",
-            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+            "heading": "<p>Contact us To <em>find your size</em></p>",
+            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
+            "button_link": "shopify://pages/appointments",
+            "button_text": "Contact Us"
           }
         }
       },
@@ -62,7 +64,7 @@
         "variant_picker",
         "buy_buttons",
         "share",
-        "contact_kMHxFw"
+        "product_cta_P4igca"
       ],
       "settings": {
         "enable_sticky_info": true,
