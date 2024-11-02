@@ -26,12 +26,19 @@
           "type": "description",
           "settings": {
           }
+        },
+        "share_ViWAJh": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
         }
       },
       "block_order": [
         "title",
         "price",
-        "description"
+        "description",
+        "share_ViWAJh"
       ],
       "settings": {
         "enable_sticky_info": false,
