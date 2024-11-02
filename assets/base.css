@@ -1733,6 +1733,7 @@ button,
   color: rgb(var(--color-base-text-1));  
   display: flex;
   align-items: center;
+  max-width: max-content;
 }
 
 button:hover,
@@ -1752,7 +1753,7 @@ button:hover,
   border-bottom: 1px solid rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
   font-family: var(--tertiary-font-family);
-  letter-spacing: 10px;
+  letter-spacing: 6px;
   background-color: transparent;
 }
 
