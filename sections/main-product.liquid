@@ -660,11 +660,16 @@
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
-              {%- when 'contact-us' -%}
-                <div class="contact-us-section">
-                  <h2 class="contact-us-section__heading">{{ section.settings.heading }}</h2>
-                  <div class="contact-us-section__body">
+              {%- when 'product-cta' -%}
+                <div class="product-cta-section">
+                  <h2 class="product-cta__heading">{{ section.settings.heading }}</h2>
+                  <div class="product-cta__body">
                     {{ section.settings.rich_text }}
+                  </div>
+                  <div class="product-cta__cta">
+                    <a href="{{ section.settings.cta_link }}" class="button button--primary button--medium">
+                      {{- section.settings.cta_text -}}
+                    </a>
                   </div>
                 </div>
             {%- endcase -%}
@@ -2083,11 +2088,11 @@
       ]
     },
     {
-      "type": "contact",
-      "name": "Contact Us Section",
+      "type": "product-cta",
+      "name": "Product CTA Card",
       "settings": [
         {
-          "type": "text",
+          "type": "richtext",
           "id": "heading",
           "label": "Heading"
         },
@@ -2095,6 +2100,20 @@
           "type": "richtext",
           "id": "body",
           "label": "Body"
+        },
+        {
+          "type": "header",
+          "content": "CTA Link"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
         }
       ]
     }
