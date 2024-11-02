@@ -32,13 +32,23 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "product_cta_ahWRTE": {
+          "type": "product-cta",
+          "settings": {
+            "heading": "<p>Contact us <em>To find your size</em></p>",
+            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
+            "button_link": "shopify://pages/contact",
+            "button_text": "Connect With Us"
+          }
         }
       },
       "block_order": [
         "title",
         "price",
         "description",
-        "share_ViWAJh"
+        "share_ViWAJh",
+        "product_cta_ahWRTE"
       ],
       "settings": {
         "enable_sticky_info": false,
