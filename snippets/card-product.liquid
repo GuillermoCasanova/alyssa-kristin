@@ -43,6 +43,20 @@
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div class="card card--product">
       <div class="card__inner">
+        <button
+          class="swym-button swym-add-to-wishlist card__wishlist-button"
+          data-with-epi="true"
+          data-swaction="addToWishlist"
+          data-product-id="{{ card_product.id }}"
+          data-variant-id="{{ card_product.variants[0].id }}"
+          data-product-url="{{ shop.url }}{{ card_product.url }}"
+          type="button"
+        >
+          <span class="visually-hidden"> favorite </span>
+
+          <span class="button__icon  svg-wrapper">{{ 'icon-favorite.svg' | inline_asset_content }}</span>
+        </button>
+
         {%- if card_product.featured_media -%}
           <a href="{{card_product.url}}" class="card__media">
             <div class="media media--transparent media--hover-effect">

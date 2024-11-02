@@ -92,7 +92,7 @@
   font-size: var(--h6);
   margin-bottom: var(--level2); 
   text-wrap: nowrap;
-  max-width: 90%; 
+  max-width: 100%; 
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -258,4 +258,28 @@ deferred-media {
   width: 0;
   height: 0;
   padding-bottom: var(--ratio-percent);
+}
+
+.card__wishlist-button {
+  position: absolute !important;
+  top: var(--level2);
+  right: var(--level2);
+  z-index: 2;
+  background-color: transparent !important;
+  color: #fff !important;
+  width: 2rem !important;
+  height: 2rem !important; 
+  padding: 0 !important;
+}
+
+.card__wishlist-button .button__icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: 0; 
+}
+
+
+.card .swym-add-to-wishlist, .swym-add-to-wishlist:after, .swym-fave-count {
+  color: #fff !important;
 }

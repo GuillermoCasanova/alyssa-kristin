@@ -20,8 +20,8 @@
 
 @media screen and (min-width: 940px) {
   .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: calc(var(--level6) * 2);
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: calc(var(--level3) * 2);
   }
   
 }
