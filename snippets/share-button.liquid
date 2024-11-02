@@ -16,9 +16,38 @@
   .share-button__button {
     width: 100%;
   }
+
+  .share-buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .share-buttons-container button.swym-button {
+    display: flex;
+    background-color: rgb(var(--color-base-background-2));
+    border: 1px solid transparent;
+    color: rgb(var(--color-base-text-1));
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--tertiary-font-family);
+    text-decoration: none;
+    letter-spacing: 3px !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    font-size: var(--mini) !important;
+    padding-left: var(--level4) !important;
+    padding-right: var(--level4) !important;
+  }
+
+  .button.swym-button:focus,
+  .button.swym-button:hover {
+    border: 1px solid rgb(var(--color-base-text-1)) !important;
+  }
 </style>
 
-<div>
+<div class="share-buttons-container">
   <button
     class="swym-button swym-add-to-wishlist button button--medium button--secondary button--full-width"
     data-with-epi="true"
@@ -29,7 +58,7 @@
   >
     Favorite
 
-    <span class="button__icon  svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
+    <span class="button__icon  svg-wrapper">{{ 'icon-favorite.svg' | inline_asset_content }}</span>
   </button>
 
   <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
