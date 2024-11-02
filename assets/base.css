@@ -764,7 +764,7 @@ summary::-webkit-details-marker {
 
 :root {
   --input-height: 4rem;
-  --input-height-large: 3rem;
+  --input-height-large: 2.5rem;
 }
 
 @media screen and (min-width: 940px) {
@@ -1277,7 +1277,7 @@ variant-selects {
 .form__label {
   position: absolute;
   left: var(--level5); 
-  font-size: var(--h6);
+  font-size: var(--normal);
   top: 1.15rem;
 }
 
@@ -1731,6 +1731,8 @@ button,
   text-decoration: none;
   margin-bottom: var(--level3); 
   color: rgb(var(--color-base-text-1));  
+  display: flex;
+  align-items: center;
 }
 
 button:hover,
@@ -1750,7 +1752,8 @@ button:hover,
   border-bottom: 1px solid rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
   font-family: var(--tertiary-font-family);
-  letter-spacing: 3px;
+  letter-spacing: 10px;
+  background-color: transparent;
 }
 
 .button--primary:focus,
@@ -1760,20 +1763,20 @@ button:hover,
 }
 
 .button--secondary {
-  background-color: rgb(var(--color-base-background-1));
-  border: 1px solid rgb(var(--color-base-text-1));
+  background-color: rgb(var(--color-base-background-2));
+  border: 1px solid transparent;
   color: rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
-  letter-spacing: 1.5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   font-family: var(--tertiary-font-family);
   text-decoration: none;
+  letter-spacing: 3px;
 }
 
 .button--secondary:focus,
 .button--secondary:hover {
-  background-color: rgb(var(--color-base-text-1));
-  color: rgb(var(--color-base-background-2));
+  border: 1px solid rgb(var(--color-base-text-1));
 }
 
 .button--tertiary {
@@ -1805,6 +1808,11 @@ button:hover,
   text-decoration: none;
 }
 
+.button__icon {
+  margin-left: var(--level1);
+  width: 1.5rem; 
+  height: 1.5rem; 
+}
 
 
 
@@ -1825,9 +1833,9 @@ button:hover,
 }
 
 .button--medium {
-  padding-top: .85rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: var(--micro);
+  font-size: var(--mini);
   padding-left: var(--level4); 
   padding-right: var(--level4); 
 }
@@ -1836,11 +1844,6 @@ button:hover,
   margin-right: 1rem;
 }
 
-.button--medium .button__icon {
-  display: block;
-  height: 2rem;
-  width: 3.5rem;
-}
 
 .button--medium .button__icon svg {
   width: 100%;
@@ -1848,12 +1851,12 @@ button:hover,
 }
 
 .button--large {
-  padding-top: var(--level5);
-  padding-bottom: var(--level5);
+  padding-top: var(--level4);
+  padding-bottom: var(--level4);
   padding-left: var(--level7);
   padding-right: var(--level7);
-  font-size: var(--normal);
-  letter-spacing: 1.5px;
+  font-size: var(--micro);
+  letter-spacing: 3px;
 }
 
 .styled-link:hover,

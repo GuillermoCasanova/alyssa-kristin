@@ -12,7 +12,7 @@ product-info {
   margin: 0;
   display: flex;
   margin: autop;
-    max-width: 78rem;
+    max-width: 82rem;
     margin: auto;
     margin-top: 14rem;
 
@@ -36,7 +36,6 @@ product-info {
   .product__column-sticky {
     display: block;
     position: sticky;
-    top: 3rem;
     z-index: 2;
   }
 
@@ -292,7 +291,7 @@ a.product__text {
   word-break: break-word;
   font-family: var(--secondary-font-family);
   text-transform: uppercase;
-  font-size: var(--h5);
+  font-size: var(--h6);
   margin-bottom: var(--level7);
   font-weight: 300;
 }
@@ -427,6 +426,9 @@ a.product__text {
   text-align: center;
   margin-left: auto;
  margin-right: auto; 
+ margin-top: var(--level8);
+ display: flex;
+ justify-content: center;
 }
 
 .product--no-media .product__info-container > modal-opener {
