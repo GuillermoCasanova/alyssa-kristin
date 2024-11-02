@@ -57,6 +57,15 @@
           <span class="button__icon  svg-wrapper">{{ 'icon-favorite.svg' | inline_asset_content }}</span>
         </button>
 
+        <style>
+          .swym-button {
+            cursor: pointer;
+          }
+          .swym-button:disabled {
+            background: #ccc;
+          }
+        </style>
+
         {%- if card_product.featured_media -%}
           <a href="{{card_product.url}}" class="card__media">
             <div class="media media--transparent media--hover-effect">
