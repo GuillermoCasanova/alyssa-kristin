@@ -43,19 +43,17 @@
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div class="card card--product">
       <div class="card__inner">
+        <!-- Swym Wishlist Plus EPI Button with default first variant -->
         <button
-          class="swym-button swym-add-to-wishlist card__wishlist-button"
+          aria-label="Add to Wishlist"
           data-with-epi="true"
+          class="swym-button swym-add-to-wishlist-view-product product_{{card_product.id}} card__wishlist-button"
           data-swaction="addToWishlist"
-          data-product-id="{{ card_product.id }}"
-          data-variant-id="{{ card_product.variants[0].id }}"
+          data-product-id="{{card_product.id | json}}"
+          data-variant-id="{{card_product.variants[0].id}}"
           data-product-url="{{ shop.url }}{{ card_product.url }}"
-          type="button"
-        >
-          <span class="visually-hidden"> favorite </span>
-
-          <span class="button__icon  svg-wrapper">{{ 'icon-favorite.svg' | inline_asset_content }}</span>
-        </button>
+        ></button>
+        <!-- Swym Wishlist Plus EPI Button -->
 
         <style>
           .swym-button {
