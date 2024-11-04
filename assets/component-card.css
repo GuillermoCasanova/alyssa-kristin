@@ -145,7 +145,7 @@
 \*------------------------------------*/
 
 .card__media {
-  padding-bottom: 130%; 
+  padding-bottom: 140%; 
   width: 100%; 
   display: block;
 }
@@ -260,6 +260,14 @@ deferred-media {
   padding-bottom: var(--ratio-percent);
 }
 
+
+
+
+
+/*------------------------------------*\
+    #Wisthlist
+\*------------------------------------*/
+
 .card__wishlist-button {
   position: absolute !important;
   top: var(--level2);
@@ -267,9 +275,12 @@ deferred-media {
   z-index: 2;
   background-color: transparent !important;
   color: #fff !important;
-  width: 2rem !important;
-  height: 2rem !important; 
+  width: 1.75rem !important;
+  height: 1.75rem !important; 
   padding: 0 !important;
+  outline: none !important;
+  border: none !important;
+  z-index: 1 !important;
 }
 
 .card__wishlist-button .button__icon {
@@ -282,4 +293,21 @@ deferred-media {
 
 .card .swym-add-to-wishlist, .swym-add-to-wishlist:after, .swym-fave-count {
   color: #fff !important;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #Card Product
+\*------------------------------------*/
+
+.card--product {
+  background-color: transparent;
+}
+
+
+.card--product .card__inner {
+  padding: 0; 
 }
