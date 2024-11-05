@@ -52,8 +52,8 @@
           "settings": {
             "heading": "<p>Contact us To <em>find your size</em></p>",
             "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-            "button_link": "shopify://pages/appointments",
-            "button_text": "Connect With us"
+            "cta_link": "",
+            "cta_text": "Learn More"
           }
         }
       },
@@ -73,7 +73,7 @@
         "media_fit": "contain",
         "gallery_layout": "stacked",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "hover",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false
