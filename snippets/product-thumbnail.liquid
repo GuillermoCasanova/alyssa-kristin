@@ -50,6 +50,7 @@
         width="973"
         height="{{ 973 | divided_by: media.preview_image.aspect_ratio | ceil }}"
         alt="{{ media.preview_image.alt | escape }}"
+        class="image-magnify-hover"
       >
     </div>
     <a
@@ -85,18 +86,13 @@
         width="973"
         height="{{ 973 | divided_by: media.preview_image.aspect_ratio | ceil }}"
         alt="{{ media.preview_image.alt | escape }}"
+        class="image-magnify-hover"
       >
     </div>
   {%- endif -%}
 </noscript>
 
-{% comment %}
-  <modal-opener
-    class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden"
-    data-modal="#ProductModal-{{ modal_id }}"
-  >
-{% endcomment %}
-<span class="product__media-icon motion-reduce quick-add-hidden" aria-hidden="true">
+<span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--hover" aria-hidden="true">
   {%- liquid
     case media.media_type
       when 'video', 'external_video'
@@ -108,6 +104,7 @@
     endcase
   -%}
 </span>
+{%- render 'loading-spinner' -%}
 
 <div
   class="product__media media media--transparent gradient global-media-settings"
@@ -135,10 +132,10 @@
     {% endunless %}
     width="973"
     height="{{ 973 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+    class="image-magnify-hover"
     alt="{{ media.preview_image.alt | escape }}"
   >
 </div>
-{% comment %} </modal-opener> {% endcomment %}
 
 {%- if media.media_type != 'image' -%}
   {%- if media.media_type == 'model' -%}

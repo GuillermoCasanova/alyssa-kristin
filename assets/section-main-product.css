@@ -597,9 +597,11 @@ slider-component {
   height: 3rem;
   width: 3rem;
   position: absolute;
-  left: 1.2rem;
+  right: 1.2rem;
   top: 1.2rem;
+  left: auto; 
   z-index: 1;
+  pointer-events: none !important;
   transition: color var(--duration-short) ease, opacity var(--duration-short) ease;
 }
 
@@ -662,9 +664,6 @@ slider-component {
   }
 }
 
-.product__media-item > * {
-  display: block;
-}
 
 .product__media-toggle {
   display: flex;
@@ -1272,7 +1271,6 @@ button.thumbnail[aria-current="true"] {
 @media (hover: hover) {
   .product__media-zoom-hover,
   .product__media-icon--hover {
-    display: none;
   }
 }
 
