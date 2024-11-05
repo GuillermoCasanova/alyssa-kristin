@@ -27,6 +27,11 @@
           "settings": {
           }
         },
+        "size_guide_AzhnFp": {
+          "type": "size-guide",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -61,6 +66,7 @@
         "title",
         "price",
         "description",
+        "size_guide_AzhnFp",
         "variant_picker",
         "buy_buttons",
         "share",
