@@ -314,7 +314,19 @@ slider-component.slider-component-full-width {
 .slider-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  font-size: 2rem; 
+}
+.slider-counter {
+  opacity: 0; 
 }
 
 @media screen and (min-width: 990px) {
@@ -352,7 +364,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button .icon {
-  height: 0.6rem;
+  height: 1.25rem;
 }
 
 .slider-button[disabled] .icon {

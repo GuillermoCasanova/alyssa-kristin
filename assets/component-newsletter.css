@@ -46,6 +46,10 @@
   flex-direction: row;
 }
 
+.newsletter-form__field button {
+  margin-bottom: 0 !important; 
+}
+
 .newsletter-form__field .custom-field {
   margin-bottom: 0;
 }

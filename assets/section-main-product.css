@@ -16,14 +16,35 @@ product-info {
   margin: auto;
   display: flex; 
   flex-direction: column; 
-  margin-top: 7rem;
+  margin-top: 5rem;
+  padding-left: var(--level7); 
+  padding-right: var(--level7);
+}
+
+@media screen and (min-width: 990px) {
+  .grid.product {
+    flex-wrap: no-wrap; 
+  }
+}
+
+.product__media-icon {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  background-color: #fff;
+  display: block; 
 }
 
 @media screen and (min-width: 750px) {
   .product {
     flex-direction: row; 
-    margin-top: 13rem;
-    padding-right: var(--level6);
+    margin-top: 9rem;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .product {
+    margin-top: 12rem; 
   }
 }
 
@@ -44,8 +65,25 @@ product-info {
 @media screen and (min-width: 940px) {
   .product__media-wrapper {
     padding-left: 0;
-    max-width: 30rem;
+    max-width: 50%;
   }
+}
+
+.product__info-wrapper {
+  padding-left: var(--level4); 
+  padding-right: var(--level4); 
+}
+
+@media screen and (min-width: 990px) {
+  .product__info-wrapper  {
+    width: 50%; 
+  }
+}
+
+@media screen and (min-width: 990px) {
+.product__info-wrapper {
+  width: 50%; 
+}
 }
 
 @media screen and (min-width: 750px) {
@@ -61,6 +99,7 @@ product-info {
 
   .product__info-wrapper {
     padding: 0 0 0 var(--level10);
+
   }
 
   .product__info-wrapper--extra-padding {
@@ -89,8 +128,7 @@ product-info {
 }
 
 @media screen and (min-width: 990px) {
-  .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 38rem;
+  /* .product--large:not(.product--no-media) .product__media-wrapper {
     width: 100%; 
   }
 
@@ -113,7 +151,7 @@ product-info {
   .product--small:not(.product--no-media) .product__media-wrapper {
     max-width: 45%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
+  } */
 }
 
 
@@ -284,7 +322,7 @@ product-info {
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
   margin: var(--level2) 0;
-  margin-bottom: var(--level10); 
+  margin-bottom: var(--level9); 
 }
 
 .product__text {
@@ -306,7 +344,7 @@ a.product__text {
   font-family: var(--secondary-font-family);
   text-transform: uppercase;
   font-size: var(--h6);
-  margin-bottom: var(--level7);
+  margin-bottom: var(--level5);
   font-weight: 300;
 }
 
@@ -460,6 +498,19 @@ a.product__text {
 }
 
 /* Product media */
+
+slider-component {
+  overflow: hidden;
+}
+
+.product__media {
+  width: 100%; 
+}
+
+.product__media-list  {
+  position: relative; 
+}
+
 .product__media-list video {
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
@@ -489,6 +540,11 @@ a.product__text {
     background-color: rgba(var(--color-foreground), 0.2);
   }
 
+}
+
+.product-media-modal__content {
+  padding: var(--level6); 
+  padding: var(--level6); 
 }
 
 @media screen and (min-width: 750px) {
@@ -622,7 +678,6 @@ a.product__text {
 
 .product__media-item > * {
   display: block;
-  position: relative;
 }
 
 .product__media-toggle {
@@ -631,6 +686,11 @@ a.product__text {
   background-color: transparent;
   color: currentColor;
   padding: 0;
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  z-index: 3; 
+  top: 0; 
 }
 
 .product__media-toggle::after {
@@ -676,7 +736,7 @@ a.product__text {
 }
 
 .product-media-modal {
-  background-color: rgb(var(--color-background));
+  background-color: #fff;
   height: 100%;
   position: fixed;
   top: 0;
@@ -991,10 +1051,6 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
-  .product--stacked .thumbnail-list {
-    display: none;
-  }
-
   .thumbnail-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1017,6 +1073,10 @@ a.product__text {
   .product--large .thumbnail-list {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+.product__modal-opener {
+  z-index: 2; 
 }
 
 @media screen and (max-width: 749px) {
@@ -1042,7 +1102,7 @@ a.product__text {
   }
 
   .thumbnail-list__item.slider__slide {
-    width: calc(33% - 0.6rem);
+    width: calc(20% - 0.6rem);
   }
 }
 
@@ -1077,6 +1137,8 @@ a.product__text {
 }
 
 @media screen and (min-width: 900px) {
+
+
   .product--small .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
     width: calc(25% - 0.8rem);
   }
@@ -1097,6 +1159,7 @@ a.product__text {
   color: rgb(var(--color-foreground));
   cursor: pointer;
   background-color: transparent;
+  border: none; 
 }
 
 .thumbnail:hover {
