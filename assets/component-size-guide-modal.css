@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #Size Guide Modal
+\*------------------------------------*/
+
+
+@media screen and (min-width: 750px) {
+    .size-guide-modal__secondary-content__body {
+        display: flex;
+        column-gap: var(--level10);
+    }
+}
+
+.size-guide-modal__image {
+    width: 30rem; 
+}
+
+.size-guide-modal .modal__inner {
+    padding: var(--level7); 
+}
+
+.size-guide-modal .modal__inner {
+    width: 100%; 
+    max-width: 70rem;
+    position: relative;
+}
+
+.size-guide-modal__image {
+    max-width: 32%; 
+    width: 100%; 
+}
+.size-guide-modal__image__inner {
+    position: relative;
+    padding-bottom: 145%; 
+}
+
+.size-guide-modal__headline {
+    text-align:  center;
+}
+
+
+.size-guide-modal__subline {
+    text-align: left; 
+    font-size: var(--h3);
+    text-transform: uppercase;
+    font-family: var(--secondary-font-family);
+    font-weight: 300;
+}
+
+.size-guide-modal__subline em {
+    text-transform: lowercase;
+}
