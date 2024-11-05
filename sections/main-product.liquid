@@ -204,10 +204,31 @@
                         </button>
                       </div>
                       <div class="modal__content">
-                        <h2>STANDARD size chart</h2>
+                        <div class="size-guide-modal__primary-content">
+                          <h2 class="size-guide-modal__headline">{{ block.settings.headline }}</h2>
 
-                        <div>
-                          {{ product.metafields.properties.size_chart.content }}
+                          <div>
+                            {{ product.metafields.properties.size_chart.content }}
+                          </div>
+                        </div>
+                        <div class="size-guide-modal__secondary-content">
+                          <h3 class="size-guide-modal__headline">{{ block.settings.subline }}</h3>
+
+                          <div class="size-guide-modal__secondary-content__body">
+                            <div class="size-guide-modal__image">
+                              <div class="size-guide-modal__image__inner">
+                                <img
+                                  src="{{ block.settings.image | img_url }}"
+                                  width="100%"
+                                  height="auto"
+                                  alt="{{ block.settings.headline }}"
+                                >
+                              </div>
+                            </div>
+                            <div class="size-guide-modal__body">
+                              {{ block.settings.body }}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
