@@ -29,7 +29,6 @@ slider-component.slider-component-full-width {
   padding-bottom: 0;
 }
 
-@media screen and (max-width: 749px) {
   .slider.slider--mobile {
     position: relative;
     flex-wrap: inherit;
@@ -59,13 +58,12 @@ slider-component.slider-component-full-width {
   .slider.slider--mobile.contains-content-container .slider__slide {
     --focus-outline-padding: 0rem;
   }
-}
 
 @media screen and (min-width: 750px) {
   .slider--mobile {
     margin-bottom: 1rem; 
   }
-  
+
   .slider.slider--tablet-up {
     position: relative;
     flex-wrap: inherit;
@@ -328,20 +326,9 @@ slider-component.slider-component-full-width {
   opacity: 0; 
 }
 
-@media screen and (min-width: 990px) {
-  .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
-    display: none;
-  }
-}
 
 @media screen and (max-width: 989px) {
   .slider--desktop:not(.slider--tablet) + .slider-buttons {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .slider--mobile + .slider-buttons {
     display: none;
   }
 }
@@ -506,13 +493,6 @@ slider-component.slider-component-full-width {
   row-gap: var(--grid-mobile-vertical-spacing);
 }
 
-@media screen and (min-width: 750px) {
-  .grid {
-    column-gap: var(--grid-desktop-horizontal-spacing);
-    row-gap: var(--grid-desktop-vertical-spacing);
-  }
-}
-
 .grid:last-child {
   margin-bottom: 0;
 }
@@ -524,24 +504,13 @@ slider-component.slider-component-full-width {
   flex-shrink: 0;
 }
 
-@media screen and (min-width: 750px) {
-  .grid__item {
-    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
-}
 
 .grid--gapless.grid {
   column-gap: 0;
   row-gap: 0;
 }
 
-@media screen and (max-width: 749px) {
-  .grid__item.slider__slide--full-width {
-    width: 100%;
-    max-width: none;
-  }
-}
+
 
 .grid--1-col .grid__item {
   max-width: 100%;
@@ -552,85 +521,9 @@ slider-component.slider-component-full-width {
   width: calc(33.33% - var(--grid-mobile-horizontal-spacing) * 2 / 3);
 }
 
-@media screen and (min-width: 750px) {
-  .grid--3-col .grid__item {
-    width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-  }
-}
+
 
 .grid--2-col .grid__item {
   width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
 }
 
-@media screen and (min-width: 750px) {
-  .grid--2-col .grid__item {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
-
-  .grid--4-col-tablet .grid__item {
-    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-  }
-
-  .grid--3-col-tablet .grid__item {
-    width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-  }
-
-}
-
-
-
-@media screen and (max-width: 989px) {
-  .grid--1-col-tablet-down .grid__item {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .grid--6-col-desktop .grid__item {
-    width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
-    max-width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
-  }
-
-  .grid--5-col-desktop .grid__item {
-    width: calc(20% - var(--grid-desktop-horizontal-spacing) * 4 / 5);
-    max-width: calc(20% - var(--grid-desktop-horizontal-spacing) * 4 / 5);
-  }
-
-  .grid--4-col-desktop .grid__item {
-    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-  }
-
-  .grid--3-col-desktop .grid__item {
-    width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-    max-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-  }
-
-  .grid--2-col-desktop .grid__item {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .grid--1-col-desktop {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .grid--1-col-desktop .grid__item {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 750px) and (max-width: 989px) {
-  .grid--2-col-tablet-down .grid__item {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
-
-  .grid--1-col-tablet-down.grid--peek .grid__item {
-    width: calc(100% - var(--grid-desktop-horizontal-spacing) - 3rem);
-  }
-}
