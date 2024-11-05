@@ -41,6 +41,10 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{'choices.min.js' |  asset_url}}" defer="defer"></script>
+  <script src="{{ 'custom-selects.js' | asset_url }}" defer="defer"></script>
+  {{ 'nice-select2.css' | asset_url | stylesheet_tag }}
+
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
