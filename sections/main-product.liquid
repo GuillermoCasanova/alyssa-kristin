@@ -186,6 +186,19 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
+
+              {%- when 'size-guide' -%}
+                <div>
+                  <button class="button-link product__size-guide-modal-trigger" data-modal="size-guide">
+                    Size Guide
+                  </button>
+                </div>
+                <global-modal id="size-guide-modal">
+                  <div class="modal__content">
+                    <h2>Size Guide</h2>
+                  </div>
+                </global-modal>
+
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -891,6 +904,11 @@
           "default": "circle"
         }
       ]
+    },
+    {
+      "type": "size-guide",
+      "name": "Size Guide",
+      "limit": 1
     },
     {
       "type": "buy_buttons",
