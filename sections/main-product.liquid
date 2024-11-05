@@ -207,9 +207,17 @@
                       <div class="modal__content">
                         <div class="size-guide-modal__primary-content">
                           <h2 class="size-guide-modal__headline">{{ block.settings.headline }}</h2>
-
                           <div>
-                            {{ product.metafields.properties.size_chart.content }}
+                            {% assign page_handle = product.metafields.properties.size_chart %}
+                            {% assign page = pages[page_handle] %}
+
+                            {% if page %}
+                              <div class="page-content">
+                                {{ page.content }}
+                              </div>
+                            {% else %}
+                              <p>No page content available.</p>
+                            {% endif %}
                           </div>
                         </div>
                         <div class="size-guide-modal__secondary-content">

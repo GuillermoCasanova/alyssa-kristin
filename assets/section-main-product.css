@@ -16,7 +16,7 @@ product-info {
   margin: auto;
   display: flex; 
   flex-direction: column; 
-  margin-top: 5rem;
+  margin-top: 7rem;
   padding-left: var(--level7); 
   padding-right: var(--level7);
 }

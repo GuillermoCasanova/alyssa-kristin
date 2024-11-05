@@ -3,25 +3,69 @@
 \*------------------------------------*/
 
 
+.size-guide-modal {
+    display: block;
+}
+
+.size-guide-modal .modal__inner {
+    background-color: white;
+}
+
 @media screen and (min-width: 750px) {
     .size-guide-modal__secondary-content__body {
-        display: flex;
         column-gap: var(--level10);
     }
 }
+
+
 
 .size-guide-modal__image {
     width: 30rem; 
 }
 
 .size-guide-modal .modal__inner {
-    padding: var(--level7); 
+    padding: 0; 
 }
 
 .size-guide-modal .modal__inner {
     width: 100%; 
     max-width: 70rem;
     position: relative;
+}
+
+
+@media screen and (min-width: 750px) {
+    .size-guide-modal .modal__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.size-guide-modal__primary-content {
+    padding: var(--level5); 
+}
+
+@media screen and (min-width: 750px) {
+    .size-guide-modal__primary-content {
+        display: flex   ;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--level7); 
+    }
+}
+
+.size-guide-modal__secondary-content {
+    background-color: rgb(var(--color-base-background-2));
+    padding: var(--level5);
+    display: flex;
+    flex-direction: column;;
+}
+
+@media screen and (min-width: 750px) {
+    .size-guide-modal__secondary-content {
+        padding: var(--level7);
+    }
 }
 
 .size-guide-modal__image {
@@ -35,6 +79,10 @@
 
 .size-guide-modal__headline {
     text-align:  center;
+    font-size: var(--h3);
+    text-transform: uppercase;
+    font-family: var(--secondary-font-family);
+    font-weight: 300;
 }
 
 
@@ -44,8 +92,37 @@
     text-transform: uppercase;
     font-family: var(--secondary-font-family);
     font-weight: 300;
+    margin-top: var(--level5);  
 }
 
 .size-guide-modal__subline em {
     text-transform: lowercase;
+}
+
+.size-guide-modal table {
+    border: 1px solid rgb(var(--color-base-text-1));
+    width: 100% !important;
+}
+
+.size-guide-modal tbody tr {
+    height: 2rem;
+    border-bottom: 1px solid rgb(var(--color-base-text-1));
+}
+
+.product__size-guide-modal-trigger {
+    background-color: transparent;
+    border: 0;
+    color: rgb(var(--color-base-text-1));
+    font-size: var(--micro);
+    right: 0; 
+    left: auto; 
+    margin-bottom: 0; 
+    margin-left: auto; 
+    margin-right: 0; 
+    display: block; 
+}
+
+.product__size-guide-modal-trigger:hover,
+.product__size-guide-modal-trigger:focus {
+    text-decoration: underline;
 }
