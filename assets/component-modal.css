@@ -11,6 +11,7 @@
     display: flex;
     align-items: flex-end;
     display: none;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 940px) {
@@ -21,6 +22,10 @@
 
 .modal[aria-hidden="true"] {
     pointer-events: none;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
 }
 
 .modal[aria-hidden="true"] .modal__inner {
@@ -115,8 +120,6 @@
     padding: var(--level5);
     padding-top: var(--level2);
     padding-bottom: var(--level2);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     border: 1px solid rgb(var(--color-base-text-1));
     background-color: rgb(var(--color-base-background-1));
     z-index: 1;
@@ -129,8 +132,6 @@
         margin-left: auto;
         margin-right: auto;
         min-height: auto;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
         padding: var(--level10);
         max-width: 68rem;
         overflow: hidden;
@@ -165,7 +166,7 @@
     background: transparent;
     outline: none;
     border: 0;
-    color: rgb(var(--color-base-background-2));
+    color: rgb(var(--color-base-text-1));
     position: relative;
     display: inline-block;
     width: auto;

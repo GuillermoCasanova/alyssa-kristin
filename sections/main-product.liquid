@@ -189,14 +189,29 @@
 
               {%- when 'size-guide' -%}
                 <div>
-                  <button class="button-link product__size-guide-modal-trigger" data-modal="size-guide">
+                  <button class="button-link product__size-guide-modal-trigger" data-modal="size-guide-modal">
                     Size Guide
                   </button>
                 </div>
                 <global-modal id="size-guide-modal">
-                  <div class="modal__content">
-                    <h2>Size Guide</h2>
-                  </div>
+                  <dialog class="modal">
+                    <div class="modal__cover" data-modal-close aria-hidden="true"></div>
+
+                    <div class="modal__inner">
+                      <div class="modal__close">
+                        <button data-modal-close>
+                          {% render 'icon-close' %}
+                        </button>
+                      </div>
+                      <div class="modal__content">
+                        <h2>STANDARD size chart</h2>
+
+                        <div>
+                          {{ product.metafields.properties.size_chart.content }}
+                        </div>
+                      </div>
+                    </div>
+                  </dialog>
                 </global-modal>
 
               {%- when 'sku' -%}
@@ -908,7 +923,29 @@
     {
       "type": "size-guide",
       "name": "Size Guide",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "headline",
+          "label": "Headline"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "subline",
+          "label": "Subline"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body"
+        }
+      ]
     },
     {
       "type": "buy_buttons",

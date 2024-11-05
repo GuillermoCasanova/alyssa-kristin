@@ -1094,9 +1094,9 @@ class GlobalModal extends HTMLElement {
     super();
   
     this.modalId  = this.id; 
-    this.modal = this.querySelector('[role="dialog"]'); 
+    this.modal = this.querySelector('[role="dialog"]') || this.querySelector('dialog'); 
     this.modalTriggers =  document.querySelectorAll(`button[data-modal="${this.modalId}"]`);
-    this.close = this.querySelector('[data-modal-close]'); 
+    this.close = this.querySelectorAll('[data-modal-close]'); 
   //   this.openButton = this.shadowRoot.querySelector('#openModalButton');
   //   this.modal = this.shadowRoot.querySelector('#modal');
   //   this.closeButton = this.shadowRoot.querySelector('#closeModalButton');
@@ -1111,13 +1111,13 @@ class GlobalModal extends HTMLElement {
           elem.addEventListener('click', (event)=> this.openModal(event));
       });
 
-      this.close.addEventListener('click', ()=> {
-          this.closeModal(); 
+      this.close.forEach((elem) => {
+        elem.addEventListener('click', ()=> this.closeModal());
       }); 
+      
   }
 
   openModal(pEvent) {
-    this.modal.style.display = 'flex'; 
 
     if(pEvent) {
       pEvent.target.closest('button').setAttribute('aria-expanded', true);
@@ -1140,9 +1140,9 @@ class GlobalModal extends HTMLElement {
     
     document.body.classList.remove(`overflow-hidden`);
 
-    setTimeout(()=> {
-      this.modal.style.display = 'none';
-    }, 600);
+    // setTimeout(()=> {
+    //   this.modal.style.display = 'none';
+    // }, 600);
   }
 
 }
