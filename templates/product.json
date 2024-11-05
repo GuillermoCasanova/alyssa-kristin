@@ -30,6 +30,10 @@
         "size_guide_AzhnFp": {
           "type": "size-guide",
           "settings": {
+            "headline": "<p>STANDARD <em>size chart</em></p>",
+            "image": "shopify://shop_images/size-guide.png",
+            "subline": "<p>HOW TO <em>measure</em></p>",
+            "body": "<p><strong>BUST: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<br/><br/><strong>WAIST:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<br/><br/><strong>HIPS:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<strong><br/><br/>HEIGHT:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<br/><br/><strong>YOUR TYPICAL SIZE:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>"
           }
         },
         "variant_picker": {
