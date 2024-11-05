@@ -52,8 +52,8 @@
           "settings": {
             "heading": "<p>Contact us To <em>find your size</em></p>",
             "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-            "button_link": "shopify://pages/appointments",
-            "button_text": "Connect With us"
+            "cta_link": "",
+            "cta_text": "Learn More"
           }
         }
       },
@@ -70,11 +70,11 @@
         "enable_sticky_info": true,
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "stacked",
         "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false
       }
