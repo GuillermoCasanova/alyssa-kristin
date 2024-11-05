@@ -114,7 +114,7 @@
     transition: all var(--duration-default) var(--default-easing);
     z-index: 0;
     width: 47vw;
-    min-width: 14rem;
+    min-width: 16rem;
     margin-top: 1rem; 
 }
 

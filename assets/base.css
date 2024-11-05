@@ -537,6 +537,10 @@ main {
   width: 100%;
 }
 
+.page-width.full-width {
+  padding-left: 0 !important; 
+  padding-right: 0 !important; 
+}
 @media screen and (min-width: 360px) {
   .page-width {
     padding-left: var(--level3);
