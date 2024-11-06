@@ -21,6 +21,10 @@
   transition: all 0.2s ease-out;
 }
 
+.quick-add-modal__content-info .product {
+  margin-top: 0; 
+}
+
 .quick-add button {
   margin-bottom: 0; 
   padding-top: var(--level3); 
@@ -90,7 +94,6 @@
     --modal-height-offset: 10rem;
     margin-top: var(--modal-height-offset);
     width: 80%;
-    max-height: calc(100% - var(--modal-height-offset) * 2);
     overflow-y: auto;
   }
 
