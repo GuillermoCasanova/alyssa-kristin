@@ -22,17 +22,6 @@
           "settings": {
           }
         },
-        "tabbed_interface_eMJMtD": {
-          "type": "tabbed_interface",
-          "settings": {
-            "tab1_heading": "Description",
-            "tab1_content": "",
-            "tab2_heading": "Designer Tips",
-            "tab2_content": "",
-            "tab3_heading": "Size & Fit",
-            "tab3_content": ""
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -80,7 +69,6 @@
       "block_order": [
         "title",
         "price",
-        "tabbed_interface_eMJMtD",
         "description",
         "size_guide_AzhnFp",
         "variant_picker",
