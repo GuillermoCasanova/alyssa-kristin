@@ -4,7 +4,7 @@
 
 
 .size-guide-modal {
-    display: block;
+    display: none;
 }
 
 .size-guide-modal .modal__inner {
