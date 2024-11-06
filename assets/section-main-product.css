@@ -1183,7 +1183,7 @@ slider-component {
 
 @media screen and (min-width: 750px) {
   .thumbnail-list__item {
-    width: calc(25% - 1rem);
+    width: calc(25% - .75rem);
     height: 12rem; 
   }
 }
