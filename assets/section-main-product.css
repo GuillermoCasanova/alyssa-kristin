@@ -1734,3 +1734,26 @@ button.thumbnail[aria-current="true"] {
   padding-left: var(--level6); 
   padding-right: var(--level6);
 }
+
+
+
+.tabbed-interface__tabs {
+  display: flex;
+  column-gap: var(--level2); 
+}
+
+.tabbed-interface__tabs button {
+ background: transparent;
+ border: none;
+ font-size: var(--normal);
+ font-weight: 400;
+ font-family: var(--primary-font-family);
+ margin-bottom: 0;
+ text-align: left;
+ padding-left: 0; 
+}
+
+.tabbed-interface__tabs button:hover,
+.tabbed-interface__tabs button:focus {
+  text-decoration: underline;
+}

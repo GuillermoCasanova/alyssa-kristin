@@ -189,67 +189,48 @@
                   {%- endif -%}
                 </p>
               {%- when 'description' -%}
-                {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
-                  </div>
-                {%- endif -%}
-
-              {%- when 'tabbed-interface' -%}
                 <div class="tabbed-interface" {{ block.shopify_attributes }}>
                   <ul class="tabbed-interface__tabs" role="tablist">
-                    <li role="presentation">
-                      <button id="tab1" role="tab" aria-controls="tabpanel1" aria-selected="true">
-                        {{ block.settings.tab1_heading }}
-                      </button>
-                    </li>
-                    <li role="presentation">
-                      <button id="tab2" role="tab" aria-controls="tabpanel2" aria-selected="false">
-                        {{ block.settings.tab2_heading }}
-                      </button>
-                    </li>
-                    <li role="presentation">
-                      <button id="tab3" role="tab" aria-controls="tabpanel3" aria-selected="false">
-                        {{ block.settings.tab3_heading }}
-                      </button>
-                    </li>
+                    {%- if product.description != blank -%}
+                      <li role="presentation">
+                        <button id="tab1" role="tab" aria-controls="tabpanel1" aria-selected="true">Description</button>
+                      </li>
+                    {%- endif -%}
+                    {%- if product.metafields.properties.designer_tips != blank -%}
+                      <li role="presentation">
+                        <button id="tab2" role="tab" aria-controls="tabpanel2" aria-selected="false">
+                          Designer Tips
+                        </button>
+                      </li>
+                    {%- endif -%}
+                    {%- if product.metafields.properties.size_and_fit != blank -%}
+                      <li role="presentation">
+                        <button id="tab3" role="tab" aria-controls="tabpanel3" aria-selected="false">Size & Fit</button>
+                      </li>
+                    {%- endif -%}
                   </ul>
-                  <div id="tabpanel1" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab1">
-                    <div class="rte">
-                      {{ block.settings.tab1_content }}
+                  {%- if product.description != blank -%}
+                    <div id="tabpanel1" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab1">
+                      <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                        {{ product.description }}
+                      </div>
                     </div>
-                  </div>
-                  <div id="tabpanel2" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab2" hidden>
-                    <div class="rte">
-                      {{ block.settings.tab2_content }}
+                  {%- endif -%}
+                  {%- if product.metafields.properties.designer_tips != blank -%}
+                    <div id="tabpanel2" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab2" hidden>
+                      <div class="product__description">
+                        {{ product.metafields.properties.designer_tips | metafield_tag }}
+                      </div>
                     </div>
-                  </div>
-                  <div id="tabpanel3" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab3" hidden>
-                    <div class="rte">
-                      {{ block.settings.tab3_content }}
+                  {%- endif -%}
+                  {%- if product.metafields.properties.size_and_fit != blank -%}
+                    <div id="tabpanel3" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab3" hidden>
+                      <div class="product__description">
+                        {{ product.metafields.properties.size_and_fit | metafield_tag }}
+                      </div>
                     </div>
-                  </div>
+                  {%- endif -%}
                 </div>
-                <script>
-                  document.querySelectorAll('.tabbed-interface__tabs button').forEach((button) => {
-                    button.addEventListener('click', () => {
-                      const tabContainer = button.closest('.tabbed-interface');
-                      const tabPanels = tabContainer.querySelectorAll('.tabbed-interface__panel');
-                      const tabs = tabContainer.querySelectorAll('.tabbed-interface__tabs button');
-
-                      tabs.forEach((tab) => {
-                        tab.setAttribute('aria-selected', 'false');
-                      });
-
-                      tabPanels.forEach((panel) => {
-                        panel.hidden = true;
-                      });
-
-                      button.setAttribute('aria-selected', 'true');
-                      tabContainer.querySelector(`#${button.getAttribute('aria-controls')}`).hidden = false;
-                    });
-                  });
-                </script>
 
               {%- when 'size-guide' -%}
                 {{ 'component-size-guide-modal.css' | asset_url | stylesheet_tag }}
@@ -854,6 +835,35 @@
   </div>
 </product-info>
 
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document
+      .querySelector('.tabbed-interface__tabs')
+      .querySelectorAll('button')
+      .forEach((button) => {
+        console.log(button);
+        button.addEventListener('click', () => {
+          const tabContainer = button.closest('.tabbed-interface');
+
+          console.log(tabContainer);
+          const tabPanels = tabContainer.querySelectorAll('.tabbed-interface__panel');
+          const tabs = tabContainer.querySelectorAll('.tabbed-interface__tabs button');
+
+          tabs.forEach((tab) => {
+            tab.setAttribute('aria-selected', 'false');
+          });
+
+          tabPanels.forEach((panel) => {
+            panel.hidden = true;
+          });
+
+          button.setAttribute('aria-selected', 'true');
+          tabContainer.querySelector(`#${button.getAttribute('aria-controls')}`).hidden = false;
+        });
+      });
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -1021,43 +1031,6 @@
             }
           ],
           "default": "circle"
-        }
-      ]
-    },
-    {
-      "type": "tabbed_interface",
-      "name": "Tabbed Interface",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "tab1_heading",
-          "label": "Tab 1 Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "tab1_content",
-          "label": "Tab 1 Content"
-        },
-        {
-          "type": "text",
-          "id": "tab2_heading",
-          "label": "Tab 2 Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "tab2_content",
-          "label": "Tab 2 Content"
-        },
-        {
-          "type": "text",
-          "id": "tab3_heading",
-          "label": "Tab 3 Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "tab3_content",
-          "label": "Tab 3 Content"
         }
       ]
     },
