@@ -1,11 +1,11 @@
 
 .collection {
-  margin-bottom: var(--level10);
+  margin-bottom: var(--level8);
 }
 
 @media screen and (min-width: 700px) {
   .collection {
-    margin-bottom: calc(var(--level10) + var(--level5));
+    margin-bottom: calc(var(--level8));
   }
 }
 

@@ -1,5 +1,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add.css' | asset_url | stylesheet_tag }}
 {{ 'section-featured-collection.css' | asset_url | stylesheet_tag }}
 {{ 'vendor-swiper.css' | asset_url | stylesheet_tag }}
 
@@ -63,14 +65,15 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            {% render 'product-card',
+            {% render 'card-product',
               card_product: product,
-              heading_level: 'h2',
-              card_style: section.settings.product_card_style,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_rating: section.settings.show_rating,
+              media_aspect_ratio: 'portrait',
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
               lazy_load: true,
-              show_quick_add: false,
+              skip_styles: false,
+              quick_add: 'standard',
               section_id: section.id
             %}
           </li>

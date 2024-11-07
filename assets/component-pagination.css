@@ -24,7 +24,6 @@
 @media screen and (min-width: 700px) {
   .pagination-button {
       margin-bottom:  calc(var(--level10) + var(--level5)); 
-      margin-top:  calc(var(--level10) + var(--level5)); 
   }
 }
 
