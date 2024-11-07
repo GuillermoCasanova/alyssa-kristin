@@ -536,7 +536,6 @@ main {
   display: block;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .page-width.full-width {
