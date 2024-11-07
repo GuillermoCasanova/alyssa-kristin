@@ -19,7 +19,6 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   margin-bottom:  var(--level10); 
-  margin-top:  var(--level10); 
 }
 
 @media screen and (min-width: 700px) {
