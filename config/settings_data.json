@@ -155,12 +155,15 @@
             "type": "block",
             "settings": {
               "top_level_link": "Shop",
-              "promotion_1_text": "",
-              "promotion_1_url": "",
-              "promotion_2_text": "",
-              "promotion_2_url": "",
-              "promotion_3_text": "",
-              "promotion_3_url": ""
+              "promotion_1_image": "shopify://shop_images/Rectangle_5_e8f06d23-5bbd-4480-8750-8a784ae153c2.png",
+              "promotion_1_text": "Little White Dress",
+              "promotion_1_url": "shopify://collections/little-white-dress",
+              "promotion_2_image": "shopify://shop_images/Rectangle_4_ba8907d1-d41a-4e96-b549-9287853233be.png",
+              "promotion_2_text": "Customize Your LWD",
+              "promotion_2_url": "shopify://pages/build-your-own-white-dress",
+              "promotion_3_image": "shopify://shop_images/Rectangle_3_b07c1311-a593-45bf-a5b1-635a55d395a5.png",
+              "promotion_3_text": "Accessories",
+              "promotion_3_url": "shopify://collections/accessories"
             }
           },
           "block_drRKjq": {
