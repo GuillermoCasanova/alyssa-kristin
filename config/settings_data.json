@@ -200,12 +200,15 @@
             "type": "block",
             "settings": {
               "top_level_link": "About",
-              "promotion_1_text": "",
-              "promotion_1_url": "",
-              "promotion_2_text": "",
-              "promotion_2_url": "",
-              "promotion_3_text": "",
-              "promotion_3_url": ""
+              "promotion_1_image": "shopify://shop_images/image-6.png",
+              "promotion_1_text": "Philosophy",
+              "promotion_1_url": "shopify://pages/about",
+              "promotion_2_image": "shopify://shop_images/image-5.png",
+              "promotion_2_text": "The Process",
+              "promotion_2_url": "shopify://pages/about",
+              "promotion_3_image": "shopify://shop_images/image-4.png",
+              "promotion_3_text": "About",
+              "promotion_3_url": "shopify://pages/about"
             }
           }
         },
