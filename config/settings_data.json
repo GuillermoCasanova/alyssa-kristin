@@ -140,12 +140,15 @@
             "type": "block",
             "settings": {
               "top_level_link": "View Collection",
-              "promotion_1_text": "",
-              "promotion_1_url": "",
-              "promotion_2_text": "",
-              "promotion_2_url": "",
-              "promotion_3_text": "",
-              "promotion_3_url": ""
+              "promotion_1_image": "shopify://shop_images/Rectangle_5.png",
+              "promotion_1_text": "Gowns",
+              "promotion_1_url": "shopify://collections/gowns",
+              "promotion_2_image": "shopify://shop_images/Rectangle_4.png",
+              "promotion_2_text": "Cusotmize Your LWD",
+              "promotion_2_url": "shopify://pages/build-your-own-white-dress",
+              "promotion_3_image": "shopify://shop_images/Rectangle_3.png",
+              "promotion_3_text": "Accessories",
+              "promotion_3_url": "shopify://collections/accessories"
             }
           },
           "block_FLHNxk": {
