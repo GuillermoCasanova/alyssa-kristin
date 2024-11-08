@@ -181,34 +181,25 @@
               "promotion_3_url": "shopify://pages/appointments"
             }
           },
-          "block_QD9dUG": {
-            "type": "block",
-            "settings": {
-              "top_level_link": "About",
-              "promotion_1_text": "",
-              "promotion_1_url": "",
-              "promotion_2_text": "",
-              "promotion_2_url": "",
-              "promotion_3_text": "",
-              "promotion_3_url": ""
-            }
-          },
-          "block_x7pAaU": {
-            "type": "block",
-            "settings": {
-              "top_level_link": "Events",
-              "promotion_1_text": "",
-              "promotion_1_url": "",
-              "promotion_2_text": "",
-              "promotion_2_url": "",
-              "promotion_3_text": "",
-              "promotion_3_url": ""
-            }
-          },
           "block_gRxPdX": {
             "type": "block",
             "settings": {
               "top_level_link": "Appointments",
+              "promotion_1_image": "shopify://shop_images/image-3.png",
+              "promotion_1_text": "Explore Gowns",
+              "promotion_1_url": "shopify://collections/gowns",
+              "promotion_2_image": "shopify://shop_images/Screen_Shot_2024-09-03_at_10.27.32_PM_b85df4b4-1855-434f-9e0f-8f04beed4fd3.png",
+              "promotion_2_text": "Book an Appointment",
+              "promotion_2_url": "shopify://pages/appointments",
+              "promotion_3_image": "shopify://shop_images/Screen_Shot_2024-09-03_at_10.27.32_PM-1.png",
+              "promotion_3_text": "Contact Us",
+              "promotion_3_url": "shopify://pages/contact"
+            }
+          },
+          "block_QD9dUG": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "About",
               "promotion_1_text": "",
               "promotion_1_url": "",
               "promotion_2_text": "",
@@ -222,9 +213,8 @@
           "block_y8xtzm",
           "block_FLHNxk",
           "block_drRKjq",
-          "block_QD9dUG",
-          "block_x7pAaU",
-          "block_gRxPdX"
+          "block_gRxPdX",
+          "block_QD9dUG"
         ],
         "settings": {
           "mobile_nav_heading": "Navigation",
