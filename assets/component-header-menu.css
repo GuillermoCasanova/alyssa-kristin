@@ -139,12 +139,13 @@
 
 @media only screen and (min-width: 940px) {
     .header__submenu {
-        width: 100vw;
+        width: 100%;
         max-width: none;
         position: absolute;
         left: 0;
         display: flex;
         flex-direction: row;
+        top: 10px; 
     }
 }
 
@@ -224,3 +225,178 @@
     font-size: 1rem;
     cursor: pointer;
 }
+
+
+
+
+
+/*------------------------------------*\
+  #Header Sub Menus
+\*------------------------------------*/
+
+@media only screen and (min-width: 940px) {
+
+    .header__submenu {
+        transition: all var(--duration-default) cubic-bezier(0.16, 1, 0.3, 1);
+        background-color: rgb(var(--color-base-background-1));
+        width: 100vw;
+        max-width: none;
+        position: absolute;
+        left: 0;
+        border-top: 1px solid rgb(var(--color-base-text-1));
+        border-bottom: 1px solid rgb(var(--color-base-text-1));
+        border-right: 1px solid rgb(var(--color-base-text-1));
+        border-left: 1px solid rgb(var(--color-base-text-1));
+        z-index: 0;
+        top: 10rem; 
+    }
+  
+    .header__submenu__inner {
+        flex-direction: row;
+        display: flex;
+        padding-top: var(--level3);
+        padding-bottom: var(--level3);
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: var(--level7);
+        padding-bottom: var(--level7);
+        padding-left: calc(var(--level10) * 2);
+    }
+  
+  
+    .header__submenu--shop .header__submenu__inner {
+        display: grid;
+        grid-template-columns: 1.6fr 1.15fr;
+        grid-template-areas: 'menu collections';
+    }
+  
+    .header__submenu--shop .header__submenu__featured-collections {
+        width: 100%;
+        max-width: 100%;
+        grid-area: collections;
+        min-width: 14rem;
+        padding-top: var(--level1);
+        padding-right: var(--level3);
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .header__submenu__title {
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: var(--level3);
+    }
+  
+    .header__submenu--shop .header__submenu__list-menu {
+        grid-area: menu;
+    }
+  
+  
+    .header__submenu[aria-hidden="true"] {
+        opacity: 0;
+        pointer-events: none;
+        animation: headerDropDownClose .2s ease-in-out forwards;
+    }
+  
+    .header__submenu[aria-hidden="true"].preload {
+        visibility: hidden;
+        opacity: 0;
+    }
+  
+    .header__submenu[aria-hidden="false"] {
+        opacity: 1;
+        pointer-events: all;
+        top: 5.05rem;
+        animation: headerDropDownOpen .4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  
+    .header__submenu__list-menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header__submenu__title {
+        font-size: var(--normal); 
+        opacity: .7;
+    }
+
+    .header__submenu__list-item {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 0;
+        text-transform: uppercase;
+        font-size: var(--normal);
+        text-decoration: none;
+        margin-bottom: var(--level4);
+        font-weight: normal;
+        letter-spacing: var(--letter-spacing-2);
+    }
+  
+    .header__childmenu {
+        margin-right: var(--level3);
+    }
+  
+  
+    .header__childmenu__list-menu {
+        display: grid;
+        flex-direction: column;
+        padding-left: 0;
+    }
+  
+    .header__childmenu__list-item {
+        font-size: var(--h5);
+        color: rgb(var(--color-base-link));
+        text-transform: capitalize;
+        text-decoration: none;
+        padding-top: var(--level1);
+    }
+  
+    .header__childmenu__list-item:hover,
+    .header__childmenu__list-item:focus {
+        color: rgb(var(--color-base-text));
+        text-decoration: underline;
+    }
+  
+  
+  
+    @keyframes headerDropDownOpen {
+        0% {
+            opacity: 0;
+            transform: translateY(-120vh);
+        }
+  
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+  
+    @keyframes headerDropDownClose {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+  
+        100% {
+            opacity: 1;
+            transform: translateY(-120vh);
+        }
+    }
+  }
+  
+  @media only screen and (min-width: 1300px) {
+    .header__actions-menu {
+        max-width: 31rem;
+    }
+
+    .header__submenu--shop .header__submenu__featured-collections {
+        max-width: 35rem;
+        padding-right: var(--level1);
+    }
+  
+    .header__childmenu__list-item {
+        margin-bottom: var(--level2);
+    }
+  }

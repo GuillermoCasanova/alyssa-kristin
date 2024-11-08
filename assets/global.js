@@ -1575,3 +1575,170 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+
+
+
+{% javascript %}
+
+
+
+class SearchToggle extends HTMLElement {
+constructor() {
+  super(); 
+  this.button = this.querySelector('button');
+  this.setUpEvents(); 
+
+  document.addEventListener('click', (event) => {
+    
+    var isClickInside = document.querySelector('[data-search-modal]').contains(event.target);
+    var isToggleButton = this.contains(event.target); 
+
+    if (!isClickInside && !isToggleButton) {
+      this.closeSearch(); 
+    }
+  });
+}
+
+
+setUpCloseEvents() {    
+  document.addEventListener('keyup', (evt) => {
+    evt.code === 'Escape' && this.closeSearch()
+  }, { once: true });
+}
+
+closeSearch() {
+  this.button.setAttribute('aria-expanded', false); 
+  this.button.blur();
+  document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+}
+
+setUpEvents() {
+
+  this.button.addEventListener('click', (event) => {
+    if(this.button.getAttribute('aria-expanded') == 'false') {
+      this.button.setAttribute('aria-expanded', true); 
+    } else {
+      this.button.setAttribute('aria-expanded', false); 
+    }     
+
+    this.button.blur();
+
+    if(document.querySelector('[data-search-modal]').getAttribute('aria-hidden') == 'false') {
+      document.querySelector('[data-search-modal]').setAttribute('aria-hidden', true);
+      removeTrapFocus(); 
+    }
+    else {
+      this.setUpCloseEvents();
+      document.querySelector('[data-search-modal]').setAttribute('aria-hidden', false);
+      trapFocus(document.querySelector('[data-search-modal]'), document.querySelector('[data-search-modal] input[type="search"]'));
+    }
+  }); 
+}
+
+}
+
+customElements.define('search-toggle', SearchToggle);
+
+
+  class StickyHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.header = document.querySelector('.section-header');
+      this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+      this.headerBounds = {};
+
+      this.setHeaderHeight();
+
+      window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
+
+      if (this.headerIsAlwaysSticky) {
+        this.header.classList.add('shopify-section-header-sticky');
+      };
+
+      this.currentScrollTop = 0;
+      this.preventReveal = false;
+
+      this.onScrollHandler = this.onScroll.bind(this);
+      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.addEventListener('scroll', this.onScrollHandler, false);
+
+      this.createObserver();
+    }
+
+    setHeaderHeight() {
+      document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.removeEventListener('scroll', this.onScrollHandler);
+    }
+
+    createObserver() {
+      let observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
+      });
+
+      observer.observe(this.header);
+    }
+
+    onScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        this.header.classList.add('scrolled-past-header');
+        if (this.preventHide) return;
+        requestAnimationFrame(this.hide.bind(this));
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        this.header.classList.add('scrolled-past-header');
+        if (!this.preventReveal) {
+          requestAnimationFrame(this.reveal.bind(this));
+        } else {
+          window.clearTimeout(this.isScrolling);
+
+          this.isScrolling = setTimeout(() => {
+            this.preventReveal = false;
+          }, 66);
+
+          requestAnimationFrame(this.hide.bind(this));
+        }
+      } else if (scrollTop <= this.headerBounds.top) {
+        this.header.classList.remove('scrolled-past-header');
+        requestAnimationFrame(this.reset.bind(this));
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+
+    hide() {
+      if (this.headerIsAlwaysSticky) return;
+      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.closeMenuDisclosure();
+    }
+
+    reveal() {
+      if (this.headerIsAlwaysSticky) return;
+      this.header.classList.add('shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-header-hidden');
+    }
+
+    reset() {
+      if (this.headerIsAlwaysSticky) return;
+      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    }
+
+    closeMenuDisclosure() {
+      this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
+      this.disclosures.forEach(disclosure => disclosure.close());
+    }
+
+  }
+
+  customElements.define('sticky-header', StickyHeader);
