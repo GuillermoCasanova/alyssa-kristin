@@ -123,6 +123,7 @@ if (!customElements.get('product-info')) {
             this.pendingRequestUrl = null;
             const html = new DOMParser().parseFromString(responseText, 'text/html');
             callback(html);
+              initializeNiceSelects();
           })
           .then(() => {
             // set focus to last clicked option value
@@ -165,7 +166,6 @@ if (!customElements.get('product-info')) {
         return (html) => {
           const variant = this.getSelectedVariant(html);
 
-          this.pickupAvailability?.update(variant);
           this.updateOptionValues(html);
           this.updateURL(productUrl, variant?.id);
           this.updateVariantInputs(variant?.id);

@@ -680,9 +680,9 @@ class VariantSelects extends HTMLElement {
     const { value, tagName } = target;
 
     if (tagName === 'SELECT' && target.selectedOptions.length) {
-      Array.from(target.options)
-        .find((option) => option.getAttribute('selected'))
-        .removeAttribute('selected');
+      // Array.from(target.options)
+      //   .find((option) => option.getAttribute('selected'))
+      //   .removeAttribute('selected');
       target.selectedOptions[0].setAttribute('selected', 'selected');
 
       const swatchValue = target.selectedOptions[0].dataset.optionSwatchValue;
@@ -1578,8 +1578,6 @@ customElements.define('product-recommendations', ProductRecommendations);
 
 
 
-
-{% javascript %}
 
 
 

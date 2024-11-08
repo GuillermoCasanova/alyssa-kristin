@@ -2,11 +2,15 @@ function initializeNiceSelects() {
 
     function initCustomSelects() {
         document.querySelectorAll('[data-custom-select]').forEach((element) => {
+            if (element.choices) {
+              element.choices.destroy();
+            }
             const choices = new Choices(element, {
               searchEnabled: false,
-              searchChoices: false,
+              searchChoices: false
             });
-          });
+            element.choices = choices;
+        });
     }
 
     initCustomSelects(); 
