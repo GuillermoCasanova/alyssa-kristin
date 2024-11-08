@@ -170,12 +170,15 @@
             "type": "block",
             "settings": {
               "top_level_link": "Find Us",
-              "promotion_1_text": "",
-              "promotion_1_url": "",
-              "promotion_2_text": "",
-              "promotion_2_url": "",
-              "promotion_3_text": "",
-              "promotion_3_url": ""
+              "promotion_1_image": "shopify://shop_images/image-1_e6378364-f01a-41e1-948e-76540f4885d0.png",
+              "promotion_1_text": "Find a Retailer",
+              "promotion_1_url": "shopify://pages/contact",
+              "promotion_2_image": "shopify://shop_images/image_34abe7f7-8699-4a25-9ff9-288e39a66b30.png",
+              "promotion_2_text": "Events",
+              "promotion_2_url": "shopify://pages/contact",
+              "promotion_3_image": "shopify://shop_images/Screen_Shot_2024-09-03_at_10.27.32_PM.png",
+              "promotion_3_text": "Book An Appointment",
+              "promotion_3_url": "shopify://pages/appointments"
             }
           },
           "block_QD9dUG": {
