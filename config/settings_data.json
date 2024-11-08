@@ -135,6 +135,88 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "block_y8xtzm": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "View Collection",
+              "promotion_1_text": "",
+              "promotion_1_url": "",
+              "promotion_2_text": "",
+              "promotion_2_url": "",
+              "promotion_3_text": "",
+              "promotion_3_url": ""
+            }
+          },
+          "block_FLHNxk": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "Shop",
+              "promotion_1_text": "",
+              "promotion_1_url": "",
+              "promotion_2_text": "",
+              "promotion_2_url": "",
+              "promotion_3_text": "",
+              "promotion_3_url": ""
+            }
+          },
+          "block_drRKjq": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "Find Us",
+              "promotion_1_text": "",
+              "promotion_1_url": "",
+              "promotion_2_text": "",
+              "promotion_2_url": "",
+              "promotion_3_text": "",
+              "promotion_3_url": ""
+            }
+          },
+          "block_QD9dUG": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "About",
+              "promotion_1_text": "",
+              "promotion_1_url": "",
+              "promotion_2_text": "",
+              "promotion_2_url": "",
+              "promotion_3_text": "",
+              "promotion_3_url": ""
+            }
+          },
+          "block_x7pAaU": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "Events",
+              "promotion_1_text": "",
+              "promotion_1_url": "",
+              "promotion_2_text": "",
+              "promotion_2_url": "",
+              "promotion_3_text": "",
+              "promotion_3_url": ""
+            }
+          },
+          "block_gRxPdX": {
+            "type": "block",
+            "settings": {
+              "top_level_link": "Appointments",
+              "promotion_1_text": "",
+              "promotion_1_url": "",
+              "promotion_2_text": "",
+              "promotion_2_url": "",
+              "promotion_3_text": "",
+              "promotion_3_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "block_y8xtzm",
+          "block_FLHNxk",
+          "block_drRKjq",
+          "block_QD9dUG",
+          "block_x7pAaU",
+          "block_gRxPdX"
+        ],
         "settings": {
           "mobile_nav_heading": "Navigation",
           "mobile_menu_primary": "main-menu",
@@ -206,29 +288,23 @@
       },
       "email-popup": {
         "type": "email-popup",
-        "settings": {
-        }
+        "settings": {}
       },
       "announcement-bar": {
         "type": "announcement-bar",
-        "settings": {
-        }
+        "settings": {}
       },
       "loading-screen": {
         "type": "loading-screen",
-        "settings": {
-        }
+        "settings": {}
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "5946647744298494267": {
         "type": "shopify://apps/wishlist-plus/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   },
