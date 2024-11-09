@@ -21,12 +21,6 @@
   margin-bottom:  var(--level10); 
 }
 
-@media screen and (min-width: 700px) {
-  .pagination-button {
-      margin-bottom:  calc(var(--level10) + var(--level5)); 
-  }
-}
-
 
 .pagination-button__icon {
   width: 1.5rem;

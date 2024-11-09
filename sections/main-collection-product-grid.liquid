@@ -18,22 +18,27 @@
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
 <div class="page-width">
-  {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-    <aside
-      aria-labelledby="verticalTitle"
-      class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}"
-      id="main-collection-filters"
-      data-id="{{ section.id }}"
-    >
-      {% render 'facets',
-        results: collection,
-        enable_filtering: section.settings.enable_filtering,
-        enable_sorting: section.settings.enable_sorting,
-        filter_type: section.settings.filter_type,
-        paginate: paginate
-      %}
-    </aside>
-  {%- endif -%}
+  <div class="collection-header">
+    <h1 class="collection-header__heading">
+      {{ collection.title }}
+    </h1>
+    {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+      <aside
+        aria-labelledby="verticalTitle"
+        class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}"
+        id="main-collection-filters"
+        data-id="{{ section.id }}"
+      >
+        {% render 'facets',
+          results: collection,
+          enable_filtering: section.settings.enable_filtering,
+          enable_sorting: section.settings.enable_sorting,
+          filter_type: section.settings.filter_type,
+          paginate: paginate
+        %}
+      </aside>
+    {%- endif -%}
+  </div>
 
   <div
     class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"

@@ -1,4 +1,9 @@
 
+/*------------------------------------*\
+    #Collection Template
+\*------------------------------------*/
+
+
 .collection {
   margin-bottom: var(--level8);
 }
@@ -124,4 +129,19 @@
 
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
+}
+
+
+.collection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--level5);
+  margin-top: var(--level10);
+}
+
+.collection-header__heading {
+  margin: 0;
+  font-size: var(--h5);
+  text-transform: uppercase;
 }

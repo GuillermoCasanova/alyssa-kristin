@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  font-weight: 300;
 }
 
 li,
@@ -366,12 +366,6 @@ a {
 
 section {
   padding-bottom: var(--level10);
-}
-
-@media only screen and (min-width: 940px) {
-  section {
-    padding-bottom: calc(var(--level10) * 2);
-  }
 }
 
 

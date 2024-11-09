@@ -1,15 +1,23 @@
-<section class="collection-description" id="main-collection-description">
-  <div class="collection-description page-width">
-    <div class="container">
-      <h2 class="collection-description__heading">
-        {{ section.settings.heading }}
-      </h2>
-      <div class="collection-description__body rich-text">
-        {{ section.settings.description }}
+{{ 'section-collection-description.css' | asset_url | stylesheet_tag }}
+
+<collection-description>
+  <section class="collection-description" id="main-collection-description">
+    <div class="collection-description__inner page-width">
+      <div class="container">
+        <h2 class="collection-description__heading">
+          {{ collection.title }}
+        </h2>
+        <div class="collection-description__body rich-text ">
+          <span data-seo-text>
+            {{ collection.description }}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</collection-description>
+
+<script src="{{ 'collection-description.js' | asset_url  }}" defer="defer"></script>
 
 {% schema %}
 {
