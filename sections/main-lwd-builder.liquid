@@ -1,0 +1,53 @@
+<section class="collection-items">
+  <div class="collection-items__grid">
+    {% for product in collection.products %}
+      <div class="collection-item">
+        <h3>{{ product.title }}</h3>
+        <div class="collection-item__images">
+          {% if product.metafields.dress.top %}
+            <img src="{{ product.metafields.dress.top | img_url: 'large' }}" alt="{{ product.title }} top">
+          {% endif %}
+          {% if product.metafields.dress.bottom %}
+            <img src="{{ product.metafields.dress.bottom | img_url: 'large' }}" alt="{{ product.title }} bottom">
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .collection-items {
+    padding: var(--level6) 0;
+  }
+  .collection-items__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--level4);
+  }
+  .collection-item {
+    border: 1px solid #e1e1e1;
+    padding: var(--level4);
+    text-align: center;
+  }
+  .collection-item__images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto var(--level2);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Select the collection to display the items for."
+    }
+  ]
+}
+{% endschema %}
