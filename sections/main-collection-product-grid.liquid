@@ -17,93 +17,91 @@
 {{ 'component-facets.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
-<div class="section-{{ section.id }}-padding">
-  <div class="page-width">
-    {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-      <aside
-        aria-labelledby="verticalTitle"
-        class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}"
-        id="main-collection-filters"
-        data-id="{{ section.id }}"
-      >
-        {% render 'facets',
-          results: collection,
-          enable_filtering: section.settings.enable_filtering,
-          enable_sorting: section.settings.enable_sorting,
-          filter_type: section.settings.filter_type,
-          paginate: paginate
-        %}
-      </aside>
-    {%- endif -%}
-
-    <div
-      class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-      id="ProductGridContainer"
+<div class="page-width">
+  {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+    <aside
+      aria-labelledby="verticalTitle"
+      class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}"
+      id="main-collection-filters"
+      data-id="{{ section.id }}"
     >
-      {%- if collection.products.size == 0 -%}
-        <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
-          <div class="loading-overlay gradient"></div>
-          <div class="title-wrapper center">
-            <h2 class="title title--primary">
-              {{ 'sections.collection_template.empty' | t -}}
-              <br>
-              {{
-                'sections.collection_template.use_fewer_filters_html'
-                | t: link: collection.url, class: 'underlined-link link'
-              }}
-            </h2>
-          </div>
+      {% render 'facets',
+        results: collection,
+        enable_filtering: section.settings.enable_filtering,
+        enable_sorting: section.settings.enable_sorting,
+        filter_type: section.settings.filter_type,
+        paginate: paginate
+      %}
+    </aside>
+  {%- endif -%}
+
+  <div
+    class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    id="ProductGridContainer"
+  >
+    {%- if collection.products.size == 0 -%}
+      <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+        <div class="loading-overlay gradient"></div>
+        <div class="title-wrapper center">
+          <h2 class="title title--primary">
+            {{ 'sections.collection_template.empty' | t -}}
+            <br>
+            {{
+              'sections.collection_template.use_fewer_filters_html'
+              | t: link: collection.url, class: 'underlined-link link'
+            }}
+          </h2>
         </div>
-      {%- else -%}
-        {%- paginate collection.products by 8 -%}
-          {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
+      </div>
+    {%- else -%}
+      {%- paginate collection.products by 8 -%}
+        {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
 
-          <div
-            class="collection"
-            id="AjaxinateLoop"
+        <div
+          class="collection"
+          id="AjaxinateLoop"
+        >
+          <div class="loading-overlay gradient"></div>
+          <ul
+            id="product-grid"
+            data-id="{{ section.id }}"
+            class="product-grid"
           >
-            <div class="loading-overlay gradient"></div>
-            <ul
-              id="product-grid"
-              data-id="{{ section.id }}"
-              class="product-grid"
-            >
-              {% assign skip_card_product_styles = false %}
-              {%- for product in collection.products -%}
-                {% assign lazy_load = false %}
-                {%- if forloop.index > 2 -%}
-                  {%- assign lazy_load = true -%}
-                {%- endif -%}
-                <li
-                  class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: 'portrait',
-                    show_secondary_image: false,
-                    show_vendor: false,
-                    show_rating: false,
-                    lazy_load: lazy_load,
-                    skip_styles: skip_card_product_styles,
-                    quick_add: 'standard',
-                    section_id: section.id
-                  %}
-                </li>
-                {%- assign skip_card_product_styles = true -%}
-              {%- endfor -%}
-            </ul>
-          </div>
+            {% assign skip_card_product_styles = false %}
+            {%- for product in collection.products -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+                {%- assign lazy_load = true -%}
+              {%- endif -%}
+              <li
+                class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: 'portrait',
+                  show_secondary_image: false,
+                  show_vendor: false,
+                  show_rating: false,
+                  lazy_load: lazy_load,
+                  skip_styles: skip_card_product_styles,
+                  quick_add: 'standard',
+                  section_id: section.id
+                %}
+              </li>
+              {%- assign skip_card_product_styles = true -%}
+            {%- endfor -%}
+          </ul>
+        </div>
 
-          {%- if paginate.pages > 1 -%}
-            {% render 'pagination', paginate: paginate %}
-          {%- endif -%}
-        {%- endpaginate -%}
-      {%- endif -%}
-    </div>
+        {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate %}
+        {%- endif -%}
+      {%- endpaginate -%}
+    {%- endif -%}
   </div>
 </div>
 

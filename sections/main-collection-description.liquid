@@ -1,0 +1,40 @@
+<section class="collection-description" id="main-collection-description">
+  <div class="collection-description page-width">
+    <div class="container">
+      <h2 class="collection-description__heading">
+        {{ section.settings.heading }}
+      </h2>
+      <div class="collection-description__body rich-text">
+        {{ section.settings.description }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Description",
+  "enabled_on": {
+    "templates": ["collection", "page"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Headline Here"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Your rich text description here.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Collection Description"
+    }
+  ]
+}
+{% endschema %}
