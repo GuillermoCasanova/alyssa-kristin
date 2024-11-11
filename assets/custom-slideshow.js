@@ -282,6 +282,10 @@ class LwdSlideshow extends ImageSlideshow {
       let activeId =  this.querySelector('.swiper-slide-active').querySelector('[data-dress-combo-option]').dataset.id; 
       this.changeActiveId(activeId); 
     });
+
+    if (this.getSwiper().initialized) {
+      this.addSvgToSwiperButtons();
+    }
   }
 
   changeActiveId(pActiveId) {
@@ -300,6 +304,22 @@ class LwdSlideshow extends ImageSlideshow {
     });
 
   }
+
+
+      // Function to add SVG code to Swiper buttons
+    addSvgToSwiperButtons() {
+      console.log('addSvgToSwiperButtons'); 
+        var svgCode =
+          '<svg>  <use href="#arrow-right" /> </svg>';
+
+        var nextButton = this.querySelector('.swiper-button-next');
+        var prevButton = this.querySelector('.swiper-button-prev');
+
+        if (nextButton && prevButton) {
+          nextButton.innerHTML = svgCode;
+          prevButton.innerHTML = svgCode;
+        }
+      }
 
 }
 

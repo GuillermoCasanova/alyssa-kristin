@@ -1,21 +1,17 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 
-<section class="collection-banner master-padding-top">
-  <div>
-    <h2 class="collection-banner__heading">
+{{ 'section-main-collection-header.css' | asset_url | stylesheet_tag }}
+
+<section class="collection-header master-padding-top">
+  <div class="page-width is-x-small collection-header__inner">
+    <h1 class="collection-header__heading">
       {{ collection.title }}
-    </h2>
-    <div class="collection-banner__description">
+    </h1>
+    <div class="collection-header__description">
       {{ collection.description }}
     </div>
   </div>
 </section>
-
-<style>
-  .collection-banner {
-    margin-bottom: var(--level6);
-  }
-</style>
 
 {% schema %}
 {
