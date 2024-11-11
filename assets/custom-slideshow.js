@@ -192,6 +192,7 @@ class ImageSlideshow extends HTMLElement {
               this.setUpHtml(this.options);
               this.swiper = new Swiper.default(this.querySelector('.swiper-container'), this.options);
               controlElement.getSwiper().controller.control = this.swiper; 
+          
               // if(true) {
               //   this.initHoverArrowNav(); 
               // } 
@@ -200,6 +201,14 @@ class ImageSlideshow extends HTMLElement {
   
           this.setUpHtml(this.options);
           this.swiper = new Swiper.default(this.querySelector('.swiper-container'), this.options);
+
+          const event = new CustomEvent('swiperLoaded', {
+            detail: {
+              swiper: this.swiper
+            }
+          });
+          this.dispatchEvent(event);
+          
           resolve(this.swiper); // Resolve the promise with the initialized swiper instance
          ///return Promise.resolve(); // Return a resolved promise if no controlContainer
         })
@@ -258,3 +267,40 @@ class ImageSlideshow extends HTMLElement {
 }
 
 customElements.define('custom-slideshow', ImageSlideshow);
+
+
+
+
+class LwdSlideshow extends ImageSlideshow {
+  constructor() {
+    super();
+    this.addEventListener('swiperLoaded', this.initEventListeners.bind(this));
+  }
+
+  initEventListeners() {
+    this.getSwiper().on('slideChangeTransitionEnd', () => {
+      let activeId =  this.querySelector('.swiper-slide-active').querySelector('[data-dress-combo-option]').dataset.id; 
+      this.changeActiveId(activeId); 
+    });
+  }
+
+  changeActiveId(pActiveId) {
+    const selects = document.querySelector('lwd-builder').querySelectorAll('select'); 
+    const id = pActiveId;
+    const lwdBuilder = document.querySelector('lwd-builder');
+
+    selects.forEach(select => {
+      const options = select.querySelectorAll('option');
+      options.forEach(option => {
+        if (option.value === id) {
+          select.value = id;
+          lwdBuilder.setActiveCombo(); 
+        }
+      });
+    });
+
+  }
+
+}
+
+customElements.define('lwd-slideshow', LwdSlideshow);
