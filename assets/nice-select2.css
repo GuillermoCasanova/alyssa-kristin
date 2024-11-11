@@ -31,6 +31,12 @@
     border-color: rgb(var(--color-base-text-1)); 
 }
 
+.product .choices__inner,
+.main-product-form .choices__item  {
+    font-size: var(--h6) !important;
+}
+
+.choices
 .choices__list--dropdown {
     border-radius: 0;
     border-color: rgb(var(--color-base-text-1)) !important; 
