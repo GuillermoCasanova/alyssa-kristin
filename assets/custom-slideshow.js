@@ -280,7 +280,7 @@ class LwdSlideshow extends ImageSlideshow {
   initEventListeners() {
     this.getSwiper().on('slideChangeTransitionEnd', () => {
       let activeId =  this.querySelector('.swiper-slide-active').querySelector('[data-dress-combo-option]').dataset.id; 
-      this.changeActiveId(activeId); 
+      this.changeActiveIds(activeId); 
     });
 
     if (this.getSwiper().initialized) {
@@ -288,7 +288,7 @@ class LwdSlideshow extends ImageSlideshow {
     }
   }
 
-  changeActiveId(pActiveId) {
+  changeActiveIds(pActiveId) {
     const selects = document.querySelector('lwd-builder').querySelectorAll('select'); 
     const id = pActiveId;
     const lwdBuilder = document.querySelector('lwd-builder');

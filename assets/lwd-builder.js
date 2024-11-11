@@ -3,8 +3,6 @@
 class LwdBuilder extends HTMLElement {
   constructor() {
     super();
-    let activeTop = null; 
-    let activeBottom = null; 
     this.topSelect = this.querySelector('[data-top-select]');
     this.bottomSelect = this.querySelector('[data-bottom-select]');
     this.topValue = this.topSelect.value;
@@ -34,9 +32,9 @@ class LwdBuilder extends HTMLElement {
   }
   
   setActiveCombo(){
-    this.showActiveDress(); 
     this.showActiveChoices();
     this.setLwdLink();
+    this.setChoicesNames(); 
   }
 
   setLwdLink() {
@@ -47,6 +45,7 @@ class LwdBuilder extends HTMLElement {
       const imgBottomId = img.getAttribute('data-bottom-id');
       if (imgTopId === this.topValue && imgBottomId === this.bottomValue) {
         this.lwdLink.href = img.getAttribute('data-dress-url');
+        console.log(img.getAttribute('data-dress-url'));
       }
     });
 
@@ -56,6 +55,8 @@ class LwdBuilder extends HTMLElement {
     if (this.topSelect && this.bottomSelect) {
         const topId = this.topSelect.value;
         const bottomId = this.bottomSelect.value;
+        this.topValue = this.topSelect.value;
+        this.bottomValue = this.bottomSelect.value;
         
         document.querySelectorAll('[data-option-images]').forEach(container => {
             const images = container.querySelectorAll('[data-id]');
@@ -70,6 +71,21 @@ class LwdBuilder extends HTMLElement {
     }
   }
 
+  setChoicesNames() {
+    const topSelectedOption = this.topSelect.options[this.topSelect.selectedIndex].text;
+    const bottomSelectedOption = this.bottomSelect.options[this.bottomSelect.selectedIndex].text;
+
+    const topSelectedTitleElement = this.querySelector('[data-top-selected-title]');
+    const bottomSelectedTitleElement = this.querySelector('[data-bottom-selected-title]');
+
+    if (topSelectedTitleElement) {
+        topSelectedTitleElement.textContent = topSelectedOption;
+    }
+
+    if (bottomSelectedTitleElement) {
+        bottomSelectedTitleElement.textContent = bottomSelectedOption;
+    }
+  }
 
   showActiveDress() {
     const dressesContainer = this.querySelector('[data-dress-combo]');
