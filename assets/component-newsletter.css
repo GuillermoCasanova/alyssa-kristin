@@ -100,6 +100,10 @@ input.newsletter-form__input {
   border-left: 1px solid rgb(var(--color-base-background-3));
 }
 
+.newsleter-form button {
+  border: 1px solid rgb(var(--color-base-text-1));
+}
+
 @media only screen and (min-width: 700px) {
   .newsletter-form__button {
     font-size: var(--normal);

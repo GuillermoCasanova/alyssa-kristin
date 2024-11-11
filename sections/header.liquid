@@ -68,6 +68,22 @@
       {%- endif -%}
 
     <div class="header__icons ">
+
+    <div class="show-for-large-up">
+    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--cart link focus-inset">
+      {% render 'icon-account' %}
+      <span class="visually-hidden">
+        {%- liquid
+          if customer
+            echo 'customer.account_fallback' | t
+          else
+            echo 'customer.log_in' | t
+          endif
+        -%}
+      </span>
+    </a>
+    </div>
+    
       <div class="header__icon  header__icon--search">
         <search-toggle>
           <button  class="header__icon " id="search-modal-toggle" data-search-modal-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="search-modal">
@@ -89,22 +105,7 @@
       </div>
     </localization-form> {% endcomment %}
     
-      {%- if shop.customer_accounts_enabled -%}
-        <div class="show-for-medium-up">
-        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset">
-          {% render 'icon-account' %}
-          <span class="visually-hidden">
-            {%- liquid
-              if customer
-                echo 'customer.account_fallback' | t
-              else
-                echo 'customer.log_in' | t
-              endif
-            -%}
-          </span>
-        </a>
-        </div>
-      {%- endif -%}
+
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble" data-cart-toggle>
         <svg class="icon icon-cart" aria-hidden="true" focusable="false" role="presentation">
