@@ -28,10 +28,20 @@
         "cta_link": "",
         "cta_text": "Book an Appointment"
       }
+    },
+    "instagram_feed_WUKQMk": {
+      "type": "instagram-feed",
+      "settings": {
+        "heading": "",
+        "top_border": "no",
+        "bottom_border": "yes",
+        "trigger_email_popup": false
+      }
     }
   },
   "order": [
     "main",
-    "appointment_section_RVmhtA"
+    "appointment_section_RVmhtA",
+    "instagram_feed_WUKQMk"
   ]
 }
