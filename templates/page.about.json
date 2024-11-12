@@ -32,10 +32,11 @@
       "settings": {
         "main_image": "shopify://shop_images/image-1.jpg",
         "secondary_image": "shopify://shop_images/image-2.jpg",
-        "heading": "<p>Our Process</p>",
+        "heading": "<p><em>Our</em> Process</p>",
         "body": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
         "card_body": "<p>Dreamt up and designed in our Chicago studio, each Alyssa Kristin gown is a labor of love, meticulously handcrafted by skilled local artisans. We believe that a bridal gown should be more than just a dress; it should be a work of art that embodies the essence of artistry and craftsmanship.</p>",
-        "card_cta": "Explore More"
+        "card_cta": "Explore More",
+        "card_link": ""
       }
     },
     "about_founder_JCYgbf": {
