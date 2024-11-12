@@ -22,7 +22,8 @@
       "type": "about-philosophy",
       "settings": {
         "heading": "<p>Our Philosophy</p>",
-        "body": "<p>Every bride is unique, and so is every gown. From dramatic trains to plunging necklines, our customizable designs are crafted to make you feel like the most confident version of yourself. Effortlessly refined, unstoppably supportive—each piece is a reflection of your distinct style.</p>"
+        "body": "<p>Every bride is unique, and so is every gown. From dramatic trains to plunging necklines, our customizable designs are crafted to make you feel like the most confident version of yourself. Effortlessly refined, unstoppably supportive—each piece is a reflection of your distinct style.</p>",
+        "image": "shopify://shop_images/Rectangle_43.jpg"
       }
     },
     "about_process_ggTMVe": {
@@ -32,6 +33,13 @@
         "body": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
         "card_body": "<p>Dreamt up and designed in our Chicago studio, each Alyssa Kristin gown is a labor of love, meticulously handcrafted by skilled local artisans. We believe that a bridal gown should be more than just a dress; it should be a work of art that embodies the essence of artistry and craftsmanship.</p>",
         "card_cta": "Explore More"
+      }
+    },
+    "about_founder_JCYgbf": {
+      "type": "about-founder",
+      "settings": {
+        "heading": "<p>About the Founder</p>",
+        "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>"
       }
     },
     "appointment_section_RVmhtA": {
@@ -53,13 +61,6 @@
         "top_border": "no",
         "bottom_border": "no",
         "trigger_email_popup": false
-      }
-    },
-    "about_founder_JCYgbf": {
-      "type": "about-founder",
-      "settings": {
-        "heading": "<p>About the Founder</p>",
-        "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>"
       }
     }
   },
