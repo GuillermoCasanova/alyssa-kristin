@@ -377,7 +377,7 @@ a.product__text {
 
 .product__info-container .price {
   position: absolute;
-  top: var(--level5);
+  top: 1.25rem;
   right: 0; 
   font-size: var(--normal);
   font-family: var(--tertiary-font-family);

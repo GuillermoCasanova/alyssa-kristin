@@ -120,6 +120,7 @@
     margin-left: auto; 
     margin-right: 0; 
     display: block; 
+    letter-spacing: 1px;
 }
 
 .product__size-guide-modal-trigger:hover,

@@ -1727,6 +1727,7 @@ button,
   align-items: center;
   display: inline-block;
   font-family: var(--tertiary-font-family);
+  font-weight: 300; 
   justify-content: center;
   line-height: 1;
   margin: 0;
@@ -1763,7 +1764,6 @@ button:hover,
   border: 1px solid rgb(var(--color-base-text));
   color: rgb(var(--color-base-text-1));
   border-bottom: 1px solid rgb(var(--color-base-text-1));
-  font-weight: var(--font-weight-bold);
   font-family: var(--tertiary-font-family);
   letter-spacing: 6px;
   background-color: transparent;
@@ -1779,7 +1779,6 @@ button:hover,
   background-color: rgb(var(--color-base-background-2));
   border: 1px solid transparent;
   color: rgb(var(--color-base-text-1));
-  font-weight: var(--font-weight-bold);
   letter-spacing: 3px;
   text-transform: uppercase;
   font-family: var(--tertiary-font-family);
@@ -1842,12 +1841,11 @@ button:hover,
 
 
 .button--small {
-  font-size: var(--micro);
+  font-size: var(--mini);
   padding-left: var(--level3); 
   padding-right: var(--level3);
   padding-bottom: 1rem; 
   padding-top: 1rem; 
-  font-size: var(--mini);
 }
 
 .button--medium {
