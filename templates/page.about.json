@@ -39,7 +39,8 @@
       "type": "about-founder",
       "settings": {
         "heading": "<p>About the Founder</p>",
-        "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>"
+        "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>",
+        "image1": "shopify://shop_images/image.jpg"
       }
     },
     "appointment_section_RVmhtA": {
