@@ -492,6 +492,7 @@ h6:empty {
 main {
   min-height: calc(70vw - 300px);
   position: relative;
+  padding-top: calc(var(--level10) + var(--level8));
 }
 
 

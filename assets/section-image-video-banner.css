@@ -10,6 +10,7 @@ image-video-banner {
   padding-bottom: 0;
   margin-bottom: 0;
   background-color: rgb(var(--color-base-background-2));
+  margin-top: calc((var(--level10) + var(--level10)) * -1);
 }
 
 .image-banner {

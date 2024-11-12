@@ -11,13 +11,11 @@
 }
 
 .collection-header__inner {
-    margin-top: calc(var(--level10) + var(--level8)); 
     text-align: center;
 }
 
 @media screen and (min-width: 940px) {
   .collection-header__inner {
-     margin-top: calc(var(--level10) * 2 + var(--level2)); 
      margin-bottom: var(--level6);
   }
 }

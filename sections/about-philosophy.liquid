@@ -1,3 +1,21 @@
+{{ 'section-about-philosophy.css' | asset_url | stylesheet_tag }}
+
+<div class="about-philosophy">
+  <div class="about-philosophy__content">
+    <div class="about-philosophy__heading">
+      {{ section.settings.heading }}
+    </div>
+    <div class="about-philosophy__body">
+      {{ section.settings.body }}
+    </div>
+    <div class="about-philosophy__image">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.heading | strip_html }}">
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "About -Philosophy",
@@ -35,19 +53,3 @@
   ]
 }
 {% endschema %}
-
-<div class="about-philosophy">
-  <div class="about-philosophy__content">
-    <div class="about-philosophy__heading">
-      {{ section.settings.heading }}
-    </div>
-    <div class="about-philosophy__body">
-      {{ section.settings.body }}
-    </div>
-    <div class="about-philosophy__image">
-      {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.heading | strip_html }}">
-      {% endif %}
-    </div>
-  </div>
-</div>

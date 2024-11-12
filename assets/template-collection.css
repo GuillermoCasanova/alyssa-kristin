@@ -137,15 +137,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--level5);
-  margin-top: var(--level10);
 }
 
-
-@media screen and (min-width: 940px) {
-  .collection-header {
-     margin-top: calc(var(--level10) * 2 + var(--level2)); 
-  }
-}
 
 
 .collection-header__heading {
