@@ -73,6 +73,8 @@
 
     .about-philosophy__quote p {
         line-height: 1.3;
+        margin-bottom: 0;
+        font-weight: 300;
     }
 
     .about-philosophy__quote em {
@@ -83,6 +85,13 @@
 @media screen and (min-width: 940px) {
     .about-philosophy__quote {
         font-size: var(--kilo);
+        grid-row: 2 / 3;
+        grid-column: 5 / -1;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        max-width: 56rem;
+        margin-left: var(--level4);
     }
 }
 
@@ -122,11 +131,15 @@
 
 @media screen and (min-width: 940px) {
     .about-philosophy__body  {
-        padding-left: var(--level10); 
-        padding-right: var(--level5); 
+        padding-left: var(--level8); 
+        padding-right: var(--level10); 
         max-width: 42rem;
         position: relative;
-        margin-top: calc(var(--level10) * 3); 
+        grid-row: 3 / 3;
+        grid-column: 6 / -1;
+        margin-top: 0;
+        padding-top: 0; 
+        padding-bottom: var(--level5); 
     }
 
     .about-philosophy__body p {
@@ -152,13 +165,19 @@
 @media screen and (min-width: 940px) {
     .about-philosophy__image    {
         position: relative;
-        width: 100%;
         grid-column: 1 / 6;
-        grid-row: 2 / 2;  
+        grid-row: 2 / 4;
+        max-width: 100%;
     }
 }
 
 .about-philosophy__image__inner {
     position: relative;
     padding-bottom: 120%; 
+}
+
+@media screen and (min-width: 750px) {
+    .about-philosophy__image__inner {
+        padding-bottom: 125%; 
+    }
 }
