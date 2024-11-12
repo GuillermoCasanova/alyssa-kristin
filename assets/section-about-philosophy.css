@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    #Appointment Embed
+\*------------------------------------*/
+
+
+
+.about-philosophy {
+    background-color: rgb(var(--color-base-background-2));
+}
+
+.about-philosophy__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: var(--level8); 
+}
+
+@media screen and (min-width: 750px) {
+    .about-philosophy__inner {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.about-philosophy__heading {
+    text-align: center;
+    font-family: var(--secondary-font-family);
+    text-transform: uppercase;
+    font-size: var(--h2);
+    text-align: left;
+}
+
+
+@media screen and (min-width: 750px) {
+    .about-philosophy__heading {
+        font-size: var(--h1);
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .about-philosophy__heading {
+        font-size: var(--mega)
+    }
+}
+
+
+.about-philosophy__heading p {
+    margin-bottom: 0;
+}
+
+
+.about-philosophy__quote {
+    display: none
+}
+
+@media screen and (min-width: 750px) {
+    .about-philosophy__quote {
+        display: block;
+        grid-column-start: 5;
+        grid-column-end: 8;
+    }
+}
+
+.about-philosophy__body {
+    order: 3; 
+    background-color: white;
+    margin-top: calc(var(--level8) * -1);
+    z-index: 1;
+    margin-left: 15%; 
+    padding: var(--level6);
+    padding-bottom: var(--level3); 
+}
+
+@media screen and (min-width: 750px) {
+    .about-philosophy__body {
+        max-width: 100%;
+        right: 0; 
+        left: auto;
+        margin-left: auto; 
+        margin-right: 0;
+        order: 2;
+        background-color: transparent;
+        grid-column-start: 4;
+        grid-column-end: 9;
+        display: grid;
+        width: 100%;
+        align-items: center;
+        justify-self: center;
+        padding-left: var(--level10); 
+    }
+    .about-philosophy__body p {
+        font-size: var(--h5)
+    }
+}
+.about-philosophy__image {
+    position: relative;
+    width: 85%;
+    max-width: 35rem;
+}
+
+@media screen and (min-width: 750px) {
+    .about-philosophy__image    {
+        position: relative;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+.about-philosophy__image__inner {
+    position: relative;
+    padding-bottom: 120%; 
+}

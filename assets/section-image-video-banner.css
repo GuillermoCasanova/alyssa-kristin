@@ -10,7 +10,13 @@ image-video-banner {
   padding-bottom: 0;
   margin-bottom: 0;
   background-color: rgb(var(--color-base-background-2));
-  margin-top: calc((var(--level10) + var(--level10)) * -1);
+  margin-top: calc((var(--level10) + var(--level10)) *  -1);
+}
+
+@media screen and (min-width: 940px) {
+  .image-banner-container {
+    margin-top: calc((var(--level10) + var(--level10) + var(--level8)) * -1);
+  }
 }
 
 .image-banner {

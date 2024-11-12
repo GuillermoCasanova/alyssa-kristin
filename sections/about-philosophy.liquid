@@ -1,24 +1,35 @@
 {{ 'section-about-philosophy.css' | asset_url | stylesheet_tag }}
 
-<div class="about-philosophy">
-  <div class="about-philosophy__content">
-    <div class="about-philosophy__heading">
+<section class="about-philosophy">
+  <div class="about-philosophy__inner page-width is-small">
+    <h2 class="about-philosophy__heading">
       {{ section.settings.heading }}
+    </h2>
+    <div class="about-philosophy__quote">
+      {{ section.settings.quote }}
     </div>
     <div class="about-philosophy__body">
       {{ section.settings.body }}
     </div>
     <div class="about-philosophy__image">
-      {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.heading | strip_html }}">
-      {% endif %}
+      <div class="about-philosophy__image__inner">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | img_url: 'master' }}"
+            alt="{{ section.settings.heading | strip_html }}"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="responsive-image"
+          >
+        {% endif %}
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 {% schema %}
 {
-  "name": "About -Philosophy",
+  "name": "About - Philosophy",
   "enabled_on": {
     "templates": ["page"]
   },
@@ -43,6 +54,16 @@
       "id": "image",
       "type": "image_picker",
       "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Quote"
+    },
+    {
+      "id": "quote",
+      "type": "richtext",
+      "label": "Quote",
+      "default": "<p>“Uniquely you, effortlessly refined—our gowns celebrate your individuality.”</p>"
     }
   ],
   "presets": [
