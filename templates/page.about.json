@@ -13,11 +13,25 @@
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "hide_body": "false"
+      }
+    },
+    "appointment_section_RVmhtA": {
+      "type": "appointment-section",
+      "settings": {
+        "image_mobile": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2_3e9f5bd5-32b1-4ce5-81c6-4d8d219ac36d.png",
+        "image_desktop": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_1.jpg",
+        "image_alt": "",
+        "headline": "<p>Visit Us</p>",
+        "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio.445 W Erie St #108, Chicago, IL 60654</p>",
+        "cta_link": "",
+        "cta_text": "Book an Appointment"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "appointment_section_RVmhtA"
   ]
 }
