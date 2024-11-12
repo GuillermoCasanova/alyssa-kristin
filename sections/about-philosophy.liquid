@@ -1,0 +1,53 @@
+{% schema %}
+{
+  "name": "About -Philosophy",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "heading",
+      "type": "richtext",
+      "label": "Heading",
+      "default": "<p>Our Philosophy</p>"
+    },
+    {
+      "id": "body",
+      "type": "richtext",
+      "label": "Body Copy",
+      "default": "<p>Every bride is unique, and so is every gown. From dramatic trains to plunging necklines, our customizable designs are crafted to make you feel like the most confident version of yourself. Effortlessly refined, unstoppably supportive—each piece is a reflection of your distinct style.</p>"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - Philosophy",
+      "category": "About"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="about-philosophy">
+  <div class="about-philosophy__content">
+    <div class="about-philosophy__heading">
+      {{ section.settings.heading }}
+    </div>
+    <div class="about-philosophy__body">
+      {{ section.settings.body }}
+    </div>
+    <div class="about-philosophy__image">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.heading | strip_html }}">
+      {% endif %}
+    </div>
+  </div>
+</div>

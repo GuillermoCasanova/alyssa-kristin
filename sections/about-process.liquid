@@ -1,0 +1,77 @@
+{% schema %}
+{
+  "name": "About - Process",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main Content"
+    },
+    {
+      "id": "main_image",
+      "type": "image_picker",
+      "label": "Main Image"
+    },
+    {
+      "id": "heading",
+      "type": "richtext",
+      "label": "Main Heading",
+      "default": "<p>Our Process</p>"
+    },
+    {
+      "id": "body",
+      "type": "richtext",
+      "label": "Body",
+      "default": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Card"
+    },
+    {
+      "id": "card_body",
+      "type": "richtext",
+      "label": "Card Body Copy",
+      "default": "<p>Dreamt up and designed in our Chicago studio, each Alyssa Kristin gown is a labor of love, meticulously handcrafted by skilled local artisans. We believe that a bridal gown should be more than just a dress; it should be a work of art that embodies the essence of artistry and craftsmanship.</p>"
+    },
+    {
+      "id": "card_cta",
+      "type": "text",
+      "label": "Card CTA",
+      "default": "Explore More"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - Process",
+      "category": "About"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="about-process">
+  <div class="about-process__main-content">
+    <div class="about-process__heading">
+      {{ section.settings.main_heading }}
+    </div>
+    <div class="about-process__image">
+      {% if section.settings.main_image != blank %}
+        <img
+          src="{{ section.settings.main_image | img_url: 'master' }}"
+          alt="{{ section.settings.main_heading | strip_html }}"
+        >
+      {% endif %}
+    </div>
+  </div>
+  <div class="about-process__card">
+    <div class="about-process__card-body">
+      {{ section.settings.card_body }}
+    </div>
+    <div class="about-process__card-cta">
+      <a href="#">{{ section.settings.card_cta }}</a>
+    </div>
+  </div>
+</div>

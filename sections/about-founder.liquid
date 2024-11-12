@@ -1,0 +1,68 @@
+{% schema %}
+{
+  "name": "About -  Founder",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "heading",
+      "type": "richtext",
+      "label": "Heading",
+      "default": "<p>About the Founder</p>"
+    },
+    {
+      "id": "body",
+      "type": "richtext",
+      "label": "Body Copy",
+      "default": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>"
+    },
+    {
+      "id": "image1",
+      "type": "image_picker",
+      "label": "Image 1"
+    },
+    {
+      "id": "image2",
+      "type": "image_picker",
+      "label": "Image 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - Founder",
+      "category": "About"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="about-founder">
+  <div class="about-founder__content">
+    <div class="about-founder__heading">
+      {{ section.settings.heading }}
+    </div>
+    <div class="about-founder__body">
+      {{ section.settings.body }}
+    </div>
+    <div class="about-founder__images">
+      {% if section.settings.image1 != blank %}
+        <div class="about-founder__image">
+          <img
+            src="{{ section.settings.image1 | img_url: 'master' }}"
+            alt="{{ section.settings.heading | strip_html }}"
+          >
+        </div>
+      {% endif %}
+      {% if section.settings.image2 != blank %}
+        <div class="about-founder__image">
+          <img
+            src="{{ section.settings.image2 | img_url: 'master' }}"
+            alt="{{ section.settings.heading | strip_html }}"
+          >
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
