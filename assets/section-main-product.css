@@ -1739,7 +1739,7 @@ button.thumbnail[aria-current="true"] {
 
 .tabbed-interface__tabs {
   display: flex;
-  column-gap: var(--level2); 
+  column-gap: var(--level5); 
 }
 
 .tabbed-interface__tabs button {
@@ -1751,6 +1751,7 @@ button.thumbnail[aria-current="true"] {
  margin-bottom: 0;
  text-align: left;
  padding-left: 0; 
+ letter-spacing: .5px;
 }
 
 .tabbed-interface__tabs button:hover,

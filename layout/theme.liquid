@@ -51,6 +51,35 @@
           font-style: normal;
           font-display: swap;
         }
+
+        @font-face {
+          font-family: 'Helvetica';
+          src: url('{{ "Helvetica.woff" | asset_url }}') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+        @font-face {
+          font-family: 'Helvetica-Bold';
+          src: url('{{ "Helvetica-Bold.woff" | asset_url }}') format('woff'),
+               url('{{ "Helvetica-Bold.woff2" | asset_url }}') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
+        @font-face {
+          font-family: 'Helvetica-Oblique';
+          src: url('{{ "Helvetica-Oblique.woff" | asset_url }}') format('woff'),
+               url('{{ "Helvetica-Oblique.woff2" | asset_url }}') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+
+
         :root {
           --color-base-text-1: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
           --color-base-text-2: {{ settings.colors_text_2.red }}, {{ settings.colors_text_2.green }}, {{ settings.colors_text_2.blue }};
@@ -185,7 +214,7 @@
         \*------------------------------------*/
 
         :root {
-          --primary-font-family: "sweet-sanss-pro", sans-serif;
+          --primary-font-family: "Helvetica", sans-serif;
           --secondary-font-family: "ivypresto-display", serif;
           --tertiary-font-family: "TRAFFIC5", sans-serif;
           --font-weight-regular: 600;
