@@ -17,6 +17,7 @@
 @media screen and (min-width: 940px) {
   .collection-header__inner {
      margin-bottom: var(--level6);
+     margin-top: var(--level8);
   }
 }
 
