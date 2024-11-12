@@ -6,14 +6,8 @@
 
 .appointment-info-section {
     background-color:rgb(var(--color-base-background-2));
-    margin-top: calc(var(--level10) + var(--level10)); 
 }
 
-@media screen and (min-width: 940px) {
-    .appointment-info-section {
-        margin-top: calc(var(--level10) + var(--level10) + var(--level10)); 
-    }
-}
 
 .appointment-info__inner {
     padding-top: var(--level10); 

@@ -22,7 +22,7 @@ product-info {
 
 @media screen and (min-width: 750px) {
   .product {
-    margin-top: 6rem;
+    margin-top: var(--level6);
   }
 }
 
