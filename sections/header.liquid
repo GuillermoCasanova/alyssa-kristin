@@ -41,8 +41,8 @@
 
   -%}
   
-  <header class="header{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}">
-   <div class="header__inner  ">
+  <header class="header">
+   <div class="header__inner  page-width">
 
     {%- render 'header-drawer' -%}
 
@@ -67,7 +67,7 @@
       </div>
       {%- endif -%}
 
-    <div class="header__icons ">
+    <div class="header__icons page-width">
 
     <div class="show-for-large-up">
     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--cart link focus-inset">

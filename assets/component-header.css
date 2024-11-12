@@ -46,7 +46,6 @@
         justify-content: center;
         padding-bottom: var(--level7);
         padding-top: calc(var(--level6) + var(--level6));
-       position: initial;
     }
 }
 
@@ -274,7 +273,7 @@
     position: relative;
     top: -.15rem;
     transition: all var(--duration-default) ease-in-out;
-    width: 4rem;
+    width: 2rem;
     z-index: 1;
 }
 
@@ -297,8 +296,6 @@
 .header__icon--cart .icon {
     color: rgb(var(--color-base-text-1));
     stroke: rgb(var(--color-base-text-1));
-    height: 1.9rem;
-    width: 1.8rem;
 }
 
 .menu-open .header__icon--cart .icon {

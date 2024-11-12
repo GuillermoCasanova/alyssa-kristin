@@ -4,7 +4,6 @@
 
 
 .header__menu {
-    margin-left: -1.2rem;
     grid-area: navigation;
     display: none;
 }

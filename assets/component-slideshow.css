@@ -204,3 +204,25 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 0;
   transform: scale(.8)
 }
+
+
+slider-component .slideshow.banner{
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+  }
+  
+  @keyframes fadeIn {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+  }
+  
+  slider-component .slideshow.banner [aria-hidden="false"] {
+  animation: fadeIn 200ms, fadeOut 200ms 4800ms;
+  }
+  
+   
