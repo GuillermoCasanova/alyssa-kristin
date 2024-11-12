@@ -36,8 +36,8 @@
     justify-content: space-between;
     margin: auto;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: var(--level2);
+    padding-right: var(--level2);
 }
 
 @media screen and (min-width: 940px) {
@@ -204,6 +204,7 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+    padding-right: 0; 
 }
 
 @media screen and (min-width: 940px) {

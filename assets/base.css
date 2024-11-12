@@ -251,7 +251,7 @@ summary::before {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-  font-size: .95rem;
+  font-size: .9rem;
   }
 }
 
@@ -259,7 +259,7 @@ summary::before {
 /*WIDESCREEN-UP*/
 @media screen and (min-width: 2000px) {
   :root {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 }
 
@@ -1765,7 +1765,7 @@ button:hover,
   color: rgb(var(--color-base-text-1));
   border-bottom: 1px solid rgb(var(--color-base-text-1));
   font-family: var(--tertiary-font-family);
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   background-color: transparent;
 }
 
@@ -1779,11 +1779,11 @@ button:hover,
   background-color: rgb(var(--color-base-background-2));
   border: 1px solid transparent;
   color: rgb(var(--color-base-text-1));
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
   font-family: var(--tertiary-font-family);
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .button--secondary:focus,

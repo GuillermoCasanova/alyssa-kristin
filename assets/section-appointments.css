@@ -38,12 +38,6 @@
     }
 }
 
-@media screen and (min-width: 1681px) {
-    .apppointment-section__image__innner {
-        padding-bottom: 45%; 
-    }
-}
-
 
 .appointment-section__copy {
     text-align: center;
