@@ -28,6 +28,10 @@
     text-align: left;
 }
 
+.about-philosophy__heading em {
+    text-transform: lowercase;
+}
+
 
 @media screen and (min-width: 750px) {
     .about-philosophy__heading {
@@ -39,7 +43,7 @@
 
 @media screen and (min-width: 940px) {
     .about-philosophy__heading {
-        font-size: var(--giga)
+        font-size: var(--mega)
     }
 }
 
@@ -69,6 +73,10 @@
 
     .about-philosophy__quote p {
         line-height: 1.3;
+    }
+
+    .about-philosophy__quote em {
+        text-transform: lowercase;
     }
 }
 
