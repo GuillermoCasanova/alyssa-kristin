@@ -1,3 +1,32 @@
+<section class="about-founder">
+  <div class="about-founder__inner page-width is-small">
+    <div class="about-founder__heading">
+      {{ section.settings.heading }}
+    </div>
+    <div class="about-founder__body">
+      {{ section.settings.body }}
+    </div>
+    <div class="about-founder__images">
+      {% if section.settings.image1 != blank %}
+        <div class="about-founder__image">
+          <img
+            src="{{ section.settings.image1 | img_url: 'master' }}"
+            alt="{{ section.settings.heading | strip_html }}"
+          >
+        </div>
+      {% endif %}
+      {% if section.settings.image2 != blank %}
+        <div class="about-founder__image">
+          <img
+            src="{{ section.settings.image2 | img_url: 'master' }}"
+            alt="{{ section.settings.heading | strip_html }}"
+          >
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "About -  Founder",
@@ -38,32 +67,3 @@
   ]
 }
 {% endschema %}
-
-<div class="about-founder">
-  <div class="about-founder__content">
-    <div class="about-founder__heading">
-      {{ section.settings.heading }}
-    </div>
-    <div class="about-founder__body">
-      {{ section.settings.body }}
-    </div>
-    <div class="about-founder__images">
-      {% if section.settings.image1 != blank %}
-        <div class="about-founder__image">
-          <img
-            src="{{ section.settings.image1 | img_url: 'master' }}"
-            alt="{{ section.settings.heading | strip_html }}"
-          >
-        </div>
-      {% endif %}
-      {% if section.settings.image2 != blank %}
-        <div class="about-founder__image">
-          <img
-            src="{{ section.settings.image2 | img_url: 'master' }}"
-            alt="{{ section.settings.heading | strip_html }}"
-          >
-        </div>
-      {% endif %}
-    </div>
-  </div>
-</div>

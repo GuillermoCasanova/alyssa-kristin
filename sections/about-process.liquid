@@ -1,3 +1,41 @@
+{{ 'section-about-process.css' | asset_url | stylesheet_tag }}
+
+<section class="about-process">
+  <div class="about-process__inner page-width is-small">
+    <div class="about-process__heading">
+      {{ section.settings.main_heading }}
+    </div>
+    <div class="about-process__main-image">
+      <div class="about-process__main-image_inner">
+        {% if section.settings.main_image != blank %}
+          <img
+            src="{{ section.settings.main_image | img_url: 'master' }}"
+            alt="{{ section.settings.main_heading | strip_html }}"
+          >
+        {% endif %}
+      </div>
+    </div>
+    <div class="about-process__secondary-image">
+      {% if section.settings.secondary_image != blank %}
+        <img
+          src="{{ section.settings.secondary_image | img_url: 'master' }}"
+          alt="{{ section.settings.main_heading | strip_html }}"
+        >
+      {% endif %}
+    </div>
+    <div class="about-process__card">
+      <div class="about-process__card-body">
+        {{ section.settings.card_body }}
+      </div>
+      <div class="about-process__card-cta">
+        <a href="{{ section.settings.card_link }}" class="button button--primary  button--medium">
+          {{- section.settings.card_cta -}}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "About - Process",
@@ -47,6 +85,11 @@
       "type": "text",
       "label": "Card CTA",
       "default": "Explore More"
+    },
+    {
+      "id": "card_link",
+      "type": "url",
+      "label": "Card Link"
     }
   ],
   "presets": [
@@ -57,27 +100,3 @@
   ]
 }
 {% endschema %}
-
-<div class="about-process">
-  <div class="about-process__main-content">
-    <div class="about-process__heading">
-      {{ section.settings.main_heading }}
-    </div>
-    <div class="about-process__image">
-      {% if section.settings.main_image != blank %}
-        <img
-          src="{{ section.settings.main_image | img_url: 'master' }}"
-          alt="{{ section.settings.main_heading | strip_html }}"
-        >
-      {% endif %}
-    </div>
-  </div>
-  <div class="about-process__card">
-    <div class="about-process__card-body">
-      {{ section.settings.card_body }}
-    </div>
-    <div class="about-process__card-cta">
-      <a href="#">{{ section.settings.card_cta }}</a>
-    </div>
-  </div>
-</div>

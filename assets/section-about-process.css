@@ -1,0 +1,10 @@
+
+/*------------------------------------*\
+    #About Process
+\*------------------------------------*/
+
+
+.about-process__card {
+    background-color: #C3C0B9;
+    padding: var(--level7);
+}
