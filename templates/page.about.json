@@ -34,7 +34,7 @@
       "settings": {
         "heading": "Follow us on Instagram",
         "top_border": "no",
-        "bottom_border": "yes",
+        "bottom_border": "no",
         "trigger_email_popup": false
       }
     }
