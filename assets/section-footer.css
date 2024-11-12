@@ -8,6 +8,9 @@
   color: rgb(var(--color-base-text-1));
   padding-top: var(--level4);
   padding-bottom: var(--level4);
+  overflow: hidden;
+  position: relative;
+  width: 100%; 
 }
 
 .footer__inner {
@@ -272,7 +275,7 @@
 
 
 .footer__logo {
-  width: 13rem;
+  width: 11rem;
   align-self: self-end;
   margin-top: -4rem;
   margin-bottom: var(--level4);

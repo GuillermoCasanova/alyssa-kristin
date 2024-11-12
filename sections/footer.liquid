@@ -75,6 +75,18 @@
         </div>
         <div class="footer__social-media">
           <ul class="footer__social-media-list">
+            {% if settings.social_pinterest_link %}
+              <li class="footer__social-media-item">
+                <a
+                  href="{{ settings.scocial_pinterest_link }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-media-link"
+                >
+                  {% render 'icon-pinterest' %}
+                </a>
+              </li>
+            {% endif %}
             {% if settings.social_facebook_link %}
               <li class="footer__social-media-item">
                 <a
@@ -87,7 +99,7 @@
                 </a>
               </li>
             {% endif %}
-            {% if settings.social_twitter_link %}
+            {% if settings.social_twitter_link != blank %}
               <li class="footer__social-media-item">
                 <a
                   href="{{ settings.social_twitter_link }}"
@@ -99,6 +111,7 @@
                 </a>
               </li>
             {% endif %}
+
             {% if settings.social_instagram_link %}
               <li class="footer__social-media-item">
                 <a
@@ -108,18 +121,6 @@
                   class="footer__social-media-link"
                 >
                   {% render 'icon-instagram' %}
-                </a>
-              </li>
-            {% endif %}
-            {% if settings.social_linkedin_link %}
-              <li class="footer__social-media-item">
-                <a
-                  href="{{ settings.social_linkedin_link }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="footer__social-media-link"
-                >
-                  {% render 'icon-linkedin' %}
                 </a>
               </li>
             {% endif %}
