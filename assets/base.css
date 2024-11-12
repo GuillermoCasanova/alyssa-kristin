@@ -1727,7 +1727,9 @@ textarea:focus {
   #Buttons 
 \*------------------------------------*/
 
-
+:root {
+  --button-letter-spacing: 3px;
+}
 button,
 .button {
   align-items: center;
@@ -1771,7 +1773,7 @@ button:hover,
   color: rgb(var(--color-base-text-1));
   border-bottom: 1px solid rgb(var(--color-base-text-1));
   font-family: var(--tertiary-font-family);
-  letter-spacing: 4px;
+  letter-spacing: var(--button-letter-spacing);
   background-color: transparent;
 }
 
@@ -1785,11 +1787,10 @@ button:hover,
   background-color: rgb(var(--color-base-background-2));
   border: 1px solid transparent;
   color: rgb(var(--color-base-text-1));
-  letter-spacing: 4px;
+  letter-spacing: var(--button-letter-spacing);
   text-transform: uppercase;
   font-family: var(--tertiary-font-family);
   text-decoration: none;
-  letter-spacing: 2px;
 }
 
 .button--secondary:focus,

@@ -5,23 +5,34 @@
     <h2 class="about-process__heading">
       {{ section.settings.heading }}
     </h2>
+    <div class="about-process__body">
+      {{ section.settings.body }}
+    </div>
     <div class="about-process__main-image">
-      <div class="about-process__main-image_inner">
+      <div class="about-process__main-image__inner">
         {% if section.settings.main_image != blank %}
           <img
             src="{{ section.settings.main_image | img_url: 'master' }}"
             alt="{{ section.settings.main_heading | strip_html }}"
+            class="responsive-image"
+            width="{{ section.settings.main_image.width }}"
+            height="{{ section.settings.main_image.height }}"
           >
         {% endif %}
       </div>
     </div>
     <div class="about-process__secondary-image">
-      {% if section.settings.secondary_image != blank %}
-        <img
-          src="{{ section.settings.secondary_image | img_url: 'master' }}"
-          alt="{{ section.settings.main_heading | strip_html }}"
-        >
-      {% endif %}
+      <div class="about-process__secondary-image__inner">
+        {% if section.settings.secondary_image != blank %}
+          <img
+            src="{{ section.settings.secondary_image | img_url: 'master' }}"
+            alt="{{ section.settings.main_heading | strip_html }}"
+            class="responsive-image"
+            width="{{ section.settings.secondary_image.width }}"
+            height="{{ section.settings.secondary_image.height }}"
+          >
+        {% endif %}
+      </div>
     </div>
     <div class="about-process__card">
       <div class="about-process__card-body">
