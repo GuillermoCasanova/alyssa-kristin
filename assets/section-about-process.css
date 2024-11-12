@@ -8,3 +8,27 @@
     background-color: #C3C0B9;
     padding: var(--level7);
 }
+
+
+.about-process__heading {
+    text-transform: uppercase;
+    font-family: var(--secondary-font-family);
+    font-size: var(--h1);
+}
+
+.about-process__inner {
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+}
+
+
+.about-process__heading {
+    grid-column: 1 / 13; 
+    text-align: right;
+}
+
+
+.about-process__heading em {
+    text-transform: lowercase;
+    display: block;
+}

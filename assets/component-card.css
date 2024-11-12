@@ -311,3 +311,10 @@ deferred-media {
 .card--product .card__inner {
   padding: 0; 
 }
+
+
+.card--product .price--sold-out .price__availability, .price__regular {
+  font-family: var(--tertiary-font-family);
+  font-weight: normal !important;
+  font-size: var(--micro);
+}
