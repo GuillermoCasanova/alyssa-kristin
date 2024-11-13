@@ -23,31 +23,55 @@
 </section>
 
 <script>
-  function initMap() {
+  async function initMap() {
+    // Initialize the map
     const map = new google.maps.Map(document.getElementById('map'), {
       mapId: 'd4c46217781fbc79',
-      center: { lat: 18.2208, lng: -66.5901 }, // Example: Puerto Rico
+      center: { lat: 18.2208, lng: -66.5901 },
       zoom: 6,
     });
 
-    // Create the InfoWindow content
-    const infoWindow = new google.maps.InfoWindow({
-      content: '<div><strong>Hello Puerto Rico!</strong><br>Welcome to Puerto Rico!</div>',
-    });
+    // Import the 'marker' library for AdvancedMarkerElement
+    const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
 
-    // Define the marker options for a standard Marker
-    const marker = new google.maps.Marker({
-      map: map,
-      position: { lat: 18.2208, lng: -66.5901 },
-      title: 'Hello Puerto Rico',
-    });
+    // Load JSON data from the script tag
+    const locationDataScript = document.getElementById('location-data').innerHTML;
+    addMarkersFromJson(locationDataScript, map, AdvancedMarkerElement);
+  }
 
-    // Add a click listener to open the InfoWindow when the marker is clicked
-    marker.addListener('click', () => {
-      infoWindow.open({
-        anchor: marker,
-        map,
-        shouldFocus: false,
+  function addMarkersFromJson(jsonArray, map, AdvancedMarkerElement) {
+    const locations = JSON.parse(jsonArray).locations;
+
+    locations.forEach((location) => {
+      // Create a new AdvancedMarkerElement for each location
+      const marker = new AdvancedMarkerElement({
+        position: new google.maps.LatLng(location.lat, location.lng),
+        map: map,
+        title: location.store_info.name,
+      });
+
+      // Define the content for the InfoWindow
+      const infoWindowContent = `
+        <div>
+          <strong>${location.store_info.name}</strong><br>
+          ${location.store_info.address}<br>
+          ${location.store_info.state}, ${location.store_info.country}<br>
+          ${location.store_info.phone}
+        </div>
+      `;
+
+      // Create an InfoWindow instance
+      const infoWindow = new google.maps.InfoWindow({
+        content: infoWindowContent,
+      });
+
+      // Add a listener to open the InfoWindow when the marker is clicked
+      marker.addListener('gmp-click', () => {
+        infoWindow.open({
+          anchor: marker,
+          map: map,
+          shouldFocus: false,
+        });
       });
     });
   }
@@ -60,12 +84,12 @@
         {
         "lat": {{ block.settings.latitude }},
         "lng": {{ block.settings.longitude }},
-        "title": "{{ block.settings.title }}",
-        "description": "{{ block.settings.description }}",
         "store_info": {
           "name": "{{ block.settings.store_name }}",
-          "address": "{{ block.settings.store_address }}",
-          "phone": "{{ block.settings.store_phone }}"
+          "address": "{{ block.settings.address }}",
+          "country": "{{ block.settings.country }}",
+          "state": "{{ block.settings.state }}",
+          "phone": "{{ block.settings.phone_number }}"
         }
       }{% if forloop.last == false %},{% endif %}
     {% endfor %}
@@ -76,6 +100,7 @@
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKHxrK3dLtjFWFyldmazZOaRl9gtRwuwg&callback=initMap"
   defer
+  async
 ></script>
 
 {% schema %}
