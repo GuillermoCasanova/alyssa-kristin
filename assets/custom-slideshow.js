@@ -62,6 +62,13 @@ class ImageSlideshow extends HTMLElement {
       }
     }
 
+    if(this.options.effect == 'coverflow') {
+      this.options.coverflowEffect = {
+        depth: 100, 
+        rotate: 10,
+        slideShadows: false
+      }
+    }
 
     if(numberPagination) {
       this.options.pagination = {
