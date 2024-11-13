@@ -56,7 +56,8 @@
 
 @media screen and (min-width: 940px) {
     .header__menu-item {
-        padding: var(--level1); 
+        padding-left: 0;
+        padding-right: 0;
         font-size: var(--micro);
         padding-top: var(--level2);
         padding-bottom: var(--level2);
