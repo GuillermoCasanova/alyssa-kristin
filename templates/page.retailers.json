@@ -34,10 +34,24 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_Rng8RL": {
+          "type": "location",
+          "settings": {
+            "store_name": "Joon Bridal",
+            "website": "https://www.joonbridal.com/",
+            "phone_number": "(479) 935-3006",
+            "address": "",
+            "state": "Arkansas",
+            "country": "USA",
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
-        "location_HJ4Lrj"
+        "location_HJ4Lrj",
+        "location_Rng8RL"
       ],
       "settings": {
         "heading": "Find a Retailer",
