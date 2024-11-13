@@ -20,6 +20,25 @@
     },
     "retailers_search_UtGe9J": {
       "type": "retailers-search",
+      "blocks": {
+        "location_HJ4Lrj": {
+          "type": "location",
+          "settings": {
+            "store_name": "Bella Lily",
+            "website": "https://bellalilybridal.com/",
+            "phone_number": "(623) 825-4496",
+            "address": "",
+            "state": "Arizona",
+            "country": "USA",
+            "latitude": -100,
+            "gown": true,
+            "lwd": false
+          }
+        }
+      },
+      "block_order": [
+        "location_HJ4Lrj"
+      ],
       "settings": {
         "heading": "Find a Retailer",
         "body": "<p>Use the search below to find a retailer near you.</p>",
