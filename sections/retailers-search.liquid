@@ -22,8 +22,6 @@
   </div>
 </section>
 
-cbcaa2b02f10e8af
-
 <script>
   function initMap() {
     const map = new google.maps.Map(document.getElementById('map'), {
@@ -52,6 +50,26 @@ cbcaa2b02f10e8af
         shouldFocus: false,
       });
     });
+  }
+</script>
+
+<script type="text/template" id="location-data">
+  {
+    "locations":    [
+      {% for block in section.blocks %}
+        {
+        "lat": {{ block.settings.latitude }},
+        "lng": {{ block.settings.longitude }},
+        "title": "{{ block.settings.title }}",
+        "description": "{{ block.settings.description }}",
+        "store_info": {
+          "name": "{{ block.settings.store_name }}",
+          "address": "{{ block.settings.store_address }}",
+          "phone": "{{ block.settings.store_phone }}"
+        }
+      }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
   }
 </script>
 
