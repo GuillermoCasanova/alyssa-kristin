@@ -65,13 +65,38 @@ lwd-slideshow {
   width: 100%;
 }
 
+lwd-slideshow .swiper-slide {
+  width: 100%;
+  opacity: .4;
+}
+
+lwd-slideshow .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+
+lwd-slideshow .swiper-slide {
+  width: 60vw;
+}
+
+@media screen and (min-width: 940px) {
+  lwd-slideshow .swiper-slide {
+    width: 40vw;
+    max-width: 22rem;
+  }
+
+  lwd-slideshow .swiper-slide.swiper-slide-active {
+    opacity: 1;
+  }
+
+}
 .lwd-combinations-container__option__image {
   position: relative;
   background-color: white;
+  width: 100%;
 }
 
 .lwd-combinations-container__option__image__inner {
-  padding-bottom: 150%;
+  padding-bottom: 100%;
 }
 
 .lwd-combinations-container__option__image__inner img {
@@ -101,15 +126,14 @@ lwd-slideshow {
 @media (min-width: 940px) {
   .lwd-builder__body {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 55% 40%; 
+    justify-content: space-between;
+    grid-column-gap: var(--level10);
   }
 }
 
 
 
-.lwd-combinations-container__bottoms .lwd-combinations-container__option__image__inner {
-  padding-bottom: 120%;
-}
 
 
 
@@ -131,26 +155,29 @@ lwd-slideshow {
 
 @media screen and (min-width: 940px) {
   .lwd-builder__controls {
-    max-width: 33rem;
+    max-width: 30rem;
     display: flex;
     width: 100%; 
     justify-self: center; 
     flex-direction: column;
   }
 }
+.lwd-builder-options__images {
+  position: relative;
+  max-width: 12rem; 
+  width: 100%; 
+}
 
-.lwd-builder-option__images {
+.lwd-builder-options__images__inner {
     position: relative;
     overflow: hidden;
     width: 100%; 
-    padding-bottom: 80%; 
+    padding-bottom:  100%;
 }
 
 @media screen and (min-width: 940px) {
-  .lwd-builder-option__images {
+  .lwd-builder-options__images__inner {
     order: 1;
-    padding-bottom: 35%; 
-    max-width: 15rem;
   }
 }
 
@@ -159,19 +186,25 @@ lwd-slideshow {
     width: 100%;
     top: 0; 
     left: 0; 
+    opacity: 0;
+    height: 100%;
 }
 
 .lwd-builder-option__image.active {
   z-index: 1;
+  opacity: 1;
 }
 
 .lwd-builder-option__image__inner {
-  padding-bottom: 80%;
+  padding-bottom: 100%;
+}
+.lwd-builder-option__image__inner img {
+  object-fit: contain;
 }
 
 @media screen and (min-width: 940px) {
   .lwd-builder-option__image__inner {
-    padding-bottom: 70%;
+    padding-bottom: 100%;
   }
 }
 
@@ -186,7 +219,6 @@ lwd-slideshow {
   .lwd-builder__controls__heading {
     order: 2;
     text-align: left;
-  font-size: var(--h4);
   }
 }
 

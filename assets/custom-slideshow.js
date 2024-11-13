@@ -64,8 +64,8 @@ class ImageSlideshow extends HTMLElement {
 
     if(this.options.effect == 'coverflow') {
       this.options.coverflowEffect = {
-        depth: 100, 
-        rotate: 10,
+        depth: 200, 
+        rotate: 20,
         slideShadows: false
       }
     }
