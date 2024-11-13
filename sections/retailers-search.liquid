@@ -1,0 +1,72 @@
+<section class="retailers-search" id="retailers-search">
+  <div class="retailers-search__inner page-width is-small">
+    <div class="retailers-search__heading">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="retailers-search__body">
+      {{ section.settings.body }}
+    </div>
+    <div class="retailers-search__form">
+      <form action="/search" method="get">
+        <input
+          type="text"
+          name="q"
+          placeholder="{{ section.settings.search_placeholder }}"
+          class="retailers-search__input"
+        >
+        <button type="submit" class="retailers-search__button">{{ section.settings.search_button_text }}</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Retailers Search",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Find a Retailer"
+    },
+    {
+      "id": "body",
+      "type": "richtext",
+      "label": "Body Copy",
+      "default": "<p>Use the search below to find a retailer near you.</p>"
+    },
+    {
+      "id": "search_placeholder",
+      "type": "text",
+      "label": "Search Placeholder",
+      "default": "Enter your city or zip code"
+    },
+    {
+      "id": "search_button_text",
+      "type": "text",
+      "label": "Search Button Text",
+      "default": "Search"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Search",
+      "settings": {
+        "heading": "Find a Retailer",
+        "body": "<p>Use the search below to find a retailer near you.</p>",
+        "search_placeholder": "Enter your city or zip code",
+        "search_button_text": "Search"
+      }
+    }
+  ]
+}
+{% endschema %}
