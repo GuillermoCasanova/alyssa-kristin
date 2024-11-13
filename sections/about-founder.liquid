@@ -1,6 +1,6 @@
 {{ 'section-about-founder.css' | asset_url | stylesheet_tag }}
 
-<section class="about-founder">
+<section class="about-founder" id="founder">
   <div class="about-founder__inner page-width is-small">
     <div class="about-founder__images">
       {% if section.settings.image1 != blank %}
@@ -21,11 +21,15 @@
       {% endif %}
     </div>
 
-    <div class="about-founder__heading">
-      {{ section.settings.heading }}
-    </div>
-    <div class="about-founder__body">
-      {{ section.settings.body }}
+    <div
+      class="about-founder__bio"
+    >
+      <h2 class="about-founder__heading">
+        {{ section.settings.heading }}
+      </h2>
+      <div class="about-founder__body">
+        {{ section.settings.body }}
+      </div>
     </div>
   </div>
 </section>

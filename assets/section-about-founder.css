@@ -17,8 +17,11 @@
     font-family: var(--secondary-font-family);
     font-size: var(--h2);
     text-align: left;
-    text-align: center;
     text-transform: uppercase;
+}
+
+.about-founder__heading p {
+    margin-bottom: 0;
 }
 
 .about-founder__heading em {
@@ -31,5 +34,22 @@
         grid-column: 1 / -1;
         grid-row: 1 / 2;  
         text-align: left;
+    }
+}
+
+.about-founder__bio {
+    background-color: white; 
+    padding: var(--level6); 
+}
+
+
+.about-founder__body {
+    margin-bottom: 0;
+    font-size: var(--h6);
+}
+
+@media screen and (min-width: 750px) {
+    .about-founder__body {
+        font-size: var(--h5);
     }
 }
