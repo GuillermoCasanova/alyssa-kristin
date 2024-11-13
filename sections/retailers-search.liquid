@@ -1,3 +1,4 @@
+{{ 'section-retailers-search.css' | asset_url | stylesheet_tag }}
 <section class="retailers-search" id="retailers-search">
   <div class="retailers-search__inner page-width is-small">
     <div class="retailers-search__heading">
@@ -17,8 +18,47 @@
         <button type="submit" class="retailers-search__button">{{ section.settings.search_button_text }}</button>
       </form>
     </div>
+    <div id="map" class="retailers-search__map"></div>
   </div>
 </section>
+
+cbcaa2b02f10e8af
+
+<script>
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById('map'), {
+      mapId: 'd4c46217781fbc79',
+      center: { lat: 18.2208, lng: -66.5901 }, // Example: Puerto Rico
+      zoom: 6,
+    });
+
+    // Create the InfoWindow content
+    const infoWindow = new google.maps.InfoWindow({
+      content: '<div><strong>Hello Puerto Rico!</strong><br>Welcome to Puerto Rico!</div>',
+    });
+
+    // Define the marker options for a standard Marker
+    const marker = new google.maps.Marker({
+      map: map,
+      position: { lat: 18.2208, lng: -66.5901 },
+      title: 'Hello Puerto Rico',
+    });
+
+    // Add a click listener to open the InfoWindow when the marker is clicked
+    marker.addListener('click', () => {
+      infoWindow.open({
+        anchor: marker,
+        map,
+        shouldFocus: false,
+      });
+    });
+  }
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKHxrK3dLtjFWFyldmazZOaRl9gtRwuwg&callback=initMap"
+  defer
+></script>
 
 {% schema %}
 {
@@ -54,6 +94,64 @@
       "type": "text",
       "label": "Search Button Text",
       "default": "Search"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "location",
+      "name": "Location",
+      "settings": [
+        {
+          "id": "store_name",
+          "type": "text",
+          "label": "Store Name"
+        },
+        {
+          "id": "website",
+          "type": "url",
+          "label": "Website"
+        },
+        {
+          "id": "phone_number",
+          "type": "text",
+          "label": "Phone Number"
+        },
+        {
+          "id": "address",
+          "type": "text",
+          "label": "Address"
+        },
+        {
+          "id": "state",
+          "type": "text",
+          "label": "State"
+        },
+        {
+          "id": "country",
+          "type": "text",
+          "label": "Country"
+        },
+        {
+          "id": "longitude",
+          "type": "number",
+          "label": "Longitude"
+        },
+        {
+          "id": "latitude",
+          "type": "number",
+          "label": "Latitude"
+        },
+        {
+          "id": "gown",
+          "type": "checkbox",
+          "label": "Gown"
+        },
+        {
+          "id": "lwd",
+          "type": "checkbox",
+          "label": "LWD"
+        }
+      ]
     }
   ],
   "presets": [
