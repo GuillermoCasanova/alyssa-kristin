@@ -27,31 +27,66 @@
             "store_name": "Bella Lily",
             "website": "https://bellalilybridal.com/",
             "phone_number": "(623) 825-4496",
-            "address": "",
+            "address": "<p>AZ19420 North 59th Avenue C-249 Glendale, AZ 85308</p>",
             "state": "Arizona",
             "country": "USA",
-            "latitude": -100,
+            "longitude": 33.7,
+            "latitude": 33.7,
             "gown": true,
             "lwd": false
           }
         },
-        "location_Rng8RL": {
+        "location_mnydYd": {
           "type": "location",
           "settings": {
             "store_name": "Joon Bridal",
             "website": "https://www.joonbridal.com/",
             "phone_number": "(479) 935-3006",
-            "address": "",
+            "address": "<p>1 E Center St #150<br/>Fayetteville, AR 72701</p>",
             "state": "Arkansas",
             "country": "USA",
+            "longitude": 36.1,
+            "latitude": -94.2,
             "gown": true,
             "lwd": false
+          }
+        },
+        "location_iw99Vr": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/sacramento/bridal-shop",
+            "phone_number": "(916) 446-8807",
+            "address": "<p>723 S Street, #100<br/>Sacramento, CA 95811</p>",
+            "state": "California",
+            "country": "USA",
+            "longitude": 38.6,
+            "latitude": -121.5,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_j3pKLL": {
+          "type": "location",
+          "settings": {
+            "store_name": "Alyssa Kristin",
+            "website": "https://www.alyssakristin.com/",
+            "phone_number": "(773) 887-2812",
+            "address": "<p>445 W Erie Street, #108<br/>Chicago, IL 60654</p>",
+            "state": "Illinois",
+            "country": "USA",
+            "longitude": 41.9,
+            "latitude": -87.6,
+            "gown": true,
+            "lwd": true
           }
         }
       },
       "block_order": [
         "location_HJ4Lrj",
-        "location_Rng8RL"
+        "location_mnydYd",
+        "location_iw99Vr",
+        "location_j3pKLL"
       ],
       "settings": {
         "heading": "Find a Retailer",
