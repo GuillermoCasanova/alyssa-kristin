@@ -185,13 +185,13 @@
             "type": "block",
             "settings": {
               "top_level_link": "Appointments",
-              "promotion_1_image": "shopify://shop_images/image-3.png",
+              "promotion_1_image": "shopify://shop_images/Rhea_-_3.jpg",
               "promotion_1_text": "Explore Gowns",
               "promotion_1_url": "shopify://collections/gowns",
-              "promotion_2_image": "shopify://shop_images/Screen_Shot_2024-09-03_at_10.27.32_PM_b85df4b4-1855-434f-9e0f-8f04beed4fd3.png",
+              "promotion_2_image": "shopify://shop_images/Crepe_Group_3.jpg",
               "promotion_2_text": "Book an Appointment",
               "promotion_2_url": "shopify://pages/appointments",
-              "promotion_3_image": "shopify://shop_images/Screen_Shot_2024-09-03_at_10.27.32_PM-1.png",
+              "promotion_3_image": "shopify://shop_images/Bianca_Mikado_-_2.jpg",
               "promotion_3_text": "Contact Us",
               "promotion_3_url": "shopify://pages/contact"
             }
