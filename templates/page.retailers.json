@@ -65,12 +65,28 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_j3pKLL": {
+          "type": "location",
+          "settings": {
+            "store_name": "Alyssa Kristin",
+            "website": "https://www.alyssakristin.com/",
+            "phone_number": "(773) 887-2812",
+            "address": "<p>445 W Erie Street, #108 Chicago, IL 60654</p>",
+            "state": "Illinois",
+            "country": "USA",
+            "longitude": 41.9,
+            "latitude": -87.6,
+            "gown": true,
+            "lwd": true
+          }
         }
       },
       "block_order": [
         "location_HJ4Lrj",
         "location_mnydYd",
-        "location_iw99Vr"
+        "location_iw99Vr",
+        "location_j3pKLL"
       ],
       "settings": {
         "heading": "Find a Retailer",
