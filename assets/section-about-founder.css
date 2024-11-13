@@ -1,0 +1,35 @@
+
+/*------------------------------------*\
+    #About Founder
+\*------------------------------------*/
+
+.about-founder {
+    background-color: rgb(var(--color-base-background-2));
+}
+
+.about-founder__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: var(--level8); 
+}
+
+.about-founder__heading {
+    font-family: var(--secondary-font-family);
+    font-size: var(--h2);
+    text-align: left;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about-founder__heading em {
+    text-transform: lowercase;
+}
+
+@media screen and (min-width: 750px) {
+    .about-founder__heading {
+        font-size: var(--kilo);
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;  
+        text-align: left;
+    }
+}
