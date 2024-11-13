@@ -50,11 +50,27 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_iw99Vr": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/sacramento/bridal-shop",
+            "phone_number": "(916) 446-8807",
+            "address": "<p>723 S Street, #100 Sacramento, CA 95811</p>",
+            "state": "California",
+            "country": "USA",
+            "longitude": 38.6,
+            "latitude": -121.5,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
         "location_HJ4Lrj",
-        "location_mnydYd"
+        "location_mnydYd",
+        "location_iw99Vr"
       ],
       "settings": {
         "heading": "Find a Retailer",
