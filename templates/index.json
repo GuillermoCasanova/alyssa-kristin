@@ -60,8 +60,8 @@
     "a91f73fa-9991-492c-bca6-4dfe59bea098": {
       "type": "brand-intro",
       "settings": {
-        "image": "shopify://shop_images/image_f33e4fcf-5d9e-4570-9292-bc5f2f854418.png",
-        "second_image": "shopify://shop_images/image-1.png",
+        "image": "shopify://shop_images/HP_confidence2.jpg",
+        "second_image": "shopify://shop_images/Confidence_Group.jpg",
         "headline": "<p>Nothing looks more striking on a woman than confidence.</p>",
         "subline": "",
         "body": "<p>Every bride is unique, and so are our gowns. With customizable options and thoughtfully crafted details, each dress is designed to accentuate your style and confidence, making you feel like the best version of yourself on your special day.</p>",
@@ -110,7 +110,7 @@
         "logo_DkMaWC"
       ],
       "settings": {
-        "headline": "<p>Featured On</p>"
+        "headline": "<p>As Seen In</p>"
       }
     },
     "appointment_section_zrN4XF": {
