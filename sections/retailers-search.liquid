@@ -8,50 +8,66 @@
       {{ section.settings.body }}
     </div>
     <div class="retailers-search__form">
-      <form action="/search" method="get">
+      <form onsubmit="handleAddressSearch()" method="get">
         <input
           type="text"
           name="q"
           placeholder="{{ section.settings.search_placeholder }}"
+          data-search-input
           class="retailers-search__input"
         >
-        <button type="submit" class="retailers-search__button">{{ section.settings.search_button_text }}</button>
+        <button type="submit" class="retailers-search__button" data-search-button>
+          {{ section.settings.search_button_text }}
+        </button>
+        <button type="button" class="retailers-search__clear" data-clear-input>Clear</button>
       </form>
+
+      <div data-filter-by>
+        Filter By:
+        <input type="checkbox" id="gowns" name="filter" value="gowns">
+        <label for="gowns">Gowns</label>
+
+        <input type="checkbox" id="lwd" name="filter" value="lwd">
+        <label for="lwd">LWD</label>
+      </div>
+      <h2>Closest Locations</h2>
+      <div data-closest-locations>Loading nearest locations...</div>
     </div>
     <div id="map" class="retailers-search__map"></div>
   </div>
 </section>
 
 <script>
+  let map;
+  let markers = []; // Array to store markers
+  let locations;
+  let storedClosestLocations;
+
   async function initMap() {
-    // Initialize the map
-    const map = new google.maps.Map(document.getElementById('map'), {
+    let userLocation = await getUserLocation(); // Get the user's location
+
+    map = new google.maps.Map(document.getElementById('map'), {
       mapId: 'd4c46217781fbc79',
-      center: { lat: 18.2208, lng: -66.5901 },
-      zoom: 6,
+      center: { lat: 39.8283, lng: -98.5795 },
+      zoom: 2,
     });
 
-    // Import the 'marker' library for AdvancedMarkerElement
     const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
-
-    // Load JSON data from the script tag
     const locationDataScript = document.getElementById('location-data').innerHTML;
-    addMarkersFromJson(locationDataScript, map, AdvancedMarkerElement);
-  }
+    locations = JSON.parse(locationDataScript).locations;
 
-  function addMarkersFromJson(jsonArray, map, AdvancedMarkerElement) {
-    const locations = JSON.parse(jsonArray).locations;
+    addMarkersFromJson(locations, AdvancedMarkerElement);
 
-    locations.forEach((location) => {
-      // Create a new AdvancedMarkerElement for each location
-      const marker = new AdvancedMarkerElement({
-        position: new google.maps.LatLng(location.lat, location.lng),
-        map: map,
-        title: location.store_info.name,
-      });
+    function addMarkersFromJson(locationsArray, AdvancedMarkerElement) {
+      clearMarkers();
+      locationsArray.forEach((location) => {
+        const marker = new AdvancedMarkerElement({
+          position: new google.maps.LatLng(location.lat, location.lng),
+          map: map,
+          title: location.store_info.name,
+        });
 
-      // Define the content for the InfoWindow
-      const infoWindowContent = `
+        const infoWindowContent = `
         <div>
           <strong>${location.store_info.name}</strong><br>
           ${location.store_info.address}<br>
@@ -60,20 +76,168 @@
         </div>
       `;
 
-      // Create an InfoWindow instance
-      const infoWindow = new google.maps.InfoWindow({
-        content: infoWindowContent,
+        const infoWindow = new google.maps.InfoWindow({ content: infoWindowContent });
+
+        marker.addListener('gmp-click', () => {
+          infoWindow.open({ anchor: marker, map: map, shouldFocus: false });
+        });
+
+        markers.push(marker);
+      });
+    }
+
+    function clearMarkers() {
+      markers.forEach((marker) => marker.setMap(null));
+      markers = [];
+    }
+
+    // Filter locations based on the checked boxes and distance to the user
+    async function onFilterChange() {
+      const gownCheckbox = document.querySelector('input#gowns').checked;
+      const lwdCheckbox = document.querySelector('input#lwd').checked;
+
+      const filteredLocations = locations.filter((location) => {
+        const matchesGown = gownCheckbox ? location.store_info.gown : true;
+        const matchesLwd = lwdCheckbox ? location.store_info.lwd : true;
+        return matchesGown && matchesLwd;
       });
 
-      // Add a listener to open the InfoWindow when the marker is clicked
-      marker.addListener('gmp-click', () => {
-        infoWindow.open({
-          anchor: marker,
-          map: map,
-          shouldFocus: false,
+      addMarkersFromJson(filteredLocations, AdvancedMarkerElement);
+    }
+
+    function addLocationToDOM(location) {
+      const locationsContainer = document.querySelector('[data-closest-locations]');
+      const listItem = document.createElement('li');
+      listItem.textContent = `${location.store_info.name} - ${location.store_info.address}`;
+      locationsContainer.appendChild(listItem);
+    }
+
+    // Calculate the distance between two coordinates using Haversine formula
+    function calculateDistance(coord1, coord2) {
+      const R = 6371; // Radius of Earth in kilometers
+      const dLat = (coord2.lat - coord1.lat) * (Math.PI / 180);
+      const dLng = (coord2.lng - coord1.lng) * (Math.PI / 180);
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(coord1.lat * (Math.PI / 180)) *
+          Math.cos(coord2.lat * (Math.PI / 180)) *
+          Math.sin(dLng / 2) *
+          Math.sin(dLng / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c; // Distance in kilometers
+    }
+
+    async function getClosestLocations() {
+      const userLocation = await getUserLocation();
+
+      if (!userLocation) {
+        console.log('User location could not be determined.');
+        return;
+      }
+
+      clearClosestLocations();
+
+      // Calculate distances for each location
+      const locationsWithDistance = locations.map((location) => ({
+        ...location,
+        distance: calculateDistance(userLocation, { lat: location.lat, lng: location.lng }),
+      }));
+
+      // Sort locations by distance and take the nearest three
+      const closestLocations = locationsWithDistance.sort((a, b) => a.distance - b.distance).slice(0, 3);
+      storedClosestLocations = closestLocations;
+      // Display closest locations in the DOM
+      closestLocations.forEach(addLocationToDOM);
+    }
+
+    function getUserLocation() {
+      if (navigator.geolocation) {
+        return new Promise((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(
+            (position) =>
+              resolve({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              }),
+            () => resolve(null)
+          );
+        });
+      } else {
+        return Promise.resolve(null);
+      }
+    }
+
+    // Add event listeners for filter changes
+    document.querySelectorAll('[data-filter-by] input').forEach((input) => {
+      input.addEventListener('change', onFilterChange);
+    });
+
+    async function getCoordinatesFromAddress(address) {
+      const geocoder = new google.maps.Geocoder();
+      return new Promise((resolve, reject) => {
+        geocoder.geocode({ address: address }, (results, status) => {
+          if (status === 'OK' && results[0]) {
+            const location = results[0].geometry.location;
+            resolve({
+              lat: location.lat(),
+              lng: location.lng(),
+            });
+          } else {
+            reject('Geocode was not successful for the following reason: ' + status);
+          }
         });
       });
-    });
+    }
+
+    async function handleAddressSearch(event) {
+      event.preventDefault();
+      const addressInput = document.querySelector('[data-search-input]').value;
+      if (!addressInput) {
+        console.log('Please enter an address.');
+        return;
+      }
+
+      try {
+        const coordinates = await getCoordinatesFromAddress(addressInput);
+        clearClosestLocations();
+
+        // Calculate distances for each location
+        const locationsWithDistance = locations.map((location) => ({
+          ...location,
+          distance: calculateDistance(coordinates, { lat: location.lat, lng: location.lng }),
+        }));
+
+        // Sort locations by distance and take the nearest three
+        const closestLocations = locationsWithDistance.sort((a, b) => a.distance - b.distance).slice(0, 3);
+
+        // Display closest locations in the DOM
+        closestLocations.forEach(addLocationToDOM);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    function clearClosestLocations() {
+      const locationsContainer = document.querySelector('[data-closest-locations]');
+      locationsContainer.innerHTML = '';
+    }
+
+    function clearInput() {
+      document.querySelector('[data-search-input]').value = '';
+      clearClosestLocations();
+
+      if (storedClosestLocations) {
+        storedClosestLocations.forEach(addLocationToDOM);
+      } else {
+        getClosestLocations();
+      }
+    }
+
+    document.querySelector('[data-search-button]').addEventListener('click', handleAddressSearch);
+    document.querySelector('[data-clear-input]').addEventListener('click', clearInput);
+
+    // Call the function on load
+    getClosestLocations();
   }
 </script>
 
@@ -82,14 +246,16 @@
     "locations":    [
       {% for block in section.blocks %}
         {
-        "lat": {{ block.settings.latitude }},
-        "lng": {{ block.settings.longitude }},
+        "lng": {{ block.settings.latitude }},
+        "lat": {{ block.settings.longitude }},
         "store_info": {
           "name": "{{ block.settings.store_name }}",
           "address": "{{ block.settings.address }}",
           "country": "{{ block.settings.country }}",
           "state": "{{ block.settings.state }}",
-          "phone": "{{ block.settings.phone_number }}"
+          "phone": "{{ block.settings.phone_number }}",
+          "gown": {{ block.settings.gown }},
+          "lwd": {{ block.settings.lwd }}
         }
       }{% if forloop.last == false %},{% endif %}
     {% endfor %}
