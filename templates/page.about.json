@@ -42,7 +42,7 @@
     "about_founder_JCYgbf": {
       "type": "about-founder",
       "settings": {
-        "heading": "<p>About the Founder</p>",
+        "heading": "<p><em>from</em> the Founder</p>",
         "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>",
         "main_image": "shopify://shop_images/image_3ff861e8-d7cd-46d3-b349-908ab23f0784.jpg",
         "secondary_image": "shopify://shop_images/image_56d72f16-6afa-44fb-b596-790f66aea143.png"
