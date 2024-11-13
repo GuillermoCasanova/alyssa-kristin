@@ -3,22 +3,32 @@
 <section class="about-founder" id="founder">
   <div class="about-founder__inner page-width is-small">
     <div class="about-founder__images">
-      {% if section.settings.image1 != blank %}
-        <div class="about-founder__image">
-          <img
-            src="{{ section.settings.image1 | img_url: 'master' }}"
-            alt="{{ section.settings.heading | strip_html }}"
-          >
+      <div class="about-founder__main-image">
+        <div class="about-founder__main-image__inner">
+          {% if section.settings.main_image != blank %}
+            <img
+              src="{{ section.settings.main_image | img_url: 'master' }}"
+              alt="{{ section.settings.heading | strip_html }}"
+              width="{{ section.settings.main_image.width }}"
+              height="{{ section.settings.main_image.height }}"
+              class="responsive-image"
+            >
+          {% endif %}
         </div>
-      {% endif %}
-      {% if section.settings.image2 != blank %}
-        <div class="about-founder__image">
-          <img
-            src="{{ section.settings.image2 | img_url: 'master' }}"
-            alt="{{ section.settings.heading | strip_html }}"
-          >
+      </div>
+      <div class="about-founder__secondary-image">
+        <div class="about-founder__secondary-image__inner">
+          {% if section.settings.secondary_image != blank %}
+            <img
+              src="{{ section.settings.secondary_image | img_url: 'master' }}"
+              alt="{{ section.settings.heading | strip_html }}"
+              width="{{ section.settings.secondary_image.width }}"
+              height="{{ section.settings.secondary_image.height }}"
+              class="responsive-image"
+            >
+          {% endif %}
         </div>
-      {% endif %}
+      </div>
     </div>
 
     <div
