@@ -228,7 +228,7 @@ summary::before {
 /*LARGE-UP*/
 @media screen and (min-width: 940px) {
   :root {
-    font-size: .9rem;
+    font-size: .85rem;
   }
 }
 
@@ -236,14 +236,14 @@ summary::before {
 /*LARGE-UP*/
 @media screen and (min-width: 1000px) {
   :root {
-    font-size: .9em;
+    font-size: .85rem;
   }
 }
 
 /*X-LARGE-UP*/
 @media screen and (min-width: 1200px) {
   :root {
-    font-size: .9rem;
+    font-size: .85rem;
   }
 }
 
@@ -251,7 +251,7 @@ summary::before {
 /*X-LARGE-UP*/
 @media screen and (min-width: 1681px) {
   :root {
-  font-size: .9rem;
+  font-size: .87rem;
   }
 }
 
@@ -259,7 +259,7 @@ summary::before {
 /*WIDESCREEN-UP*/
 @media screen and (min-width: 2000px) {
   :root {
-    font-size: .95rem;
+    font-size: 1rem;
   }
 }
 
