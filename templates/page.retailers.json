@@ -35,10 +35,26 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_mnydYd": {
+          "type": "location",
+          "settings": {
+            "store_name": "Joon Bridal",
+            "website": "https://www.joonbridal.com/",
+            "phone_number": "(479) 935-3006",
+            "address": "<p>1 E Center St #150 Fayetteville, AR 72701</p>",
+            "state": "Arkansas",
+            "country": "USA",
+            "longitude": 36.1,
+            "latitude": -94.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
-        "location_HJ4Lrj"
+        "location_HJ4Lrj",
+        "location_mnydYd"
       ],
       "settings": {
         "heading": "Find a Retailer",
