@@ -7,6 +7,9 @@
 
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
+{{ 'vendor-swiper.css' | asset_url | stylesheet_tag }}
+<script type="module" src="{{ 'custom-slideshow.js' | asset_url }}"></script>
+
 <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
@@ -26,15 +29,28 @@
 -%}
 
 <section class="featured-collection">
-  <div class="featured-collection__inner page-width is-xlarge ">
-    <div class="featured-collection__header">
+  <div class="featured-collection__inner  ">
+    <div class="featured-collection__header page-width is-xlarge">
       <div class="featured-collection__title title-wrapper title-wrapper--no-top-margin{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
           <h2 class="featured-collection__heading {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             {{ section.settings.title }}
           </h2>
         {%- endif -%}
-        <a href="{{ section.settings.collection.url }}" class="button button--medium  button--primary">Explore More</a>
+        <div class=" show-for-medium-up">
+          <a
+            href="{{ section.settings.collection.url }}"
+            class="button button--small  button--primary"
+            >Explore More
+          </a>
+        </div>
+        <div class="hide-for-medium-up">
+          <a
+            href="{{ section.settings.collection.url }}"
+            class="button button--small  button--primary"
+            >Explore More
+          </a>
+        </div>
 
         {%- if section.settings.description != blank
           or section.settings.show_description
@@ -59,28 +75,36 @@
         data-swiper
         aria-label="{{ 'general.slider.name' | t }}"
       >
-        {%- for product in section.settings.collection.products limit: 4 -%}
-          <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="featured-collection__products__item {% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {% render 'card-product',
-              card_product: product,
-              media_aspect_ratio: 'portrait',
-              show_secondary_image: false,
-              show_vendor: false,
-              show_rating: false,
-              lazy_load: true,
-              skip_styles: false,
-              quick_add: 'standard',
-              section_id: section.id
-            %}
-          </li>
-        {%- endfor -%}
+        <custom-slideshow
+          slidesPerView="auto"
+          spaceBetween="20px"
+          loop="false"
+          slidesPerView="auto"
+          disableOn="mediumUp"
+        >
+          {%- for product in section.settings.collection.products limit: 4 -%}
+            <li
+              id="Slide-{{ section.id }}-{{ forloop.index }}"
+              class="featured-collection__products__item {% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: 'portrait',
+                show_secondary_image: false,
+                show_vendor: false,
+                show_rating: false,
+                lazy_load: true,
+                skip_styles: false,
+                quick_add: 'standard',
+                section_id: section.id
+              %}
+            </li>
+          {%- endfor -%}
+        </custom-slideshow>
       </ul>
     {% else %}
       <ul

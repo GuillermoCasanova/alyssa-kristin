@@ -142,7 +142,7 @@ lwd-slideshow .swiper-slide {
 @media (min-width: 940px) {
   .lwd-builder__body {
     display: grid;
-    grid-template-columns: 55% 40%; 
+    grid-template-columns: 55% 45%; 
     justify-content: space-between;
     grid-column-gap: var(--level10);
   }
@@ -343,8 +343,7 @@ lwd-slideshow .swiper-slide {
 @media screen and (min-width: 940px) {
   .is-alt .card {
     pointer-events: auto;
-    width: 115%;
-    left: -15%;
+    width: 100%;
     position: relative;
     z-index: 1;
     
@@ -362,7 +361,9 @@ lwd-slideshow .swiper-slide {
 
  @media screen and (min-width: 940px) {
   .lwd-builder-alt-copy {
-    padding: var(--level8); 
+    padding: var(--level10);
+    padding-left: var(--level8);
+    padding-right: var(--level8);
     font-size: var(--h4);
    }
  }

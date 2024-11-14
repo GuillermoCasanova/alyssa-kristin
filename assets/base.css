@@ -435,6 +435,12 @@ section {
 }
 
 
+@media only screen and (min-width: 700px) {
+.hide-for-medium-up {
+  display: none;
+}
+}
+
 .hide-for-large-up {
   display: block;
 }
@@ -1766,6 +1772,7 @@ button,
   margin-bottom: var(--level3); 
   color: rgb(var(--color-base-text-1));  
   text-decoration: none;
+  min-width: max-content;
 }
 
 button:hover,
