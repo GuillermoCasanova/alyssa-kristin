@@ -5,9 +5,12 @@ class LwdBuilder extends HTMLElement {
     super();
     this.topSelect = this.querySelector('[data-top-select]');
     this.bottomSelect = this.querySelector('[data-bottom-select]');
-    this.topValue = this.topSelect.value;
-    this.bottomValue = this.bottomSelect.value;
-    this.lwdLink = this.querySelector('[data-product-url]');
+
+    if(this.topSelect && this.bottomSelect) {
+      this.topValue = this.topSelect.value;
+      this.bottomValue = this.bottomSelect.value;
+      this.lwdLink = this.querySelector('[data-product-url]');
+    }
 
   }
 
