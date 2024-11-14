@@ -343,10 +343,11 @@ lwd-slideshow .swiper-slide {
 @media screen and (min-width: 940px) {
   .is-alt .card {
     pointer-events: auto;
-    width: 120%;
+    width: 115%;
     left: -15%;
     position: relative;
     z-index: 1;
+    
   }
  }
 
