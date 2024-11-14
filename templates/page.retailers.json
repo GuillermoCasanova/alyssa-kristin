@@ -350,6 +350,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_CEyVqp": {
+          "type": "location",
+          "settings": {
+            "store_name": "Beloved Bridal",
+            "website": "https://www.belovedbridal.com/",
+            "phone_number": "(734) 834-4696",
+            "address": "<p>122 South Main Street, #320, Ann Arbor, MI, 48104</p>",
+            "state": "Michigan",
+            "country": "USA",
+            "longitude": 42.3,
+            "latitude": -83.7,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -374,7 +389,8 @@
         "location_QqExPN",
         "location_pz6nhW",
         "location_BXQERR",
-        "location_npDH67"
+        "location_npDH67",
+        "location_CEyVqp"
       ],
       "settings": {
         "heading": "Find a Retailer",
