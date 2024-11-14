@@ -1,3 +1,3 @@
-# Ajornada Theme 
+# Alyssa Kristin Theme
 
-Based off Dawn Theme 5.0. 
+Based off Dawn Theme 15.0.
