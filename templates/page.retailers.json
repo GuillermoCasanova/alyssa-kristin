@@ -425,6 +425,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_3ekgJ4": {
+          "type": "location",
+          "settings": {
+            "store_name": "Abigail Bride",
+            "website": "https://www.abigailbride.com/",
+            "phone_number": "(732) 774-4777",
+            "address": "<p>209 Bond Street, Unit 1 Asbury Park, NJ 07712</p>",
+            "state": "New Jersey",
+            "country": "USA",
+            "longitude": 40.2,
+            "latitude": -74.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -454,7 +469,8 @@
         "location_hLp98n",
         "location_mhKwUf",
         "location_jXAKxz",
-        "location_xhy3P8"
+        "location_xhy3P8",
+        "location_3ekgJ4"
       ],
       "settings": {
         "heading": "Find a Retailer",
