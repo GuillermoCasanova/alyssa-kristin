@@ -21,10 +21,10 @@
     "about_philosophy_haWQd9": {
       "type": "about-philosophy",
       "settings": {
-        "heading": "<p>Our Philosophy</p>",
+        "heading": "<p><em>Our</em> Philosophy</p>",
         "body": "<p>Every bride is unique, and so is every gown. From dramatic trains to plunging necklines, our customizable designs are crafted to make you feel like the most confident version of yourself. Effortlessly refined, unstoppably supportive—each piece is a reflection of your distinct style.</p>",
         "image": "shopify://shop_images/Process_5a624e8a-c5d1-456f-aa4e-6d1029f74b1c.jpg",
-        "quote": "<p>“Uniquely you, effortlessly refined—our gowns celebrate your individuality.”</p>"
+        "quote": "<p>“Uniquely you, <em>effortlessly refined—our gowns celebrate</em> your individuality.”</p>"
       }
     },
     "about_process_cLfXmB": {
@@ -32,7 +32,7 @@
       "settings": {
         "main_image": "shopify://shop_images/Screenshot_2024-11-14_at_8.23.56_AM.png",
         "secondary_image": "shopify://shop_images/Philosophy_2f9141a9-5aa8-44a3-9207-b034ca713610.jpg",
-        "heading": "<p>Our Process</p>",
+        "heading": "<p><em>Our</em> Process</p>",
         "body": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
         "card_body": "<p>Dreamt up and designed in our Chicago studio, each Alyssa Kristin gown is a labor of love, meticulously handcrafted by skilled local artisans. We believe that a bridal gown should be more than just a dress; it should be a work of art that embodies the essence of artistry and craftsmanship.</p>",
         "card_cta": "Explore More",
