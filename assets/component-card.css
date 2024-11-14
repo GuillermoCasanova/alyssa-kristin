@@ -318,3 +318,16 @@ deferred-media {
   font-weight: normal !important;
   font-size: var(--micro);
 }
+
+
+.card__media:hover .media--hover-effect img {
+  opacity: 0;
+}
+
+.card__media:hover .media--hover-effect img + img {
+  opacity: 1;
+}
+
+.card__media:hover .media.media--hover-effect > img + img {
+  opacity: 1 !important; 
+}

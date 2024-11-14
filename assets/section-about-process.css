@@ -216,16 +216,17 @@
         grid-column: 3 / 11;
         grid-row: 7 / 7;
         z-index: 2;
-        margin-top: var(--level10)
+        margin-top: var(--level10);
+        display: none; 
     }
 }
 
-@media screen and (min-width: 940px) {
+/* @media screen and (min-width: 940px) {
     .about-process__card {
         grid-column: 7 / -1;
         margin-top: -2rem
     }
-}
+} */
 
 .about-process__card-body {
     font-size: var(--h6);

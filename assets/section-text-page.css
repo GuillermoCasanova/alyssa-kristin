@@ -5,13 +5,7 @@
 \*------------------------------------*/
 
 .text-page-header {
-    margin-top: calc(var(--level10) + var(--level10) + var(--level10) + var(--level5)); 
-}
-
-@media screen and (min-width: 940px) {
-    .text-page-header{
-        margin-top: calc(var(--level10) + var(--level10) + var(--level10) + var(--level10) + var(--level6)); 
-    }
+    margin-top: var(--level8);
 }
 
 .text-page__header__heading {

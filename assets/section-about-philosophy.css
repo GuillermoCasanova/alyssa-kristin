@@ -92,7 +92,7 @@
 }
 
 .about-philosophy__body {
-    background-color: white;
+    background-color: rgb(var(--color-base-background-1));
     font-size: var(--h6); 
     margin-left: 15%; 
     margin-top: calc(var(--level8) * -1);
