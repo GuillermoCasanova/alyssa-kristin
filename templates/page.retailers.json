@@ -470,6 +470,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_X9Nkdt": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/rochester-bridal-shop",
+            "phone_number": "(585) 398-8597",
+            "address": "<p>72 W Main St, Victor, NY 14564</p>",
+            "state": "New York",
+            "country": "USA",
+            "longitude": 43.0,
+            "latitude": -77.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -502,7 +517,8 @@
         "location_xhy3P8",
         "location_3ekgJ4",
         "location_mHUmEE",
-        "location_pGbrbf"
+        "location_pGbrbf",
+        "location_X9Nkdt"
       ],
       "settings": {
         "heading": "Find a Retailer",
