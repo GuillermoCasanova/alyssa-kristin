@@ -80,13 +80,29 @@
             "gown": true,
             "lwd": true
           }
+        },
+        "location_N87mHp": {
+          "type": "location",
+          "settings": {
+            "store_name": "Love & Lace",
+            "website": "https://loveandlacebridalsalon.com/",
+            "phone_number": "(949) 861-8455",
+            "address": "<p>3800 Barranca Parkway, Suite F Irvine, California 92606</p>",
+            "state": "California",
+            "country": "USA",
+            "longitude": 33.7,
+            "latitude": -117.8,
+            "gown": false,
+            "lwd": false
+          }
         }
       },
       "block_order": [
         "location_HJ4Lrj",
         "location_mnydYd",
         "location_iw99Vr",
-        "location_j3pKLL"
+        "location_j3pKLL",
+        "location_N87mHp"
       ],
       "settings": {
         "heading": "Find a Retailer",
