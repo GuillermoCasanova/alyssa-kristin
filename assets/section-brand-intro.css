@@ -186,6 +186,10 @@
     grid-row:  1 / 2;
     font-weight: 300;
     left: 2rem; 
+    text-transform: uppercase;
+}
+.brand-intro__heading em {
+    text-transform: lowercase;
 }
 
 @media screen and (min-width: 700px) {
@@ -199,7 +203,7 @@
 @media screen and (min-width: 900px) {
     .brand-intro__heading {
         font-size: var(--mega); 
-        min-width: 34rem;
+        min-width: 40rem;
     }
 }
 
