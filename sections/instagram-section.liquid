@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="{{ 'instagram-feed.css' | asset_url }}" media="print" onload="this.media='all'">
+<script type="module" src="{{ 'instagram-feed.js' | asset_url }}" defer="defer"></script>
+
+<div class="instagram-feed">
+  <section
+    class="instagram-feed__inner"
+  >
+    <instagram-feed>
+      <div class="instagram-feed__header page-width is-full-width">
+        <h2 class="instagram-feed__heading">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+
+      <ul id="instafeed" data-script-url="{{ 'instafeed.min.js' | asset_url }}" class="instagram-feed__posts">
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+      </ul>
+    </instagram-feed>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Instagram Feed",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Follow Us On Instagram</p>"
+    },
+    {
+      "type": "header",
+      "content": "Border Elements"
+    },
+    {
+      "type": "radio",
+      "id": "top_border",
+      "label": "Top Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "no",
+      "info": "Choose whether to display a top border for the Instagram Feed section."
+    },
+    {
+      "type": "radio",
+      "id": "bottom_border",
+      "label": "Bottom Border",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ],
+      "default": "yes",
+      "info": "Choose whether to display a bottom border for the Instagram Feed section."
+    },
+    {
+      "type": "checkbox",
+      "id": "trigger_email_popup",
+      "label": "Trigger Email Pop Up",
+      "info": "If checked, this section will trigger the email pop up.",
+      "default": false
+    }
+  ],
+  "enabled_on": {
+    "templates": ["index", "page"]
+  },
+  "presets": [
+    {
+      "name": "Instagram Feed"
+    }
+  ]
+}
+{% endschema %}
