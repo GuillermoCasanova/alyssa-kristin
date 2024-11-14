@@ -11,8 +11,7 @@
   "sections": {
     "image_video_banner_XmEgnA": {
       "type": "text-page-header",
-      "settings": {
-      }
+      "settings": {}
     },
     "main": {
       "type": "faqs-list",
@@ -21,35 +20,35 @@
           "type": "faq_block",
           "settings": {
             "question": "How much do your gowns cost?",
-            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
+            "answer": "<p>Our gowns range between $2,850-$3,450. Modifications are available for an additional fee and typically range between $100-$600. Please inquire with your local retailer for pricing details.</p>"
           }
         },
         "faq_block_TMLN7m": {
           "type": "faq_block",
           "settings": {
             "question": "What sizes do you offer?",
-            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
+            "answer": "<p>The Alyssa Kristin size chart ranges from 0-28. Sizing beyond the size chart is also available - please inquire with your stylist.</p>"
           }
         },
         "e00f2a91-4f7c-4e5a-b9d2-e609293e2cf7": {
           "type": "faq_block",
           "settings": {
             "question": "Do you offer custom gowns?",
-            "answer": "<p>While both cachaça and rum are made from sugarcane, cachaça is distilled directly from fresh sugarcane juice, whereas rum is typically made from molasses, a byproduct of sugar production.</p>"
+            "answer": "<p>While we do not offer custom gowns, our gowns can be modified. Your stylist can walk you through available changes.</p>"
           }
         },
         "a59fd2a2-e0f2-41c0-83a6-a0340c31b109": {
           "type": "faq_block",
           "settings": {
             "question": "Do you offer modifications?",
-            "answer": "<p>The taste of cachaça can vary widely depending on the expressions and the individual production process and aging. It can range from light and fruity with a grassy aroma to rich and complex with notes of vanilla, caramel, and wood from barrel aging.</p>"
+            "answer": "<p>Yes – your stylist will guide you through available modifications during your appointment!</p>"
           }
         },
         "07e8ca04-f6ce-4334-9590-a20fef831ea8": {
           "type": "faq_block",
           "settings": {
-            "question": "Where can I try onaAlyssa Kristin gowns?",
-            "answer": "<p>Cachaça is pronounced kah-SHAH-sah.</p>"
+            "question": "Where can I try on Alyssa Kristin gowns?",
+            "answer": "<p>We’ve got retailers all over – find your nearest one here!</p>"
           }
         },
         "faq_block_znR8zw": {

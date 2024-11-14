@@ -58,28 +58,35 @@
           "type": "faq_block",
           "settings": {
             "question": "What should I wear to my appointment?",
-            "answer": "<p>Love is the answer.</p>"
+            "answer": "<p>Nude colored seamless undergarments are always a great idea. You’re welcome to also bring anything you know you want to wear on your wedding day – shoes, jewelry, veil,  etc.</p>"
           }
         },
         "faq_block_tDPREr": {
           "type": "faq_block",
           "settings": {
             "question": "How long are appointments?",
-            "answer": "<p>Love is the answer.</p>"
+            "answer": "<p>Appointments are 60 minutes long and cannot be extended. If you are running late, please let us know via text/email! Your appointment will be canceled if we do not hear from you 15 minutes into your scheduled time.</p>"
           }
         },
         "faq_block_Apgw7F": {
           "type": "faq_block",
           "settings": {
             "question": "What styles and sizes are available to try on in the studio?",
-            "answer": "<p>A bridal design studio offers a variety of styles to explore, ensuring every bride finds the perfect look for her special day. Options range from classic ball gowns with intricate lace details to sleek, modern silhouettes featuring clean lines and minimalistic elegance. Brides can also try on romantic bohemian dresses with flowing fabrics, soft florals, and delicate embellishments, or opt for vintage-inspired designs with timeless appeal. </p>"
+            "answer": "<p>All styles on our website are available to try on in our standard size 6 (street size 2-4). Additionally, some styles are also sampled in sizes ranging 10-14 (street size 8-12) and our most popular styles are sampled in curve sizes ranging 18-24 (street size 16-20).</p>"
           }
         },
         "faq_block_9nz7Pf": {
           "type": "faq_block",
           "settings": {
             "question": "How many guests can I bring with me?",
-            "answer": "<p>Love is the answer.</p>"
+            "answer": "<p>You can bring up to 4 guests with you.</p>"
+          }
+        },
+        "faq_block_4Yxwqn": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Do you offer modifications?",
+            "answer": "<p>Yes – your stylist will guide you through available modifications during your appointment!</p>"
           }
         }
       },
@@ -87,7 +94,8 @@
         "faq_block_QzhGAm",
         "faq_block_tDPREr",
         "faq_block_Apgw7F",
-        "faq_block_9nz7Pf"
+        "faq_block_9nz7Pf",
+        "faq_block_4Yxwqn"
       ],
       "settings": {
         "headline": "FAQ",
