@@ -41,7 +41,7 @@
           <div class="card__inner" data-filter-by>
             <div class="location-filter-header">
               <p>Filter By</p>
-              <input type="checkbox" id="gowns" name="filter" value="gowns">
+              <input type="checkbox" id="gowns" name="filgit pter" value="gowns">
               <label for="gowns">Gowns</label>
 
               <input type="checkbox" id="lwd" name="filter" value="lwd">
@@ -87,6 +87,27 @@
           title: location.store_info.name,
         });
 
+        const tooltipContent = `
+          <div>
+            <strong>${location.store_info.name}</strong><br>
+            ${location.store_info.address}<br>
+            ${location.store_info.state}, ${location.store_info.country}<br>
+            ${location.store_info.phone}
+          </div>
+        `;
+
+        const tooltip = new google.maps.InfoWindow({
+          content: tooltipContent,
+        });
+
+        marker.addListener('mouseover', () => {
+          tooltip.open(map, marker);
+        });
+
+        marker.addListener('mouseout', () => {
+          tooltip.close();
+        });
+
         const infoWindowContent = `
         <div>
           <strong>${location.store_info.name}</strong><br>
@@ -127,9 +148,8 @@
 
     function addLocationToDOM(location) {
       const locationsContainer = document.querySelector('[data-closest-locations]');
-      const listItem = document.createElement('li');
-      listItem.textContent = `${location.store_info.name} - ${location.store_info.address}`;
-      locationsContainer.insertAdjacentHTML('beforeend', listItem.outerHTML);
+      const listItem = `<li><a href="${location.store_info.url}">${location.store_info.name}</a> - ${location.store_info.address} <div>${location.store_info.phone}</div></li>`;
+      locationsContainer.insertAdjacentHTML('beforeend', listItem);
     }
 
     // Calculate the distance between two coordinates using Haversine formula
@@ -211,9 +231,9 @@
 
     async function handleAddressSearch(event) {
       event.preventDefault();
+
       const addressInput = document.querySelector('[data-search-input]').value;
       if (!addressInput) {
-        console.log('Please enter an address.');
         return;
       }
 
@@ -232,6 +252,12 @@
 
         // Display closest locations in the DOM
         closestLocations.forEach(addLocationToDOM);
+
+        if (closestLocations.length > 0) {
+          const firstLocation = closestLocations[0];
+          map.setCenter({ lat: firstLocation.lat, lng: firstLocation.lng });
+          map.setZoom(12);
+        }
       } catch (error) {
         console.log(error);
       }

@@ -5,11 +5,11 @@
     <div class="collection-description__inner page-width">
       <div class="container">
         <h2 class="collection-description__heading">
-          {{ collection.title }}
+          {{ collection.title | default: section.settings.heading }}
         </h2>
         <div class="collection-description__body rich-text ">
           <span data-seo-text>
-            {{ collection.description }}
+            {{ collection.description | default: section.settings.description }}
           </span>
         </div>
       </div>
