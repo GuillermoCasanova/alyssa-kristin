@@ -147,15 +147,6 @@
       "settings": {
         "headline": "<p>As Seen In</p>"
       }
-    },
-    "1655920347d426af19": {
-      "type": "instagram-feed",
-      "settings": {
-        "heading": "<p><em>Follow Us </em>On Instagram</p>",
-        "top_border": "no",
-        "bottom_border": "no",
-        "trigger_email_popup": false
-      }
     }
   },
   "order": [
@@ -167,6 +158,5 @@
     "appointment_section_zrN4XF",
     "featured_events_JWhbe7",
     "featured_on_mByktG",
-    "1655920347d426af19"
   ]
 }

@@ -46,21 +46,11 @@
         "cta_text": "Book an Appointment"
       }
     },
-    "instagram_feed_x7YidR": {
-      "type": "instagram-feed",
-      "settings": {
-        "heading": "",
-        "top_border": "no",
-        "bottom_border": "yes",
-        "trigger_email_popup": false
-      }
-    }
   },
   "order": [
     "main",
     "about_philosophy_haWQd9",
     "about_founder_4HW7Qt",
     "appointment_section_YTTUDb",
-    "instagram_feed_x7YidR"
   ]
 }
