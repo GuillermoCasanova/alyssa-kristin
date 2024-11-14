@@ -125,6 +125,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_G89eg6": {
+          "type": "location",
+          "settings": {
+            "store_name": "Unveiled Bridal",
+            "website": "https://www.unveiledbridalsf.com/",
+            "phone_number": "(650) 405-5447",
+            "address": "<p>1770 Union Street, San Francisco, CA, 94123</p>",
+            "state": "California",
+            "country": "USA",
+            "longitude": 37.8,
+            "latitude": -122.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -134,7 +149,8 @@
         "location_j3pKLL",
         "location_N87mHp",
         "location_RjrbRT",
-        "location_Rct3jT"
+        "location_Rct3jT",
+        "location_G89eg6"
       ],
       "settings": {
         "heading": "Find a Retailer",
