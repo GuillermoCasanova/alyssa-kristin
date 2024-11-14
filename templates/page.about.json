@@ -27,21 +27,23 @@
         "quote": "<p>“Uniquely you, effortlessly refined—our gowns celebrate your individuality.”</p>"
       }
     },
-    "about_founder_4HW7Qt": {
-      "type": "about-founder",
-      "settings": {
-        "heading": "<p>from The Founderr</p>",
-        "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>"
-      }
-    },
     "about_process_cLfXmB": {
       "type": "about-process",
       "settings": {
+        "main_image": "shopify://shop_images/Screenshot_2024-11-14_at_8.23.56_AM.png",
+        "secondary_image": "shopify://shop_images/Philosophy_2f9141a9-5aa8-44a3-9207-b034ca713610.jpg",
         "heading": "<p>Our Process</p>",
         "body": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
         "card_body": "<p>Dreamt up and designed in our Chicago studio, each Alyssa Kristin gown is a labor of love, meticulously handcrafted by skilled local artisans. We believe that a bridal gown should be more than just a dress; it should be a work of art that embodies the essence of artistry and craftsmanship.</p>",
         "card_cta": "Explore More",
         "card_link": "shopify://pages/frequently-asked-questions"
+      }
+    },
+    "about_founder_4HW7Qt": {
+      "type": "about-founder",
+      "settings": {
+        "heading": "<p>from The Founderr</p>",
+        "body": "<p>Our founder has a rich history in the industry, bringing years of experience and passion to the company.</p>"
       }
     },
     "appointment_section_YTTUDb": {
