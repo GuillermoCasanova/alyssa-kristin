@@ -1,13 +1,203 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'template-blog.css' | asset_url | stylesheet_tag }}
 
+<style>
+  /*------------------------------------*\
+    #Featured Events Section
+\*------------------------------------*/
+
+  .featured-events__heading {
+    font-size: var(--h2);
+    font-family: var(--secondary-font-family);
+    font-style: italic;
+    margin-bottom: var(--level7);
+  }
+
+  @media screen and (min-width: 940px) {
+    .featured-events__heading {
+      margin-bottom: var(--level9);
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .featured-events__heading {
+      font-size: var(--h1);
+    }
+  }
+
+  .featured-events__heading p {
+    margin-bottom: 0;
+    margin-right: 6.5rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    .featured-events__heading p {
+      margin-right: 8rem;
+    }
+  }
+
+  .featured-events__heading span {
+    text-transform: uppercase;
+    font-style: normal;
+    position: relative;
+    display: flex;
+    align-items: center;
+    right: -1rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    .featured-events__heading span {
+      right: -2rem;
+    }
+  }
+
+  .featured-events__heading span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 80%;
+    background-color: rgb(var(--color-base-text-1));
+    left: -6.5rem;
+    top: auto;
+    bottom: auto;
+    right: auto;
+  }
+
+  @media screen and (min-width: 700px) {
+    .featured-events__heading span::before {
+      left: -8rem;
+    }
+  }
+
+  .featured-events__heading {
+    display: flex;
+    align-items: center;
+  }
+
+  .featured-event__image__inner {
+    position: relative;
+    padding-bottom: 160%;
+  }
+
+  @media screen and (min-width: 940px) {
+    .featured-event__image__inner {
+      padding-bottom: 140%;
+    }
+  }
+
+  @media screen and (min-width: 940px) {
+    .featured-events__list custom-slideshow .featured-event:nth-child(n + 4) {
+      display: none;
+    }
+
+    .featured-events__list custom-slideshow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: var(--level10);
+    }
+
+    .featured-events__list {
+      margin-bottom: var(--level7);
+    }
+  }
+
+  /*------------------------------------*\
+    #Featured Event
+\*------------------------------------*/
+
+  .featured-event {
+    max-width: 38vw;
+    display: block;
+    text-decoration: none;
+  }
+
+  .featured-event__date {
+    font-size: var(--normal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--tertiary-font-family);
+  }
+
+  .featured-event__image {
+    margin-bottom: var(--level5);
+  }
+
+  .featured-event__details {
+    margin-bottom: var(--level5);
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 940px) {
+    .featured-event__details {
+      font-size: var(--h6);
+    }
+  }
+
+  .featured-event__title {
+    margin-bottom: var(--level0);
+    text-transform: uppercase;
+  }
+
+  .featured-event__location {
+    text-transform: titlecase;
+    margin-bottom: var(--level0);
+  }
+
+  @media screen and (min-width: 940px) {
+    .featured-event__location p {
+      font-size: var(--h5);
+    }
+  }
+
+  .featured-event__location p {
+    text-transform: titlecase;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+
+  .featured-event__start-end {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  @media screen and (min-width: 940px) {
+    .featured-event__start-end {
+      font-size: var(--h6);
+    }
+  }
+
+  /*------------------------------------*\
+    #CTa
+\*------------------------------------*/
+
+  .featured-events__cta {
+    text-align: center;
+  }
+
+  /*------------------------------------*\
+    #Swiper Specific Styles
+\*------------------------------------*/
+
+  .featured-events .swiper-slide {
+    width: auto;
+  }
+
+  @media screen and (min-width: 940px) {
+    .blog-articles {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: var(--level7);
+    }
+  }
+</style>
+
 <div class="page-width">
   <div class="blog-posts-header">
     <div class="blog-posts-header__inner ">
-      <h1 class="blog-posts-header__heading">
-        {{ blog.title }}
-      </h1>
-      <span class="blog-posts-header__subline"> Ajornada </span>
+      <h1 class="blog-posts-header__heading">UPCOMING events</h1>
     </div>
   </div>
 </div>
@@ -15,17 +205,34 @@
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width  section-{{ section.id }}-padding">
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        {%- render 'article-card',
-          article: article,
-          media_height: section.settings.image_height,
-          media_aspect_ratio: article.image.aspect_ratio,
-          show_image: section.settings.show_image,
-          show_date: section.settings.show_date,
-          show_author: section.settings.show_author,
-          show_excerpt: false
-        -%}
-      {%- endfor -%}
+      {% assign sorted_events = blog.articles | sort: 'metafields.details.date' | reverse %}
+      {% for event in sorted_events limit: 6 %}
+        <div class="featured-event">
+          <p class="featured-event__date">{{ event.metafields.details.date | date: '%B %d' }}</p>
+
+          <div class="featured-event__image">
+            <div class="featured-event__image__inner">
+              <img
+                src="{{ event.image | image_url: width: 300 }}"
+                alt="{{ event.title }}"
+                width="300"
+                height="300"
+                class="responsive-image"
+              >
+            </div>
+          </div>
+          <div class="featured-event__details">
+            <h3 class="featured-event__title">{{ event.title }}</h3>
+            <div class="featured-event__location">{{ event.metafields.details.location | metafield_tag }}</div>
+            <div class="featured-event__excerpt">{{ event.excerpt }}</div>
+            <div class="featured-event__start-end">
+              {{ event.metafields.details.date | date: '%b %d' }}
+              -
+              {{ event.metafields.custom.end_date | date: '%b %d %Y' }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
 
     {%- if paginate.pages > 1 -%}

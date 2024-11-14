@@ -21,7 +21,6 @@
           <h2 class="blog-posts-header__heading">
             {{ block.settings.blog.title }}
           </h2>
-          <span class="blog-posts-header__subline"> Lorem Ipsum </span>
         </div>
       </div>
       <div class="blog-articles">
@@ -36,18 +35,6 @@
             show_excerpt: false
           -%}
         {% endfor %}
-      </div>
-      <div class="blog-view-more">
-        <a
-          class="blog-view-more__link"
-          title="Go to {{ block.settings.blog.title }} page"
-          href="{{ block.settings.blog.url }}#navigated"
-        >
-          <svg class="blog-view-more__link__icon">
-            <use href="#icon-plus-sign"/>
-          </svg>
-          <span class="visually-hidden">View More</span>
-        </a>
       </div>
     </div>
   {% endfor %}

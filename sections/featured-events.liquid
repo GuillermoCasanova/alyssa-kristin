@@ -26,7 +26,7 @@
         >
           {% assign sorted_events = events | sort: 'metafields.details.date' | reverse %}
           {% for event in sorted_events limit: 6 %}
-            <a href="{{ event.url }}" class="featured-event">
+            <div class="featured-event">
               <p class="featured-event__date">{{ event.metafields.details.date | date: '%B %d' }}</p>
 
               <div class="featured-event__image">
@@ -50,7 +50,7 @@
                   {{ event.metafields.custom.end_date | date: '%b %d %Y' }}
                 </div>
               </div>
-            </a>
+            </div>
           {% endfor %}
         </custom-slideshow>
       </div>

@@ -96,6 +96,10 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: var(--level10);
     }
+
+    .featured-events__list {
+        margin-bottom: var(--level7);
+    }
 }
 
 
