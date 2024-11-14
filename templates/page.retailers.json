@@ -395,6 +395,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_jXAKxz": {
+          "type": "location",
+          "settings": {
+            "store_name": "Swoon Bridal",
+            "website": "https://swoonbridal.com/",
+            "phone_number": "(775) 826-0505",
+            "address": "<p>Swoon 530 West Plumb Lane, Suite E, Reno, NV, 89509</p>",
+            "state": "Nevada",
+            "country": "USA",
+            "longitude": 39.5,
+            "latitude": -119.8,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -422,7 +437,8 @@
         "location_npDH67",
         "location_CEyVqp",
         "location_hLp98n",
-        "location_mhKwUf"
+        "location_mhKwUf",
+        "location_jXAKxz"
       ],
       "settings": {
         "heading": "Find a Retailer",
