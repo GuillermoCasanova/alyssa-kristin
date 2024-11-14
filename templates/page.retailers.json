@@ -380,6 +380,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_mhKwUf": {
+          "type": "location",
+          "settings": {
+            "store_name": "Arc Bridal",
+            "website": "https://www.arcbridal.com/",
+            "phone_number": "(402) 452-3170",
+            "address": "<p>2580 S. 90th Street, #140, Omaha, NE 68124 </p>",
+            "state": "Nebraska",
+            "country": "USA",
+            "longitude": 41.2,
+            "latitude": -96.1,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -406,7 +421,8 @@
         "location_BXQERR",
         "location_npDH67",
         "location_CEyVqp",
-        "location_hLp98n"
+        "location_hLp98n",
+        "location_mhKwUf"
       ],
       "settings": {
         "heading": "Find a Retailer",
