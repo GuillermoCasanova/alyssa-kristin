@@ -22,7 +22,7 @@
               loop="true"
               effect="coverflow"
             >
-              {% for product in collection.products %}
+              {% for product in section.settings.collection.products %}
                 {% assign top_slideshow_image_id = all_products[product.metafields.dress.top].id %}
                 {% unless top_slideshow_image_ids contains top_slideshow_image_id %}
                   <div
@@ -198,8 +198,16 @@
 {
   "name": "LWD Builder",
   "enabled_on": {
-    "templates": ["collection", "page"]
+    "templates": ["collection", "page", "index"]
   },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "default": ""
+    }
+  ],
   "presets": [
     {
       "name": "LWD Builder"
