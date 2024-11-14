@@ -101,10 +101,45 @@
           "settings": {
             "feature": "Attainable luxury"
           }
+        },
+        "feature_7N9YGQ": {
+          "type": "feature",
+          "settings": {
+            "feature": "Quality craftsmanship"
+          }
+        },
+        "feature_zQDjcq": {
+          "type": "feature",
+          "settings": {
+            "feature": ""
+          }
+        },
+        "feature_wTbXGg": {
+          "type": "feature",
+          "settings": {
+            "feature": "customizable"
+          }
+        },
+        "feature_8A7WV4": {
+          "type": "feature",
+          "settings": {
+            "feature": "Chicago Made"
+          }
+        },
+        "feature_h8yz3n": {
+          "type": "feature",
+          "settings": {
+            "feature": "Luxurious materials"
+          }
         }
       },
       "block_order": [
-        "feature_Mg8AAn"
+        "feature_Mg8AAn",
+        "feature_7N9YGQ",
+        "feature_zQDjcq",
+        "feature_wTbXGg",
+        "feature_8A7WV4",
+        "feature_h8yz3n"
       ],
       "settings": {
         "heading": "<p>the ALYSSA KRISTIN difference</p>",
