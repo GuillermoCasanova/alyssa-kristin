@@ -110,8 +110,8 @@
       "settings": {
         "heading": "<p>Join Us</p>",
         "selected_blog": "events",
-        "cta_link": "",
-        "cta_label": ""
+        "cta_link": "shopify://blogs/events",
+        "cta_label": "View All Events"
       }
     },
     "featured_on_mByktG": {
