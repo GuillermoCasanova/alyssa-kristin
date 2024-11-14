@@ -590,6 +590,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_UyVmV9": {
+          "type": "location",
+          "settings": {
+            "store_name": "Bespoke Bride",
+            "website": "https://bespokebride.com/",
+            "phone_number": "(541) 647-1800",
+            "address": "<p>555 NW Arizona Ave, Ste 10, Bend, OR 97703</p>",
+            "state": "Oregon",
+            "country": "USA",
+            "longitude": 44.1,
+            "latitude": -121.3,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -630,7 +645,8 @@
         "location_nyRQkQ",
         "location_6GDwTc",
         "location_njTiFH",
-        "location_HEFGNd"
+        "location_HEFGNd",
+        "location_UyVmV9"
       ],
       "settings": {
         "heading": "Find a Retailer",
