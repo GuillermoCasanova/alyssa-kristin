@@ -193,12 +193,12 @@
     },
     "facets": {
       "filter_and_operator_subtitle": "Match all",
-      "apply": "Apply",
+      "apply": "View Results",
       "clear": "Clear",
-      "clear_all": "Remove all",
+      "clear_all": "Clear All",
       "from": "From",
       "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter By",
+      "filter_by_label": "Filter By +",
       "filter_button": "Filter",
       "filters_selected": {
         "one": "{{ count }} selected",
