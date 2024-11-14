@@ -410,6 +410,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_xhy3P8": {
+          "type": "location",
+          "settings": {
+            "store_name": "Madeleine’s Daughter Bridal",
+            "website": "https://madeleinesdaughter.com/",
+            "phone_number": "(603) 431‑5454",
+            "address": "<p>775 Lafayette Rd Suite 3 Portsmouth, NH, 03801</p>",
+            "state": "New Hampshire",
+            "country": "USA",
+            "longitude": 43.1,
+            "latitude": -70.8,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -438,7 +453,8 @@
         "location_CEyVqp",
         "location_hLp98n",
         "location_mhKwUf",
-        "location_jXAKxz"
+        "location_jXAKxz",
+        "location_xhy3P8"
       ],
       "settings": {
         "heading": "Find a Retailer",
