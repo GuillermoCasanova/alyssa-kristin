@@ -17,9 +17,42 @@
         "padding_bottom": 28,
         "hide_body": "false"
       }
+    },
+    "about_philosophy_GMeLAK": {
+      "type": "about-philosophy",
+      "settings": {
+        "heading": "<p><em>Our</em> Philosophy</p>",
+        "body": "<p>Every bride is unique, and so is every gown. From dramatic trains to plunging necklines, our customizable designs are crafted to make you feel like the most confident version of yourself. Effortlessly refined, unstoppably supportive—each piece is a reflection of your distinct style.</p>",
+        "image": "shopify://shop_images/Rectangle_43.jpg",
+        "quote": "<p>“Uniquely you, <em>effortlessly</em> <em>refined—our gowns celebrate</em> your individuality.”</p>"
+      }
+    },
+    "about_founder_JCYgbf": {
+      "type": "about-founder",
+      "settings": {
+        "heading": "<p><em>from</em> the Founder</p>",
+        "body": "<p>Alyssa Kahle, designer and founder of Alyssa Kristin, started her journey in public accounting and consulting. During her own engagement, she struggled to find 'the dress' and decided to take matters into her own hands by designing and crafting her own gown. <br/><br/>Realizing other brides must feel the same way, Alyssa set out to create a bridal line that celebrates form-fitting silhouettes, unique details, and comfort—allowing women to move freely and feel truly themselves on their special day.<br/><br/>Effortlessly refined, unstoppably supportive—Alyssa Kristin is made for the independent, refined and modern day woman.<br/> </p>",
+        "main_image": "shopify://shop_images/image_3ff861e8-d7cd-46d3-b349-908ab23f0784.jpg",
+        "secondary_image": "shopify://shop_images/image_56d72f16-6afa-44fb-b596-790f66aea143.png"
+      }
+    },
+    "appointment_section_RVmhtA": {
+      "type": "appointment-section",
+      "settings": {
+        "image_mobile": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2_3e9f5bd5-32b1-4ce5-81c6-4d8d219ac36d.png",
+        "image_desktop": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_1.jpg",
+        "image_alt": "",
+        "headline": "<p>Visit Us</p>",
+        "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio.445 W Erie St #108, Chicago, IL 60654</p>",
+        "cta_link": "",
+        "cta_text": "Book an Appointment"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "about_philosophy_GMeLAK",
+    "about_founder_JCYgbf",
+    "appointment_section_RVmhtA",
   ]
 }
