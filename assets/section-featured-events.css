@@ -175,6 +175,63 @@
 
 
 
+.featured-event--alt .featured-event__image {
+    margin-bottom: var(--level3)
+}
+
+.featured-event--alt {
+    max-width: 100%;
+    right: 0; 
+    top: 0; 
+    position: relative;
+    width: 100%: 
+}
+
+.featured-event--alt .featured-event__date {
+    position: absolute; 
+    right: var(--level5); 
+    top: var(--level5); 
+    z-index: 2;
+    background-color: rgb(var(--color-base-background-1));
+    width: 7.25rem;
+    height: 6.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--level0);
+    letter-spacing: 1px;
+}
+
+
+.featured-event--alt .featured-event__title {
+    font-family: var(--secondary-font-family);
+    font-size: var(--h3);
+    margin-bottom: var(--level1);
+}
+
+.featured-event--alt .featured-event__location {
+    margin-bottom: var(--level4);
+    display: flex;
+    column-gap: var(--level2);
+}
+.featured-event--alt .featured-event__location p {
+    font-size: var(--normal);
+}
+
+.featured-event--alt .featured-event__location p br { 
+    display: none;
+}
+
+
+
+.featured-event--alt .featured-event__start-end {
+    font-family: var(--tertiary-font-family);
+    font-size: var(--micro); 
+}
+
+
+
 
 /*------------------------------------*\
     #CTa

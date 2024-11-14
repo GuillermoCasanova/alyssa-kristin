@@ -26,31 +26,7 @@
         >
           {% assign sorted_events = events | sort: 'metafields.details.date' | reverse %}
           {% for event in sorted_events limit: 6 %}
-            <div class="featured-event">
-              <p class="featured-event__date">{{ event.metafields.details.date | date: '%B %d' }}</p>
-
-              <div class="featured-event__image">
-                <div class="featured-event__image__inner">
-                  <img
-                    src="{{ event.image | image_url: width: 300 }}"
-                    alt="{{ event.title }}"
-                    width="300"
-                    height="300"
-                    class="responsive-image"
-                  >
-                </div>
-              </div>
-              <div class="featured-event__details">
-                <h3 class="featured-event__title">{{ event.title }}</h3>
-                <div class="featured-event__location">{{ event.metafields.details.location | metafield_tag }}</div>
-                <div class="featured-event__excerpt">{{ event.excerpt }}</div>
-                <div class="featured-event__start-end">
-                  {{ event.metafields.details.date | date: '%b %d' }}
-                  -
-                  {{ event.metafields.custom.end_date | date: '%b %d %Y' }}
-                </div>
-              </div>
-            </div>
+            {% render 'event-card', article: event, alt_style: false %}
           {% endfor %}
         </custom-slideshow>
       </div>

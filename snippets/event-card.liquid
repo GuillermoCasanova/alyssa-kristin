@@ -1,0 +1,36 @@
+<div class="featured-event {% if alt_style %}featured-event--alt{% endif %}">
+  {% if alt_style %}
+    <div class="featured-event__date">
+      <div>
+        {{ article.metafields.details.date | date: '%b' }}
+      </div>
+      <div>
+        {{ article.metafields.details.date | date: '%d' }}
+      </div>
+    </div>
+  {% else %}
+    <p class="featured-event__date">{{ article.metafields.details.date | date: '%B %d' }}</p>
+  {% endif %}
+
+  <div class="featured-event__image">
+    <div class="featured-event__image__inner">
+      <img
+        src="{{ article.image | image_url: width: 300 }}"
+        alt="{{ article.title }}"
+        width="300"
+        height="300"
+        class="responsive-image"
+      >
+    </div>
+  </div>
+  <div class="featured-event__details">
+    <h3 class="featured-event__title">{{ article.title }}</h3>
+    <div class="featured-event__location">{{ article.metafields.details.location | metafield_tag }}</div>
+    <div class="featured-event__excerpt">{{ article.excerpt }}</div>
+    <div class="featured-event__start-end">
+      {{ article.metafields.details.date | date: '%b %d' }}
+      -
+      {{ article.metafields.custom.end_date | date: '%b %d %Y' }}
+    </div>
+  </div>
+</div>
