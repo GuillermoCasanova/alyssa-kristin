@@ -12,7 +12,7 @@
       <div class="about-process__main-image__inner">
         {% if section.settings.main_image != blank %}
           <img
-            src="{{ section.settings.main_image | img_url: 'master' }}"
+            src="{{ section.settings.main_image | image_url: 'master' }}"
             alt="{{ section.settings.main_heading | strip_html }}"
             class="responsive-image"
             width="{{ section.settings.main_image.width }}"
@@ -25,7 +25,7 @@
       <div class="about-process__secondary-image__inner">
         {% if section.settings.secondary_image != blank %}
           <img
-            src="{{ section.settings.secondary_image | img_url: 'master' }}"
+            src="{{ section.settings.secondary_image | image_url: 'master' }}"
             alt="{{ section.settings.main_heading | strip_html }}"
             class="responsive-image"
             width="{{ section.settings.secondary_image.width }}"
