@@ -30,8 +30,10 @@
     "about_process_xNqrzX": {
       "type": "about-process",
       "settings": {
-        "heading": "",
-        "body": "",
+        "main_image": "shopify://shop_images/Screenshot_2024-11-14_at_8.23.56_AM.png",
+        "secondary_image": "shopify://shop_images/Philosophy_2f9141a9-5aa8-44a3-9207-b034ca713610.jpg",
+        "heading": "<p><em>our</em> PROCESS</p>",
+        "body": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
         "card_body": "",
         "card_cta": "Explore More",
         "card_link": ""
