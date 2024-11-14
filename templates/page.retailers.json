@@ -515,6 +515,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_3UCNFe": {
+          "type": "location",
+          "settings": {
+            "store_name": "Blanc de Blanc Bridal",
+            "website": "https://blancdeblancbridal.com/",
+            "phone_number": "(412) 480-8874",
+            "address": "<p>49 W. Orange St., Suite 2 Chagrin Falls, OH 44022</p>",
+            "state": "Ohio",
+            "country": "USA",
+            "longitude": 41.4,
+            "latitude": -81.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -550,7 +565,8 @@
         "location_pGbrbf",
         "location_X9Nkdt",
         "location_irnt6m",
-        "location_dL7rL8"
+        "location_dL7rL8",
+        "location_3UCNFe"
       ],
       "settings": {
         "heading": "Find a Retailer",
