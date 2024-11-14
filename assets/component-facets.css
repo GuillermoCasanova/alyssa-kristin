@@ -140,7 +140,7 @@
 
 @media screen and (min-width: 900px ) {
   .facets__form__options-container {
-    gap: var(--level5);
+    gap: var(--level8);
   }
 }
 
@@ -1075,12 +1075,12 @@ details.menu-open .facets-modal {
   display: flex;
   z-index: 2;
   margin-top: auto;
-  padding-left: var(--level4); 
-  padding-right: var(--level4); 
+  padding-left: var(--level2); 
+  padding-right: var(--level2); 
   padding-top: var(--level6); 
   padding-bottom: var(--level4); 
   display: grid;
-  grid-template-columns: .75fr 1fr;
+  grid-template-columns: .65fr 1fr;
   column-gap: var(--level2);
   align-items: center;
   justify-content: space-between;

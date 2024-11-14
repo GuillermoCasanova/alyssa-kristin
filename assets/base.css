@@ -1873,8 +1873,8 @@ button:hover,
 
 .button--micro {
   font-size: var(--minimini);
-  padding-left: var(--level2); 
-  padding-right: var(--level2);   
+  padding-left: var(--level1); 
+  padding-right: var(--level1);   
   letter-spacing: 1.25px;
 }
 
