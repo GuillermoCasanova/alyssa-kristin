@@ -1869,9 +1869,9 @@ button:hover,
 
 
 .button--small {
-  font-size: var(--mini);
-  padding-left: var(--level3); 
-  padding-right: var(--level3);
+  font-size: var(--micro);
+  padding-left: var(--level4); 
+  padding-right: var(--level4);
   padding-bottom: 1rem; 
   padding-top: 1rem; 
 }
@@ -1880,8 +1880,8 @@ button:hover,
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: var(--micro);
-  padding-left: var(--level4); 
-  padding-right: var(--level4); 
+  padding-left: var(--level6); 
+  padding-right: var(--level6); 
   line-height: 1.7;
 }
 

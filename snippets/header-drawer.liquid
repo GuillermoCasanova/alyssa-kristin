@@ -133,11 +133,14 @@
                                     autocomplete="off"
                                     autocapitalize="off"
                                     spellcheck="false"
-                                    placeholder="Type here...asa"
+                                    placeholder="Type here..."
                                   >
-                                  <label data-search-input-label class="search__label" for="Search-In-Modal-1">
-                                    {{- 'general.search.search' | t -}}
+                                  <label data-search-input-label class="search__label" for="Search-In-Modal-1"></label>
+                                    Enter
                                   </label>
+                                  {% comment %} <label data-search-input-label class="search__label" for="Search-In-Modal-1">
+                                    {{- 'general.search.search' | t -}}
+                                  </label> {% endcomment %}
                                   <input type="hidden" name="options[prefix]" value="last">
                                   <button class="search__button" aria-label="{{ 'general.search.search' | t }}">
                                     <svg
@@ -179,25 +182,35 @@
                         </div>
                       </details>
                     {%- else -%}
-                      <a
-                        href="{{ link.url }}"
-                        class="menu-drawer__menu-link {% if link.current %} menu-drawer__menu-item--active{% endif %}{% if link.title contains 'Join' %} button-join{% endif %}"
-                        {% if link.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ link.title | escape }}
-                      </a>
-
                       {%- if link.title contains 'Join' -%}
                         <a
+                          href="{{ link.url }}"
+                          class="menu-drawer__menu-link button-join button  button--small button--tertiary"
+                          {% if link.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ link.title | escape }}
+                        </a>
+
+                        <a
                           href="/acccount/register"
-                          class="menu-drawer__menu-link button-register  button button--micro button--primary"
+                          class="button-register  button button--small button--primary"
                           {% if link.current %}
                             aria-current="page"
                           {% endif %}
                         >
                           Sign In
+                        </a>
+                      {% else %}
+                        <a
+                          href="{{ link.url }}"
+                          class="menu-drawer__menu-link"
+                          {% if link.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ link.title | escape }}
                         </a>
                       {%- endif -%}
                     {%- endif -%}

@@ -240,17 +240,7 @@ a.menu-drawer__menu-item:focus {
   color: rgb(var(--color-base-text-1));
 }
 
-.menu-drawer__menu-link.button-join {
-  border: 1px solid rgb(var(--color-base-text-1)); 
-  padding: var(--level2); 
-  padding-left: var(--level2); 
-  padding-right: var(--level2); 
-  padding-top: var(--level1); 
-  padding-bottom: var(--level1); 
-  font-size: var(--micro);
-  letter-spacing: 2px;
-  font-family: var(--tertiary-font-family);
-}
+
 
 .menu-drawer__menu-link.button-join:hover,
 .menu-drawer__menu-link.button-join:focus {
@@ -316,8 +306,8 @@ a.menu-drawer__menu-item:focus {
   display: inline-block;
 }
 
-.menu-drawer__utility-links ul li:nth-child(4) a {
-  margin-bottom: var(--level8);
+.menu-drawer__utility-links .button-join {
+  margin-bottom: var(--level5);
 }
 
 .menu-drawer__utility-links ul li:nth-last-child(2) a {
