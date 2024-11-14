@@ -102,18 +102,6 @@
         "cta_label": "View All Events"
       }
     },
-    "appointment_section_zrN4XF": {
-      "type": "appointment-section",
-      "settings": {
-        "image_mobile": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2_3e9f5bd5-32b1-4ce5-81c6-4d8d219ac36d.png",
-        "image_desktop": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_1_3f4d7a50-c3a8-4af6-b3d0-9b7375b00491.jpg",
-        "image_alt": "Woman wearing dress.",
-        "headline": "<p>Visit <em>Us</em></p>",
-        "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio. 445 W Erie St #108, Chicago, IL 60654</p>",
-        "cta_link": "shopify://pages/appointments",
-        "cta_text": "Book An Appointment"
-      }
-    },
     "featured_on_mByktG": {
       "type": "featured-on",
       "blocks": {
@@ -148,6 +136,18 @@
         "headline": "<p>As Seen In</p>"
       }
     },
+    "appointment_section_zrN4XF": {
+      "type": "appointment-section",
+      "settings": {
+        "image_mobile": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_2_3e9f5bd5-32b1-4ce5-81c6-4d8d219ac36d.png",
+        "image_desktop": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.23.04_PM_1_3f4d7a50-c3a8-4af6-b3d0-9b7375b00491.jpg",
+        "image_alt": "Woman wearing dress.",
+        "headline": "<p>Visit <em>Us</em></p>",
+        "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio. 445 W Erie St #108, Chicago, IL 60654</p>",
+        "cta_link": "shopify://pages/appointments",
+        "cta_text": "Book An Appointment"
+      }
+    },
     "instagram_section_xWcUw4": {
       "type": "instagram-section",
       "settings": {
@@ -165,8 +165,8 @@
     "main_lwd_builder_3wqr3i",
     "featured_collection_7NitaA",
     "featured_events_JWhbe7",
-    "appointment_section_zrN4XF",
     "featured_on_mByktG",
+    "appointment_section_zrN4XF",
     "instagram_section_xWcUw4"
   ]
 }
