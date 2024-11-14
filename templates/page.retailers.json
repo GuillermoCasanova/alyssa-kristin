@@ -545,6 +545,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_6GDwTc": {
+          "type": "location",
+          "settings": {
+            "store_name": "Bryde",
+            "website": "https://www.shopbryde.com/",
+            "phone_number": "(918) 221-6800",
+            "address": "<p>2409 East Admiral Blvd Tulsa, OK 74110</p>",
+            "state": "Oklahoma",
+            "country": "USA",
+            "longitude": 36.2,
+            "latitude": -96.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -582,7 +597,8 @@
         "location_irnt6m",
         "location_dL7rL8",
         "location_3UCNFe",
-        "location_nyRQkQ"
+        "location_nyRQkQ",
+        "location_6GDwTc"
       ],
       "settings": {
         "heading": "Find a Retailer",
