@@ -260,6 +260,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_rr9hB9": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Wedding Studio",
+            "website": "https://www.theweddingstudios.net/",
+            "phone_number": "(317) 815-2000",
+            "address": "<p>14550 Clay Terrace Blvd #125, Carmel, IN 46032</p>",
+            "state": "Indiana",
+            "country": "USA",
+            "longitude": 40.0,
+            "latitude": -86.1,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -278,7 +293,8 @@
         "location_iageig",
         "location_9xEBRy",
         "location_kg9MFB",
-        "location_3hk6wp"
+        "location_3hk6wp",
+        "location_rr9hB9"
       ],
       "settings": {
         "heading": "Find a Retailer",
