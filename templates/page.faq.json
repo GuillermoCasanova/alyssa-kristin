@@ -86,7 +86,7 @@
           "type": "faq_block",
           "settings": {
             "question": "Do I need an appointment?",
-            "answer": "<p>Yes! We are open by appointment only on Fridays and Saturdays and host one bride at a time. Book your appointment here!</p>"
+            "answer": "<p>Yes! We are open by appointment only on Fridays and Saturdays and host one bride at a time. Book your appointment <span style=\"text-decoration:underline\">here</span>!</p>"
           }
         },
         "faq_block_dLxbLf": {
