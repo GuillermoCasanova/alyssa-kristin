@@ -97,7 +97,7 @@
                     href="{{ collection.url }}"
                     class="collection-thumb__info__cta button button--primary button--medium"
                   >
-                    Explore More
+                    {{ block.settings.cta_text }}
                   </a>
                 </div>
               </div>
@@ -122,6 +122,12 @@
           "type": "collection",
           "id": "collection",
           "label": "Select Collection"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Explore More"
         }
       ]
     }

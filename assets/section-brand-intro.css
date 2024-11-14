@@ -191,6 +191,9 @@
 .brand-intro__heading em {
     text-transform: lowercase;
 }
+.brand-intro__heading p {
+    line-height: 1.5;
+}
 
 @media screen and (min-width: 700px) {
     .brand-intro__heading {
