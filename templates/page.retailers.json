@@ -755,6 +755,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_qNe7X3": {
+          "type": "location",
+          "settings": {
+            "store_name": "Annalise Bridal",
+            "website": "https://annalisebridal.com/",
+            "phone_number": "(804) 649-3000",
+            "address": "<p>4901 Libbie Mill East Blvd Suite #130 Richmond, VA 23230</p>",
+            "state": "Virginia",
+            "country": "USA",
+            "longitude": 37.6,
+            "latitude": -77.5,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -806,7 +821,8 @@
         "location_TbrgYR",
         "location_xkM7zG",
         "location_zjjpha",
-        "location_YJwj4D"
+        "location_YJwj4D",
+        "location_qNe7X3"
       ],
       "settings": {
         "heading": "Find a Retailer",
