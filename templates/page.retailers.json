@@ -95,6 +95,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_RjrbRT": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/san-diego-bridal-shop/",
+            "phone_number": "(619) 230-5003",
+            "address": "<p>3013 University Ave, San Diego, CA 92104</p>",
+            "state": "California",
+            "country": "USA",
+            "longitude": 33.7,
+            "latitude": -117.8,
+            "gown": false,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -102,7 +117,8 @@
         "location_mnydYd",
         "location_iw99Vr",
         "location_j3pKLL",
-        "location_N87mHp"
+        "location_N87mHp",
+        "location_RjrbRT"
       ],
       "settings": {
         "heading": "Find a Retailer",
