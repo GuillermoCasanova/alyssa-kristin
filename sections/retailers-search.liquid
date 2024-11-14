@@ -79,54 +79,53 @@
     addMarkersFromJson(locations, AdvancedMarkerElement);
 
     function addMarkersFromJson(locationsArray, AdvancedMarkerElement) {
-      clearMarkers();
-      locationsArray.forEach((location) => {
-        console.log(locationsArray);
-        const marker = new AdvancedMarkerElement({
-          position: new google.maps.LatLng(location.lat, location.lng),
-          map: map,
-          title: location.store_info.name,
+        clearMarkers();
+        
+        const glyphImg = document.createElement('img');
+        glyphImg.src = '{{ 'location-marker.svg' | asset_url }}';
+
+        locationsArray.forEach((location) => {
+            const glyphImg = document.createElement('img');
+            glyphImg.src = '{{ 'location-marker.svg' | asset_url }}';
+            glyphImg.style.width = '45px'; // Set the desired width
+            glyphImg.style.height = '45px'; // Set the desired height
+
+            const marker = new AdvancedMarkerElement({
+                position: new google.maps.LatLng(location.lat, location.lng),
+                map: map,
+                title: location.store_info.name,
+                content: glyphImg
+            });
+
+            // Tooltip content for the store information
+            const tooltipContent = `
+            <div>
+                <strong>${location.store_info.name}</strong><br>
+                ${location.store_info.address}<br>
+                ${location.store_info.state}, ${location.store_info.country}<br>
+                ${location.store_info.phone}
+            </div>
+            `;
+
+            const tooltip = new google.maps.InfoWindow({
+            content: tooltipContent,
+            });
+
+            // Show tooltip on marker click
+            marker.addListener('click', () => {
+            // Close any open tooltips first if needed
+            markers.forEach((m) => m.tooltip?.close());
+            
+            tooltip.open(map, marker);
+            });
+
+            // Store tooltip reference with marker to close it later
+            marker.tooltip = tooltip;
+            markers.push(marker);
         });
 
-        // const tooltipContent = `
-        //   <div>
-        //     <strong>${location.store_info.name}</strong><br>
-        //     ${location.store_info.address}<br>
-        //     ${location.store_info.state}, ${location.store_info.country}<br>
-        //     ${location.store_info.phone}
-        //   </div>
-        // `;
-
-        // const tooltip = new google.maps.InfoWindow({
-        //   content: tooltipContent,
-        // });
-
-        // marker.addListener('mouseover', () => {
-        //   tooltip.open(map, marker);
-        // });
-
-        // marker.addListener('mouseout', () => {
-        //   tooltip.close();
-        // });
-
-        //     const infoWindowContent = `
-        //     <div>
-        //       <strong>${location.store_info.name}</strong><br>
-        //       ${location.store_info.address}<br>
-        //       ${location.store_info.state}, ${location.store_info.country}<br>
-        //       ${location.store_info.phone}
-        //     </div>
-        //   `;
-
-        //     const infoWindow = new google.maps.InfoWindow({ content: infoWindowContent });
-
-        // marker.addListener('gmp-click', () => {
-        //   infoWindow.open({ anchor: marker, map: map, shouldFocus: false });
-        // });
-
-        markers.push(marker);
-      });
     }
+
 
     function clearMarkers() {
       markers.forEach((marker) => marker.setMap(null));
