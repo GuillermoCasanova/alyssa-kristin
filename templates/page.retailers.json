@@ -680,6 +680,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_yyMppG": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/austin/bridal-shop",
+            "phone_number": "(512) 374-9492",
+            "address": "<p>2905 San Gabriel Street, Ste. 102 Austin, TX 78705</p>",
+            "state": "Texas",
+            "country": "USA",
+            "longitude": 30.3,
+            "latitude": -97.7,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -726,7 +741,8 @@
         "location_axp9Pq",
         "location_ft3eLm",
         "location_9dw6me",
-        "location_8jXeFm"
+        "location_8jXeFm",
+        "location_yyMppG"
       ],
       "settings": {
         "heading": "Find a Retailer",
