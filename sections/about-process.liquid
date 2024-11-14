@@ -1,6 +1,6 @@
 {{ 'section-about-process.css' | asset_url | stylesheet_tag }}
 
-<section class="about-process" id="process">
+<section class="about-process">
   <div class="about-process__inner page-width is-small">
     <h2 class="about-process__heading">
       {{ section.settings.heading }}
@@ -42,8 +42,8 @@
               {%- if section.settings.secondary_image.width >= 533 -%}{{ section.settings.secondary_image | image_url: width: 533 }} 533w,{%- endif -%}
               {%- if section.settings.secondary_image.width >= 720 -%}{{ section.settings.secondary_image | image_url: width: 720 }} 720w,{%- endif -%}
               {%- if section.settings.secondary_image.width >= 940 -%}{{ section.settings.secondary_image | image_url: width: 940 }} 940w,{%- endif -%}
-              {%- if section.settings.main_image.width >= 1066 -%}{{ section.settings.main_image | image_url: width: 1066 }} 1066w,{%- endif -%}
-              {{ section.settings.main_image | image_url }} {{ section.settings.main_image.width }}w
+              {%- if section.settings.secondary_image.width >= 1066 -%}{{ section.settings.secondary_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ section.settings.secondary_image | image_url }} {{ section.settings.secondary_image.width }}w
             "
             src="{{ section.settings.secondary_image | image_url: width: 533 }}"
             sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 700px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
@@ -56,13 +56,14 @@
         {% endif %}
       </div>
     </div>
+
     <div class="about-process__card">
       <div class="about-process__card-body">
         {{ section.settings.card_body }}
       </div>
       <div class="about-process__card-cta">
         <a href="{{ section.settings.card_link }}" class="button button--primary  button--medium">
-          {{- section.settings.card_cta -}}
+          {{ section.settings.card_cta }}
         </a>
       </div>
     </div>
@@ -94,14 +95,12 @@
     {
       "id": "heading",
       "type": "richtext",
-      "label": "Main Heading",
-      "default": "<p>Our Process</p>"
+      "label": "Main Heading"
     },
     {
       "id": "body",
       "type": "richtext",
-      "label": "Body",
-      "default": "<p>Designed and handmade in Chicago. Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>"
+      "label": "Body"
     },
     {
       "type": "header",
@@ -110,8 +109,7 @@
     {
       "id": "card_body",
       "type": "richtext",
-      "label": "Card Body Copy",
-      "default": "<p>Dreamt up and designed in our Chicago studio, each Alyssa Kristin gown is a labor of love, meticulously handcrafted by skilled local artisans. We believe that a bridal gown should be more than just a dress; it should be a work of art that embodies the essence of artistry and craftsmanship.</p>"
+      "label": "Card Body Copy"
     },
     {
       "id": "card_cta",
@@ -127,8 +125,7 @@
   ],
   "presets": [
     {
-      "name": "About - Process",
-      "category": "About"
+      "name": "About - Process"
     }
   ]
 }
