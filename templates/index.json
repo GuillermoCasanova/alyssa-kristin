@@ -142,7 +142,7 @@
     "1655920347d426af19": {
       "type": "instagram-feed",
       "settings": {
-        "heading": "Follow Us",
+        "heading": "<p><em>Follow Us </em>On Instagram</p>",
         "top_border": "no",
         "bottom_border": "no",
         "trigger_email_popup": false
