@@ -605,6 +605,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_6KdrMX": {
+          "type": "location",
+          "settings": {
+            "store_name": "Blanc de Blanc Bridal",
+            "website": "https://www.blancdeblancbridal.com/",
+            "phone_number": "(412) 884-8000",
+            "address": "<p>1806 Brownsville Road, 2nd Floor Pittsburgh, PA 15210</p>",
+            "state": "Pennsylvania",
+            "country": "USA",
+            "longitude": 40.4,
+            "latitude": -80.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -646,7 +661,8 @@
         "location_6GDwTc",
         "location_njTiFH",
         "location_HEFGNd",
-        "location_UyVmV9"
+        "location_UyVmV9",
+        "location_6KdrMX"
       ],
       "settings": {
         "heading": "Find a Retailer",
