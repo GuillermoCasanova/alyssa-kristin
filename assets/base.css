@@ -1772,7 +1772,6 @@ button,
   margin-bottom: var(--level3); 
   color: rgb(var(--color-base-text-1));  
   text-decoration: none;
-  min-width: max-content;
 }
 
 button:hover,

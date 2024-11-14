@@ -89,6 +89,7 @@
     width: max-content;
     flex-basis: content;
     width: 100%;
+  min-width: max-content;
 }
 
 .featured-collection__heading em {
