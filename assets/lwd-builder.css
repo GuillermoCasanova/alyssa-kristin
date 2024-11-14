@@ -120,6 +120,14 @@ lwd-slideshow .swiper-slide {
     width: 100%;
 }
 
+
+@media screen and (min-width: 940px) {
+  .is-alt .lwd-builder__body {
+    align-items: center;
+  } 
+}
+
+
 .lwd-builder__body {
   display: flex; 
   flex-direction: column; 
@@ -136,10 +144,19 @@ lwd-slideshow .swiper-slide {
   }
 }
 
+.lwd-builder__copy {
+  padding: var(--level4);
+}
 
 
 
-
+.lwd-builder___heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--h2);
+  font-family: var(--secondary-font-family);
+  margin-bottom: var(--level8);
+}
 
 
 
