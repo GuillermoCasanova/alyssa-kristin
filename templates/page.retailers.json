@@ -575,6 +575,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_HEFGNd": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/portland/bridal-shop",
+            "phone_number": "(503) 673-2222",
+            "address": "<p>2000 NE Alberta Street Portland, OR 97211</p>",
+            "state": "Oregon",
+            "country": "USA",
+            "longitude": 45.6,
+            "latitude": -122.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -614,7 +629,8 @@
         "location_3UCNFe",
         "location_nyRQkQ",
         "location_6GDwTc",
-        "location_njTiFH"
+        "location_njTiFH",
+        "location_HEFGNd"
       ],
       "settings": {
         "heading": "Find a Retailer",
