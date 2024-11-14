@@ -505,6 +505,12 @@ class MenuDrawer extends HTMLElement {
   }
 
   openMenuDrawer(summaryElement) {
+    // Close other open menu drawers
+    document.querySelectorAll('details[open]').forEach(openDetails => {
+      if (openDetails !== summaryElement.parentNode) {
+        this.closeSubmenu(openDetails);
+      }
+    });
     setTimeout(() => {
       this.mainDetailsToggle.classList.remove('menu-close');
       this.mainDetailsToggle.classList.add('menu-open');

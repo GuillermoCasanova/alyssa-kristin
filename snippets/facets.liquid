@@ -232,7 +232,6 @@
                                 )
                               </span>
                             {%- endcapture -%}
-
                                     <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                                       {%- if presentation == 'swatch' -%}
                                         <div class="{{ label_class }}">
@@ -298,13 +297,13 @@
 
                     <div class="mobile-facets__footer">
                       <facet-remove class="mobile-facets__clear-wrapper">
-                        <a href="{{ results_url }}" class="button--small button--secondary">
+                        <a href="{{ results_url }}" class="button--micro button--tertiary">
                           {{- 'products.facets.clear_all' | t -}}
                         </a>
                       </facet-remove>
                       <button
                         type="button"
-                        class="button--small button--secondary"
+                        class="button--micro button--tertiary"
                         onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                       >
                         {{ 'products.facets.apply' | t }}

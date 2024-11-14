@@ -148,10 +148,7 @@
   position: relative;
 }
 
-.facets__form__option details > summary:hover, 
-.facets__form_option details > summary:focus {
-  text-decoration: underline;
-}
+
 
 .facets__heading {
   display: block;
@@ -159,6 +156,9 @@
   text-transform: uppercase;
   font-size: var(--h6);
   margin-bottom: 0; 
+  font-family: var(--tertiary-font-family);
+  font-size: var(--micro); 
+  letter-spacing: 1.5px;
 }
 
 .facets__reset {
@@ -958,9 +958,9 @@ details.menu-open .facets-modal {
 }
 
 @media screen and (min-width: 700px) {
-.facets-modal {
-  min-width: 21rem; 
-}
+  .facets-modal {
+    min-width: 21rem; 
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -1079,12 +1079,19 @@ details.menu-open .facets-modal {
   padding-right: var(--level4); 
   padding-top: var(--level6); 
   padding-bottom: var(--level4); 
-  display: flex;
+  display: grid;
+  grid-template-columns: .75fr 1fr;
+  column-gap: var(--level2);
   align-items: center;
   justify-content: space-between;
   background-color: rgb(var(--color-background));
   background: var(--gradient-background);
-  gap: var(--level2);
+}
+
+@media screen and (min-width: 700px) {
+  .mobile-facets__footer {
+    padding-top: var(--level10);
+  }
 }
 
 
