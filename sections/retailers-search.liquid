@@ -81,47 +81,48 @@
     function addMarkersFromJson(locationsArray, AdvancedMarkerElement) {
       clearMarkers();
       locationsArray.forEach((location) => {
+        console.log(locationsArray);
         const marker = new AdvancedMarkerElement({
           position: new google.maps.LatLng(location.lat, location.lng),
           map: map,
           title: location.store_info.name,
         });
 
-        const tooltipContent = `
-          <div>
-            <strong>${location.store_info.name}</strong><br>
-            ${location.store_info.address}<br>
-            ${location.store_info.state}, ${location.store_info.country}<br>
-            ${location.store_info.phone}
-          </div>
-        `;
+        // const tooltipContent = `
+        //   <div>
+        //     <strong>${location.store_info.name}</strong><br>
+        //     ${location.store_info.address}<br>
+        //     ${location.store_info.state}, ${location.store_info.country}<br>
+        //     ${location.store_info.phone}
+        //   </div>
+        // `;
 
-        const tooltip = new google.maps.InfoWindow({
-          content: tooltipContent,
-        });
+        // const tooltip = new google.maps.InfoWindow({
+        //   content: tooltipContent,
+        // });
 
-        marker.addListener('mouseover', () => {
-          tooltip.open(map, marker);
-        });
+        // marker.addListener('mouseover', () => {
+        //   tooltip.open(map, marker);
+        // });
 
-        marker.addListener('mouseout', () => {
-          tooltip.close();
-        });
+        // marker.addListener('mouseout', () => {
+        //   tooltip.close();
+        // });
 
-        const infoWindowContent = `
-        <div>
-          <strong>${location.store_info.name}</strong><br>
-          ${location.store_info.address}<br>
-          ${location.store_info.state}, ${location.store_info.country}<br>
-          ${location.store_info.phone}
-        </div>
-      `;
+        //     const infoWindowContent = `
+        //     <div>
+        //       <strong>${location.store_info.name}</strong><br>
+        //       ${location.store_info.address}<br>
+        //       ${location.store_info.state}, ${location.store_info.country}<br>
+        //       ${location.store_info.phone}
+        //     </div>
+        //   `;
 
-        const infoWindow = new google.maps.InfoWindow({ content: infoWindowContent });
+        //     const infoWindow = new google.maps.InfoWindow({ content: infoWindowContent });
 
-        marker.addListener('gmp-click', () => {
-          infoWindow.open({ anchor: marker, map: map, shouldFocus: false });
-        });
+        // marker.addListener('gmp-click', () => {
+        //   infoWindow.open({ anchor: marker, map: map, shouldFocus: false });
+        // });
 
         markers.push(marker);
       });
