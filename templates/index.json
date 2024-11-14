@@ -93,6 +93,15 @@
         "show_view_all": true
       }
     },
+    "featured_events_JWhbe7": {
+      "type": "featured-events",
+      "settings": {
+        "heading": "<p>Join Us</p>",
+        "selected_blog": "events",
+        "cta_link": "shopify://blogs/events",
+        "cta_label": "View All Events"
+      }
+    },
     "appointment_section_zrN4XF": {
       "type": "appointment-section",
       "settings": {
@@ -103,15 +112,6 @@
         "body_copy": "<p>Discover your dream dress at our River North Chicago loft studio. 445 W Erie St #108, Chicago, IL 60654</p>",
         "cta_link": "shopify://pages/appointments",
         "cta_text": "Book An Appointment"
-      }
-    },
-    "featured_events_JWhbe7": {
-      "type": "featured-events",
-      "settings": {
-        "heading": "<p>Join Us</p>",
-        "selected_blog": "events",
-        "cta_link": "shopify://blogs/events",
-        "cta_label": "View All Events"
       }
     },
     "featured_on_mByktG": {
@@ -164,8 +164,8 @@
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
     "main_lwd_builder_3wqr3i",
     "featured_collection_7NitaA",
-    "appointment_section_zrN4XF",
     "featured_events_JWhbe7",
+    "appointment_section_zrN4XF",
     "featured_on_mByktG",
     "instagram_section_xWcUw4"
   ]
