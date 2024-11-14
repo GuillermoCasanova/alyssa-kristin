@@ -95,6 +95,17 @@
     },
     "blurb_section_g6YbjW": {
       "type": "blurb-section",
+      "blocks": {
+        "feature_Mg8AAn": {
+          "type": "feature",
+          "settings": {
+            "feature": "Attainable luxury"
+          }
+        }
+      },
+      "block_order": [
+        "feature_Mg8AAn"
+      ],
       "settings": {
         "heading": "<p>the ALYSSA KRISTIN difference</p>",
         "card_heading": "<p><em>the</em> Fine Details</p>",
