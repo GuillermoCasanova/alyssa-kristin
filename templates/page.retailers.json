@@ -275,6 +275,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_QNbbzf": {
+          "type": "location",
+          "settings": {
+            "store_name": "Kalon Bridal Studio",
+            "website": "https://kalonbridalstudio.com/",
+            "phone_number": "(515) 220-2085",
+            "address": "<p>413 Euclid Avenue, Suite 102 Des Moines, IA 50313</p>",
+            "state": "Iowa",
+            "country": "USA",
+            "longitude": 41.6,
+            "latitude": -93.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -294,7 +309,8 @@
         "location_9xEBRy",
         "location_kg9MFB",
         "location_3hk6wp",
-        "location_rr9hB9"
+        "location_rr9hB9",
+        "location_QNbbzf"
       ],
       "settings": {
         "heading": "Find a Retailer",
