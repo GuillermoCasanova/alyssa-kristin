@@ -23,13 +23,13 @@
     gap: var(--level3); 
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__inner {
         gap: var(--level10); 
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__inner {
         grid-template-columns: minmax(0, 40%) minmax(0, 55%);
         max-width: 100%; 
@@ -52,13 +52,13 @@
     #Columns
 \*------------------------------------*/
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__right-column {
         padding-top: 10vw;
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__right-column {
         padding-top: var(--level6);
     }
@@ -81,7 +81,7 @@
     position: relative;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__image {
         right: -1rem;
     }
@@ -100,7 +100,7 @@
     width: 80%; 
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__image:before {
         left: -1.5rem; 
         top: -1.5rem; 
@@ -125,13 +125,13 @@
     overflow: hidden;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__image-wrapper {
         padding-bottom: 130%; 
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__image-wrapper {
         padding-bottom: 90%; 
     }
@@ -167,7 +167,7 @@
     margin-bottom: -1rem; 
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__quote {
         margin-bottom: var(--level10); 
     }
@@ -195,7 +195,7 @@
     line-height: 1.5;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__heading {
         font-size: var(--kilo); 
         min-width: 32rem;
@@ -203,7 +203,7 @@
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__heading {
         font-size: var(--mega); 
         min-width: 40rem;
@@ -236,7 +236,7 @@
 }
 
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__copy {
         padding: var(--level7);
         top: -4rem;
@@ -247,7 +247,7 @@
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__copy {
         max-width: 80%; 
         top: -6rem;
@@ -282,14 +282,14 @@
     margin-right: auto; 
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     .brand-intro__copy__body {
         font-size: var(--h4);
         margin-bottom: 0; 
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .brand-intro__copy__body {
         font-size: var(--h4);
         margin-bottom: 0; 
@@ -312,10 +312,30 @@
     margin-bottom: var(--level10);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
+    .brand-intro__cta {
+        margin-top: 0;
+        margin-top: -.5rem;
+    }
+}
+
+
+@media screen and (min-width: 940px) {
         .brand-intro__cta {
             margin-top: 0;
-            margin-bottom: calc(var(--level10) * 2); 
+            top: -7rem;
+            margin-top: -3.5rem;
+            bottom: auto;
+            position: relative;
+            margin-bottom: calc(var(--level10)* 2);
+            max-width: 54%;
+            margin-right: 0;
+            right: 0;
+            left: auto;
+            margin-left: auto;
+            /* background: currentColor; */
+            width: 100%;
+            text-align: left;
         }
 }
 

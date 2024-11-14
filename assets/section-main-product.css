@@ -1745,6 +1745,10 @@ button.thumbnail[aria-current="true"] {
  letter-spacing: .5px;
 }
 
+.tabbed-interface__tabs button[aria-selected="true"] {
+  text-decoration: underline;
+}
+
 .tabbed-interface__tabs button:hover,
 .tabbed-interface__tabs button:focus {
   text-decoration: underline;
