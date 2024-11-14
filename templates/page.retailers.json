@@ -320,6 +320,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_BXQERR": {
+          "type": "location",
+          "settings": {
+            "store_name": "Garnish Boutique",
+            "website": "https://garnishboutique.com/",
+            "phone_number": "(410) 321-1406",
+            "address": "<p>1515 LaBelle Avenue, Suite 3 Baltimore, Maryland 21204</p>",
+            "state": "Maryland",
+            "country": "USA",
+            "longitude": 39.4,
+            "latitude": -76.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -342,7 +357,8 @@
         "location_rr9hB9",
         "location_QNbbzf",
         "location_QqExPN",
-        "location_pz6nhW"
+        "location_pz6nhW",
+        "location_BXQERR"
       ],
       "settings": {
         "heading": "Find a Retailer",
