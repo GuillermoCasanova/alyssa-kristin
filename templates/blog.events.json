@@ -34,45 +34,6 @@
         "cta-url": ""
       }
     },
-    "16805d2d-658b-4e22-8d79-5290de6f24c8": {
-      "type": "blog-navigation",
-      "blocks": {
-        "2922be8a-0a87-4405-bfd0-5bf2905da4b4": {
-          "type": "blog",
-          "settings": {
-            "blog": "all"
-          }
-        },
-        "template--16783451619573__16805d2d-658b-4e22-8d79-5290de6f24c8-blog-1": {
-          "type": "blog",
-          "settings": {
-            "blog": "community"
-          }
-        },
-        "82e0c60d-cf85-4edb-abb6-9dbd3a3688ec": {
-          "type": "blog",
-          "settings": {
-            "blog": "recipes"
-          }
-        },
-        "blog_UBY4Hw": {
-          "type": "blog",
-          "disabled": true,
-          "settings": {
-            "blog": "news"
-          }
-        }
-      },
-      "block_order": [
-        "2922be8a-0a87-4405-bfd0-5bf2905da4b4",
-        "template--16783451619573__16805d2d-658b-4e22-8d79-5290de6f24c8-blog-1",
-        "82e0c60d-cf85-4edb-abb6-9dbd3a3688ec",
-        "blog_UBY4Hw"
-      ],
-      "settings": {
-        "name": "Blog Navigation"
-      }
-    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -90,12 +51,19 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "main_collection_description_3btUxG": {
+      "type": "main-collection-description",
+      "settings": {
+        "heading": "EVENTS",
+        "description": "<p>Discover the perfect centerpiece for your wedding wardrobe from bridal dresses by Shona Joy. We are a global brand with a clear Australian identity, crafting timeless pieces that are designed to celebrate life in. Featuring effortless and modern silhouettes, designed in luxurious white, ivory and neutral silk. These dresses will take you from engagement to ceremony and reception.</p>"
+      }
     }
   },
   "order": [
     "5c8f955f-ef36-4d0d-ab49-e2f71b13568f",
-    "16805d2d-658b-4e22-8d79-5290de6f24c8",
     "main",
-    "16944799603a2158b9"
+    "16944799603a2158b9",
+    "main_collection_description_3btUxG"
   ]
 }
