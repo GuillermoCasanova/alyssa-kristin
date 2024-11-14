@@ -24,6 +24,9 @@
 {% schema %}
 {
   "name": "Featured Events",
+  "enabled_on": {
+    "templates": ["page", "index"]
+  },
   "settings": [
     {
       "type": "richtext",
@@ -36,7 +39,7 @@
       "label": "Select Blog"
     },
     {
-      "type": "richtext",
+      "type": "url",
       "id": "cta_link",
       "label": "CTA Link"
     },
@@ -44,6 +47,11 @@
       "type": "text",
       "id": "cta_label",
       "label": "CTA Label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Events"
     }
   ]
 }
