@@ -27,6 +27,16 @@
         "quote": "<p>“Uniquely you, <em>effortlessly refined—our gowns celebrate</em> your individuality.”</p>"
       }
     },
+    "about_process_xNqrzX": {
+      "type": "about-process",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "card_body": "",
+        "card_cta": "Explore More",
+        "card_link": ""
+      }
+    },
     "about_founder_4HW7Qt": {
       "type": "about-founder",
       "settings": {
@@ -53,24 +63,14 @@
         "bottom_border": "yes",
         "trigger_email_popup": false
       }
-    },
-    "about_process_xNqrzX": {
-      "type": "about-process",
-      "settings": {
-        "heading": "",
-        "body": "",
-        "card_body": "",
-        "card_cta": "Explore More",
-        "card_link": ""
-      }
     }
   },
   "order": [
     "main",
     "about_philosophy_haWQd9",
+    "about_process_xNqrzX",
     "about_founder_4HW7Qt",
     "appointment_section_YTTUDb",
-    "about_process_xNqrzX",
     "instagram_section_kjmqLj"
   ]
 }
