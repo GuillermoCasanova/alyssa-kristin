@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "5c8f955f-ef36-4d0d-ab49-e2f71b13568f": {
+      "type": "blog-header",
+      "blocks": {
+        "template--16783451619573__5c8f955f-ef36-4d0d-ab49-e2f71b13568f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "our EVENTS"
+          }
+        },
+        "86bf2952-b1dd-481b-bc60-0d2006f0fed1": {
+          "type": "body",
+          "settings": {
+            "body": "<p>We are excited to offer both trunk shows and sales events. Trunk shows offer brides the exclusive opportunity to see the latest Alyssa Kristin designs. The entire collection is in store for a limited time, so don’t miss your chance to say yes before they ship off. As an added bonus, many stores offer a trunk show. Sales events offer brides the chance to purchase their dream AK dress at a discount, selecting from the boutique’s curated collection of Alyssa Kristin gowns. Book your appointment today.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16783451619573__5c8f955f-ef36-4d0d-ab49-e2f71b13568f-heading-1",
+        "86bf2952-b1dd-481b-bc60-0d2006f0fed1"
+      ],
+      "settings": {
+        "video": "",
+        "cta-url": ""
+      }
+    },
+    "16805d2d-658b-4e22-8d79-5290de6f24c8": {
+      "type": "blog-navigation",
+      "blocks": {
+        "2922be8a-0a87-4405-bfd0-5bf2905da4b4": {
+          "type": "blog",
+          "settings": {
+            "blog": "all"
+          }
+        },
+        "template--16783451619573__16805d2d-658b-4e22-8d79-5290de6f24c8-blog-1": {
+          "type": "blog",
+          "settings": {
+            "blog": "community"
+          }
+        },
+        "82e0c60d-cf85-4edb-abb6-9dbd3a3688ec": {
+          "type": "blog",
+          "settings": {
+            "blog": "recipes"
+          }
+        },
+        "blog_UBY4Hw": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "blog": "news"
+          }
+        }
+      },
+      "block_order": [
+        "2922be8a-0a87-4405-bfd0-5bf2905da4b4",
+        "template--16783451619573__16805d2d-658b-4e22-8d79-5290de6f24c8-blog-1",
+        "82e0c60d-cf85-4edb-abb6-9dbd3a3688ec",
+        "blog_UBY4Hw"
+      ],
+      "settings": {
+        "name": "Blog Navigation"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": false,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16944799603a2158b9": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "5c8f955f-ef36-4d0d-ab49-e2f71b13568f",
+    "16805d2d-658b-4e22-8d79-5290de6f24c8",
+    "main",
+    "16944799603a2158b9"
+  ]
+}
