@@ -2086,3 +2086,62 @@ button:hover,
   background-color: #F1EDEB;
 }
 
+
+
+
+
+.swym-ui-component.swym-wishlist-page,
+div#swym-wishlist-render-container{
+  background-color: rgb(var(--color-base-background-1)) !important;
+}
+
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-item {
+  background-color: transparent !important;
+}
+
+.swym-wishlist-grid {
+  width: 100%;
+  max-width: 100%;
+  margin: 0; 
+  max-width: 100% !important;
+}
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-image-wrapper {
+  padding-bottom: 140%; 
+}
+
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-add-to-cart-btn  {
+  background-color: transparent !important;
+  border: none ;
+  font-size: var(--normal);
+  font-family: var(--tertiary-font-family);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--level10);
+  border-radius: 0 !important;
+  color: rgb(var(--color-base-text-1)) !important;
+  border-bottom: 1px solid rgb(var(--color-base-text-1));
+  padding: var(--level4) var(--level6) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-add-to-cart-btn:hover,
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-add-to-cart-btn:focus {
+  background-color: rgb(var(--color-base-text-1)) !important;
+  color: #fff !important;
+}
+
+.swym-product-final-price  {
+  font-family: var(--tertiary-font-family) !important;
+  font-size: var(--normal) !important;
+  color: rgb(var(--color-base-text-1)) !important;
+  letter-spacing: .15px !important;
+}
+
+.swym-title {
+  text-transform: uppercase !important;
+  font-size: var(--h2) !important;
+  font-family: var(--secondary-font-family) !important;
+  font-weight: 300 !important;
+  margin-left: 0 !important;
+}
