@@ -14,18 +14,15 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "size_guide_AzhnFp": {
           "type": "size-guide",
@@ -61,7 +58,7 @@
           "settings": {
             "heading": "<p>Contact us To <em>find your size</em></p>",
             "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-            "cta_link": "",
+            "cta_link": "shopify://pages/retailers",
             "cta_text": "Learn More"
           }
         }
