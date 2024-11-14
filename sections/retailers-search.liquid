@@ -41,7 +41,7 @@
           <div class="card__inner" data-filter-by>
             <div class="location-filter-header">
               <p>Filter By</p>
-              <input type="checkbox" id="gowns" name="filgit pter" value="gowns">
+              <input type="checkbox" id="gowns" name="filgit pter" value="gowns" checked>
               <label for="gowns">Gowns</label>
 
               <input type="checkbox" id="lwd" name="filter" value="lwd">
@@ -137,6 +137,8 @@
       const gownCheckbox = document.querySelector('input#gowns').checked;
       const lwdCheckbox = document.querySelector('input#lwd').checked;
 
+      console.log(gownCheckbox, lwdCheckbox);
+      
       const filteredLocations = locations.filter((location) => {
         const matchesGown = gownCheckbox ? location.store_info.gown : true;
         const matchesLwd = lwdCheckbox ? location.store_info.lwd : true;
