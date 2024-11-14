@@ -1586,6 +1586,7 @@ constructor() {
   super(); 
   this.button = this.querySelector('button');
   this.setUpEvents(); 
+  console.log(this.button);
 
   document.addEventListener('click', (event) => {
     
@@ -1632,7 +1633,13 @@ setUpEvents() {
       trapFocus(document.querySelector('[data-search-modal]'), document.querySelector('[data-search-modal] input[type="search"]'));
     }
   }); 
+
+  document.querySelector('[data-modal-close]').addEventListener('click', () => {
+    this.closeSearch();
+  });
 }
+
+
 
 }
 
