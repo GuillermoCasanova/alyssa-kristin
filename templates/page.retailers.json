@@ -200,6 +200,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_iageig": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Sentimentalist",
+            "website": "https://www.thesentimentalistatl.com/",
+            "phone_number": "(404) 355-7500",
+            "address": "<p>1465 Howell Mill Rd NW Suite 400-A Atlanta, GA 30318</p>",
+            "state": "Georgia",
+            "country": "USA",
+            "longitude": 33.8,
+            "latitude": -84.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -214,7 +229,8 @@
         "location_UyYPtq",
         "location_xnC9iP",
         "location_TkDiFh",
-        "location_3QgCjc"
+        "location_3QgCjc",
+        "location_iageig"
       ],
       "settings": {
         "heading": "Find a Retailer",
