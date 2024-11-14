@@ -665,6 +665,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_8jXeFm": {
+          "type": "location",
+          "settings": {
+            "store_name": "Maggie Louise Bridal",
+            "website": "https://www.maggielouisebridal.com/",
+            "phone_number": "(901) 316-5397",
+            "address": "<p>1730 S. Germantown Rd., Ste. 107 Germantown, TN 38138</p>",
+            "state": "Tennessee",
+            "country": "USA",
+            "longitude": 35.1,
+            "latitude": -89.8,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -710,7 +725,8 @@
         "location_6KdrMX",
         "location_axp9Pq",
         "location_ft3eLm",
-        "location_9dw6me"
+        "location_9dw6me",
+        "location_8jXeFm"
       ],
       "settings": {
         "heading": "Find a Retailer",
