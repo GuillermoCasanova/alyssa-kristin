@@ -27,7 +27,6 @@
         "quote": "<p>“Uniquely you, <em>effortlessly refined—our gowns celebrate</em> your individuality.”</p>"
       }
     },
-
     "about_founder_4HW7Qt": {
       "type": "about-founder",
       "settings": {
@@ -46,11 +45,21 @@
         "cta_text": "Book an Appointment"
       }
     },
+    "instagram_section_kjmqLj": {
+      "type": "instagram-section",
+      "settings": {
+        "heading": "<p><em>Follow Us</em> On Instagram</p>",
+        "top_border": "no",
+        "bottom_border": "yes",
+        "trigger_email_popup": false
+      }
+    }
   },
   "order": [
     "main",
     "about_philosophy_haWQd9",
     "about_founder_4HW7Qt",
     "appointment_section_YTTUDb",
+    "instagram_section_kjmqLj"
   ]
 }
