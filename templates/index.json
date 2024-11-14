@@ -136,6 +136,12 @@
         "bottom_border": "no",
         "trigger_email_popup": false
       }
+    },
+    "main_lwd_builder_3wqr3i": {
+      "type": "main-lwd-builder",
+      "settings": {
+        "collection": "little-white-dress"
+      }
     }
   },
   "order": [
@@ -145,6 +151,7 @@
     "featured_collection_7NitaA",
     "featured_on_mByktG",
     "appointment_section_zrN4XF",
-    "1655920347d426af19"
+    "1655920347d426af19",
+    "main_lwd_builder_3wqr3i"
   ]
 }
