@@ -1,48 +1,47 @@
 <link rel="stylesheet" href="{{ 'instagram-feed.css' | asset_url }}" media="print" onload="this.media='all'">
 <script type="module" src="{{ 'instagram-feed.js' | asset_url }}" defer="defer"></script>
 
-<section
-  class="instagram-feed  {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}"
-  {% if section.settings.trigger_email_popup %}
-    data-trigger-pop-up
-  {% endif %}
->
-  <instagram-feed class="instagram-feed__inner page-width">
-    <div class="instagram-feed__header">
-      <h2 class="instagram-feed__heading">
-        {{ section.settings.heading }}
-      </h2>
-    </div>
+<div class="instagram-feed">
+  <section
+    class="instagram-feed__inner"
+  >
+    <instagram-feed class="instagram-feed__inner ">
+      <div class="instagram-feed__header page-width is-full-width">
+        <h2 class="instagram-feed__heading">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
 
-    <ul id="instafeed" data-script-url="{{ 'instafeed.min.js' | asset_url }}" class="instagram-feed__posts">
-      <li class="instagram-feed__post">
-        <span class="instagram-feed__post__inner"> </span>
-      </li>
-      <li class="instagram-feed__post">
-        <span class="instagram-feed__post__inner"> </span>
-      </li>
-      <li class="instagram-feed__post">
-        <span class="instagram-feed__post__inner"> </span>
-      </li>
-      <li class="instagram-feed__post">
-        <span class="instagram-feed__post__inner"> </span>
-      </li>
-      <li class="instagram-feed__post">
-        <span class="instagram-feed__post__inner"> </span>
-      </li>
-    </ul>
-  </instagram-feed>
-</section>
+      <ul id="instafeed" data-script-url="{{ 'instafeed.min.js' | asset_url }}" class="instagram-feed__posts">
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+        <li class="instagram-feed__post">
+          <span class="instagram-feed__post__inner"> </span>
+        </li>
+      </ul>
+    </instagram-feed>
+  </section>
+</div>
 
 {% schema %}
 {
   "name": "Instagram Feed",
   "settings": [
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
       "label": "Heading",
-      "info": "Enter the heading for the Instagram Feed section."
+      "info": "<p>Follow Us On Instagram</p>"
     },
     {
       "type": "header",
