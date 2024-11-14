@@ -245,6 +245,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_3hk6wp": {
+          "type": "location",
+          "settings": {
+            "store_name": "Honey Bridal",
+            "website": "https://www.honey-bridal.com/",
+            "phone_number": "(773) 809-3382",
+            "address": "<p>670 N Milwaukee Chicago, IL</p>",
+            "state": "Illinois",
+            "country": "USA",
+            "longitude": 41.9,
+            "latitude": -87.7,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -262,7 +277,8 @@
         "location_3QgCjc",
         "location_iageig",
         "location_9xEBRy",
-        "location_kg9MFB"
+        "location_kg9MFB",
+        "location_3hk6wp"
       ],
       "settings": {
         "heading": "Find a Retailer",
