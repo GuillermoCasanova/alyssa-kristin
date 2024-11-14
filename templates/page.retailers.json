@@ -725,6 +725,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_zjjpha": {
+          "type": "location",
+          "settings": {
+            "store_name": "Alta Moda Bridal",
+            "website": "https://www.altamodabridal.com/",
+            "phone_number": "(801) 413 7730",
+            "address": "<p>536 East 300 South, Salt Lake City, UT</p>",
+            "state": "Utah",
+            "country": "USA",
+            "longitude": 40.8,
+            "latitude": -111.9,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -774,7 +789,8 @@
         "location_8jXeFm",
         "location_yyMppG",
         "location_TbrgYR",
-        "location_xkM7zG"
+        "location_xkM7zG",
+        "location_zjjpha"
       ],
       "settings": {
         "heading": "Find a Retailer",
