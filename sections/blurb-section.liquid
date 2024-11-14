@@ -31,17 +31,23 @@
           {{ section.settings.heading }}
         </h2>
 
-        <div class="blurb-section__copy__body">
-          {{ section.settings.body }}
-        </div>
-
-        {% if section.settings.section_cta_url != blank %}
-          <div class="blurb-section__copy__body__cta">
-            <a href="{{ section.settings.section_cta_url }}">
-              {{ section.settings.section_cta_text }}
-            </a>
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__heading">
+              {{ section.settings.card_heading }}
+            </div>
+            <div class="card__description">
+              {{ section.settings.card_description }}
+            </div>
+            {% if section.settings.card_cta_url != blank %}
+              <div class="blurb-section__copy__body__cta">
+                <a href="{{ section.settings.card_cta_url }}">
+                  {{ section.settings.card_cta_text }}
+                </a>
+              </div>
+            {% endif %}
           </div>
-        {% endif %}
+        </div>
       </div>
     </div>
   </div>
@@ -59,15 +65,35 @@
       "content": "Copy"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
       "label": "Section Heading"
     },
     {
-      "type": "richtext",
-      "id": "body",
-      "label": "Section Body"
+      "type": "header",
+      "content": "Card"
     },
+    {
+      "type": "richtext",
+      "id": "card_heading",
+      "label": "Card Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "card_description",
+      "label": "Card Description"
+    },
+    {
+      "type": "url",
+      "id": "card_cta_url",
+      "label": "Card CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "card_cta_text",
+      "label": "Card CTA Text"
+    },
+
     {
       "type": "image_picker",
       "id": "image",
