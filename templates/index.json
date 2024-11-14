@@ -93,6 +93,16 @@
         "show_view_all": true
       }
     },
+    "blurb_section_g6YbjW": {
+      "type": "blurb-section",
+      "settings": {
+        "heading": "the ALYSSA KRISTIN difference",
+        "body": "<p>Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
+        "image": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.25.51_PM_1.png",
+        "section-alignment": "normal",
+        "copy-bg-color": "background-1"
+      }
+    },
     "featured_events_JWhbe7": {
       "type": "featured-events",
       "settings": {
@@ -164,6 +174,7 @@
     "a91f73fa-9991-492c-bca6-4dfe59bea098",
     "main_lwd_builder_3wqr3i",
     "featured_collection_7NitaA",
+    "blurb_section_g6YbjW",
     "featured_events_JWhbe7",
     "featured_on_mByktG",
     "appointment_section_zrN4XF",
