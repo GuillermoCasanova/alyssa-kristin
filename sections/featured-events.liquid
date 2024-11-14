@@ -1,0 +1,50 @@
+<div class="featured-events">
+  <h2 class="featured-events__heading">
+    {{ section.settings.heading }}
+  </h2>
+
+  <div class="featured-events__list">
+    {% assign selected_blog = section.settings.selected_blog %}
+    {% assign events = blogs[selected_blog].articles | sort: 'metafields.details.date' | reverse | limit: 3 %}
+
+    {% for event in events %}
+      <div class="featured-event">
+        <h3 class="featured-event__title">{{ event.title }}</h3>
+        <p class="featured-event__date">{{ event.metafields.details.date }}</p>
+        <p class="featured-event__excerpt">{{ event.excerpt }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <a href="{{ section.settings.cta_link }}" class="featured-events__cta">
+    {{ section.settings.cta_label }}
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Events",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "blog",
+      "id": "selected_blog",
+      "label": "Select Blog"
+    },
+    {
+      "type": "richtext",
+      "id": "cta_link",
+      "label": "CTA Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA Label"
+    }
+  ]
+}
+{% endschema %}
