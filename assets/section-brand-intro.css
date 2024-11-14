@@ -191,6 +191,11 @@
 .brand-intro__heading em {
     text-transform: lowercase;
 }
+
+.brand-intro__heading em strong {
+    text-transform: uppercase;
+    font-weight: 300;;
+}
 .brand-intro__heading p {
     line-height: 1.5;
 }
