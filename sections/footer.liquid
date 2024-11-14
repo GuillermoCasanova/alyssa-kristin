@@ -46,7 +46,7 @@
                 </custom-input-wrapper>
                 <button
                   type="submit"
-                  class=" button--large"
+                  class=" button--large button button--tertiary"
                   name="commit"
                   id="Subscribe"
                 >
@@ -75,6 +75,19 @@
         </div>
         <div class="footer__social-media">
           <ul class="footer__social-media-list">
+            {% if settings.social_instagram_link %}
+              <li class="footer__social-media-item">
+                <a
+                  href="{{ settings.social_instagram_link }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__social-media-link"
+                >
+                  {% render 'icon-instagram' %}
+                </a>
+              </li>
+            {% endif %}
+
             {% if settings.social_pinterest_link %}
               <li class="footer__social-media-item">
                 <a
@@ -111,26 +124,11 @@
                 </a>
               </li>
             {% endif %}
-
-            {% if settings.social_instagram_link %}
-              <li class="footer__social-media-item">
-                <a
-                  href="{{ settings.social_instagram_link }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="footer__social-media-link"
-                >
-                  {% render 'icon-instagram' %}
-                </a>
-              </li>
-            {% endif %}
           </ul>
         </div>
 
         <div class="footer__logo">
-          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <use xlink:href="#logo-badge" />
-          </svg>
+          <img src="{{ 'AK-Charcoal-badge.png' | asset_url }}" alt="{{ shop.name }}" width="100%" height="100%">
         </div>
       </div>
     {%- endif -%}

@@ -50,6 +50,14 @@
   margin-bottom: 0 !important; 
 }
 
+@media screen and (min-width: 700px) {
+  .newsletter-form__field button {
+    padding-left: var(--level5);
+    padding-right: var(--level5);
+    margin-left: var(--level2);
+  }
+}
+
 .newsletter-form__field .custom-field {
   margin-bottom: 0;
 }
@@ -58,8 +66,7 @@ input.newsletter-form__input {
   padding: var(--level3);
   padding-top: var(--level5);
   padding-bottom: var(--level5);
-  border-right: 0;
-  background-color: rgb(var(--color-base-background-1));
+  background-color: transparent;
 
 }
 

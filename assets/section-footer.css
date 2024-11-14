@@ -42,6 +42,7 @@
     max-width: var(--max-width-small);
     padding-left: var(--level9);
     padding-right: var(--level9);
+    padding-top: calc(var(--level10) + var(--level5));
   }
 }
 
@@ -304,7 +305,6 @@
 @media screen and (min-width: 940px) {
   .footer__copyright {
     text-align: left;
-    margin-bottom: var(--level10);
     padding-right: var(--level7);
   }
 }
