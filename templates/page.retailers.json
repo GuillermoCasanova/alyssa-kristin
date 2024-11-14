@@ -185,6 +185,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_3QgCjc": {
+          "type": "location",
+          "settings": {
+            "store_name": "Margaret Ellen Bridal",
+            "website": "https://www.margaretellenbridal.com/",
+            "phone_number": "(850) 641-0266",
+            "address": "<p>800 Serenoa Road, Santa Rosa Beach, FL, 32459</p>",
+            "state": "Florida",
+            "country": "USA",
+            "longitude": 30.3,
+            "latitude": -86.1,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -198,7 +213,8 @@
         "location_G89eg6",
         "location_UyYPtq",
         "location_xnC9iP",
-        "location_TkDiFh"
+        "location_TkDiFh",
+        "location_3QgCjc"
       ],
       "settings": {
         "heading": "Find a Retailer",
