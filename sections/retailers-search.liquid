@@ -148,11 +148,14 @@
       addMarkersFromJson(filteredLocations, AdvancedMarkerElement);
     }
 
+
     function addLocationToDOM(location) {
+        console.log(location);
       const locationsContainer = document.querySelector('[data-closest-locations]');
-      const listItem = `<li><a href="${location.store_info.url}">${location.store_info.name}</a> - ${location.store_info.address} <div>${location.store_info.phone}</div></li>`;
+      const listItem = `<li><div class="retailers-search__location__header"><a href="${location.store_info.url}" target="_blank">${location.store_info.name}</a>  <div class='retailers-search__location__miles'>${location.miles.toFixed(2)} MILES</div></div> ${location.store_info.address} <div>${location.store_info.phone}</div></li>`;
       locationsContainer.insertAdjacentHTML('beforeend', listItem);
     }
+
 
     // Calculate the distance between two coordinates using Haversine formula
     function calculateDistance(coord1, coord2) {
@@ -183,6 +186,7 @@
       const locationsWithDistance = locations.map((location) => ({
         ...location,
         distance: calculateDistance(userLocation, { lat: location.lat, lng: location.lng }),
+        miles: calculateDistance(userLocation, { lat: location.lat, lng: location.lng }) * 0.621371, // Convert kilometers to miles
       }));
 
       // Sort locations by distance and take the nearest three
@@ -247,6 +251,7 @@
         const locationsWithDistance = locations.map((location) => ({
           ...location,
           distance: calculateDistance(coordinates, { lat: location.lat, lng: location.lng }),
+          miles: calculateDistance(coordinates, { lat: location.lat, lng: location.lng }) * 0.621371, // Convert kilometers to miles
         }));
 
         // Sort locations by distance and take the nearest three
@@ -303,7 +308,8 @@
           "state": "{{ block.settings.state }}",
           "phone": "{{ block.settings.phone_number }}",
           "gown": {{ block.settings.gown }},
-          "lwd": {{ block.settings.lwd }}
+          "lwd": {{ block.settings.lwd }},
+          "url": "{{ block.settings.website }}"
         }
       }{% if forloop.last == false %},{% endif %}
     {% endfor %}

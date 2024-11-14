@@ -42,7 +42,7 @@
     .appointment-info__body__inner {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        column-gap: var(--level10); 
+        column-gap: var(--level5); 
     }
 }
 
@@ -139,11 +139,21 @@
 }
 
 
+
 @media screen and (min-width: 940px) {
     .appointment-info__step {
-        padding: 0; 
+        background-color: #F7F6F3;
+        border: 1px solid rgb(var(--color-base-text-1));  
+        width: 99%;
+        padding-top: var(--level7);
+        padding-left: var(--level7);
+        padding-right: var(--level7);
+        padding-bottom: 0; 
+        text-align: center;
     }
 }
+
+
 
 .appointment-info__step__heading {
     font-family: var(--quaternary-font-family); 

@@ -103,3 +103,12 @@
 [data-closest-locations]  li {
     margin-bottom: var(--level8);
 }
+
+.retailers-search__location__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.retailers-search__location__miles {
+    opacity: .5;
+}
