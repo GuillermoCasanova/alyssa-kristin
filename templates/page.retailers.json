@@ -695,6 +695,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_TbrgYR": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/dallas/bridal-shop",
+            "phone_number": "(972) 807-2597",
+            "address": "<p>154 Glass Street, Ste. 110 Dallas, TX 75207</p>",
+            "state": "Texas",
+            "country": "USA",
+            "longitude": 32.8,
+            "latitude": -96.8,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -742,7 +757,8 @@
         "location_ft3eLm",
         "location_9dw6me",
         "location_8jXeFm",
-        "location_yyMppG"
+        "location_yyMppG",
+        "location_TbrgYR"
       ],
       "settings": {
         "heading": "Find a Retailer",
