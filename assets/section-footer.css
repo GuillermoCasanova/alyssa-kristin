@@ -39,7 +39,7 @@
     grid-template-areas:
       'links links  newsletter newsletter';
     column-gap: var(--level8);
-    max-width: var(--max-width-small);
+    max-width: var(--max-width-medium);
     padding-left: var(--level9);
     padding-right: var(--level9);
     padding-top: calc(var(--level10) + var(--level5));
@@ -63,7 +63,6 @@
   margin-right: auto;
   margin-left: auto;
   text-align: left;
-  max-width: 90rem;
 }
 
 @media only screen and (min-width: 940px) {
