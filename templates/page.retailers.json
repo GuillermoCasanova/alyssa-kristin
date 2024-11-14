@@ -92,7 +92,7 @@
             "country": "USA",
             "longitude": 33.7,
             "latitude": -117.8,
-            "gown": false,
+            "gown": true,
             "lwd": false
           }
         }
