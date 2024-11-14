@@ -179,17 +179,17 @@
             </div>
           </div>
         {% else %}
-          <div class="card">
+          <div class="card is-alt">
             <div class="card__inner">
-              <div class="lwd-builder__copy">
-                <h2 class="lwd-builder___heading">
+              <div class="lwd-builder-alt-copy">
+                <h2 class="lwd-builder__heading  lwd-builder-alt-copy__heading">
                   {% if section.settings.alt_version_heading != blank %}
                     {{ section.settings.alt_version_heading }}
                   {% else %}
                     {{ section.settings.collection.title }}
                   {% endif %}
                 </h2>
-                <div class="lwd-builder___body">
+                <div class="lwd-builder-alt-copy_description">
                   {% if section.settings.alt_version_body != blank %}
                     {{ section.settings.alt_version_body }}
                   {% else %}

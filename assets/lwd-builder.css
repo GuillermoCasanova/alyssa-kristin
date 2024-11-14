@@ -26,6 +26,10 @@
     margin-bottom: var(--level9); 
 }
 
+.lwd-builder__heading p {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 940px) {
   .lwd-builder__heading {
     margin-bottom: var(--level7);
@@ -146,11 +150,12 @@ lwd-slideshow .swiper-slide {
 
 .lwd-builder__copy {
   padding: var(--level4);
+  text-align: center;
 }
 
 
 
-.lwd-builder___heading {
+.lwd-builder__heading {
   text-transform: uppercase;
   text-align: center;
   font-size: var(--h2);
@@ -158,6 +163,10 @@ lwd-slideshow .swiper-slide {
   margin-bottom: var(--level8);
 }
 
+
+.lwd-builder__body {
+  font-size: var(--h6);
+}
 
 
 
@@ -311,7 +320,7 @@ lwd-slideshow .swiper-slide {
 
  @media screen and (min-width: 940px) {
   .lwd-builder .swiper-button-next {
-    margin-right: var(--level3); 
+    margin-right: var(--level10); 
    }
  }
 
@@ -321,6 +330,49 @@ lwd-slideshow .swiper-slide {
 
  @media screen and (min-width: 940px) {
   .lwd-builder .swiper-button-prev {
-    margin-left: var(--level3); 
+    margin-left: var(--level10); 
    }
+ }
+
+
+
+ /*------------------------------------*\
+    #Alt Styles
+\*------------------------------------*/
+
+@media screen and (min-width: 940px) {
+  .is-alt .card {
+    pointer-events: auto;
+    width: 120%;
+    left: -15%;
+    position: relative;
+    z-index: 1;
+  }
+ }
+
+
+ .lwd-builder-alt-copy {
+  padding: var(--level2); 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ @media screen and (min-width: 940px) {
+  .lwd-builder-alt-copy {
+    padding: var(--level8); 
+    font-size: var(--h4);
+   }
+ }
+
+
+ .lwd-builder-alt-copy__heading em {
+  display: inline;
+ }
+
+ @media screen and (min-width: 940px) {
+  .lwd-builder-alt-copy__heading {
+    font-size: var(--h1);
+  }
  }
