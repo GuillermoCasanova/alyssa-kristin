@@ -455,6 +455,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_pGbrbf": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/new-york-city-bridal-shop/",
+            "phone_number": "(212) 924-2050",
+            "address": "<p>182 Duane St, New York, NY 10013</p>",
+            "state": "New York",
+            "country": "USA",
+            "longitude": 40.7,
+            "latitude": -74.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -486,7 +501,8 @@
         "location_jXAKxz",
         "location_xhy3P8",
         "location_3ekgJ4",
-        "location_mHUmEE"
+        "location_mHUmEE",
+        "location_pGbrbf"
       ],
       "settings": {
         "heading": "Find a Retailer",
