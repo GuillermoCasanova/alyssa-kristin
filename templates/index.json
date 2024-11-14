@@ -105,6 +105,15 @@
         "cta_text": "Book An Appointment"
       }
     },
+    "featured_events_JWhbe7": {
+      "type": "featured-events",
+      "settings": {
+        "heading": "<p>Join Us</p>",
+        "selected_blog": "events",
+        "cta_link": "",
+        "cta_label": ""
+      }
+    },
     "featured_on_mByktG": {
       "type": "featured-on",
       "blocks": {
@@ -156,6 +165,7 @@
     "main_lwd_builder_3wqr3i",
     "featured_collection_7NitaA",
     "appointment_section_zrN4XF",
+    "featured_events_JWhbe7",
     "featured_on_mByktG",
     "1655920347d426af19"
   ]
