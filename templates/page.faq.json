@@ -11,8 +11,7 @@
   "sections": {
     "image_video_banner_XmEgnA": {
       "type": "text-page-header",
-      "settings": {
-      }
+      "settings": {}
     },
     "main": {
       "type": "faqs-list",
@@ -21,14 +20,14 @@
           "type": "faq_block",
           "settings": {
             "question": "How much do your gowns cost?",
-            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
+            "answer": "<p>Our gowns range between $2,850-$3,450. Modifications are available for an additional fee and typically range between $100-$600. Please inquire with your local retailer for pricing details.</p>"
           }
         },
         "faq_block_TMLN7m": {
           "type": "faq_block",
           "settings": {
             "question": "What sizes do you offer?",
-            "answer": "<p>Cachaça is a Brazilian distilled spirit made from fermented sugarcane juice. It is the main ingredient in Brazil's national cocktail, the caipirinha.</p>"
+            "answer": "<p>The Alyssa Kristin size chart ranges from 0-28. Sizing beyond the size chart is also available - please inquire with your stylist.</p>"
           }
         },
         "e00f2a91-4f7c-4e5a-b9d2-e609293e2cf7": {
