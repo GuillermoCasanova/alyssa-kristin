@@ -23,6 +23,7 @@
       "settings": {
         "heading": "<p>Our Philosophy</p>",
         "body": "<p>Every bride is unique, and so is every gown. From dramatic trains to plunging necklines, our customizable designs are crafted to make you feel like the most confident version of yourself. Effortlessly refined, unstoppably supportive—each piece is a reflection of your distinct style.</p>",
+        "image": "shopify://shop_images/Process_5a624e8a-c5d1-456f-aa4e-6d1029f74b1c.jpg",
         "quote": "<p>“Uniquely you, effortlessly refined—our gowns celebrate your individuality.”</p>"
       }
     },
@@ -66,8 +67,8 @@
   "order": [
     "main",
     "about_philosophy_haWQd9",
-    "about_founder_4HW7Qt",
     "about_process_cLfXmB",
+    "about_founder_4HW7Qt",
     "appointment_section_YTTUDb",
     "instagram_feed_x7YidR"
   ]
