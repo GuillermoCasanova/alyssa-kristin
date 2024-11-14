@@ -305,6 +305,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_pz6nhW": {
+          "type": "location",
+          "settings": {
+            "store_name": "Adorn Louisville",
+            "website": "https://www.adornbridal.com/adornlouisville",
+            "phone_number": "(502) 805-1533",
+            "address": "<p>629 East Market Street Suite 101 Louisville, KY 40202</p>",
+            "state": "Kentucky",
+            "country": "USA",
+            "longitude": 38.3,
+            "latitude": -85.7,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -326,7 +341,8 @@
         "location_3hk6wp",
         "location_rr9hB9",
         "location_QNbbzf",
-        "location_QqExPN"
+        "location_QqExPN",
+        "location_pz6nhW"
       ],
       "settings": {
         "heading": "Find a Retailer",
