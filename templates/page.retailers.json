@@ -155,6 +155,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_xnC9iP": {
+          "type": "location",
+          "settings": {
+            "store_name": "Everthine Bridal Boutique",
+            "website": "https://shopeverthine.com/",
+            "phone_number": "(203) 421‑6222",
+            "address": "<p>33 Wall St, Madison, CT 06443</p>",
+            "state": "Connecticut",
+            "country": "USA",
+            "longitude": 41.3,
+            "latitude": -72.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -166,7 +181,8 @@
         "location_RjrbRT",
         "location_Rct3jT",
         "location_G89eg6",
-        "location_UyYPtq"
+        "location_UyYPtq",
+        "location_xnC9iP"
       ],
       "settings": {
         "heading": "Find a Retailer",
