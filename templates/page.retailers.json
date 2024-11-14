@@ -530,6 +530,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_nyRQkQ": {
+          "type": "location",
+          "settings": {
+            "store_name": "Hyde Park Bridal",
+            "website": "https://hydeparkbridal.com/",
+            "phone_number": "(513) 321-1800",
+            "address": "<p>3319 Erie Avenue Cincinnati, OH 45208</p>",
+            "state": "Ohio",
+            "country": "USA",
+            "longitude": 39.1,
+            "latitude": -84.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -566,7 +581,8 @@
         "location_X9Nkdt",
         "location_irnt6m",
         "location_dL7rL8",
-        "location_3UCNFe"
+        "location_3UCNFe",
+        "location_nyRQkQ"
       ],
       "settings": {
         "heading": "Find a Retailer",
