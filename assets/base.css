@@ -309,7 +309,6 @@ body {
   font-display: fallback;
   background: rgb(var(--color-base-background-1));
   color: rgb(var(--color-base-text-1));
-  color: yellow;
 }
 
 
