@@ -440,6 +440,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_mHUmEE": {
+          "type": "location",
+          "settings": {
+            "store_name": "Free Love Bridal",
+            "website": "https://freelovebridal.com/",
+            "phone_number": "(609) 854-3594",
+            "address": "<p>225 Jackson Street Cape May, NJ 08204</p>",
+            "state": "New Jersey",
+            "country": "USA",
+            "longitude": 38.9,
+            "latitude": -74.9,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -470,7 +485,8 @@
         "location_mhKwUf",
         "location_jXAKxz",
         "location_xhy3P8",
-        "location_3ekgJ4"
+        "location_3ekgJ4",
+        "location_mHUmEE"
       ],
       "settings": {
         "heading": "Find a Retailer",
