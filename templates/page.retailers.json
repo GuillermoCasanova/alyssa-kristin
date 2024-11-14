@@ -620,6 +620,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_axp9Pq": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Ivory Concept",
+            "website": "https://www.ticbridal.com/",
+            "phone_number": "(610) 496-2439",
+            "address": "<p>445 Lancaster Avenue, Malvern PA 19355</p>",
+            "state": "Pennsylvania",
+            "country": "USA",
+            "longitude": 40.0,
+            "latitude": -75.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -662,7 +677,8 @@
         "location_njTiFH",
         "location_HEFGNd",
         "location_UyVmV9",
-        "location_6KdrMX"
+        "location_6KdrMX",
+        "location_axp9Pq"
       ],
       "settings": {
         "heading": "Find a Retailer",
