@@ -230,6 +230,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_kg9MFB": {
+          "type": "location",
+          "settings": {
+            "store_name": "Bridal Parlour",
+            "website": "https://www.bridalparlour.net/",
+            "phone_number": "(618) 622-0880",
+            "address": "<p>3630 Green Mount Crossing Dr.  Shiloh, IL</p>",
+            "state": "Illinois",
+            "country": "USA",
+            "longitude": 38.6,
+            "latitude": -89.9,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -246,7 +261,8 @@
         "location_TkDiFh",
         "location_3QgCjc",
         "location_iageig",
-        "location_9xEBRy"
+        "location_9xEBRy",
+        "location_kg9MFB"
       ],
       "settings": {
         "heading": "Find a Retailer",
