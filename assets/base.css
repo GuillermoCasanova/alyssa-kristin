@@ -2076,6 +2076,15 @@ button:hover,
   background-color: rgb(var(--color-base-background-2));
 }
 
+.card__heading {
+  margin-bottom: var(--level4); 
+  font-weight: 300;
+}
+
+.card__heading  p {
+  margin-bottom: 0; 
+}
+
 .card__inner {
   padding: var(--level6);
 }
@@ -2086,6 +2095,10 @@ button:hover,
   background-color: #F1EDEB;
 }
 
+
+.card.is-alt-2 {
+  background-color: rgb(var(--color-base-background-1));
+}
 
 
 

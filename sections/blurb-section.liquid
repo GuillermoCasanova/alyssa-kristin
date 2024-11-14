@@ -1,37 +1,47 @@
-<link rel="stylesheet" href="{{ 'section-blurb-section.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-blurb.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<section class="blurb-section {% if section.settings.top_border == 'yes' %}has-top-border{% endif %} {% if section.settings.bottom_border == 'yes' %}has-bottom-border{% endif %}">
-  <div class="blurb-section__inner">
-    <div class="blurb-section__image-container">
+<div class="blurb-section">
+  <section class="blurb-section__inner page-width is-small">
+    <h2 class="blurb-section__heading">
+      {{ section.settings.heading }}
+    </h2>
+    <div class="blurb-section__body">
       <div class="blurb-section__image">
-        <img
-          srcset="
-            {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
-            {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
-            {%- if section.settings.image.width >= 800 -%}{{ section.settings.image | image_url: width: 800 }} 800w,{%- endif -%}
-            {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | image_url: width: 940 }} 940w,{%- endif -%}
-            {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | image_url: width: 1066 }} 1066w,{%- endif -%}
-            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
-          "
-          src="{{ section.settings.image | image_url: width: 533 }}"
-          sizes="(min-width: 700px) 50vw, 90vw"
-          alt="{{ section.settings.image.alt | escape }}"
-          class="motion-reduce"
-          loading="lazy"
-          width="{{ section.settings.image.width }}"
-          height="{{ section.settings.image.height }}"
-        >
-      </div>
-    </div>
-    <div class="blurb-section__copy">
-      <div class="blurb-section__copy__inner">
-        <h2 class="blurb-section__copy__heading">
-          {{ section.settings.heading }}
-        </h2>
+        <div class="blurb-section__image">
+          <div class="blurb-section__image__inner">
+            <img
+              srcset="
+                {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if section.settings.image.width >= 533 -%}{{ section.settings.image | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if section.settings.image.width >= 720 -%}{{ section.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if section.settings.image.width >= 800 -%}{{ section.settings.image | image_url: width: 800 }} 800w,{%- endif -%}
+                {%- if section.settings.image.width >= 940 -%}{{ section.settings.image | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if section.settings.image.width >= 1066 -%}{{ section.settings.image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+              "
+              src="{{ section.settings.image | image_url: width: 533 }}"
+              sizes="(min-width: 700px) 50vw, 90vw"
+              alt="{{ section.settings.image.alt | escape }}"
+              class="responsive-image"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+            >
+          </div>
 
-        <div class="card">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'feature' %}
+                <div class="blurb-section__feature">
+                  {{ block.settings.feature }}
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="blurb-section__copy">
+        <div class="card is-alt-2">
           <div class="card__inner">
             <div class="card__heading">
               {{ section.settings.card_heading }}
@@ -41,7 +51,7 @@
             </div>
             {% if section.settings.card_cta_url != blank %}
               <div class="blurb-section__copy__body__cta">
-                <a href="{{ section.settings.card_cta_url }}">
+                <a href="{{ section.settings.card_cta_url }}" class="button button--small button--primary">
                   {{ section.settings.card_cta_text }}
                 </a>
               </div>
@@ -50,8 +60,8 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 {% schema %}
 {
@@ -93,7 +103,6 @@
       "id": "card_cta_text",
       "label": "Card CTA Text"
     },
-
     {
       "type": "image_picker",
       "id": "image",
@@ -142,6 +151,19 @@
     {
       "type": "header",
       "content": "Border Elements"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature Text"
+        }
+      ]
     }
   ],
   "presets": [

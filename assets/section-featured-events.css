@@ -74,6 +74,9 @@
     align-items: center;
 }
 
+.featued-events__inner {
+    padding-top: var(--level10);
+}
 .featured-event__image__inner {
     position: relative;
     padding-bottom: 160%; 
