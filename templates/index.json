@@ -34,19 +34,22 @@
         "collection_qB4cqN": {
           "type": "collection",
           "settings": {
-            "collection": "accessories"
+            "collection": "accessories",
+            "cta_text": "Shop Now"
           }
         },
         "collection_3TbTnq": {
           "type": "collection",
           "settings": {
-            "collection": "gowns"
+            "collection": "gowns",
+            "cta_text": "Explore"
           }
         },
         "collection_bWQi4N": {
           "type": "collection",
           "settings": {
-            "collection": "little-white-dress"
+            "collection": "little-white-dress",
+            "cta_text": "Shop Now"
           }
         }
       },
