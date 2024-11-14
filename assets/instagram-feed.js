@@ -35,8 +35,6 @@ class instagramFeed extends HTMLElement {
 
     initFeed(pMediaQueries) {
         
-        console.log('hit!');
-        
         if(this.feed) {
             return 
         }

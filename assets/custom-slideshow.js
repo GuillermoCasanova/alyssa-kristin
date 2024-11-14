@@ -258,7 +258,6 @@ class ImageSlideshow extends HTMLElement {
 
       if(nextTargetElement) {
         nextTargetElement.addEventListener('mouseenter', () => {
-          console.log('hover'); 
           setCursorToSVG(nextTargetElement, nextCursorSVG);
         });
 

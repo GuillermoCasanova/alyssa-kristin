@@ -1364,10 +1364,6 @@ button.thumbnail[aria-current="true"] {
   text-decoration: none;
 }
 
-.product__view-details:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
 
 .product__view-details .icon {
   width: 1.2rem;

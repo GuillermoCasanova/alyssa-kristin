@@ -1764,11 +1764,13 @@ button,
   text-decoration: none;
   margin-bottom: var(--level3); 
   color: rgb(var(--color-base-text-1));  
+  text-decoration: none;
 }
 
 button:hover,
 .button:hover {
   cursor: pointer;
+  text-decoration: none;
 }
 
 
@@ -1821,8 +1823,8 @@ button:hover,
   border: 1px solid rgb(var(--color-base-text-1));
   color: rgb(var(--color-base-text-1));
   font-weight: var(--font-weight-bold);
-  letter-spacing: .5px;
   text-decoration: none;
+  letter-spacing: 3px;
 }
 
 .button--tertiary:focus,
@@ -1893,8 +1895,8 @@ button:hover,
 }
 
 .button--large {
-  padding-top: var(--level4);
-  padding-bottom: var(--level4);
+  padding-top: var(--level5);
+  padding-bottom: var(--level5);
   padding-left: var(--level10);
   padding-right: var(--level10);
   font-size: var(--micro);

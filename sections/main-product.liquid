@@ -234,7 +234,7 @@
 
               {%- when 'size-guide' -%}
                 {{ 'component-size-guide-modal.css' | asset_url | stylesheet_tag }}
-                <div>
+                <div class="quick-add-hidden">
                   <button class="button-link product__size-guide-modal-trigger" data-modal="size-guide-modal">
                     Size Guide
                   </button>
@@ -770,7 +770,7 @@
                       {{ block.settings.body }}
                     </div>
                     <div class="product-cta__cta">
-                      <a href="{{ block.settings.cta_link }}" class="button button--primary button--small">
+                      <a href="{{ block.settings.cta_link }}" class="button button--primary button--medium">
                         {{- block.settings.cta_text -}}
                       </a>
                     </div>
@@ -778,7 +778,10 @@
                 </div>
             {%- endcase -%}
           {%- endfor -%}
-          <a href="{{ product.url }}" class="link product__view-details animate-arrow">
+          <a
+            href="{{ product.url }}"
+            class="link product__view-details animate-arrow button button--tertiary button--small"
+          >
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
           </a>

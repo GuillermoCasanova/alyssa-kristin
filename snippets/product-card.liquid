@@ -40,7 +40,14 @@
       assign ratio = 1
     endif
   -%}
+
+  {%- assign is_non_shoppable = false -%}
+  {%- if card_product.template_suffix == 'non-shoppable' -%}
+    {%- assign is_non_shoppable = true -%}
+  {%- endif -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
+    {{ card_product.template_suffix }}
+
     <div
       class="
         card card--{{ settings.card_style }}
@@ -287,7 +294,7 @@
           </div>
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
-        {% if quick_add == 'standard' %}
+        {% if quick_add == 'standard' and is_non_shoppable == false %}
           <div class="quick-add no-js-hidden">
             {%- liquid
               assign qty_rules = false
@@ -295,7 +302,7 @@
                 assign qty_rules = true
               endif
             -%}
-            {%- if card_product.variants.size > 1 or qty_rules -%}
+            {%- if card_product.variants.size > 1 or qty_rules and is_non_shoppable == false -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
                 <button
                   id="{{ product_form_id }}-submit"
@@ -413,7 +420,7 @@
                 {% render 'quantity-input', variant: card_product.selected_or_first_available_variant, min: 0 %}
               {% endif %}
             </quick-add-bulk>
-          {% else %}
+          {% elsif is_non_shoppable == false %}
             <div class="quick-add no-js-hidden">
               {%- liquid
                 assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
