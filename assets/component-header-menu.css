@@ -32,11 +32,17 @@
     }
 
     .header__menu__list-menu > li:nth-child(3) {
-        margin-right: 24rem;
+        margin-right: 22rem;
     }
 }
 
 @media screen and (min-width: 1200px) {
+    .header__menu__list-menu > li:nth-child(3) {
+        margin-right: 28rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
     .header__menu__list-menu > li:nth-child(3) {
         margin-right: 30rem;
     }
@@ -83,7 +89,7 @@
     text-underline-offset: 0.3rem;
     position: relative;
     display: inline-block;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
 }
 
 @media screen and (min-width: 940px) {

@@ -7,6 +7,9 @@
 
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 

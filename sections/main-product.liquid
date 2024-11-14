@@ -211,7 +211,7 @@
                   </ul>
                   {%- if product.description != blank -%}
                     <div id="tabpanel1" class="tabbed-interface__panel" role="tabpanel" aria-labelledby="tab1">
-                      <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      <div class="product__description rte " {{ block.shopify_attributes }}>
                         {{ product.description }}
                       </div>
                     </div>
@@ -763,7 +763,7 @@
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
               {%- when 'product-cta' -%}
-                <div class="product-cta-card  card">
+                <div class="product-cta-card  card quick-add-hidden">
                   <div class="card__inner">
                     <h2 class="product-cta-card__heading">{{ block.settings.heading }}</h2>
                     <div class="product-cta-card__body">
@@ -834,35 +834,6 @@
     </script>
   </div>
 </product-info>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    document
-      .querySelector('.tabbed-interface__tabs')
-      .querySelectorAll('button')
-      .forEach((button) => {
-        console.log(button);
-        button.addEventListener('click', () => {
-          const tabContainer = button.closest('.tabbed-interface');
-
-          console.log(tabContainer);
-          const tabPanels = tabContainer.querySelectorAll('.tabbed-interface__panel');
-          const tabs = tabContainer.querySelectorAll('.tabbed-interface__tabs button');
-
-          tabs.forEach((tab) => {
-            tab.setAttribute('aria-selected', 'false');
-          });
-
-          tabPanels.forEach((panel) => {
-            panel.hidden = true;
-          });
-
-          button.setAttribute('aria-selected', 'true');
-          tabContainer.querySelector(`#${button.getAttribute('aria-controls')}`).hidden = false;
-        });
-      });
-  });
-</script>
 
 {% schema %}
 {

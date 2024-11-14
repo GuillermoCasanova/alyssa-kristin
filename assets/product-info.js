@@ -15,6 +15,31 @@ if (!customElements.get('product-info')) {
         super();
 
         this.quantityInput = this.querySelector('.quantity__input');
+          this
+            .querySelector('.tabbed-interface__tabs')
+            .querySelectorAll('button')
+            .forEach((button) => {
+              console.log(button);
+              button.addEventListener('click', () => {
+                const tabContainer = button.closest('.tabbed-interface');
+      
+                console.log(tabContainer);
+                const tabPanels = tabContainer.querySelectorAll('.tabbed-interface__panel');
+                const tabs = tabContainer.querySelectorAll('.tabbed-interface__tabs button');
+      
+                tabs.forEach((tab) => {
+                  tab.setAttribute('aria-selected', 'false');
+                });
+      
+                tabPanels.forEach((panel) => {
+                  panel.hidden = true;
+                });
+      
+                button.setAttribute('aria-selected', 'true');
+                tabContainer.querySelector(`#${button.getAttribute('aria-controls')}`).hidden = false;
+              });
+            });
+
       }
 
       connectedCallback() {
