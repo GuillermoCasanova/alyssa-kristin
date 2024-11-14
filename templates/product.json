@@ -14,18 +14,15 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "size_guide_AzhnFp": {
           "type": "size-guide",
@@ -60,9 +57,9 @@
           "type": "product-cta",
           "settings": {
             "heading": "<p>Contact us To <em>find your size</em></p>",
-            "body": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-            "cta_link": "",
-            "cta_text": "Learn More"
+            "body": "<p>Have questions about fit and styling for your wedding look? We’re here to help. Book an in-person appointment to try, or contact us for personalized assistance.</p>",
+            "cta_link": "shopify://pages/retailers",
+            "cta_text": "Find Us"
           }
         }
       },
