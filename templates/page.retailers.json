@@ -635,6 +635,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_ft3eLm": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/providence-bridal-shop/",
+            "phone_number": "(401) 415-8663",
+            "address": "<p>65 Eddy St, Providence, RI 02903</p>",
+            "state": "Rhode Island",
+            "country": "USA",
+            "longitude": 41.8,
+            "latitude": -71.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -678,7 +693,8 @@
         "location_HEFGNd",
         "location_UyVmV9",
         "location_6KdrMX",
-        "location_axp9Pq"
+        "location_axp9Pq",
+        "location_ft3eLm"
       ],
       "settings": {
         "heading": "Find a Retailer",
