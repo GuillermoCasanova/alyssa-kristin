@@ -140,6 +140,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_UyYPtq": {
+          "type": "location",
+          "settings": {
+            "store_name": "Emma & Grace",
+            "website": "https://emmaandgracebridal.com/",
+            "phone_number": "(720) 383-8091",
+            "address": "<p>3353 Larimer St, Denver CO 80205</p>",
+            "state": "Colorado",
+            "country": "USA",
+            "longitude": 39.8,
+            "latitude": -105.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -150,7 +165,8 @@
         "location_N87mHp",
         "location_RjrbRT",
         "location_Rct3jT",
-        "location_G89eg6"
+        "location_G89eg6",
+        "location_UyYPtq"
       ],
       "settings": {
         "heading": "Find a Retailer",
