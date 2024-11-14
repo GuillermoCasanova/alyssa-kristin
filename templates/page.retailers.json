@@ -740,6 +740,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_YJwj4D": {
+          "type": "location",
+          "settings": {
+            "store_name": "Hinterland Bride",
+            "website": "https://www.hinterlandbride.com/",
+            "phone_number": "(802) 540-8186",
+            "address": "<p>209 College St. 3rd Floor Burlington, VT 05401</p>",
+            "state": "Vermont",
+            "country": "USA",
+            "longitude": 44.5,
+            "latitude": -73.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -790,7 +805,8 @@
         "location_yyMppG",
         "location_TbrgYR",
         "location_xkM7zG",
-        "location_zjjpha"
+        "location_zjjpha",
+        "location_YJwj4D"
       ],
       "settings": {
         "heading": "Find a Retailer",
