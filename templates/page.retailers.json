@@ -650,6 +650,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_9dw6me": {
+          "type": "location",
+          "settings": {
+            "store_name": "Adorn Nashville",
+            "website": "https://www.adornbridal.com/adornnashville",
+            "phone_number": "(615) 727-7223",
+            "address": "<p>1013 16th Avenue South Nashville, TN 37212</p>",
+            "state": "Tennessee",
+            "country": "USA",
+            "longitude": 36.1,
+            "latitude": -86.8,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -694,7 +709,8 @@
         "location_UyVmV9",
         "location_6KdrMX",
         "location_axp9Pq",
-        "location_ft3eLm"
+        "location_ft3eLm",
+        "location_9dw6me"
       ],
       "settings": {
         "heading": "Find a Retailer",
