@@ -335,6 +335,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_npDH67": {
+          "type": "location",
+          "settings": {
+            "store_name": "VOWS Bridal",
+            "website": "https://vowsbridal.com/",
+            "phone_number": "(800) 831-8697",
+            "address": "<p>130 Galen St, Watertown, MA 02472</p>",
+            "state": "Massachusetts",
+            "country": "USA",
+            "longitude": 42.4,
+            "latitude": -71.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -358,7 +373,8 @@
         "location_QNbbzf",
         "location_QqExPN",
         "location_pz6nhW",
-        "location_BXQERR"
+        "location_BXQERR",
+        "location_npDH67"
       ],
       "settings": {
         "heading": "Find a Retailer",
