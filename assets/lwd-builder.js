@@ -12,8 +12,8 @@ class LwdBuilder extends HTMLElement {
   }
 
   connectedCallback() {
-    this.initControlsEvents();
-    this.setActiveCombo(); 
+    // this.initControlsEvents();
+    // this.setActiveCombo(); 
   }
 
   initControlsEvents() {

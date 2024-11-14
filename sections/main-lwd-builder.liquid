@@ -3,8 +3,33 @@
 <script type="module" src="{{ 'custom-slideshow.js' | asset_url }}"></script>
 <script src="{{ 'lwd-builder.js' | asset_url }}" defer></script>
 
+{% for product in collection.products %}
+  {% assign bottom_slideshow_image_id = all_products[product.metafields.dress.bottom].id %}
+  {% unless bottom_slideshow_image_ids contains bottom_slideshow_image_id %}
+    <div
+      class="lwd-combinations-container__option__image"
+      data-dress-combo-option
+      data-id="{{ bottom_slideshow_image_id }}"
+    >
+      <div class="lwd-combinations-container__option__image__inner">
+        <img
+          src="{{ product.metafields.dress.bottom | img_url: 'large' }}"
+          alt="{{ product.title }} bottom"
+          width="300"
+          height="300"
+          class="responsive-image"
+        >
+      </div>
+    </div>
+    {% assign bottom_slideshow_image_ids = bottom_slideshow_image_ids
+      | append: bottom_slideshow_image_id
+      | append: ','
+    %}
+  {% endunless %}
+{% endfor %}
+
 <lwd-builder>
-  <section class="lwd-builder">
+  <section class="lwd-builder {% if section.settings.is_alt %}is-alt{% endif %}">
     <div class="page-width is-small lwd-builder__inner">
       <h2 class="lwd-builder__heading hide-for-large-up"><em> Customize Your</em> Little White Dress</h2>
 
@@ -205,6 +230,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_alt",
+      "label": "Is Alt",
+      "default": false
     }
   ],
   "presets": [

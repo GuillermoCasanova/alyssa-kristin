@@ -9,6 +9,10 @@
   background-color: rgb(var(--color-base-background-2));
 }
 
+
+.lwd-builder.is-alt {
+  background-color: #C3C0B9;
+}
 .lwd-builder__inner {
     padding-top: var(--level10); 
 }
