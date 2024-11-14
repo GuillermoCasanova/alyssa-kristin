@@ -500,6 +500,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_dL7rL8": {
+          "type": "location",
+          "settings": {
+            "store_name": "B. Loved Bridal Boutique",
+            "website": "https://blovedbridal.com/",
+            "phone_number": "(614) 395-4437",
+            "address": "<p>36 W Gay Street Columbus, OH 43215</p>",
+            "state": "Ohio",
+            "country": "USA",
+            "longitude": 40.0,
+            "latitude": -83.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -534,7 +549,8 @@
         "location_mHUmEE",
         "location_pGbrbf",
         "location_X9Nkdt",
-        "location_irnt6m"
+        "location_irnt6m",
+        "location_dL7rL8"
       ],
       "settings": {
         "heading": "Find a Retailer",
