@@ -365,6 +365,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_hLp98n": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/minneapolis/bridal-shop",
+            "phone_number": "(612) 238-1300",
+            "address": "<p>7101 France Ave S #114 Edina, MN 55435</p>",
+            "state": "Minnesota",
+            "country": "USA",
+            "longitude": 44.9,
+            "latitude": -93.3,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -390,7 +405,8 @@
         "location_pz6nhW",
         "location_BXQERR",
         "location_npDH67",
-        "location_CEyVqp"
+        "location_CEyVqp",
+        "location_hLp98n"
       ],
       "settings": {
         "heading": "Find a Retailer",
