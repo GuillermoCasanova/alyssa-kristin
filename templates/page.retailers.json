@@ -560,6 +560,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_njTiFH": {
+          "type": "location",
+          "settings": {
+            "store_name": "Chantilly Bridal Studio",
+            "website": "https://chantillybridalstudio.com/",
+            "phone_number": "(405) 900-6811",
+            "address": "<p>525 NW 11th St, Suite 120, OKC, OK 73103</p>",
+            "state": "Oklahoma",
+            "country": "USA",
+            "longitude": 35.5,
+            "latitude": -97.5,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -598,7 +613,8 @@
         "location_dL7rL8",
         "location_3UCNFe",
         "location_nyRQkQ",
-        "location_6GDwTc"
+        "location_6GDwTc",
+        "location_njTiFH"
       ],
       "settings": {
         "heading": "Find a Retailer",
