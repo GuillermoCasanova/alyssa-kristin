@@ -343,6 +343,7 @@ a.product__text {
   text-transform: uppercase;
   font-size: var(--h6);
   margin-bottom: var(--level5);
+  padding-right: 4rem;
 }
 
 .product__title h1 {
