@@ -485,6 +485,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_irnt6m": {
+          "type": "location",
+          "settings": {
+            "store_name": "Gilded Bridal",
+            "website": "https://www.gildedbridal.com/",
+            "phone_number": "(919) 717-2674",
+            "address": "<p>421 N. Boylan Ave, Raleigh, NC 27603</p>",
+            "state": "North Carolina",
+            "country": "USA",
+            "longitude": 35.8,
+            "latitude": -78.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -518,7 +533,8 @@
         "location_3ekgJ4",
         "location_mHUmEE",
         "location_pGbrbf",
-        "location_X9Nkdt"
+        "location_X9Nkdt",
+        "location_irnt6m"
       ],
       "settings": {
         "heading": "Find a Retailer",
