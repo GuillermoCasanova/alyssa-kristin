@@ -710,6 +710,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_xkM7zG": {
+          "type": "location",
+          "settings": {
+            "store_name": "Unbridaled",
+            "website": "https://www.unbridaled.com/locations/houston",
+            "phone_number": "(832) 767-0407",
+            "address": "<p>1502 Sawyer Street #105 Houston, TX 77007</p>",
+            "state": "Texas",
+            "country": "USA",
+            "longitude": 29.8,
+            "latitude": -95.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -758,7 +773,8 @@
         "location_9dw6me",
         "location_8jXeFm",
         "location_yyMppG",
-        "location_TbrgYR"
+        "location_TbrgYR",
+        "location_xkM7zG"
       ],
       "settings": {
         "heading": "Find a Retailer",
