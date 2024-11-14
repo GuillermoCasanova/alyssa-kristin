@@ -215,6 +215,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_9xEBRy": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/boise/bridal-shop",
+            "phone_number": "(208) 853-5868",
+            "address": "<p>5519 West State Street Garden City, ID 83703</p>",
+            "state": "Idaho",
+            "country": "USA",
+            "longitude": 43.7,
+            "latitude": -116.3,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -230,7 +245,8 @@
         "location_xnC9iP",
         "location_TkDiFh",
         "location_3QgCjc",
-        "location_iageig"
+        "location_iageig",
+        "location_9xEBRy"
       ],
       "settings": {
         "heading": "Find a Retailer",
