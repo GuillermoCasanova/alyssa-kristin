@@ -167,14 +167,12 @@
         flex-direction: row;
         transition: all var(--duration-default) cubic-bezier(0.16, 1, 0.3, 1);
         background-color: rgb(var(--color-base-background-1));
-        width: 100vw;
+        width: 100%;
         max-width: none;
         position: absolute;
         left: 0;
         border-top: 1px solid rgb(var(--color-base-text-1));
         border-bottom: 1px solid rgb(var(--color-base-text-1));
-        border-right: 1px solid rgb(var(--color-base-text-1));
-        border-left: 1px solid rgb(var(--color-base-text-1));
         z-index: 0;
         top: 9rem; 
     }

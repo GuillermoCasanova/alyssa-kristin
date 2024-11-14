@@ -548,7 +548,7 @@ main {
   position: relative;
 }
 
-.page-width.full-width {
+.page-width.is-full-width {
   padding-left: 0 !important; 
   padding-right: 0 !important; 
 }
@@ -1348,6 +1348,8 @@ textarea {
   font-family: var(--primary-font-family);
   transition: all .4s ease-in-out;
   border: 1px solid rgb(var(--color-base-text-1));
+  text-transform: uppercase;
+  font-size: var(--micro);
 }
 
 
@@ -1358,15 +1360,16 @@ textarea {
 .input--medium {
   padding-top: .85rem;
   padding-bottom: 1rem;
-  padding-left: var(--level2);
+  padding-left: var(--level4);
   font-size: var(--h6);
 }
 
 .input--large {
   padding-top: var(--level6);
   padding-bottom: var(--level6);
+  padding-left: var(--level6);
   font-size: var(--h5);
-  padding-left: var(--level3);
+ 
 }
 
 label {
@@ -1886,8 +1889,8 @@ button:hover,
 .button--large {
   padding-top: var(--level4);
   padding-bottom: var(--level4);
-  padding-left: var(--level7);
-  padding-right: var(--level7);
+  padding-left: var(--level10);
+  padding-right: var(--level10);
   font-size: var(--micro);
   letter-spacing: 3px;
 }

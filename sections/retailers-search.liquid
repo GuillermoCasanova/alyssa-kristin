@@ -1,39 +1,59 @@
 {{ 'section-retailers-search.css' | asset_url | stylesheet_tag }}
 <section class="retailers-search" id="retailers-search">
-  <div class="retailers-search__inner page-width is-small">
-    <div class="retailers-search__heading">
-      <h2>{{ section.settings.heading }}</h2>
-    </div>
-    <div class="retailers-search__body">
-      {{ section.settings.body }}
-    </div>
-    <div class="retailers-search__form">
-      <form onsubmit="handleAddressSearch()" method="get">
-        <input
-          type="text"
-          name="q"
-          placeholder="{{ section.settings.search_placeholder }}"
-          data-search-input
-          class="retailers-search__input"
-        >
-        <button type="submit" class="retailers-search__button" data-search-button>
-          {{ section.settings.search_button_text }}
-        </button>
-        <button type="button" class="retailers-search__clear" data-clear-input>Clear</button>
-      </form>
-
-      <div data-filter-by>
-        Filter By:
-        <input type="checkbox" id="gowns" name="filter" value="gowns">
-        <label for="gowns">Gowns</label>
-
-        <input type="checkbox" id="lwd" name="filter" value="lwd">
-        <label for="lwd">LWD</label>
-      </div>
-      <h2>Closest Locations</h2>
-      <div data-closest-locations>Loading nearest locations...</div>
-    </div>
+  <div class="retailers-search__inner page-width is-small is-full-width">
     <div id="map" class="retailers-search__map"></div>
+
+    <div>
+      <div class="retailers-search__heading">
+        <h2>{{ section.settings.heading }}</h2>
+      </div>
+      <div class="retailers-search__body">
+        {{ section.settings.body }}
+      </div>
+      <div class="retailers-search__form page-width">
+        <form onsubmit="handleAddressSearch()" method="get">
+          <div class="form-section">
+            <input
+              type="text"
+              name="q"
+              placeholder="{{ section.settings.search_placeholder }}"
+              data-search-input
+              class="input input--medium"
+            >
+          </div>
+          <button
+            type="submit"
+            class="button button--primary button--large retailers-search__button"
+            data-search-button
+          >
+            {{ section.settings.search_button_text }}
+          </button>
+          <button
+            type="button"
+            class=" visually-hidden buttonn button--primary  button--large retailers-search__clear"
+            data-clear-input
+          >
+            Clear
+          </button>
+        </form>
+
+        <div class="card">
+          <div class="card__inner" data-filter-by>
+            <div class="location-filter-header">
+              <p>Filter By</p>
+              <input type="checkbox" id="gowns" name="filter" value="gowns">
+              <label for="gowns">Gowns</label>
+
+              <input type="checkbox" id="lwd" name="filter" value="lwd">
+              <label for="lwd">Little White Dress</label>
+            </div>
+
+            <h2 class="location-filter__heading">Nearest Locations</h2>
+            <div data-closest-locations>Loading nearest locations...</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -109,7 +129,7 @@
       const locationsContainer = document.querySelector('[data-closest-locations]');
       const listItem = document.createElement('li');
       listItem.textContent = `${location.store_info.name} - ${location.store_info.address}`;
-      locationsContainer.appendChild(listItem);
+      locationsContainer.insertAdjacentHTML('beforeend', listItem.outerHTML);
     }
 
     // Calculate the distance between two coordinates using Haversine formula

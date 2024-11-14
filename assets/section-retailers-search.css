@@ -1,7 +1,89 @@
 
 
+.retailers-search {
+    margin-top: var(--level8);
+}
+
+.retailers-search__inner {
+}
+
+@media screen and (min-width: 940px) {
+    .retailers-search__inner {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        column-gap: var(--level8);
+    }
+
+}
+
 .retailers-search__map {
     position: relative;
     padding-bottom: 100%;
     background-color: gray;
+}
+
+@media screen and (min-width: 940px) {
+    .retailers-search__map {
+        padding-bottom: 110%;
+        order: 2;
+    }
+}
+
+
+.retailers-search__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--secondary-font-family);
+    font-size: var(--h4);
+    margin-bottom: var(--level);
+}
+
+
+.retailers-search__form label {
+    margin-right: var(--level3);
+    display: inline-block;
+}
+
+
+.retailers-search__body {
+    text-align: center;
+    font-size: var(--h5);
+}
+
+.retailers-search__form   form {
+    max-width: 22rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.retailers-search__map {
+    margin-bottom: var(--level7);
+}
+
+.retailers-search__form  form{
+    margin-bottom: var(--level5);
+    text-align: center;
+    font-size: var(--h6);
+}
+
+.location-filter-header {
+    font-size: var(--h6);
+}
+.location-filter-header {
+    margin-bottom: var(--level4);
+    text-transform: uppercase;
+    padding-bottom: var(--level4);
+  border-bottom: 1px solid rgb(var(--color-base-text-1));
+}
+
+
+.location-filter__heading {
+    font-size: var(--h6);
+    text-transform: uppercase;
+}
+
+[data-closest-locations] {
+    text-align: center;
+    width: 100%;
 }
