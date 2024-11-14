@@ -170,6 +170,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_TkDiFh": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/miami-bridal-shop/",
+            "phone_number": "(305) 392-1149",
+            "address": "<p>175 NW 25th St, Miami, FL 33127</p>",
+            "state": "Florida",
+            "country": "USA",
+            "longitude": 25.8,
+            "latitude": -80.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -182,7 +197,8 @@
         "location_Rct3jT",
         "location_G89eg6",
         "location_UyYPtq",
-        "location_xnC9iP"
+        "location_xnC9iP",
+        "location_TkDiFh"
       ],
       "settings": {
         "heading": "Find a Retailer",
