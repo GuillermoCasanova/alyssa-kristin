@@ -107,7 +107,22 @@
             "country": "USA",
             "longitude": 33.7,
             "latitude": -117.8,
-            "gown": false,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_Rct3jT": {
+          "type": "location",
+          "settings": {
+            "store_name": "Moondance Bridal",
+            "website": "https://www.moondancebridal.com/",
+            "phone_number": "(805) 788-0811",
+            "address": "<p>1880 Santa Barbara Ave - Suite 130, San Luis Obispo, CA 93401</p>",
+            "state": "California",
+            "country": "USA",
+            "longitude": 35.3,
+            "latitude": -120.7,
+            "gown": true,
             "lwd": false
           }
         }
@@ -118,7 +133,8 @@
         "location_iw99Vr",
         "location_j3pKLL",
         "location_N87mHp",
-        "location_RjrbRT"
+        "location_RjrbRT",
+        "location_Rct3jT"
       ],
       "settings": {
         "heading": "Find a Retailer",
