@@ -9,7 +9,7 @@
     grid-template-columns: repeat(12, 1fr); 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__inner {
         column-gap: var(--level7);
     }
@@ -33,7 +33,7 @@
     justify-self: flex-end;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__heading {
         font-size: var(--kilo);
         text-align: left;
@@ -63,7 +63,7 @@
 
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__heading em {
         display: inline;
     }
@@ -78,14 +78,14 @@
     margin-bottom: var(--level2);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__body {
         grid-column: 1 / 6;
         grid-row: 3 / 4;
     }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__body {
         grid-column: 1 / 7;
         grid-row: 3 / 4;
@@ -113,7 +113,7 @@
     margin-bottom: var(--level10);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__main-image {
         grid-column: 5 / 9;
         right: -1.5rem; 
@@ -129,7 +129,7 @@
     position: relative;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__main-image__inner {
         padding-bottom: 100%; 
     }
@@ -146,7 +146,7 @@
     bottom: -1.5rem; 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__main-image__inner:before {
        display: none;
     }
@@ -178,7 +178,7 @@
     display: none; 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__secondary-image {
         display: block;
         grid-column: 7 / -1;
@@ -211,7 +211,7 @@
     padding-bottom: var(--level5);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-process__card {
         grid-column: 3 / 11;
         grid-row: 7 / 7;

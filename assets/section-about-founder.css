@@ -48,7 +48,7 @@
     font-size: var(--h6);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-founder__body {
         font-size: var(--h5);
     }
@@ -83,7 +83,7 @@
     text-transform: lowercase;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .about-founder__heading {
         font-size: var(--kilo);
         grid-column: 1 / -1;

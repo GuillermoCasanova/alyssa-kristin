@@ -163,6 +163,7 @@ summary::before {
 \*------------------------------------*/
 
 :root {
+  --level0: .25rem;
   --level1: .5rem;
   --level2: .75rem;
   --level3: 1rem;
@@ -392,7 +393,7 @@ section {
   overflow: hidden;
 }
 
-/* @media screen and (min-width: 750px) {
+/* @media screen and (min-width: 700px) {
   .overflow-hidden-mobile {
     overflow: auto;
   }
@@ -417,7 +418,7 @@ section {
   display: none;
 } 
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 700px) {
   .show-for-medium-up {
     display: block;
   }
@@ -758,7 +759,7 @@ summary::-webkit-details-marker {
   z-index: 100;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .disclosure-has-popup[open]>summary+* {
     z-index: 4;
   }
@@ -1942,7 +1943,7 @@ button:hover,
   table-layout: fixed;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .rte table td {
     padding-left: 1.2rem;
     padding-right: 1.2rem;

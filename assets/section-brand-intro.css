@@ -23,7 +23,7 @@
     gap: var(--level3); 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__inner {
         gap: var(--level10); 
     }
@@ -52,7 +52,7 @@
     #Columns
 \*------------------------------------*/
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__right-column {
         padding-top: 10vw;
     }
@@ -125,7 +125,7 @@
     overflow: hidden;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__image-wrapper {
         padding-bottom: 130%; 
     }
@@ -167,7 +167,7 @@
     margin-bottom: -1rem; 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__quote {
         margin-bottom: var(--level10); 
     }
@@ -195,7 +195,7 @@
     line-height: 1.5;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__heading {
         font-size: var(--kilo); 
         min-width: 32rem;
@@ -236,7 +236,7 @@
 }
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__copy {
         padding: var(--level7);
         top: -4rem;
@@ -282,7 +282,7 @@
     margin-right: auto; 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__copy__body {
         font-size: var(--h4);
         margin-bottom: 0; 
@@ -312,7 +312,7 @@
     margin-bottom: var(--level10);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .brand-intro__cta {
         margin-top: 0;
         margin-top: -.5rem;

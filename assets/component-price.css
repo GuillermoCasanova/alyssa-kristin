@@ -32,7 +32,7 @@
   margin: 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .price {
     margin-bottom: 0;
   }
@@ -55,7 +55,7 @@
   letter-spacing: 0.13rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .price--large {
     font-size: 1.8rem;
   }

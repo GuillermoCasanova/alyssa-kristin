@@ -70,7 +70,7 @@ pickup-availability-drawer[open] {
   opacity: 1;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   pickup-availability-drawer {
     transform: translateX(100%);
     width: 37.5rem;
@@ -164,7 +164,7 @@ pickup-availability-drawer[open] {
     }
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 700px) {
     0% {
       opacity: 0;
       transform: translateX(100%);

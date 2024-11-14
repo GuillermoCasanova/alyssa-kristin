@@ -1,24 +1,67 @@
+{{ 'section-featured-events.css' | asset_url | stylesheet_tag }}
+{{ 'vendor-swiper.css' | asset_url | stylesheet_tag }}
+<script type="module" src="{{ 'custom-slideshow.js' | asset_url }}"></script>
+
 <div class="featured-events">
-  <h2 class="featured-events__heading">
-    {{ section.settings.heading }}
-  </h2>
-
-  <div class="featured-events__list">
-    {% assign selected_blog = section.settings.selected_blog %}
-    {% assign events = blogs[selected_blog].articles | sort: 'metafields.details.date' | reverse | limit: 3 %}
-
-    {% for event in events %}
-      <div class="featured-event">
-        <h3 class="featured-event__title">{{ event.title }}</h3>
-        <p class="featured-event__date">{{ event.metafields.details.date }}</p>
-        <p class="featured-event__excerpt">{{ event.excerpt }}</p>
+  <section class="featued-events__inner">
+    <div class="featured-events__header">
+      <div class="page-width">
+        <h2 class="featured-events__heading">
+          {{ section.settings.heading }}
+          <span> Events </span>
+        </h2>
       </div>
-    {% endfor %}
-  </div>
+    </div>
 
-  <a href="{{ section.settings.cta_link }}" class="featured-events__cta">
-    {{ section.settings.cta_label }}
-  </a>
+    {% assign selected_blog = section.settings.selected_blog %}
+    {% assign events = blogs[selected_blog].articles | sort: 'metafields.details.date' | reverse %}
+
+    <div class="page-width">
+      <div class="featured-events__list">
+        <custom-slideshow
+          slidesPerView="auto"
+          spaceBetween="20px"
+          loop="false"
+          disableOn="largeUp"
+        >
+          {% assign sorted_events = events | sort: 'metafields.details.date' | reverse %}
+          {% for event in sorted_events limit: 6 %}
+            <a href="{{ event.url }}" class="featured-event">
+              <p class="featured-event__date">{{ event.metafields.details.date | date: '%B %d' }}</p>
+
+              <div class="featured-event__image">
+                <div class="featured-event__image__inner">
+                  <img
+                    src="{{ event.image | image_url: width: 300 }}"
+                    alt="{{ event.title }}"
+                    width="300"
+                    height="300"
+                    class="responsive-image"
+                  >
+                </div>
+              </div>
+              <div class="featured-event__details">
+                <h3 class="featured-event__title">{{ event.title }}</h3>
+                <div class="featured-event__location">{{ event.metafields.details.location | metafield_tag }}</div>
+                <div class="featured-event__excerpt">{{ event.excerpt }}</div>
+                <div class="featured-event__start-end">
+                  {{ event.metafields.details.date | date: '%b %d' }}
+                  -
+                  {{ event.metafields.custom.end_date | date: '%b %d %Y' }}
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </custom-slideshow>
+      </div>
+    </div>
+
+    <div class="featured-events__cta">
+      <a href="{{ section.settings.cta_link }}" class="button button--primary button--medium">
+        {{ section.settings.cta_label }}
+      </a>
+    </div>
+  </section>
 </div>
 
 {% schema %}

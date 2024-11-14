@@ -11,7 +11,7 @@
     background-color: white;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .size-guide-modal__secondary-content__body {
         column-gap: var(--level10);
     }
@@ -34,7 +34,7 @@
 }
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .size-guide-modal .modal__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -45,7 +45,7 @@
     padding: var(--level5); 
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .size-guide-modal__primary-content {
         display: flex   ;
         align-items: center;
@@ -62,7 +62,7 @@
     flex-direction: column;;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .size-guide-modal__secondary-content {
         padding: var(--level7);
     }

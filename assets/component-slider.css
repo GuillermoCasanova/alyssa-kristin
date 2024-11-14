@@ -60,7 +60,7 @@ slider-component.slider-component-full-width {
     --focus-outline-padding: 0rem;
   }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .slider--mobile {
     margin-bottom: 1rem; 
   }
@@ -245,7 +245,7 @@ slider-component.slider-component-full-width {
   min-width: 4.4rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .slider-counter--dots {
     margin: 0 1.2rem;
   }
@@ -376,7 +376,7 @@ slider-component.slider-component-full-width {
 }
 
 
-@media screen and (min-width: 750px) and (max-width: 989px) {
+@media screen and (min-width: 700px) and (max-width: 989px) {
   .slider--tablet.grid--peek .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) - 3rem);
   }
