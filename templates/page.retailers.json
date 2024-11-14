@@ -290,6 +290,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_QqExPN": {
+          "type": "location",
+          "settings": {
+            "store_name": "Bridal Extraordinaire",
+            "website": "https://www.bridalextraordinaire.com/",
+            "phone_number": "(913) 268‑5566",
+            "address": "<p>12109 Shawnee Mission Parkway Shawnee, KS 66216</p>",
+            "state": "Kansas",
+            "country": "USA",
+            "longitude": 39.0,
+            "latitude": -94.7,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -310,7 +325,8 @@
         "location_kg9MFB",
         "location_3hk6wp",
         "location_rr9hB9",
-        "location_QNbbzf"
+        "location_QNbbzf",
+        "location_QqExPN"
       ],
       "settings": {
         "heading": "Find a Retailer",
