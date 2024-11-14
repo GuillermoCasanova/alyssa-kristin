@@ -1874,6 +1874,7 @@ button:hover,
   font-size: var(--micro);
   padding-left: var(--level4); 
   padding-right: var(--level4); 
+  line-height: 1.7;
 }
 
 .button--medium .button__text {

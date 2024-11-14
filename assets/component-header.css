@@ -250,10 +250,13 @@
     transition: all 200ms ease-in-out;
 }
 
-.header__icon:hover,
-.header__icon:focus {
-    cursor: pointer;
-    opacity: .5;
+@media screen and (min-width: 940px) {
+    .header__icon:hover,
+    .header__icon:focus {
+        cursor: pointer;
+        opacity: .5;
+    }
+
 }
 
 .header__icon .icon {
