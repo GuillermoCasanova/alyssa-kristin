@@ -1005,6 +1005,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_Wj4RkN": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(306) 477-7077",
+            "address": "<p>160 2nd Ave N Saskatoon, Saskatchewan, S7K 2B2</p>",
+            "state": "Saskatchewan",
+            "country": "Canada",
+            "longitude": 52.1,
+            "latitude": -106.7,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1018,7 +1033,8 @@
         "location_gkU6eN",
         "location_DjX7NH",
         "location_7hdbnG",
-        "location_rx8k6Y"
+        "location_rx8k6Y",
+        "location_Wj4RkN"
       ],
       "settings": {}
     }
