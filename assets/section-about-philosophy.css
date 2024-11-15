@@ -129,6 +129,8 @@
 
 @media screen and (min-width: 940px) {
     .about-philosophy__body {
+        align-self: flex-start;
+        padding: var(--level10);
         grid-column: 6 / -1;
         grid-row: 3 / 3;
         margin-top: 0;
@@ -136,7 +138,6 @@
         padding-bottom: var(--level5); 
         padding-left: var(--level8); 
         padding-right: var(--level10); 
-        padding-top: 0; 
         position: relative;
     }
 
