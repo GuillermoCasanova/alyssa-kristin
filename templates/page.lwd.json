@@ -13,11 +13,31 @@
       "type": "main-page",
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "hide_body": "false"
+      }
+    },
+    "main_lwd_builder_YdxB6V": {
+      "type": "main-lwd-builder",
+      "settings": {
+        "collection": "little-white-dress",
+        "is_alt": false,
+        "alt_version_heading": "<h2>Your Alt Version Heading Here</h2>",
+        "alt_version_body": "<p>Your Alt Version Body Here</p>",
+        "alt_version_cta_label": "Explore More",
+        "alt_version_cta_link": ""
+      }
+    },
+    "dress_options_list_jR97Nz": {
+      "type": "dress-options-list",
+      "settings": {
+        "collection": "little-white-dress"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "main_lwd_builder_YdxB6V",
+    "dress_options_list_jR97Nz"
   ]
 }
