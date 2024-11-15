@@ -1170,6 +1170,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_D9pHr6": {
+          "type": "location",
+          "settings": {
+            "store_name": "Jill Jones",
+            "website": "https://www.jilljonesbridal.co.uk/",
+            "phone_number": "0794 359 9969",
+            "address": "<p>1 Rashee Road, Ballyclare BT39 9HJ</p>",
+            "state": "Antrim",
+            "country": "United Kingdom",
+            "longitude": 54.8,
+            "latitude": -6.0,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1194,7 +1209,8 @@
         "location_nxMpXb",
         "location_WAYFaB",
         "location_3c3RJE",
-        "location_erXJDH"
+        "location_erXJDH",
+        "location_D9pHr6"
       ],
       "settings": {}
     }
