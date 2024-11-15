@@ -31,7 +31,7 @@
 
 @media screen and (min-width: 940px) {
     .blurb-section__heading {
-        font-size: var(--kilo);
+        font-size: var(--mega);
         margin-bottom: var(--level10);
     }
 }
@@ -139,6 +139,7 @@
         margin-bottom: var(--level8);
     }
 }
+
 
 @media screen and (min-width: 940px) {
     .blurb-section .card {

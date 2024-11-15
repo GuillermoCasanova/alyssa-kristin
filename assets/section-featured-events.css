@@ -236,7 +236,7 @@
     column-gap: var(--level2);
 }
 .featured-event--alt .featured-event__location p {
-    font-size: var(--normal);
+    font-size: var(--h6);
 }
 
 .featured-event--alt .featured-event__location p br { 
