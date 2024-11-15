@@ -7,22 +7,17 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "banner": {
-        "type": "main-collection-banner",
-        "settings": {}
-      },
-      "main_lwd_builder_xqaipN": {
-        "type": "main-lwd-builder",
-        "settings": {
-          "collection": "little-white-dress"
-        }
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
       }
-    },
-    "order": [
-      "banner",
-      "main_lwd_builder_xqaipN"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
