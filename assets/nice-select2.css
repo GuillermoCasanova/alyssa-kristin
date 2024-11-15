@@ -20,7 +20,7 @@
 }
 
 .choices__list--dropdown, .choices__list[aria-expanded] {
-    background-color: rgb(var(--color-base-background-2)); 
+    background-color: rgb(var(--color-base-background-1)); 
 }
 
 .choices__inner,

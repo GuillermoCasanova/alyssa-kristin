@@ -72,9 +72,6 @@ class LwdBuilder extends HTMLElement {
   }
 
   setChoicesNames() {
-    console.log('setChoicesNames');
-    console.log(this.topSelect);
-    console.log(this.bottomSelect);
     const topSelectedOption = this.topSelect.options[this.topSelect.selectedIndex].text;
     const bottomSelectedOption = this.bottomSelect.options[this.bottomSelect.selectedIndex].text;
 

@@ -268,6 +268,7 @@ product-info {
 
 .product-form__input .select {
   max-width: 100%;
+  background-color: rgb(var(--color-base-background-2));
 }
 
 .product-form__input .svg-wrapper {
