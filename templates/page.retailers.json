@@ -930,6 +930,21 @@
             "gown": false,
             "lwd": false
           }
+        },
+        "location_HXHFaG": {
+          "type": "location",
+          "settings": {
+            "store_name": "Everly Fine Bridal",
+            "website": "https://www.everlyfinebridal.com/",
+            "phone_number": "(604) 564-3070",
+            "address": "<p>910 Richards St, Vancouver, BC V6B 3C1, Canada</p>",
+            "state": "British Columbia",
+            "country": "Canada",
+            "longitude": 49.3,
+            "latitude": -123.1,
+            "gown": false,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -938,7 +953,8 @@
         "location_XWraGU",
         "location_4JyztK",
         "location_xQYPb7",
-        "location_4LVBq7"
+        "location_4LVBq7",
+        "location_HXHFaG"
       ],
       "settings": {}
     }
