@@ -183,10 +183,15 @@ summary::before {
     #Typography
 \*------------------------------------*/
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing:antialiased;
+}
+
 :root {
   font-size: .85rem;
 }
-
 
 /*X-SMALL*/
 @media screen and (min-width: 260px) {
@@ -265,11 +270,7 @@ summary::before {
 }
 
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing:antialiased;
-}
+
 
 /*------------------------------------*\
     #Default Text Selection Color 
