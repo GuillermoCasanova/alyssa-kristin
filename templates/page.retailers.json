@@ -1125,6 +1125,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_WAYFaB": {
+          "type": "location",
+          "settings": {
+            "store_name": "Paperswan Bride",
+            "website": "https://paperswanbride.co.nz/",
+            "phone_number": "09 300 7433",
+            "address": "<p>G06, 70 Daldy Street Auckland CBD 1010</p>",
+            "state": "Auckland",
+            "country": "New Zealand",
+            "longitude": -36.8,
+            "latitude": 174.8,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1146,7 +1161,8 @@
         "location_YyxH9i",
         "location_W7EY98",
         "location_etmDzk",
-        "location_nxMpXb"
+        "location_nxMpXb",
+        "location_WAYFaB"
       ],
       "settings": {}
     }
