@@ -1155,6 +1155,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_erXJDH": {
+          "type": "location",
+          "settings": {
+            "store_name": "Isabella’s Closet",
+            "website": "https://isabellascloset.co.uk/",
+            "phone_number": "0151 724 3365",
+            "address": "<p>65 Booker Avenue, Liverpool, L18 4QZ</p>",
+            "state": "Liverpool",
+            "country": "United Kingdom",
+            "longitude": 53.4,
+            "latitude": -2.9,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1178,7 +1193,8 @@
         "location_etmDzk",
         "location_nxMpXb",
         "location_WAYFaB",
-        "location_3c3RJE"
+        "location_3c3RJE",
+        "location_erXJDH"
       ],
       "settings": {}
     }
