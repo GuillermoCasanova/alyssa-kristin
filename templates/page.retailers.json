@@ -975,6 +975,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_7hdbnG": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(780) 930-1505",
+            "address": "<p>10935-120th Street Edmonton, Alberta T5H3R3</p>",
+            "state": "Alberta",
+            "country": "Canada",
+            "longitude": 53.6,
+            "latitude": -113.5,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -986,7 +1001,8 @@
         "location_4LVBq7",
         "location_HXHFaG",
         "location_gkU6eN",
-        "location_DjX7NH"
+        "location_DjX7NH",
+        "location_7hdbnG"
       ],
       "settings": {}
     }
