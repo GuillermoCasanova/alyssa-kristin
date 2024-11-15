@@ -1020,6 +1020,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_eEXcgG": {
+          "type": "location",
+          "settings": {
+            "store_name": "Tilted Veil",
+            "website": "https://tiltedveil.com/",
+            "phone_number": "(519) 821-8868",
+            "address": "<p>43 Arthur St. South, Unit D Guelph, Ontario, N1E 0P9</p>",
+            "state": "Ontario",
+            "country": "Canada",
+            "longitude": 43.5,
+            "latitude": -80.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1034,7 +1049,8 @@
         "location_DjX7NH",
         "location_7hdbnG",
         "location_rx8k6Y",
-        "location_Wj4RkN"
+        "location_Wj4RkN",
+        "location_eEXcgG"
       ],
       "settings": {}
     }
