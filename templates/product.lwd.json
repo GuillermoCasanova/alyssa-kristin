@@ -14,17 +14,22 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "description": {
           "type": "description",
+          "settings": {}
+        },
+        "size_guide_hQTfbY": {
+          "type": "size-guide",
           "settings": {
+            "headline": "",
+            "subline": "",
+            "body": ""
           }
         },
         "variant_picker": {
@@ -46,6 +51,7 @@
         "title",
         "price",
         "description",
+        "size_guide_hQTfbY",
         "variant_picker",
         "buy_buttons"
       ],
