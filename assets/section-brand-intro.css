@@ -38,7 +38,7 @@
 }
 @media screen and (min-width: 1200px) {
     .brand-intro__inner {
-        grid-template-columns: minmax(0,35%) minmax(0,60%);
+        grid-template-columns: minmax(0, 35%) minmax(0, 61%);
         max-width: 100%; 
         max-width: var(--max-width-medium);
         justify-content: space-between;
@@ -255,7 +255,7 @@
 @media screen and (min-width: 940px) {
     .brand-intro__copy {
         max-width: 80%; 
-        top: -6rem;
+        top: -8rem;
         min-width: 36rem;
     }
 }
@@ -291,12 +291,13 @@
     .brand-intro__copy__body {
         font-size: var(--h4);
         margin-bottom: 0; 
+        margin-left: 0;
     }
 }
 
 @media screen and (min-width: 940px) {
     .brand-intro__copy__body {
-        font-size: var(--h4);
+        font-size: var(--h3);
         margin-bottom: 0; 
         max-width: 39rem;
     }
@@ -333,7 +334,7 @@
             bottom: auto;
             position: relative;
             margin-bottom: calc(var(--level10)* 2);
-            max-width: 54%;
+            max-width: 57%;
             margin-right: 0;
             right: 0;
             left: auto;

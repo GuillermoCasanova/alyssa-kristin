@@ -361,10 +361,10 @@ lwd-slideshow .swiper-slide {
 
  @media screen and (min-width: 940px) {
   .lwd-builder-alt-copy {
-    padding: var(--level10);
+    padding: var(--level9);
     padding-left: var(--level8);
     padding-right: var(--level8);
-    font-size: var(--h4);
+    font-size: var(--h3);
    }
  }
 
@@ -378,3 +378,5 @@ lwd-slideshow .swiper-slide {
     font-size: var(--h1);
   }
  }
+
+
