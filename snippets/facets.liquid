@@ -147,6 +147,8 @@
                         endif
                       %}
 
+                      {% assign turn_off_price_sorting = section.settings.turn_off_price_sorting %}
+
                       {% case filter.type %}
                         {% when 'boolean', 'list' %}
                           <details
@@ -354,6 +356,9 @@
                           or option.value == 'created-descending'
                           or option.value == 'best-selling'
                         %}
+                          {% if option.value contains 'price' and section.settings.turn_off_price_sorting %}
+                            {% continue %}
+                          {% endif %}
                           <li class="facets__sorting-option">
                             <button
                               class="facets__sorting-option-button"
@@ -368,7 +373,7 @@
                       {%- endfor -%}
                     </ul>
                     <div class="select visually-hidden">
-                      <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+                      <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</ label>
                       <select
                         name="sort_by"
                         class="facet-filters__sort select__select caption-large"
@@ -376,6 +381,9 @@
                         aria-describedby="a11y-refresh-page-message"
                       >
                         {%- for option in results.sort_options -%}
+                          {% if option.value contains 'price' and section.settings.turn_off_price_sorting %}
+                            {% continue %}
+                          {% endif %}
                           <option
                             value="{{ option.value | escape }}"
                             {% if option.value == sort_by %}

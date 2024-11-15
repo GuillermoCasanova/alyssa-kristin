@@ -96,7 +96,8 @@
                 lazy_load: lazy_load,
                 skip_styles: skip_card_product_styles,
                 quick_add: 'standard',
-                section_id: section.id
+                section_id: section.id,
+                turn_off_price_sorting: section.settings.turn_off_price_sorting
               %}
             </li>
             {%- assign skip_card_product_styles = true -%}
@@ -107,21 +108,19 @@
   </div>
 </div>
 
-{% comment %}
-  <script src="{{ 'ajaxinate.min.js' | asset_url }}" defer></script>
-  <script>
-    function initAjaxinate() {
-      var endlessScroll = new Ajaxinate({
-        container: '#AjaxinateLoop',
-        pagination: '#AjaxinatePagination',
-        method: 'click',
-      });
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-      initAjaxinate();
+<script src="{{ 'ajaxinate.min.js' | asset_url }}" defer></script>
+<script>
+  function initAjaxinate() {
+    var endlessScroll = new Ajaxinate({
+      container: '#AjaxinateLoop',
+      pagination: '#AjaxinatePagination',
+      method: 'click',
     });
-  </script>
-{% endcomment %}
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    initAjaxinate();
+  });
+</script>
 
 {% schema %}
 {
@@ -332,6 +331,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "turn_off_price_sorting",
+      "default": false,
+      "label": "Turn off price sorting"
     }
   ]
 }

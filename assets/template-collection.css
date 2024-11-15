@@ -48,6 +48,7 @@
 .collection .loading-overlay {
   justify-content: flex-start;
   align-items: flex-start;
+  transition: all 0.3s ease-out;
 }
 
 .collection .loading-overlay__spinner {

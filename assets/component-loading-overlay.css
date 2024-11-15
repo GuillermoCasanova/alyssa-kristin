@@ -16,6 +16,7 @@
 .loading-overlay.hidden {
   opacity: 0;
   pointer-events: none;
+  display: block;
 }
 
 @media screen and (max-width: 749px) {
