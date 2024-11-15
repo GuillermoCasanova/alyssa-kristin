@@ -1035,6 +1035,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_CTgbaz": {
+          "type": "location",
+          "settings": {
+            "store_name": "Tilted Veil East",
+            "website": "https://tiltedveileast.com/",
+            "phone_number": "(902) 536-2618",
+            "address": "<p>5663 Nora Bernard Street Suite 102, Halifax, Nova Scotia, B3K 1B6</p>",
+            "state": "Nova Scotia",
+            "country": "Canada",
+            "longitude": 44.7,
+            "latitude": -63.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1050,7 +1065,8 @@
         "location_7hdbnG",
         "location_rx8k6Y",
         "location_Wj4RkN",
-        "location_eEXcgG"
+        "location_eEXcgG",
+        "location_CTgbaz"
       ],
       "settings": {}
     }
