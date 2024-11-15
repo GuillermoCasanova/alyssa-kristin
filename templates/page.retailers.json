@@ -855,10 +855,26 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_QkGw8z": {
+          "type": "location",
+          "settings": {
+            "store_name": "Honest in Ivory",
+            "website": "https://honestinivory.com/",
+            "phone_number": "(509) 309‑3239",
+            "address": "<p>123 E Sprague Ave Spokane, WA 99202</p>",
+            "state": "Washington",
+            "country": "USA",
+            "longitude": 47.7,
+            "latitude": -117.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
-        "location_WXJnDr"
+        "location_WXJnDr",
+        "location_QkGw8z"
       ],
       "settings": {}
     }
