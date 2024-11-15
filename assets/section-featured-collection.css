@@ -159,7 +159,7 @@
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .featured-collection .swiper-container {
         max-width: 100%;
         margin-left: 0; 

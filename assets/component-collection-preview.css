@@ -61,7 +61,7 @@
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .collection-preview__products {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }

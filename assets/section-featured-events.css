@@ -135,7 +135,7 @@
 }
 
 .featured-event__image {
-    margin-bottom: var(--level5);
+    margin-bottom: var(--level4);
 }
 
 .featured-event__details {
@@ -152,7 +152,7 @@
 .featured-event__title {
     margin-bottom: var(--level0); 
     text-transform: uppercase;
-    font-size: var(--h6);
+    font-size: var(--h5);
 }
 
 
@@ -162,9 +162,17 @@
     margin-bottom: var(--level0); 
 }
 
+.featured-event__location br {
+    display: none;
+}
+
 @media screen and (min-width: 940px) {
     .featured-event__location  p {
         font-size: var(--h5);
+    }
+
+    .featured-event__location br {
+        display: none;
     }
 }
 

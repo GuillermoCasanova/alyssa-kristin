@@ -25,6 +25,12 @@
     display: flex;
 }
 
+@media screen and (min-width: 940px) {
+    .appointment-section__image {
+        max-height: 36rem; ;
+    }
+}
+
 .appointment-section__image img {
     object-position: top;
 }
@@ -34,7 +40,7 @@
     width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .apppointment-section__image__innner {
         padding-bottom: 60%; 
     }
@@ -58,7 +64,7 @@
     text-transform: lowercase;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .appointment-section__copy__heading {
         font-family: var(--secondary-font-family);
         font-size: var(--h1);
@@ -76,17 +82,17 @@
 
 .appointment-section__copy__body {
     font-size: var(--normal);
-    max-width: 38rem; 
+    max-width: 40rem; 
     margin-left: auto; 
     margin-right: auto; 
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .appointment-section__copy__body {
-        margin-bottom: var(--level10); 
+        margin-bottom: var(--level7); 
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 940px) {
     .appointment-section__copy__body p {
         font-size: var(--h5);
     }
@@ -94,7 +100,7 @@
 
 @media screen and (min-width: 1200px) {
     .appointment-section__copy__body p {
-        font-size: var(--h4);
+        font-size: var(--h3);
     }
 }
 
