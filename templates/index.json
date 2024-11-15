@@ -108,16 +108,10 @@
             "feature": "Quality craftsmanship"
           }
         },
-        "feature_zQDjcq": {
-          "type": "feature",
-          "settings": {
-            "feature": ""
-          }
-        },
         "feature_wTbXGg": {
           "type": "feature",
           "settings": {
-            "feature": "customizable"
+            "feature": "Customizable"
           }
         },
         "feature_8A7WV4": {
@@ -136,7 +130,6 @@
       "block_order": [
         "feature_Mg8AAn",
         "feature_7N9YGQ",
-        "feature_zQDjcq",
         "feature_wTbXGg",
         "feature_8A7WV4",
         "feature_h8yz3n"
