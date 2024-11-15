@@ -95,7 +95,7 @@
               <h3 class="lwd-builder__controls__heading">Top: <span data-top-selected-title></span></h3>
               <select data-top-select class="visually-hidden">
                 {% assign top_ids = '' %}
-                {% for product in collection.products %}
+                {% for product in section.settings.collection.products %}
                   {% assign top_id = all_products[product.metafields.dress.top].id %}
                   {% unless top_ids contains top_id %}
                     <option
@@ -113,7 +113,7 @@
               <div class="lwd-builder-options__images" data-option-images>
                 <div class="lwd-builder-options__images__inner">
                   {% assign top_image_ids = '' %}
-                  {% for product in collection.products %}
+                  {% for product in section.settings.collection.products %}
                     {% assign top_image_id = all_products[product.metafields.dress.top].id %}
                     {% unless top_image_ids contains top_image_id %}
                       <div class="lwd-builder-option__image" data-id="{{ top_image_id }}">
@@ -137,7 +137,7 @@
               <h3 class="lwd-builder__controls__heading">Bottom: <span data-bottom-selected-title></span></h3>
               <select data-bottom-select class="visually-hidden">
                 {% assign bottom_ids = '' %}
-                {% for product in collection.products %}
+                {% for product in section.settings.collection.products %}
                   {% assign bottom_id = all_products[product.metafields.dress.bottom].id %}
                   {% unless bottom_ids contains bottom_id %}
                     <option
@@ -155,7 +155,7 @@
               <div class="lwd-builder-options__images" data-option-images>
                 <div class="lwd-builder-options__images__inner">
                   {% assign bottom_image_ids = '' %}
-                  {% for product in collection.products %}
+                  {% for product in section.settings.collection.products %}
                     {% assign bottom_image_id = all_products[product.metafields.dress.bottom].id %}
                     {% unless bottom_image_ids contains bottom_image_id %}
                       <div class="lwd-builder-option__image" data-id="{{ bottom_image_id }}">
