@@ -1,0 +1,78 @@
+{% schema %}
+{
+  "name": "Retailer List",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Retailers List"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "blocks": [
+    {
+      "type": "location",
+      "name": "Location",
+      "settings": [
+        {
+          "id": "store_name",
+          "type": "text",
+          "label": "Store Name"
+        },
+        {
+          "id": "website",
+          "type": "url",
+          "label": "Website"
+        },
+        {
+          "id": "phone_number",
+          "type": "text",
+          "label": "Phone Number"
+        },
+        {
+          "id": "address",
+          "type": "richtext",
+          "label": "Address"
+        },
+        {
+          "id": "state",
+          "type": "text",
+          "label": "State"
+        },
+        {
+          "id": "country",
+          "type": "text",
+          "label": "Country"
+        },
+        {
+          "id": "longitude",
+          "type": "number",
+          "label": "Longitude"
+        },
+        {
+          "id": "latitude",
+          "type": "number",
+          "label": "Latitude"
+        },
+        {
+          "id": "gown",
+          "type": "checkbox",
+          "label": "Gown"
+        },
+        {
+          "id": "lwd",
+          "type": "checkbox",
+          "label": "LWD"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
