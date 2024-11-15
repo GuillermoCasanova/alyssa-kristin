@@ -1,0 +1,77 @@
+{% if section.settings.enable_side_nav %}
+  <aside class="side-nav">
+    <nav>
+      <ul id="side-nav-list">
+        <!-- Links will be generated here by JavaScript -->
+      </ul>
+    </nav>
+  </aside>
+
+  <style>
+    .side-nav {
+      position: fixed;
+      top: 20%;
+      left: 0;
+      width: 200px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      display: none; /* Hidden by default */
+    }
+    .side-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    .side-nav li {
+      margin-bottom: 10px;
+    }
+    .side-nav a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.innerWidth >= 940) {
+        document.querySelector('.side-nav').style.display = 'block';
+        var sections = document.querySelectorAll('section[id]');
+        var sideNavList = document.getElementById('side-nav-list');
+        sections.forEach(function (section) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = '#' + section.id;
+          a.textContent = section.id.replace(/-/g, ' ');
+          li.appendChild(a);
+          sideNavList.appendChild(li);
+        });
+      }
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Page Side Navigation",
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Side Navigation Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_side_nav",
+      "label": "Enable Side Navigation",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Side Nav"
+    }
+  ]
+}
+{% endschema %}
