@@ -1110,6 +1110,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_nxMpXb": {
+          "type": "location",
+          "settings": {
+            "store_name": "Paperswan Bride",
+            "website": "https://paperswanbride.co.nz/",
+            "phone_number": "03 366 9956",
+            "address": "<p>181 High Street Christchurch 8011</p>",
+            "state": "Christchurch",
+            "country": "New Zealand",
+            "longitude": -43.5,
+            "latitude": 172.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1130,7 +1145,8 @@
         "location_4GJBPK",
         "location_YyxH9i",
         "location_W7EY98",
-        "location_etmDzk"
+        "location_etmDzk",
+        "location_nxMpXb"
       ],
       "settings": {}
     }
