@@ -927,7 +927,7 @@
             "country": "Canada",
             "longitude": -35.0,
             "latitude": 138.6,
-            "gown": false,
+            "gown": true,
             "lwd": false
           }
         },
@@ -942,7 +942,22 @@
             "country": "Canada",
             "longitude": 49.3,
             "latitude": -123.1,
-            "gown": false,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_gkU6eN": {
+          "type": "location",
+          "settings": {
+            "store_name": "Sash & Bustle",
+            "website": "https://sashandbustle.com/",
+            "phone_number": "(647) 340-5850",
+            "address": "<p>111 Berkeley Street, Toronto, ON M5A 2W8</p>",
+            "state": "Ontario",
+            "country": "Canada",
+            "longitude": 43.7,
+            "latitude": -79.4,
+            "gown": true,
             "lwd": false
           }
         }
@@ -954,7 +969,8 @@
         "location_4JyztK",
         "location_xQYPb7",
         "location_4LVBq7",
-        "location_HXHFaG"
+        "location_HXHFaG",
+        "location_gkU6eN"
       ],
       "settings": {}
     }
