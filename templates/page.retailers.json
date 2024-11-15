@@ -1140,6 +1140,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_3c3RJE": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Atelier",
+            "website": "https://thebridalatelier.ae/",
+            "phone_number": "971 55 574 6611",
+            "address": "<p>Store 5 - Street 4 4th St - Al Quoz - Al Quoz Industrial Area 3 - Dubai</p>",
+            "state": "Dubai",
+            "country": "United Arab Emirates",
+            "longitude": 25.1,
+            "latitude": 55.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1162,7 +1177,8 @@
         "location_W7EY98",
         "location_etmDzk",
         "location_nxMpXb",
-        "location_WAYFaB"
+        "location_WAYFaB",
+        "location_3c3RJE"
       ],
       "settings": {}
     }
