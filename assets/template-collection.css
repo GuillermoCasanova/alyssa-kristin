@@ -6,6 +6,7 @@
 
 .collection {
   margin-bottom: var(--level8);
+  position: relative;
 }
 
 @media screen and (min-width: 700px) {
@@ -45,33 +46,19 @@
 }
 
 .collection .loading-overlay {
-  position: absolute;
-  z-index: 1;
-  width: 1.8rem;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-@media screen and (max-width: 749px) {
-  .collection .loading-overlay {
-    top: 0;
-    right: 0;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .collection .loading-overlay {
-    left: 0;
-  }
-}
-
-.collection .loading-overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  padding: 0 1.5rem;
-  opacity: 0.7;
+.collection .loading-overlay__spinner {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  position: relative;
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24vh;
 }
 
 @media screen and (min-width: 700px) {
@@ -79,10 +66,6 @@
     padding-left: 5rem;
     padding-right: 5rem;
   }
-}
-
-.collection.loading .loading-overlay {
-  display: block;
 }
 
 .collection--empty .title-wrapper {

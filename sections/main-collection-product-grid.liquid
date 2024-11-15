@@ -1,4 +1,5 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -46,7 +47,6 @@
   >
     {%- if collection.products.size == 0 -%}
       <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
-        <div class="loading-overlay gradient"></div>
         <div class="title-wrapper center">
           <h2 class="title title--primary">
             {{ 'sections.collection_template.empty' | t -}}
@@ -63,9 +63,12 @@
 
       <div
         class="collection"
-        id="AjaxinateLoop"
       >
-        <div class="loading-overlay gradient"></div>
+        <div class="loading-overlay hidden">
+          <div class="loading-overlay__spinner">
+            {%- render 'loading-spinner' -%}
+          </div>
+        </div>
         <ul
           id="product-grid"
           data-id="{{ section.id }}"
@@ -73,7 +76,7 @@
         >
           {% assign skip_card_product_styles = false %}
           {%- for product in collection.products -%}
-            {% assign lazy_load = false %}
+            {% assign lazy_load = true %}
             {%- if forloop.index > 2 -%}
               {%- assign lazy_load = true -%}
             {%- endif -%}

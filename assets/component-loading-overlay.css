@@ -2,6 +2,20 @@
   position: absolute;
   z-index: 1;
   width: 1.8rem;
+  background-color: rgb(var(--color-base-background-1));
+  width: 100%; 
+  height: 100%; 
+  top: 0; 
+  opacity: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 749px) {
@@ -19,7 +33,9 @@
 
 .loading-overlay__spinner {
   width: 1.8rem;
+  height: 1.6rem;
   display: inline-block;
+  position: relative;
 }
 
 .spinner {
