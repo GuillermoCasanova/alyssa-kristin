@@ -837,11 +837,16 @@
         "heading": "RETAILERS",
         "description": "<p>Discover the perfect centerpiece for your wedding wardrobe from bridal dresses by Shona Joy. We are a global brand with a clear Australian identity, crafting timeless pieces that are designed to celebrate life in. Featuring effortless and modern silhouettes, designed in luxurious white, ivory and neutral silk. These dresses will take you from engagement to ceremony and reception.</p>"
       }
+    },
+    "retailer_list_xxiky3": {
+      "type": "retailer-list",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "retailers_search_UtGe9J",
-    "main_collection_description_BcEKAb"
+    "main_collection_description_BcEKAb",
+    "retailer_list_xxiky3"
   ]
 }
