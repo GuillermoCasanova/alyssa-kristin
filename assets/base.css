@@ -300,6 +300,7 @@ h5,
 h6 {
   margin-bottom: 1rem;
   letter-spacing: -.05px;
+  font-weight: 300;
 }
 
 body {
@@ -1749,9 +1750,11 @@ button:hover,
 }
 
 .button--primary {
-  border: 1px solid rgb(var(--color-base-text));
+  border: 1px solid rgb(var(--color-base-text-1));
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
   color: rgb(var(--color-base-text-1));
-  border-bottom: 1px solid rgb(var(--color-base-text-1));
   font-family: var(--tertiary-font-family);
   letter-spacing: var(--button-letter-spacing);
   background-color: transparent;
@@ -1759,8 +1762,10 @@ button:hover,
 
 .button--primary:focus,
 .button--primary:hover {
-  background-color: rgb(var(--color-base-text-1));
-  color: #fff;
+  background-color: transparent;
+  border-left-color: rgb(var(--color-base-text-1));
+  border-right-color: rgb(var(--color-base-text-1));
+  border-top-color: rgb(var(--color-base-text-1));
 }
 
 .button--secondary {
