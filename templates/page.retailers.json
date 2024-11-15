@@ -1200,6 +1200,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_EtxpxY": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Courtyard",
+            "website": "https://bridalcourtyard.com/",
+            "phone_number": "0141 237 8680",
+            "address": "<p>48 St Andrew’s Square, Glasgow, G1 5PP</p>",
+            "state": "Glasgow",
+            "country": "United Kingdom",
+            "longitude": 55.9,
+            "latitude": -4.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1226,7 +1241,8 @@
         "location_3c3RJE",
         "location_erXJDH",
         "location_D9pHr6",
-        "location_D9PWrX"
+        "location_D9PWrX",
+        "location_EtxpxY"
       ],
       "settings": {}
     }
