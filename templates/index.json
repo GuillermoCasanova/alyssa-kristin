@@ -201,27 +201,6 @@
         "cta_text": "Book An Appointment"
       }
     },
-    "1731699248c7f8cf2a": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_KKRh3g": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "alignment": "center",
-            "background_color": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_KKRh3g"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "instagram_section_xWcUw4": {
       "type": "instagram-section",
       "settings": {
@@ -242,7 +221,6 @@
     "featured_events_JWhbe7",
     "featured_on_mByktG",
     "appointment_section_zrN4XF",
-    "1731699248c7f8cf2a",
     "instagram_section_xWcUw4"
   ]
 }
