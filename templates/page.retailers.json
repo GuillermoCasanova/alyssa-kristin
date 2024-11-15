@@ -1080,6 +1080,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_W7EY98": {
+          "type": "location",
+          "settings": {
+            "store_name": "Memories Bridal Boutique",
+            "website": "https://memoriesbridalboutique.com/",
+            "phone_number": "353 85 858 1303",
+            "address": "<p>5A Lower Main St, Lucan And Pettycanon, Dublin, K78 R2H1</p>",
+            "state": "Dublin",
+            "country": "Ireland",
+            "longitude": 53.4,
+            "latitude": -6.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1098,7 +1113,8 @@
         "location_eEXcgG",
         "location_CTgbaz",
         "location_4GJBPK",
-        "location_YyxH9i"
+        "location_YyxH9i",
+        "location_W7EY98"
       ],
       "settings": {}
     }
