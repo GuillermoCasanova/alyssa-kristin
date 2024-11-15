@@ -1050,6 +1050,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_4GJBPK": {
+          "type": "location",
+          "settings": {
+            "store_name": "JE Bridal Atelier",
+            "website": "https://www.instagram.com/jebridalatelier",
+            "phone_number": "852 2640 1314",
+            "address": "<p>Hong Kong, Causeway Bay, Yun Ping Rd, 17 號3 樓</p>",
+            "state": "Hong Kong",
+            "country": "Hong Kong",
+            "longitude": 22.3,
+            "latitude": 114.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1066,7 +1081,8 @@
         "location_rx8k6Y",
         "location_Wj4RkN",
         "location_eEXcgG",
-        "location_CTgbaz"
+        "location_CTgbaz",
+        "location_4GJBPK"
       ],
       "settings": {}
     }
