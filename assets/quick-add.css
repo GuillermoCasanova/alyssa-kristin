@@ -17,7 +17,6 @@
   right: 0; 
   bottom: 0; 
   opacity: 0;
-  transform: translateY(90%);
   transition: all 0.2s ease-out;
 }
 
@@ -31,12 +30,14 @@
   padding-bottom: var(--level3); 
   font-size: var(--micro); 
   font-family: var(--tertiary-font-family); 
+  top: 0; 
+  position: relative;
 }
 
 .card:hover .quick-add,
-.card:focus .quick-add {
-  opacity: 1;
+.card:focus .quick-add  {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .quick-add-modal {
@@ -406,9 +407,13 @@ quick-add-modal .product-form__buttons {
 }
 
 .quick-add__submit {
-  padding: 0.8rem;
   min-width: 100%;
   box-sizing: border-box;
+  background-color: rgb(var(--color-base-background-2));
+}
+
+.quick-add__submit .loading__spinner {
+  background-color: rgb(var(--color-base-background-2));
 }
 
 quick-add-modal .product-media-container.constrain-height {

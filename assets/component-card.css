@@ -145,6 +145,11 @@
 \*------------------------------------*/
 
 .card__media {
+  width: 100%; 
+  position: relative;
+}
+
+.card__media__inner {
   padding-bottom: 140%; 
   width: 100%; 
   display: block;

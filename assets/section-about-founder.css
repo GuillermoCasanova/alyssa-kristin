@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 940px) {
     .about-founder__inner {
-        padding-top: var(--level10);
+        padding-top: calc(var(--level10) + var(--level5));
         grid-template-columns: repeat(12, 1fr);
     }
 }
@@ -40,6 +40,8 @@
         padding-bottom: 0; 
         max-width: 100%;
         margin-right: 0;
+        padding-bottom: var(--level10);
+        padding-top: var(--level10);
     }
 }
 
@@ -116,6 +118,13 @@
     z-index: 0; 
 }
 
+@media screen and (min-width: 940px)  {       top: -1rem;
+    .about-founder__main-image {
+        top: -1rem;
+        position: relative;
+    }
+}
+
 .about-founder__main-image__inner {
     padding-bottom: 140%;
 }
@@ -123,6 +132,7 @@
 @media screen and (min-width: 940px) {
     .about-founder__main-image__inner {
         padding-bottom: 110%;
+
     }
 }
 

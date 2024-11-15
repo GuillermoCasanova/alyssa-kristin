@@ -1753,3 +1753,50 @@ customElements.define('search-toggle', SearchToggle);
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const parentElement = entry.target;
+          const textElements = parentElement.querySelectorAll('.animate-text');
+
+          textElements.forEach((textElement, index) => {
+            const text = textElement.textContent;
+            textElement.textContent = '';
+
+            for (let i = 0; i < text.length; i++) {
+              const span = document.createElement('span');
+              const char = text[i];
+              const parentTag = textElement.cloneNode(false);
+              parentTag.textContent = '';
+              span.textContent = char;
+              span.style.opacity = 0;
+              span.style.transition = `opacity 1s ease ${(index * 0.5) + (i * 0.1)}s`;
+              parentTag.appendChild(span);
+              textElement.appendChild(parentTag);
+
+              requestAnimationFrame(() => {
+                span.style.opacity = 1;
+              });
+            }
+          });
+
+          observer.unobserve(parentElement);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.anima-text').forEach(element => {
+      observer.observe(element.parentElement);
+    });
+  });

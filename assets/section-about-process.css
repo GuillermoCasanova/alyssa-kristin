@@ -12,6 +12,7 @@
 @media screen and (min-width: 700px) {
     .about-process__inner {
         column-gap: var(--level7);
+        padding-top: calc(var(--level10) + var(--level5));
     }
 }
 
