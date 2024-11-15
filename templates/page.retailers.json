@@ -897,7 +897,7 @@
             "country": "Australia",
             "longitude": -34.1,
             "latitude": 150.7,
-            "gown": false,
+            "gown": true,
             "lwd": false
           }
         },
@@ -960,6 +960,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_DjX7NH": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(403) 281-9777",
+            "address": "<p>5131 Elbow Drive SW Calgary, Alberta T2V1H2</p>",
+            "state": "Alberta",
+            "country": "Canada",
+            "longitude": 51.0,
+            "latitude": -114.1,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -970,7 +985,8 @@
         "location_xQYPb7",
         "location_4LVBq7",
         "location_HXHFaG",
-        "location_gkU6eN"
+        "location_gkU6eN",
+        "location_DjX7NH"
       ],
       "settings": {}
     }
