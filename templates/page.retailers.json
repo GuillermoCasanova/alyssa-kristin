@@ -840,6 +840,26 @@
     },
     "retailer_list_xxiky3": {
       "type": "retailer-list",
+      "blocks": {
+        "location_WXJnDr": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/seattle/bridal-shop",
+            "phone_number": "(206) 338-0304",
+            "address": "<p>5423 Ballard Avenue NW Seattle, WA 98107</p>",
+            "state": "Washington",
+            "country": "USA",
+            "longitude": 47.7,
+            "latitude": -122.4,
+            "gown": true,
+            "lwd": false
+          }
+        }
+      },
+      "block_order": [
+        "location_WXJnDr"
+      ],
       "settings": {}
     }
   },
