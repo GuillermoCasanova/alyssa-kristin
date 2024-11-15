@@ -1215,6 +1215,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_xFecyy": {
+          "type": "location",
+          "settings": {
+            "store_name": "The White Closet",
+            "website": "https://www.thewhitecloset.co.uk/",
+            "phone_number": "44 161 445 5678",
+            "address": "<p>204 Burton Rd, West Didsbury, Manchester M20 2LW</p>",
+            "state": "Manchester",
+            "country": "United Kingdom",
+            "longitude": 53.4,
+            "latitude": 53.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1242,7 +1257,8 @@
         "location_erXJDH",
         "location_D9pHr6",
         "location_D9PWrX",
-        "location_EtxpxY"
+        "location_EtxpxY",
+        "location_xFecyy"
       ],
       "settings": {}
     }
