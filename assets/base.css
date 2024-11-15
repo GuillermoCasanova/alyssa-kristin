@@ -2164,3 +2164,38 @@ div#swym-wishlist-render-container{
   font-weight: 300 !important;
   margin-left: 0 !important;
 }
+
+.shopify-policy__title {
+  text-align: center; 
+  text-transform: uppercase; 
+  margin-bottom: var(--level8);
+  font-family: var(--secondary-font-family);
+}
+
+@media screen and (min-width: 700px) {
+  .shopify-policy__title {
+    font-size: var(--h6); 
+  }
+}
+
+.shopify-policy__body {
+  min-height: 50vh;
+  text-align: left; 
+}
+
+.shopify-policy__container {    
+  max-width: var(--max-width-x-small); 
+  margin-top: var(--level8);
+}
+
+
+.shopify-policy__body {
+  margin-bottom: calc(var(--level10) * 3);
+}
+
+@media screen and (min-width: 700px) {
+  .shopify-policy__body {
+    font-size: var(--h6);
+    
+  }
+}

@@ -153,14 +153,26 @@
     }
 }
 
+@media screen and (min-width: 1300px) {
+    .appointment-info__step {
+        padding-top: var(--level10);
+        padding-bottom: var(--level6);
+    }
+}
 
 
 .appointment-info__step__heading {
-    font-family: var(--quaternary-font-family); 
+    font-family: var(--tertiary-font-family); 
     font-weight: normal;
         text-transform: uppercase;
         font-size: var(--h5); 
         margin-bottom: var(--level7); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: var(--normal);
 }
 
 @media screen and (min-width: 940px) {
@@ -169,6 +181,19 @@
         text-transform: uppercase;
         margin-bottom: var(--level6); 
     }
+}
+
+
+.appointment-info__step__heading p {
+    margin-bottom: 0;
+}
+.appointment-info__step__heading strong, 
+.appointment-info__step__heading b {
+    display: block;
+    font-family: var(--tertiary-font-family);
+    font-size: var(--h5);
+    margin-bottom: var(--level2);
+    font-weight: 400;
 }
 
 
