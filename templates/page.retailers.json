@@ -870,11 +870,27 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_XWraGU": {
+          "type": "location",
+          "settings": {
+            "store_name": "Miss Ruby",
+            "website": "https://www.missrubyboutique.com/",
+            "phone_number": "(414) 755-2900",
+            "address": "<p>313 N Plankinton Ave, St 203 Milwaukee, WI 53203</p>",
+            "state": "Wisconsin",
+            "country": "USA",
+            "longitude": 43.0,
+            "latitude": -87.9,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
         "location_WXJnDr",
-        "location_QkGw8z"
+        "location_QkGw8z",
+        "location_XWraGU"
       ],
       "settings": {}
     }
