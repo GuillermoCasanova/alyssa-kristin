@@ -900,13 +900,29 @@
             "gown": false,
             "lwd": false
           }
+        },
+        "location_xQYPb7": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bride Lab",
+            "website": "https://www.thebridelab.com.au/",
+            "phone_number": "61 411 433 781",
+            "address": "<p>109 King William Road, Unley South Australia, 5061</p>",
+            "state": "Unley",
+            "country": "Australia",
+            "longitude": -35.0,
+            "latitude": 138.6,
+            "gown": false,
+            "lwd": false
+          }
         }
       },
       "block_order": [
         "location_WXJnDr",
         "location_QkGw8z",
         "location_XWraGU",
-        "location_4JyztK"
+        "location_4JyztK",
+        "location_xQYPb7"
       ],
       "settings": {}
     }
