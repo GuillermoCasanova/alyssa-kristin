@@ -1065,6 +1065,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_YyxH9i": {
+          "type": "location",
+          "settings": {
+            "store_name": "Memories Bridal Boutique",
+            "website": "https://memoriesbridalboutique.com/",
+            "phone_number": "353 21 455 2324",
+            "address": "<p>22 Tuckey St, Centre, Cork, T12 YPY1</p>",
+            "state": "Cork",
+            "country": "Ireland",
+            "longitude": 51.9,
+            "latitude": -8.5,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1082,7 +1097,8 @@
         "location_Wj4RkN",
         "location_eEXcgG",
         "location_CTgbaz",
-        "location_4GJBPK"
+        "location_4GJBPK",
+        "location_YyxH9i"
       ],
       "settings": {}
     }
