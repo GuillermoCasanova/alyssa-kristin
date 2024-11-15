@@ -1,27 +1,87 @@
-<div class="dress-options-list">
-  <div class="dress-options-list__tops">
-    <h3>Tops</h3>
-    <ul>
-      {% for product in section.settings.collection.products %}
-        <li>
-          <img src="{{ product.metafields.dress.top | img_url: 'small' }}" alt="{{ product.title }} top">
-          <span>{{ product.title }} Top</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="dress-options-list__bottoms">
-    <h3>Bottoms</h3>
-    <ul>
-      {% for product in section.settings.collection.products %}
-        <li>
-          <img src="{{ product.metafields.dress.bottom | img_url: 'small' }}" alt="{{ product.title }} bottom">
-          <span>{{ product.title }} Bottom</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-dress-options.css' | asset_url | stylesheet_tag }}
+<div class="dress-options">
+  <section class="dress-options__inner page-width">
+    <div role="tablist" aria-label="Dress Options">
+      <button id="tab-tops" role="tab" aria-selected="true" aria-controls="panel-tops" tabindex="0">Tops</button>
+      <button id="tab-bottoms" role="tab" aria-selected="false" aria-controls="panel-bottoms" tabindex="-1">
+        Bottoms
+      </button>
+    </div>
+
+    <div id="panel-tops" role="tabpanel" aria-labelledby="tab-tops">
+      <ul class="dress-options__list">
+        {% for product in section.settings.collection.products %}
+          <li class="dress-options__list__item">
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: 'portrait',
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
+              lazy_load: true,
+              skip_styles: false,
+              quick_add: false,
+              section_id: section.id,
+              lwd_style: true,
+              hide_price: true
+            %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="panel-bottoms" role="tabpanel" aria-labelledby="tab-bottoms" hidden>
+      <ul class="dress-">
+        {% for product in section.settings.collection.products %}
+          <li class="dress-options__list__item">
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: 'portrait',
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
+              lazy_load: true,
+              skip_styles: false,
+              quick_add: false,
+              section_id: section.id,
+              lwd_style: true,
+              hide_price: true
+            %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        // Deselect all tabs
+        tabs.forEach((t) => {
+          t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
+        });
+
+        // Hide all tab panels
+        tabPanels.forEach((panel) => (panel.hidden = true));
+
+        // Select the clicked tab
+        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
+
+        // Show the associated tab panel
+        const panelId = tab.getAttribute('aria-controls');
+        document.getElementById(panelId).hidden = false;
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {

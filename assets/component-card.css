@@ -153,6 +153,7 @@
   padding-bottom: 140%; 
   width: 100%; 
   display: block;
+  background-color: rgb(var(--color-base-background-2)); 
 }
 
 .card .media {

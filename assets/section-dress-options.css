@@ -1,0 +1,23 @@
+
+
+
+.dress-options__inner {
+    padding-top: var(--level10);
+}
+
+@media screen and (min-width: 940px ) {
+    
+    .dress-options__inner {
+        padding-top: calc(var(--level10) * 2);
+    }
+}
+
+@media screen and (min-width: 700px ) {
+    .dress-options__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--level10);
+    }
+}
+
+
