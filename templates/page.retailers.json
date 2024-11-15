@@ -990,6 +990,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_rx8k6Y": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(306) 565-1034",
+            "address": "<p>1850 Hamilton Street Regina, Saskatchewan, S4P 2B8</p>",
+            "state": "Saskatchewan",
+            "country": "Canada",
+            "longitude": 50.4,
+            "latitude": -104.6,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1002,7 +1017,8 @@
         "location_HXHFaG",
         "location_gkU6eN",
         "location_DjX7NH",
-        "location_7hdbnG"
+        "location_7hdbnG",
+        "location_rx8k6Y"
       ],
       "settings": {}
     }
