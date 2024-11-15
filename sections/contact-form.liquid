@@ -1,27 +1,7 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
 <section class="contact-form">
-  <div class="contact-form__bg">
-    <img
-      srcset="
-        {%- if section.settings.background.width >= 165 -%}{{ section.settings.background | image_url: width: 165 }} 165w,{%- endif -%}
-        {%- if section.settings.background.width >= 360 -%}{{ section.settings.background | image_url: width: 360 }} 360w,{%- endif -%}
-        {%- if section.settings.background.width >= 533 -%}{{ section.settings.background | image_url: width: 533 }} 533w,{%- endif -%}
-        {%- if section.settings.background.width >= 720 -%}{{ section.settings.background | image_url: width: 720 }} 720w,{%- endif -%}
-        {%- if section.settings.background.width >= 800 -%}{{ section.settings.background | image_url: width: 800 }} 800w,{%- endif -%}
-        {%- if section.settings.background.width >= 940 -%}{{ section.settings.background | image_url: width: 940 }} 940w,{%- endif -%}
-        {%- if section.settings.background.width >= 1066 -%}{{ section.settings.background | image_url: width: 1066 }} 1066w,{%- endif -%}
-        {{ section.settings.background | image_url }} {{ section.settings.background.width }}w
-      "
-      src="{{ section.settings.background | image_url: width: 533 }}"
-      sizes="(min-width: 700px) 50vw, 90vw"
-      alt="{{ section.settings.background.alt | escape }}"
-      class="responsive-image motion-reduce"
-      loading="lazy"
-      width="{{ section.settings.background.width }}"
-      height="{{ section.settings.background.height }}"
-    >
-  </div>
+  <div class="contact-form__bg"></div>
   <div class="contact-form__inner  page-width">
     <h2 class="contact-form__heading">
       {{ section.settings.heading }}
@@ -139,14 +119,9 @@
               </span>
             </button>
           {% else %}
-            <button type="submit" class="button  button--secondary  button--medium  button--contact-form">
+            <button type="submit" class="button  button--tertiary  button--large">
               <span class="button__text">
                 {{ 'templates.contact.form.send' | t }}
-              </span>
-              <span class="button__icon">
-                <svg>
-                  <use href="#arrow-right"/>
-                </svg>
               </span>
             </button>
           {%- endif -%}

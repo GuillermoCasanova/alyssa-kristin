@@ -512,7 +512,7 @@ h6:empty {
 \*------------------------------------*/
 
 main {
-  min-height: calc(70vw - 300px);
+  min-height: calc(70vh - 300px);
   position: relative;
   padding-top: calc(var(--level10) + var(--level8));
 }
@@ -1322,10 +1322,6 @@ textarea {
 }
 
 
-.input--primary {
-  border-radius: 6px;
-}
-
 .input--medium {
   padding-top: .85rem;
   padding-bottom: 1rem;
@@ -1791,12 +1787,17 @@ button:hover,
   letter-spacing: 3px;
   text-transform: uppercase;
   font-family: var(--tertiary-font-family);
+  font-weight: 300;
 }
 
 .button--tertiary:focus,
 .button--tertiary:hover {
   background-color: rgb(var(--color-base-background-3));
   color: rgb(var(--color-base-background-1));
+}
+
+.button--tertiary.button--small {
+  font-size: var(--micro);
 }
 
 .styled-link {
