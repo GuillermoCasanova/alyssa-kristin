@@ -837,11 +837,308 @@
         "heading": "RETAILERS",
         "description": "<p>Discover the perfect centerpiece for your wedding wardrobe from bridal dresses by Shona Joy. We are a global brand with a clear Australian identity, crafting timeless pieces that are designed to celebrate life in. Featuring effortless and modern silhouettes, designed in luxurious white, ivory and neutral silk. These dresses will take you from engagement to ceremony and reception.</p>"
       }
+    },
+    "retailer_list_xxiky3": {
+      "type": "retailer-list",
+      "blocks": {
+        "location_WXJnDr": {
+          "type": "location",
+          "settings": {
+            "store_name": "A&BE Bridal Shop",
+            "website": "https://aandbebridalshop.com/seattle/bridal-shop",
+            "phone_number": "(206) 338-0304",
+            "address": "<p>5423 Ballard Avenue NW Seattle, WA 98107</p>",
+            "state": "Washington",
+            "country": "USA",
+            "longitude": 47.7,
+            "latitude": -122.4,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_QkGw8z": {
+          "type": "location",
+          "settings": {
+            "store_name": "Honest in Ivory",
+            "website": "https://honestinivory.com/",
+            "phone_number": "(509) 309‑3239",
+            "address": "<p>123 E Sprague Ave Spokane, WA 99202</p>",
+            "state": "Washington",
+            "country": "USA",
+            "longitude": 47.7,
+            "latitude": -117.4,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_XWraGU": {
+          "type": "location",
+          "settings": {
+            "store_name": "Miss Ruby",
+            "website": "https://www.missrubyboutique.com/",
+            "phone_number": "(414) 755-2900",
+            "address": "<p>313 N Plankinton Ave, St 203 Milwaukee, WI 53203</p>",
+            "state": "Wisconsin",
+            "country": "USA",
+            "longitude": 43.0,
+            "latitude": -87.9,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_4JyztK": {
+          "type": "location",
+          "settings": {
+            "store_name": "Love Marie",
+            "website": "https://lovemarie.com.au/",
+            "phone_number": "61 418 869 341",
+            "address": "<p>Shop 21. Camden Village Court 180-186 Argyle Street Camden NSW 2570</p>",
+            "state": "Camden NSW",
+            "country": "Australia",
+            "longitude": -34.1,
+            "latitude": 150.7,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_xQYPb7": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bride Lab",
+            "website": "https://www.thebridelab.com.au/",
+            "phone_number": "61 411 433 781",
+            "address": "<p>109 King William Road, Unley South Australia, 5061</p>",
+            "state": "Unley",
+            "country": "Australia",
+            "longitude": -35.0,
+            "latitude": 138.6,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_4LVBq7": {
+          "type": "location",
+          "settings": {
+            "store_name": "Ceremony Bridal Studio",
+            "website": "https://ceremonybarrie.com/",
+            "phone_number": "(705) 817-1187",
+            "address": "<p>50 Dunlop St. E, Barrie, ON L4M 6J9</p>",
+            "state": "Ontario",
+            "country": "Canada",
+            "longitude": -35.0,
+            "latitude": 138.6,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_HXHFaG": {
+          "type": "location",
+          "settings": {
+            "store_name": "Everly Fine Bridal",
+            "website": "https://www.everlyfinebridal.com/",
+            "phone_number": "(604) 564-3070",
+            "address": "<p>910 Richards St, Vancouver, BC V6B 3C1, Canada</p>",
+            "state": "British Columbia",
+            "country": "Canada",
+            "longitude": 49.3,
+            "latitude": -123.1,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_gkU6eN": {
+          "type": "location",
+          "settings": {
+            "store_name": "Sash & Bustle",
+            "website": "https://sashandbustle.com/",
+            "phone_number": "(647) 340-5850",
+            "address": "<p>111 Berkeley Street, Toronto, ON M5A 2W8</p>",
+            "state": "Ontario",
+            "country": "Canada",
+            "longitude": 43.7,
+            "latitude": -79.4,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_DjX7NH": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(403) 281-9777",
+            "address": "<p>5131 Elbow Drive SW Calgary, Alberta T2V1H2</p>",
+            "state": "Alberta",
+            "country": "Canada",
+            "longitude": 51.0,
+            "latitude": -114.1,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_7hdbnG": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(780) 930-1505",
+            "address": "<p>10935-120th Street Edmonton, Alberta T5H3R3</p>",
+            "state": "Alberta",
+            "country": "Canada",
+            "longitude": 53.6,
+            "latitude": -113.5,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_rx8k6Y": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(306) 565-1034",
+            "address": "<p>1850 Hamilton Street Regina, Saskatchewan, S4P 2B8</p>",
+            "state": "Saskatchewan",
+            "country": "Canada",
+            "longitude": 50.4,
+            "latitude": -104.6,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_Wj4RkN": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Boutique",
+            "website": "https://www.thebridalboutique.ca/",
+            "phone_number": "(306) 477-7077",
+            "address": "<p>160 2nd Ave N Saskatoon, Saskatchewan, S7K 2B2</p>",
+            "state": "Saskatchewan",
+            "country": "Canada",
+            "longitude": 52.1,
+            "latitude": -106.7,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_eEXcgG": {
+          "type": "location",
+          "settings": {
+            "store_name": "Tilted Veil",
+            "website": "https://tiltedveil.com/",
+            "phone_number": "(519) 821-8868",
+            "address": "<p>43 Arthur St. South, Unit D Guelph, Ontario, N1E 0P9</p>",
+            "state": "Ontario",
+            "country": "Canada",
+            "longitude": 43.5,
+            "latitude": -80.2,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_CTgbaz": {
+          "type": "location",
+          "settings": {
+            "store_name": "Tilted Veil East",
+            "website": "https://tiltedveileast.com/",
+            "phone_number": "(902) 536-2618",
+            "address": "<p>5663 Nora Bernard Street Suite 102, Halifax, Nova Scotia, B3K 1B6</p>",
+            "state": "Nova Scotia",
+            "country": "Canada",
+            "longitude": 44.7,
+            "latitude": -63.6,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_4GJBPK": {
+          "type": "location",
+          "settings": {
+            "store_name": "JE Bridal Atelier",
+            "website": "https://www.instagram.com/jebridalatelier",
+            "phone_number": "852 2640 1314",
+            "address": "<p>Hong Kong, Causeway Bay, Yun Ping Rd, 17 號3 樓</p>",
+            "state": "Hong Kong",
+            "country": "Hong Kong",
+            "longitude": 22.3,
+            "latitude": 114.2,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_YyxH9i": {
+          "type": "location",
+          "settings": {
+            "store_name": "Memories Bridal Boutique",
+            "website": "https://memoriesbridalboutique.com/",
+            "phone_number": "353 21 455 2324",
+            "address": "<p>22 Tuckey St, Centre, Cork, T12 YPY1</p>",
+            "state": "Cork",
+            "country": "Ireland",
+            "longitude": 51.9,
+            "latitude": -8.5,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_W7EY98": {
+          "type": "location",
+          "settings": {
+            "store_name": "Memories Bridal Boutique",
+            "website": "https://memoriesbridalboutique.com/",
+            "phone_number": "353 85 858 1303",
+            "address": "<p>5A Lower Main St, Lucan And Pettycanon, Dublin, K78 R2H1</p>",
+            "state": "Dublin",
+            "country": "Ireland",
+            "longitude": 53.4,
+            "latitude": -6.4,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_etmDzk": {
+          "type": "location",
+          "settings": {
+            "store_name": "Paperswan Bride",
+            "website": "https://paperswanbride.co.nz/",
+            "phone_number": "04 475 5945",
+            "address": "<p>94b Upland Road Kelburn Village Wellington 6012</p>",
+            "state": "Wellington",
+            "country": "New Zealand",
+            "longitude": -41.3,
+            "latitude": 174.8,
+            "gown": true,
+            "lwd": false
+          }
+        }
+      },
+      "block_order": [
+        "location_WXJnDr",
+        "location_QkGw8z",
+        "location_XWraGU",
+        "location_4JyztK",
+        "location_xQYPb7",
+        "location_4LVBq7",
+        "location_HXHFaG",
+        "location_gkU6eN",
+        "location_DjX7NH",
+        "location_7hdbnG",
+        "location_rx8k6Y",
+        "location_Wj4RkN",
+        "location_eEXcgG",
+        "location_CTgbaz",
+        "location_4GJBPK",
+        "location_YyxH9i",
+        "location_W7EY98",
+        "location_etmDzk"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
     "retailers_search_UtGe9J",
-    "main_collection_description_BcEKAb"
+    "main_collection_description_BcEKAb",
+    "retailer_list_xxiky3"
   ]
 }
