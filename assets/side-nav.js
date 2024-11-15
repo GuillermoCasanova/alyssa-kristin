@@ -7,6 +7,7 @@ class SideNav {
     if (window.innerWidth >= 940) {
       this.generateSideNav();
       this.addSmoothScroll();
+      this.pinSideNav();
     }
   }
 
@@ -35,6 +36,28 @@ class SideNav {
     const targetId = event.currentTarget.getAttribute('href').substring(1);
     const targetSection = document.getElementById(targetId);
     targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+
+  pinSideNav() {
+    const sideNav = document.querySelector('.side-nav-wrapper');
+    sideNav.style.position = 'sticky';
+    sideNav.style.top = '0';
+
+    const sections = document.querySelectorAll('section[id]');
+    console.log(sections);
+
+  const wrapperDiv = document.createElement('div');
+
+
+  sections.forEach(section => {
+    wrapperDiv.appendChild(section.closest('div'));
+  });
+
+  wrapperDiv.insertAdjacentElement('afterbegin', sideNav);
+
+  document.querySelector('main').insertAdjacentElement('afterbegin', wrapperDiv);
+
   }
 }
 
