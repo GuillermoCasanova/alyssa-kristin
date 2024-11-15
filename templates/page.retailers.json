@@ -885,12 +885,28 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_4JyztK": {
+          "type": "location",
+          "settings": {
+            "store_name": "Love Marie",
+            "website": "https://lovemarie.com.au/",
+            "phone_number": "61 418 869 341",
+            "address": "<p>Shop 21. Camden Village Court 180-186 Argyle Street Camden NSW 2570</p>",
+            "state": "Camden NSW",
+            "country": "Australia",
+            "longitude": -34.1,
+            "latitude": 150.7,
+            "gown": false,
+            "lwd": false
+          }
         }
       },
       "block_order": [
         "location_WXJnDr",
         "location_QkGw8z",
-        "location_XWraGU"
+        "location_XWraGU",
+        "location_4JyztK"
       ],
       "settings": {}
     }
