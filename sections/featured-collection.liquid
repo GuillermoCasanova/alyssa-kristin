@@ -41,14 +41,16 @@
           <a
             href="{{ section.settings.collection.url }}"
             class="button button--small  button--primary"
-            >Explore More
+          >
+            {{- section.settings.cta_text }}
           </a>
         </div>
         <div class="hide-for-medium-up">
           <a
             href="{{ section.settings.collection.url }}"
             class="button button--small  button--primary"
-            >Explore More
+          >
+            {{- section.settings.cta_text }}
           </a>
         </div>
 
@@ -171,6 +173,12 @@
       "type": "richtext",
       "id": "description",
       "label": "t:sections.featured-collection.settings.description.label"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "default": "Shop now",
+      "label": "t:sections.featured-collection.settings.cta_text.label"
     },
     {
       "type": "collection",
