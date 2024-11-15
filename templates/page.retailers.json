@@ -1155,6 +1155,81 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_erXJDH": {
+          "type": "location",
+          "settings": {
+            "store_name": "Isabella’s Closet",
+            "website": "https://isabellascloset.co.uk/",
+            "phone_number": "0151 724 3365",
+            "address": "<p>65 Booker Avenue, Liverpool, L18 4QZ</p>",
+            "state": "Liverpool",
+            "country": "United Kingdom",
+            "longitude": 53.4,
+            "latitude": -2.9,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_D9pHr6": {
+          "type": "location",
+          "settings": {
+            "store_name": "Jill Jones",
+            "website": "https://www.jilljonesbridal.co.uk/",
+            "phone_number": "0794 359 9969",
+            "address": "<p>1 Rashee Road, Ballyclare BT39 9HJ</p>",
+            "state": "Antrim",
+            "country": "United Kingdom",
+            "longitude": 54.8,
+            "latitude": -6.0,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_D9PWrX": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/london-bridal-shop/",
+            "phone_number": "44 20 3795 7467",
+            "address": "<p>60 Great Eastern St, London EC2A 3QR</p>",
+            "state": "London",
+            "country": "United Kingdom",
+            "longitude": 51.5,
+            "latitude": -0.1,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_EtxpxY": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Courtyard",
+            "website": "https://bridalcourtyard.com/",
+            "phone_number": "0141 237 8680",
+            "address": "<p>48 St Andrew’s Square, Glasgow, G1 5PP</p>",
+            "state": "Glasgow",
+            "country": "United Kingdom",
+            "longitude": 55.9,
+            "latitude": -4.2,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_xFecyy": {
+          "type": "location",
+          "settings": {
+            "store_name": "The White Closet",
+            "website": "https://www.thewhitecloset.co.uk/",
+            "phone_number": "44 161 445 5678",
+            "address": "<p>204 Burton Rd, West Didsbury, Manchester M20 2LW</p>",
+            "state": "Manchester",
+            "country": "United Kingdom",
+            "longitude": 53.4,
+            "latitude": 53.4,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1178,7 +1253,12 @@
         "location_etmDzk",
         "location_nxMpXb",
         "location_WAYFaB",
-        "location_3c3RJE"
+        "location_3c3RJE",
+        "location_erXJDH",
+        "location_D9pHr6",
+        "location_D9PWrX",
+        "location_EtxpxY",
+        "location_xFecyy"
       ],
       "settings": {}
     }
