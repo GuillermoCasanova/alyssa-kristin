@@ -67,10 +67,17 @@
         "bottom_border": "yes",
         "trigger_email_popup": false
       }
+    },
+    "side_nav_fTRBKm": {
+      "type": "side-nav",
+      "settings": {
+        "enable_side_nav": true
+      }
     }
   },
   "order": [
     "main",
+    "side_nav_fTRBKm",
     "about_philosophy_haWQd9",
     "about_process_xNqrzX",
     "about_founder_4HW7Qt",
