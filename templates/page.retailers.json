@@ -1110,6 +1110,51 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_nxMpXb": {
+          "type": "location",
+          "settings": {
+            "store_name": "Paperswan Bride",
+            "website": "https://paperswanbride.co.nz/",
+            "phone_number": "03 366 9956",
+            "address": "<p>181 High Street Christchurch 8011</p>",
+            "state": "Christchurch",
+            "country": "New Zealand",
+            "longitude": -43.5,
+            "latitude": 172.6,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_WAYFaB": {
+          "type": "location",
+          "settings": {
+            "store_name": "Paperswan Bride",
+            "website": "https://paperswanbride.co.nz/",
+            "phone_number": "09 300 7433",
+            "address": "<p>G06, 70 Daldy Street Auckland CBD 1010</p>",
+            "state": "Auckland",
+            "country": "New Zealand",
+            "longitude": -36.8,
+            "latitude": 174.8,
+            "gown": true,
+            "lwd": false
+          }
+        },
+        "location_3c3RJE": {
+          "type": "location",
+          "settings": {
+            "store_name": "The Bridal Atelier",
+            "website": "https://thebridalatelier.ae/",
+            "phone_number": "971 55 574 6611",
+            "address": "<p>Store 5 - Street 4 4th St - Al Quoz - Al Quoz Industrial Area 3 - Dubai</p>",
+            "state": "Dubai",
+            "country": "United Arab Emirates",
+            "longitude": 25.1,
+            "latitude": 55.2,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1130,7 +1175,10 @@
         "location_4GJBPK",
         "location_YyxH9i",
         "location_W7EY98",
-        "location_etmDzk"
+        "location_etmDzk",
+        "location_nxMpXb",
+        "location_WAYFaB",
+        "location_3c3RJE"
       ],
       "settings": {}
     }
