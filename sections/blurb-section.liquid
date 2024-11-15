@@ -40,22 +40,24 @@
           {% endfor %}
         </div>
       </div>
-      <div class="blurb-section__copy">
+      <div class="blurb-section__right-column">
         <div class="card is-alt-2">
           <div class="card__inner">
-            <div class="card__heading">
-              {{ section.settings.card_heading }}
-            </div>
-            <div class="card__description">
-              {{ section.settings.card_description }}
-            </div>
-            {% if section.settings.card_cta_url != blank %}
-              <div class="blurb-section__copy__body__cta">
-                <a href="{{ section.settings.card_cta_url }}" class="button button--small button--primary">
-                  {{ section.settings.card_cta_text }}
-                </a>
+            <div class="blurb-section__copy">
+              <div class="card__heading">
+                {{ section.settings.card_heading }}
               </div>
-            {% endif %}
+              <div class="card__description">
+                {{ section.settings.card_description }}
+              </div>
+              {% if section.settings.card_cta_url != blank %}
+                <div class="blurb-section__copy__body__cta">
+                  <a href="{{ section.settings.card_cta_url }}" class="button button--small button--primary">
+                    {{ section.settings.card_cta_text }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
