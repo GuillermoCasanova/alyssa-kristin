@@ -152,6 +152,7 @@
 .featured-event__title {
     margin-bottom: var(--level0); 
     text-transform: uppercase;
+    font-size: var(--h6);
 }
 
 

@@ -115,7 +115,7 @@
     left: auto;
     position: absolute;
     top: 2rem;
-    right: 2rem;
+    right: var(--level9);
     height: 30vh;
     padding-top: var(--level9);
     min-height: 27rem;
@@ -286,6 +286,16 @@
 
   cart-drawer-items {
     overflow: visible;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .cart-drawer__inner {
+    position: relative;
+    max-width: var(--max-width-large); 
+    margin-left: auto;
+    margin-right: auto;
+    height: 90vh;
   }
 }
 
