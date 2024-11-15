@@ -3,6 +3,18 @@
     #Featured Events Section
 \*------------------------------------*/
 
+.featured-events__inner {
+    padding-top: var(--level10);
+}
+
+@media screen and (min-width: 940px) {
+    .featured-events__inner {
+        max-width: var(--max-width-small);
+        margin: 0 auto;
+    }
+}
+
+
 .featured-events__heading {
     font-size: var(--h2);
     font-family: var(--secondary-font-family);
@@ -72,10 +84,6 @@
 .featured-events__heading {
     display: flex; 
     align-items: center;
-}
-
-.featued-events__inner {
-    padding-top: var(--level10);
 }
 .featured-event__image__inner {
     position: relative;
