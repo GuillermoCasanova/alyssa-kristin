@@ -55,7 +55,7 @@
 
 @media screen and (min-width: 940px) {
     .blurb-section__image__inner {
-        padding-bottom: 160%;
+        padding-bottom: 155%;
     }
 }
 
@@ -178,74 +178,219 @@
     font-size: var(--normal);
     text-transform: uppercase;
     line-height: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 7rem;
 }
 
-.blurb-section__image .blurb-section__feature:nth-child(2) {
-    top: -2.25rem; 
+:root {
+    --line-elements-width: 1px; 
+}
+
+.blurb-section__image .blurb-section__feature:nth-child(1) {
+    top: -2rem;
+    left: 100%;  
     left: auto; 
-    right: -35%;
+    color: green
 }
 
-.blurb-section__image .blurb-section__feature:nth-child(2):before {
+.blurb-section__image .blurb-section__feature:nth-child(1):before {
     position: absolute;
     width: 100%; 
     height: 3rem;
-    border-bottom: 1px solid rgb(var(--color-base-text-1));
-    border-right: 1px solid rgb(var(--color-base-text-1));
+    border-bottom: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    border-right: var(--line-elements-width) solid rgb(var(--color-base-text-1));
     content: '';
     top: 160%; 
     left: -50%;
 }
 
-@media screen and (min-width: 940px) {
-    .blurb-section__image .blurb-section__feature:nth-child(2) {
+/* @media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(1) {
         top: -1%;
         left: auto;
         right: -25%;
     }
+} */
+
+
+.blurb-section__image .blurb-section__feature:nth-child(2) {
+    top: -8%; 
+    right: -31%;
+    left: auto;
 }
+
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(2) {
+        top: 10%;
+        left: auto;
+        right: -30%;
+        
+    }
+} 
+
+.blurb-section__image .blurb-section__feature:nth-child(2)::before {
+    position: absolute;
+    width: 30%; 
+    height: 7rem;
+    border-bottom: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    border-right: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    content: '';
+    top: 3.5rem; 
+    right: 50%;
+}
+
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(2)::before {
+        width: 120%;
+        height: 2rem;
+    }
+}
+
+
+.blurb-section__image .blurb-section__feature:nth-child(3) {
+    bottom: -8%;
+    right: -30%;
+    left: auto;
+    bottom: 20%;
+    top: auto;
+    text-align: center;
+}
+
+
+
+
+.blurb-section__image .blurb-section__feature:nth-child(3)::before {
+    position: absolute;
+    width: 70%; 
+    height: 2rem;
+    border-top: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    border-right: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    content: '';
+    bottom: 3rem; 
+    right: 50%;
+}
+
+@media screen {
+    .blurb-section__image .blurb-section__feature:nth-child(3)::before {
+        width: 130%;
+        height: 2rem;
+    }
+}
+
+
+
 
 .blurb-section__image .blurb-section__feature:nth-child(4) {
-    top: -8%; 
-    right: auto; 
-    left: -25%;
-}
-
-
-.blurb-section__image .blurb-section__feature:nth-child(6) {
-    bottom: -8%; 
-    right: -34%; 
-    left: auto;
     bottom: 20%; 
-    top: auto; 
-    max-width: 6rem;  
+    top: -.5rem;
+    left: 35%; 
 }
 
-.blurb-section__image .blurb-section__feature:nth-child(6)::before {
-    position: absolute;
-    width: 100%; 
-    height: 3rem;
-    border-bottom: 1px solid rgb(var(--color-base-text-1));
-    border-right: 1px solid rgb(var(--color-base-text-1));
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(4) {
+        bottom: 50%; 
+        left: -30%; 
+        top: auto;
+    }
+}
+
+
+.blurb-section__image .blurb-section__feature:nth-child(4)::before {
+    width: var(--line-elements-width); 
+    height: 4rem; 
     content: '';
-    top: 160%; 
-    left: -50%;
+    position: absolute;
+    top: 1.75rem; 
+    left: 50%; 
+    z-index: 1;
+    background-color: rgb(var(--color-base-text-1));
 }
 
-.blurb-section__image .blurb-section__feature:nth-child(7) {
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(4)::before {
+        border-bottom: 0; 
+        width: 60%; 
+        border-bottom: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+        background-color: transparent;
+        height: 1px;
+        top: .5rem;
+        left: 120%;
+    }
+}
+
+.blurb-section__image .blurb-section__feature:nth-child(5) {
     bottom: 35%; 
-    left: -45%; 
+    left: -35%; 
     top: auto;
 }
 
-.blurb-section__image .blurb-section__feature:nth-child(7)::before {
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(5) {
+        left: -29%; 
+        bottom: 8%; 
+    }
+}
+
+.blurb-section__image .blurb-section__feature:nth-child(5)::before {
     position: absolute;
     width: 100%; 
     height: 3rem;
-    border-bottom: 1px solid rgb(var(--color-base-text-1));
-    border-left: 1px solid rgb(var(--color-base-text-1));
+    border-bottom: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    border-left: var(--line-elements-width) solid rgb(var(--color-base-text-1));
     content: '';
     top: 160%; 
     right: -50%;
     left: auto; 
+}
+
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(5)::before {
+        left: 50%; 
+        bottom: 150%;
+        top: auto; 
+        border: 0; 
+        width: 130%; 
+        border-top: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+        border-left: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    }
+}
+
+
+
+
+
+.blurb-section__image .blurb-section__feature:nth-child(6) {
+    bottom: 35%; 
+    left: -31%; 
+    top: -2rem;
+}
+
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(6) {
+        top: 20%; 
+        bottom: auto;
+        left: -29%; 
+    }
+}
+
+
+
+.blurb-section__image .blurb-section__feature:nth-child(6):before {
+    position: absolute;
+    width: 30%;
+    height: 7rem;
+    border-bottom: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    border-left: var(--line-elements-width) solid rgb(var(--color-base-text-1));
+    content: '';
+    top: 3.5rem;
+    bottom: auto;
+    left: 50%;
+}
+
+@media screen and (min-width: 940px) {
+    .blurb-section__image .blurb-section__feature:nth-child(6):before {
+        width: 120%;
+        height: 2rem;
+    }
 }
