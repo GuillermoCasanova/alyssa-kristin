@@ -1185,6 +1185,21 @@
             "gown": true,
             "lwd": false
           }
+        },
+        "location_D9PWrX": {
+          "type": "location",
+          "settings": {
+            "store_name": "Lovely Bride",
+            "website": "https://lovelybride.com/stores/london-bridal-shop/",
+            "phone_number": "44 20 3795 7467",
+            "address": "<p>60 Great Eastern St, London EC2A 3QR</p>",
+            "state": "London",
+            "country": "United Kingdom",
+            "longitude": 51.5,
+            "latitude": -0.1,
+            "gown": true,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -1210,7 +1225,8 @@
         "location_WAYFaB",
         "location_3c3RJE",
         "location_erXJDH",
-        "location_D9pHr6"
+        "location_D9pHr6",
+        "location_D9PWrX"
       ],
       "settings": {}
     }
