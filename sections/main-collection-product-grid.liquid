@@ -59,70 +59,66 @@
         </div>
       </div>
     {%- else -%}
-      {%- paginate collection.products by 8 -%}
-        {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
+      {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
 
-        <div
-          class="collection"
-          id="AjaxinateLoop"
+      <div
+        class="collection"
+        id="AjaxinateLoop"
+      >
+        <div class="loading-overlay gradient"></div>
+        <ul
+          id="product-grid"
+          data-id="{{ section.id }}"
+          class="product-grid"
         >
-          <div class="loading-overlay gradient"></div>
-          <ul
-            id="product-grid"
-            data-id="{{ section.id }}"
-            class="product-grid"
-          >
-            {% assign skip_card_product_styles = false %}
-            {%- for product in collection.products -%}
-              {% assign lazy_load = false %}
-              {%- if forloop.index > 2 -%}
-                {%- assign lazy_load = true -%}
-              {%- endif -%}
-              <li
-                class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {% render 'card-product',
-                  card_product: product,
-                  media_aspect_ratio: 'portrait',
-                  show_secondary_image: false,
-                  show_vendor: false,
-                  show_rating: false,
-                  lazy_load: lazy_load,
-                  skip_styles: skip_card_product_styles,
-                  quick_add: 'standard',
-                  section_id: section.id
-                %}
-              </li>
-              {%- assign skip_card_product_styles = true -%}
-            {%- endfor -%}
-          </ul>
-        </div>
-
-        {%- if paginate.pages > 1 -%}
-          {% render 'pagination', paginate: paginate %}
-        {%- endif -%}
-      {%- endpaginate -%}
+          {% assign skip_card_product_styles = false %}
+          {%- for product in collection.products -%}
+            {% assign lazy_load = false %}
+            {%- if forloop.index > 2 -%}
+              {%- assign lazy_load = true -%}
+            {%- endif -%}
+            <li
+              class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: 'portrait',
+                show_secondary_image: false,
+                show_vendor: false,
+                show_rating: false,
+                lazy_load: lazy_load,
+                skip_styles: skip_card_product_styles,
+                quick_add: 'standard',
+                section_id: section.id
+              %}
+            </li>
+            {%- assign skip_card_product_styles = true -%}
+          {%- endfor -%}
+        </ul>
+      </div>
     {%- endif -%}
   </div>
 </div>
 
-<script src="{{ 'ajaxinate.min.js' | asset_url }}" defer></script>
-<script>
-  function initAjaxinate() {
-    var endlessScroll = new Ajaxinate({
-      container: '#AjaxinateLoop',
-      pagination: '#AjaxinatePagination',
-      method: 'click',
+{% comment %}
+  <script src="{{ 'ajaxinate.min.js' | asset_url }}" defer></script>
+  <script>
+    function initAjaxinate() {
+      var endlessScroll = new Ajaxinate({
+        container: '#AjaxinateLoop',
+        pagination: '#AjaxinatePagination',
+        method: 'click',
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      initAjaxinate();
     });
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    initAjaxinate();
-  });
-</script>
+  </script>
+{% endcomment %}
 
 {% schema %}
 {
