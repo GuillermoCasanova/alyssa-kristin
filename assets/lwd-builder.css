@@ -89,7 +89,7 @@ lwd-slideshow .swiper-slide {
 @media screen and (min-width: 940px) {
   lwd-slideshow .swiper-slide {
     width: 40vw;
-    max-width: 22rem;
+    max-width: 30rem;
   }
 
   lwd-slideshow .swiper-slide.swiper-slide-active {
@@ -100,15 +100,17 @@ lwd-slideshow .swiper-slide {
 .lwd-combinations-container__option__image {
   position: relative;
   background-color: white;
-  width: 100%;
 }
 
 .lwd-combinations-container__option__image__inner {
-  padding-bottom: 100%;
+  padding-bottom: 75%;
 }
 
 .lwd-combinations-container__option__image__inner img {
   object-fit: contain;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lwd-combinations-container__option__image.active,
@@ -123,6 +125,18 @@ lwd-slideshow .swiper-slide {
     overflow: hidden;
     width: 100%;
 }
+
+.lwd-combinations-container__tops img {
+  object-position: bottom;
+}
+
+
+.lwd-combinations-container__bottoms img {
+  object-position: top;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 @media screen and (min-width: 940px) {
@@ -145,6 +159,7 @@ lwd-slideshow .swiper-slide {
     grid-template-columns: 55% 45%; 
     justify-content: space-between;
     grid-column-gap: var(--level10);
+    align-items: center;
   }
 }
 

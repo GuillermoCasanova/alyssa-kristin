@@ -58,6 +58,7 @@
               slidesPerView="auto"
               loop="true"
               effect="coverflow"
+              spaceBetween="0"
             >
               {% for product in section.settings.collection.products %}
                 {% assign bottom_slideshow_image_id = all_products[product.metafields.dress.bottom].id %}
