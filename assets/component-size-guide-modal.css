@@ -121,9 +121,10 @@
     margin-right: 0; 
     display: block; 
     letter-spacing: 1px;
+    text-decoration: underline;
 }
 
 .product__size-guide-modal-trigger:hover,
 .product__size-guide-modal-trigger:focus {
-    text-decoration: underline;
+    text-decoration: none;
 }
