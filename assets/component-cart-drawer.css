@@ -117,7 +117,10 @@
     top: 2rem;
     right: 2rem;
     height: 30vh;
-    padding-top: var(--level9)
+    padding-top: var(--level9);
+    min-height: 27rem;
+    width: 100%;
+    min-width: 30rem;
   }
 }
 
