@@ -201,15 +201,6 @@
         "cta_text": "Book An Appointment"
       }
     },
-    "instagram_section_xWcUw4": {
-      "type": "instagram-section",
-      "settings": {
-        "heading": "<p><em>Follow Us</em> On Instagram</p>",
-        "top_border": "no",
-        "bottom_border": "yes",
-        "trigger_email_popup": false
-      }
-    },
     "1731699248c7f8cf2a": {
       "type": "apps",
       "blocks": {
@@ -230,6 +221,15 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "instagram_section_xWcUw4": {
+      "type": "instagram-section",
+      "settings": {
+        "heading": "<p><em>Follow Us</em> On Instagram</p>",
+        "top_border": "no",
+        "bottom_border": "yes",
+        "trigger_email_popup": false
+      }
     }
   },
   "order": [
@@ -242,7 +242,7 @@
     "featured_events_JWhbe7",
     "featured_on_mByktG",
     "appointment_section_zrN4XF",
-    "instagram_section_xWcUw4",
-    "1731699248c7f8cf2a"
+    "1731699248c7f8cf2a",
+    "instagram_section_xWcUw4"
   ]
 }
