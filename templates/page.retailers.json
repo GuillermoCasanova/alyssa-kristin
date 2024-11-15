@@ -915,6 +915,21 @@
             "gown": false,
             "lwd": false
           }
+        },
+        "location_4LVBq7": {
+          "type": "location",
+          "settings": {
+            "store_name": "Ceremony Bridal Studio",
+            "website": "https://ceremonybarrie.com/",
+            "phone_number": "(705) 817-1187",
+            "address": "<p>50 Dunlop St. E, Barrie, ON L4M 6J9</p>",
+            "state": "Ontario",
+            "country": "Canada",
+            "longitude": -35.0,
+            "latitude": 138.6,
+            "gown": false,
+            "lwd": false
+          }
         }
       },
       "block_order": [
@@ -922,7 +937,8 @@
         "location_QkGw8z",
         "location_XWraGU",
         "location_4JyztK",
-        "location_xQYPb7"
+        "location_xQYPb7",
+        "location_4LVBq7"
       ],
       "settings": {}
     }
