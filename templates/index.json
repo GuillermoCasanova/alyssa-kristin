@@ -108,16 +108,10 @@
             "feature": "Quality craftsmanship"
           }
         },
-        "feature_zQDjcq": {
-          "type": "feature",
-          "settings": {
-            "feature": ""
-          }
-        },
         "feature_wTbXGg": {
           "type": "feature",
           "settings": {
-            "feature": "customizable"
+            "feature": "Customizable"
           }
         },
         "feature_8A7WV4": {
@@ -136,7 +130,6 @@
       "block_order": [
         "feature_Mg8AAn",
         "feature_7N9YGQ",
-        "feature_zQDjcq",
         "feature_wTbXGg",
         "feature_8A7WV4",
         "feature_h8yz3n"
@@ -147,7 +140,7 @@
         "card_description": "<p>Our gowns are celebrated for their fine quality materials and exquisite craftsmanship. From our figure-hugging signature crepe to the sleek, lustrous mikado, each dress is designed to offer an effortlessly refined look, exceptional support, and an elevated experience that feels uniquely you.</p>",
         "card_cta_url": "shopify://collections/2025-collection",
         "card_cta_text": "Shop Now",
-        "image": "shopify://shop_images/Screen_Shot_2024-09-03_at_3.25.51_PM_1.png",
+        "image": "shopify://shop_images/Sophie_-_2.jpg",
         "section-alignment": "normal",
         "copy-bg-color": "background-1"
       }
