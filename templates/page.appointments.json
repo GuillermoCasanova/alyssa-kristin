@@ -15,21 +15,21 @@
         "text_column_GTqDUq": {
           "type": "text_column",
           "settings": {
-            "heading": "<p>01 Preparing For Appointment</p>",
+            "heading": "<p><strong>01</strong> Preparing For Appointment</p>",
             "rich_text": "<p>Our Chicago flagship showroom is open by appointment only on Fridays and Saturdays. To make the most of your visit, we suggest wearing nude-colored seamless undergarments and bringing any wedding day accessories, like jewelry, shoes, or a veil. </p>"
           }
         },
         "text_column_YcMJyN": {
           "type": "text_column",
           "settings": {
-            "heading": "<p>02 The Fitting Experience</p>",
+            "heading": "<p><strong>02</strong> The Fitting Experience</p>",
             "rich_text": "<p>Once you arrive, our bridal stylist will pull some personalized bridal gowns for you to try on based on your preferred style and fit. Since our gowns are made-to-order, our sizing ranges from size 0-28 for all body types. Each appointment lasts 60 minutes, and you’re welcome to bring up to four guests.</p>"
           }
         },
         "text_column_tR6wqD": {
           "type": "text_column",
           "settings": {
-            "heading": "<p>03 The Gown</p>",
+            "heading": "<p><strong>03</strong> The Gown</p>",
             "rich_text": "<p>The bridal stylist will walk you through the fitting process to ensure the bride feels like the most elegant version of herself – offering some modification options during the fitting appointment. Since the gowns are made-to-order, an estimated 8 weeks is required for turn around. Expedited gowns are available, please inquire with our bridal stylist.</p>"
           }
         }
