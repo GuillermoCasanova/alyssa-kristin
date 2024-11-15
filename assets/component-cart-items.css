@@ -135,7 +135,6 @@ cart-remove-button .button {
 
 cart-remove-button button:hover, 
 cart-remove-button button:focus {
-  transform: scale(1.2);
 }
 
 cart-remove-button .button:before,

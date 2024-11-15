@@ -23,6 +23,8 @@ cart-items.is-empty .title-wrapper-with-link,
 
 .cart__empty-text {
   margin: 4.5rem 0 2rem;
+  font-family: var(--secondary-font-family);
+  font-size: var(--h6);
 }
 
 .cart__contents > * + * {
@@ -153,7 +155,9 @@ cart-items {
 }
 
 .cart__ctas button {
-  width: 100%;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cart__ctas > *:not(noscript:first-child) + * {

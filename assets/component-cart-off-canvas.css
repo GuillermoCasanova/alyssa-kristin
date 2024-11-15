@@ -541,7 +541,6 @@
     text-transform: capitalize;
     display: block;
     width: 2rem;
-    height: 2rem;
 }
 
 .cart-notification__remove-btn .icon {
@@ -585,7 +584,6 @@
     background: rgb(var(--color-base-background-1));
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    border-top: 1px solid rgb(var(--color-base-text-1));
 }
 
 @media only screen and (min-width: 940px) {

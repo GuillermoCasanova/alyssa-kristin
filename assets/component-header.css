@@ -48,7 +48,7 @@
         justify-content: center;
         padding-top: var(--level9); 
         width: 100%; 
-        position: static;
+        position: relative;
         padding-left: 2%;
         padding-right: 2%;
     }
@@ -407,21 +407,21 @@
 
 .cart-count-bubble {
     align-items: center;
-    background-color: rgb(var(--color-base-background-2));
-    bottom: 15%;
+    background-color: rgb(var(--color-base-background-3));
+    bottom: 30%;
     border-radius: 100%;
     color: #fff;
     display: flex;
     font-size: var(--primary-font-family);
-    font-size: var(--mini);
-    height: 1.15rem;
+    font-size: var(--micro);
+    height: 1.25rem;
     justify-content: center;
     margin: auto;
     padding-top: 1px;
     position: absolute;
-    right: 25%;
+    right: -.15rem; 
     text-decoration: none !important;
-    width: 1.15rem;
+    width: 1.25rem;
 }
 
 .cart-count-bubble.is-hidden {
