@@ -171,11 +171,27 @@
             "image": "shopify://shop_images/Wedvibes.png",
             "alt_text": ""
           }
+        },
+        "logo_jxHwen": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/People-Magazine-Symbol.png",
+            "alt_text": ""
+          }
+        },
+        "logo_Vx3HKm": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/popsugar.png",
+            "alt_text": ""
+          }
         }
       },
       "block_order": [
         "logo_tAPXDC",
-        "logo_CdRFWY"
+        "logo_CdRFWY",
+        "logo_jxHwen",
+        "logo_Vx3HKm"
       ],
       "settings": {
         "headline": "<p>As Seen In</p>"
