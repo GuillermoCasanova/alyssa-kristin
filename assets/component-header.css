@@ -260,7 +260,8 @@
 }
 
 .header__icon .icon {
-    fill: var(--color-base-text);
+    fill: rgb(var(--color-base-text-1));
+    color: rgb(var(--color-base-text-1));
     vertical-align: middle;
 }
 
