@@ -311,7 +311,7 @@
                         {{ 'products.facets.apply' | t }}
                         (
                         <span class="mobile-facets__count">
-                          {{ results.products_count }}
+                          {{ results.products_count | default: search.results_count }}
                         </span>
                         )
                       </button>
