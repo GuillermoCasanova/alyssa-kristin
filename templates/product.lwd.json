@@ -16,10 +16,6 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -45,15 +41,19 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
         }
       },
       "block_order": [
         "title",
-        "price",
         "description",
         "size_guide_hQTfbY",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "price"
       ],
       "settings": {
         "enable_sticky_info": false,
