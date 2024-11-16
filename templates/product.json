@@ -16,10 +16,6 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -61,17 +57,21 @@
             "cta_link": "shopify://pages/retailers",
             "cta_text": "Find Us"
           }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
         }
       },
       "block_order": [
         "title",
-        "price",
         "description",
         "size_guide_AzhnFp",
         "variant_picker",
         "buy_buttons",
         "share",
-        "product_cta_P4igca"
+        "product_cta_P4igca",
+        "price"
       ],
       "settings": {
         "enable_sticky_info": true,
