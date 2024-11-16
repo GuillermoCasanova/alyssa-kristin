@@ -158,13 +158,6 @@
     "featured_on_mByktG": {
       "type": "featured-on",
       "blocks": {
-        "logo_CdRFWY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/image_3_1678f65c-ebfb-4fd2-b39d-9878f624ca79.png",
-            "alt_text": ""
-          }
-        },
         "logo_tAPXDC": {
           "type": "logo",
           "settings": {
@@ -172,18 +165,17 @@
             "alt_text": ""
           }
         },
-        "logo_DkMaWC": {
+        "logo_CdRFWY": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/image_4.png",
+            "image": "shopify://shop_images/Wedvibes.png",
             "alt_text": ""
           }
         }
       },
       "block_order": [
-        "logo_CdRFWY",
         "logo_tAPXDC",
-        "logo_DkMaWC"
+        "logo_CdRFWY"
       ],
       "settings": {
         "headline": "<p>As Seen In</p>"
