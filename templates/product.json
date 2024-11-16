@@ -43,6 +43,10 @@
             "show_gift_card_recipient": false
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -57,10 +61,6 @@
             "cta_link": "shopify://pages/retailers",
             "cta_text": "Find Us"
           }
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
         }
       },
       "block_order": [
@@ -69,9 +69,9 @@
         "size_guide_AzhnFp",
         "variant_picker",
         "buy_buttons",
+        "price",
         "share",
-        "product_cta_P4igca",
-        "price"
+        "product_cta_P4igca"
       ],
       "settings": {
         "enable_sticky_info": true,
