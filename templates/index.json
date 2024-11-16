@@ -165,33 +165,33 @@
             "alt_text": ""
           }
         },
-        "logo_CdRFWY": {
+        "logo_MrJmYP": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Wedvibes.png",
+            "image": "shopify://shop_images/People.png",
             "alt_text": ""
           }
         },
-        "logo_jxHwen": {
+        "logo_b7pCUb": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/People-Magazine-Symbol.png",
+            "image": "shopify://shop_images/Popsugar_6a412eaa-cd06-44d0-bb3d-e5b69cbf04eb.png",
             "alt_text": ""
           }
         },
-        "logo_Vx3HKm": {
+        "logo_mPqwbH": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/popsugar.png",
+            "image": "shopify://shop_images/Wedvibes_91ba2969-cad9-4330-b5b3-1801c2576690.png",
             "alt_text": ""
           }
         }
       },
       "block_order": [
         "logo_tAPXDC",
-        "logo_CdRFWY",
-        "logo_jxHwen",
-        "logo_Vx3HKm"
+        "logo_MrJmYP",
+        "logo_b7pCUb",
+        "logo_mPqwbH"
       ],
       "settings": {
         "headline": "<p>As Seen In</p>"
