@@ -45,6 +45,21 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "share_zgbcRA": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "product_cta_PLBWg6": {
+          "type": "product-cta",
+          "settings": {
+            "heading": "<p>Contact us To <em>find your size</em></p>",
+            "body": "<p>Have questions about fit and styling for your wedding look? We’re here to help. Book an in-person appointment to try, or contact us for personalized assistance.</p>",
+            "cta_link": "shopify://pages/retailers",
+            "cta_text": "Find Us"
+          }
         }
       },
       "block_order": [
@@ -53,7 +68,9 @@
         "size_guide_hQTfbY",
         "variant_picker",
         "buy_buttons",
-        "price"
+        "price",
+        "share_zgbcRA",
+        "product_cta_PLBWg6"
       ],
       "settings": {
         "enable_sticky_info": false,
